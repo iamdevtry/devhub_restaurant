@@ -17,11 +17,8 @@ namespace Dev69Restaurant
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-<<<<<<< HEAD
             Application.Run(new LoginForm());
-=======
             //Application.Run(new Form1());
->>>>>>> dev
         }
     }
 }
