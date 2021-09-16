@@ -1,5 +1,5 @@
 ﻿
-namespace Dev69Restaurant.GUI
+namespace Dev69Restaurant.GUI.Login
 {
     partial class LoginForm
     {
