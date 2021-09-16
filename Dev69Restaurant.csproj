@@ -53,6 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Components\UserControls\UCTableFood.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\UserControls\UCTableFood.Designer.cs">
+      <DependentUpon>UCTableFood.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Home\HomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,15 +71,27 @@
     <Compile Include="GUI\Login\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\TableFood\TableFoodForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\TableFood\TableFoodForm.Designer.cs">
+      <DependentUpon>TableFoodForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings\BaseColor.cs" />
     <Compile Include="Settings\BaseIcon.cs" />
+    <EmbeddedResource Include="Components\UserControls\UCTableFood.resx">
+      <DependentUpon>UCTableFood.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Home\HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Login\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\TableFood\TableFoodForm.resx">
+      <DependentUpon>TableFoodForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -166,6 +184,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\menu_hover_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no_image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checked_radio_button_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unchecked_radio_button_48px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
