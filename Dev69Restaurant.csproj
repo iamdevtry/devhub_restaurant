@@ -67,6 +67,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings\BaseColor.cs" />
+    <Compile Include="Settings\BaseIcon.cs" />
     <EmbeddedResource Include="GUI\Home\HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -112,45 +114,6 @@
     <None Include="Resources\user_50px.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\myimage.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\home_dark-hover_30px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\home_dark_30px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\table_dark_24px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\table_dark-hover_24px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\food_bar_dark_24px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\food_bar_dark-hover_24px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\settings_dark_50px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\settings_dark-hover_50px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\info_dark_50px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\info_dark-hover_50px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\menu_dark_50px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\menu_dark-hover_50px.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\banner_Logo_Dark.png" />
   </ItemGroup>
   <ItemGroup>
@@ -163,10 +126,46 @@
     <None Include="Resources\search-hover_48px.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\home_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_hover_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food_bar_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food_bar_hover_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table_top_view_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table_top_view_hover_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info_hover_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_hover_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\statistics_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\statistics-hover_48px.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\statistics_50px.png" />
+    <None Include="Resources\menu_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_hover_48px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
