@@ -113,9 +113,9 @@ namespace Dev69Restaurant.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap food_bar_dark_24px {
+        internal static System.Drawing.Bitmap food_bar_48px {
             get {
-                object obj = ResourceManager.GetObject("food_bar_dark_24px", resourceCulture);
+                object obj = ResourceManager.GetObject("food_bar_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,9 @@ namespace Dev69Restaurant.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap food_bar_dark_hover_24px {
+        internal static System.Drawing.Bitmap food_bar_hover_48px {
             get {
-                object obj = ResourceManager.GetObject("food_bar_dark-hover_24px", resourceCulture);
+                object obj = ResourceManager.GetObject("food_bar_hover_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +133,9 @@ namespace Dev69Restaurant.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap home_dark_30px {
+        internal static System.Drawing.Bitmap home_48px {
             get {
-                object obj = ResourceManager.GetObject("home_dark_30px", resourceCulture);
+                object obj = ResourceManager.GetObject("home_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +143,9 @@ namespace Dev69Restaurant.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap home_dark_hover_30px {
+        internal static System.Drawing.Bitmap home_hover_48px {
             get {
-                object obj = ResourceManager.GetObject("home_dark-hover_30px", resourceCulture);
+                object obj = ResourceManager.GetObject("home_hover_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +153,9 @@ namespace Dev69Restaurant.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap info_dark_50px {
+        internal static System.Drawing.Bitmap info_48px {
             get {
-                object obj = ResourceManager.GetObject("info_dark_50px", resourceCulture);
+                object obj = ResourceManager.GetObject("info_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +163,9 @@ namespace Dev69Restaurant.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap info_dark_hover_50px {
+        internal static System.Drawing.Bitmap info_hover_48px {
             get {
-                object obj = ResourceManager.GetObject("info_dark-hover_50px", resourceCulture);
+                object obj = ResourceManager.GetObject("info_hover_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +183,9 @@ namespace Dev69Restaurant.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap menu_dark_50px {
+        internal static System.Drawing.Bitmap menu_48px {
             get {
-                object obj = ResourceManager.GetObject("menu_dark_50px", resourceCulture);
+                object obj = ResourceManager.GetObject("menu_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,19 +193,9 @@ namespace Dev69Restaurant.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap menu_dark_hover_50px {
+        internal static System.Drawing.Bitmap menu_hover_48px {
             get {
-                object obj = ResourceManager.GetObject("menu_dark-hover_50px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap myimage {
-            get {
-                object obj = ResourceManager.GetObject("myimage", resourceCulture);
+                object obj = ResourceManager.GetObject("menu_hover_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,9 +223,9 @@ namespace Dev69Restaurant.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap settings_dark_50px {
+        internal static System.Drawing.Bitmap settings_48px {
             get {
-                object obj = ResourceManager.GetObject("settings_dark_50px", resourceCulture);
+                object obj = ResourceManager.GetObject("settings_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -243,9 +233,9 @@ namespace Dev69Restaurant.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap settings_dark_hover_50px {
+        internal static System.Drawing.Bitmap settings_hover_48px {
             get {
-                object obj = ResourceManager.GetObject("settings_dark-hover_50px", resourceCulture);
+                object obj = ResourceManager.GetObject("settings_hover_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,9 +243,9 @@ namespace Dev69Restaurant.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap statistics_50px {
+        internal static System.Drawing.Bitmap statistics_48px {
             get {
-                object obj = ResourceManager.GetObject("statistics_50px", resourceCulture);
+                object obj = ResourceManager.GetObject("statistics_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -273,9 +263,9 @@ namespace Dev69Restaurant.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap table_dark_24px {
+        internal static System.Drawing.Bitmap table_top_view_48px {
             get {
-                object obj = ResourceManager.GetObject("table_dark_24px", resourceCulture);
+                object obj = ResourceManager.GetObject("table_top_view_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -283,9 +273,9 @@ namespace Dev69Restaurant.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap table_dark_hover_24px {
+        internal static System.Drawing.Bitmap table_top_view_hover_48px {
             get {
-                object obj = ResourceManager.GetObject("table_dark-hover_24px", resourceCulture);
+                object obj = ResourceManager.GetObject("table_top_view_hover_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
