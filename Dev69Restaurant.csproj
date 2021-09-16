@@ -53,31 +53,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GUI\LoginForm.cs">
+    <Compile Include="GUI\Home\HomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\LoginForm.Designer.cs">
+    <Compile Include="GUI\Home\HomeForm.Designer.cs">
+      <DependentUpon>HomeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Login\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Login\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="GUI\LoginForm.resx">
+    <EmbeddedResource Include="GUI\Home\HomeForm.resx">
+      <DependentUpon>HomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Login\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -101,6 +110,63 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\user_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\myimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_dark-hover_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_dark_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table_dark_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table_dark-hover_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food_bar_dark_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food_bar_dark-hover_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_dark_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_dark-hover_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info_dark_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info_dark-hover_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_dark_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_dark-hover_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner_Logo_Dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner_Logo_Light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-hover_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\statistics-hover_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\statistics_50px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Dev69Restaurant.GUI
+namespace Dev69Restaurant.GUI.Login
 {
     public partial class LoginForm : Form
     {
