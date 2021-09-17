@@ -1,4 +1,5 @@
-﻿using Dev69Restaurant.Settings;
+﻿using Dev69Restaurant.GUI.TableFood;
+using Dev69Restaurant.Settings;
 using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
@@ -29,9 +30,19 @@ namespace Dev69Restaurant.GUI.Home
         {
             ShowHideLeftBar();
         }
+
+        private Form activeForm = null;
         private void btnHome_Click(object sender, EventArgs e)
         {
             ActivateButton(sender,BaseIcon.HOME_ACTIVE);
+            TableFoodForm tableFood = new TableFoodForm();
+            activeForm = tableFood;
+            tableFood.TopLevel = false;
+            tableFood.AutoScroll = true;
+            //childForm.FormBorderStyle = FormBorderStyle.None;
+            tableFood.Dock = DockStyle.Fill;
+            pnMain.Controls.Add(tableFood);
+            tableFood.Show();
         }
 
         private void btnTableFood_Click(object sender, EventArgs e)

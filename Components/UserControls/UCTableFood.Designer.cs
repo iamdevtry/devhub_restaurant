@@ -100,7 +100,6 @@ namespace Dev69Restaurant.Components.UserControls
             this.pnlineTableFood.LineStyle = System.Windows.Forms.BorderStyle.None;
             this.pnlineTableFood.LineTop = 3;
             this.pnlineTableFood.Location = new System.Drawing.Point(0, 0);
-            this.pnlineTableFood.Margin = new System.Windows.Forms.Padding(0);
             this.pnlineTableFood.Name = "pnlineTableFood";
             this.pnlineTableFood.Size = new System.Drawing.Size(220, 200);
             this.pnlineTableFood.TabIndex = 2;
@@ -126,7 +125,7 @@ namespace Dev69Restaurant.Components.UserControls
             this.Controls.Add(this.pnTableName);
             this.Controls.Add(this.pnStatus);
             this.Controls.Add(this.pnlineTableFood);
-            this.Margin = new System.Windows.Forms.Padding(0);
+            this.Margin = new System.Windows.Forms.Padding(15);
             this.Name = "UCTableFood";
             this.Size = new System.Drawing.Size(220, 200);
             this.Click += new System.EventHandler(this.UCTableFood_Click);
