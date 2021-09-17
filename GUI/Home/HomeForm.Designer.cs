@@ -46,13 +46,9 @@ namespace Dev69Restaurant.GUI.Home
             this.btnSetting = new Guna.UI2.WinForms.Guna2GradientButton();
             this.gnTransition = new Guna.UI2.WinForms.Guna2Transition();
             this.pnLeft = new Guna.UI.WinForms.GunaPanel();
-            this.picLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnHeader = new Guna.UI.WinForms.GunaPanel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.lblWelcome = new System.Windows.Forms.Label();
-            this.picAvatarUser = new Guna.UI.WinForms.GunaCirclePictureBox();
-            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnToogleMenu = new Guna.UI2.WinForms.Guna2ImageButton();
             this.pnDetail = new System.Windows.Forms.Panel();
             this.grbDetail = new Guna.UI.WinForms.GunaGroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -68,17 +64,21 @@ namespace Dev69Restaurant.GUI.Home
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.picAvatarUser = new Guna.UI.WinForms.GunaCirclePictureBox();
+            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnToogleMenu = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.picLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnTop.SuspendLayout();
             this.pnLeft.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.pnHeader.SuspendLayout();
             this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picAvatarUser)).BeginInit();
             this.pnDetail.SuspendLayout();
             this.grbDetail.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatarUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // btnHome
@@ -377,18 +377,6 @@ namespace Dev69Restaurant.GUI.Home
             this.pnLeft.Size = new System.Drawing.Size(320, 900);
             this.pnLeft.TabIndex = 11;
             // 
-            // picLogo
-            // 
-            this.gnTransition.SetDecoration(this.picLogo, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.picLogo.Image = global::Dev69Restaurant.Properties.Resources.banner_Logo_Dark;
-            this.picLogo.Location = new System.Drawing.Point(0, 38);
-            this.picLogo.Name = "picLogo";
-            this.picLogo.ShadowDecoration.Parent = this.picLogo;
-            this.picLogo.Size = new System.Drawing.Size(315, 100);
-            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picLogo.TabIndex = 7;
-            this.picLogo.TabStop = false;
-            // 
             // pnHeader
             // 
             this.pnHeader.Controls.Add(this.panel9);
@@ -422,61 +410,6 @@ namespace Dev69Restaurant.GUI.Home
             this.lblWelcome.Size = new System.Drawing.Size(154, 23);
             this.lblWelcome.TabIndex = 0;
             this.lblWelcome.Text = "Xin chào, Dev69... !";
-            // 
-            // picAvatarUser
-            // 
-            this.picAvatarUser.BaseColor = System.Drawing.Color.White;
-            this.gnTransition.SetDecoration(this.picAvatarUser, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.picAvatarUser.Image = global::Dev69Restaurant.Properties.Resources.user_50px;
-            this.picAvatarUser.Location = new System.Drawing.Point(213, 25);
-            this.picAvatarUser.Name = "picAvatarUser";
-            this.picAvatarUser.Size = new System.Drawing.Size(48, 48);
-            this.picAvatarUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picAvatarUser.TabIndex = 11;
-            this.picAvatarUser.TabStop = false;
-            this.picAvatarUser.UseTransfarantBackground = false;
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.BorderRadius = 8;
-            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gnTransition.SetDecoration(this.txtSearch, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.txtSearch.DefaultText = "";
-            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch.DisabledState.Parent = this.txtSearch;
-            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.FocusedState.Parent = this.txtSearch;
-            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.HoverState.Parent = this.txtSearch;
-            this.txtSearch.IconLeft = global::Dev69Restaurant.Properties.Resources.search_24px;
-            this.txtSearch.Location = new System.Drawing.Point(147, 29);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.PasswordChar = '\0';
-            this.txtSearch.PlaceholderText = "Search everything...";
-            this.txtSearch.SelectedText = "";
-            this.txtSearch.ShadowDecoration.Parent = this.txtSearch;
-            this.txtSearch.Size = new System.Drawing.Size(623, 44);
-            this.txtSearch.TabIndex = 0;
-            // 
-            // btnToogleMenu
-            // 
-            this.btnToogleMenu.CheckedState.Parent = this.btnToogleMenu;
-            this.gnTransition.SetDecoration(this.btnToogleMenu, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.btnToogleMenu.HoverState.Image = global::Dev69Restaurant.Properties.Resources.menu_hover_48px;
-            this.btnToogleMenu.HoverState.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnToogleMenu.HoverState.Parent = this.btnToogleMenu;
-            this.btnToogleMenu.Image = global::Dev69Restaurant.Properties.Resources.menu_48px;
-            this.btnToogleMenu.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnToogleMenu.Location = new System.Drawing.Point(49, 29);
-            this.btnToogleMenu.Name = "btnToogleMenu";
-            this.btnToogleMenu.PressedState.Parent = this.btnToogleMenu;
-            this.btnToogleMenu.Size = new System.Drawing.Size(40, 44);
-            this.btnToogleMenu.TabIndex = 10;
-            this.btnToogleMenu.Click += new System.EventHandler(this.btnToogleMenu_Click);
             // 
             // pnDetail
             // 
@@ -646,6 +579,73 @@ namespace Dev69Restaurant.GUI.Home
             this.panel4.Size = new System.Drawing.Size(56, 704);
             this.panel4.TabIndex = 0;
             // 
+            // picAvatarUser
+            // 
+            this.picAvatarUser.BaseColor = System.Drawing.Color.White;
+            this.gnTransition.SetDecoration(this.picAvatarUser, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.picAvatarUser.Image = global::Dev69Restaurant.Properties.Resources.user_50px;
+            this.picAvatarUser.Location = new System.Drawing.Point(213, 25);
+            this.picAvatarUser.Name = "picAvatarUser";
+            this.picAvatarUser.Size = new System.Drawing.Size(48, 48);
+            this.picAvatarUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picAvatarUser.TabIndex = 11;
+            this.picAvatarUser.TabStop = false;
+            this.picAvatarUser.UseTransfarantBackground = false;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.BorderRadius = 8;
+            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gnTransition.SetDecoration(this.txtSearch, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.txtSearch.DefaultText = "";
+            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.DisabledState.Parent = this.txtSearch;
+            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.FocusedState.Parent = this.txtSearch;
+            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.HoverState.Parent = this.txtSearch;
+            this.txtSearch.IconLeft = global::Dev69Restaurant.Properties.Resources.search_24px;
+            this.txtSearch.Location = new System.Drawing.Point(147, 29);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PasswordChar = '\0';
+            this.txtSearch.PlaceholderText = "Search everything...";
+            this.txtSearch.SelectedText = "";
+            this.txtSearch.ShadowDecoration.Parent = this.txtSearch;
+            this.txtSearch.Size = new System.Drawing.Size(623, 44);
+            this.txtSearch.TabIndex = 0;
+            // 
+            // btnToogleMenu
+            // 
+            this.btnToogleMenu.CheckedState.Parent = this.btnToogleMenu;
+            this.gnTransition.SetDecoration(this.btnToogleMenu, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnToogleMenu.HoverState.Image = global::Dev69Restaurant.Properties.Resources.menu_hover_48px;
+            this.btnToogleMenu.HoverState.ImageSize = new System.Drawing.Size(32, 32);
+            this.btnToogleMenu.HoverState.Parent = this.btnToogleMenu;
+            this.btnToogleMenu.Image = global::Dev69Restaurant.Properties.Resources.menu_48px;
+            this.btnToogleMenu.ImageSize = new System.Drawing.Size(32, 32);
+            this.btnToogleMenu.Location = new System.Drawing.Point(49, 29);
+            this.btnToogleMenu.Name = "btnToogleMenu";
+            this.btnToogleMenu.PressedState.Parent = this.btnToogleMenu;
+            this.btnToogleMenu.Size = new System.Drawing.Size(40, 44);
+            this.btnToogleMenu.TabIndex = 10;
+            this.btnToogleMenu.Click += new System.EventHandler(this.btnToogleMenu_Click);
+            // 
+            // picLogo
+            // 
+            this.gnTransition.SetDecoration(this.picLogo, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.picLogo.Image = global::Dev69Restaurant.Properties.Resources.banner_Logo_Dark;
+            this.picLogo.Location = new System.Drawing.Point(0, 38);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.ShadowDecoration.Parent = this.picLogo;
+            this.picLogo.Size = new System.Drawing.Size(315, 100);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogo.TabIndex = 7;
+            this.picLogo.TabStop = false;
+            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -665,16 +665,16 @@ namespace Dev69Restaurant.GUI.Home
             this.Text = "HomeForm";
             this.pnTop.ResumeLayout(false);
             this.pnLeft.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.pnHeader.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picAvatarUser)).EndInit();
             this.pnDetail.ResumeLayout(false);
             this.grbDetail.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatarUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
