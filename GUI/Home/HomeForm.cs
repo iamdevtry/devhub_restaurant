@@ -1,5 +1,5 @@
 ﻿using Dev69Restaurant.GUI.TableFood;
-using Dev69Restaurant.Settings;
+using Dev69Restaurant.Infrastructure.Settings;
 using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;

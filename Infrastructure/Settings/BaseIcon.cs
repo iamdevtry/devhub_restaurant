@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dev69Restaurant.Settings
+namespace Dev69Restaurant.Infrastructure.Settings
 {
     public static class BaseIcon
     {
