@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Dev69Restaurant.Components.UserControls
+namespace Dev69Restaurant.Infrastructure.Components.UserControls
 {
     public partial class UCTableFood : UserControl
     {
@@ -20,7 +20,7 @@ namespace Dev69Restaurant.Components.UserControls
 
         private void UCTableFood_Click(object sender, EventArgs e)
         {
-            if(chbSelectTable.Checked == false)
+            if (chbSelectTable.Checked == false)
             {
                 chbSelectTable.Checked = true;
                 pnlineTableFood.Visible = true;

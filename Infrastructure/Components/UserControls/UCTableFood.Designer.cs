@@ -1,5 +1,5 @@
 ﻿
-namespace Dev69Restaurant.Components.UserControls
+namespace Dev69Restaurant.Infrastructure.Components.UserControls
 {
     partial class UCTableFood
     {
