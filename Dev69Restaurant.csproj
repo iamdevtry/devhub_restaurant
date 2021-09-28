@@ -65,6 +65,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\Infrastructure\DbFactory.cs" />
+    <Compile Include="DAL\Infrastructure\Disposable.cs" />
+    <Compile Include="DAL\Infrastructure\IDbFactory.cs" />
+    <Compile Include="DAL\Infrastructure\IRepository.cs" />
+    <Compile Include="DAL\Infrastructure\IUnitOfWork.cs" />
+    <Compile Include="DAL\Infrastructure\RepositoryBase.cs" />
+    <Compile Include="DAL\Infrastructure\UnitOfWork.cs" />
+    <Compile Include="DAL\Repositories\AreaRepository.cs" />
+    <Compile Include="DAL\Repositories\BillDetailRepository.cs" />
+    <Compile Include="DAL\Repositories\BillRepository.cs" />
+    <Compile Include="DAL\Repositories\CustomerCategoryRepository.cs" />
+    <Compile Include="DAL\Repositories\CustomerRepository.cs" />
+    <Compile Include="DAL\Repositories\DiscountRepository.cs" />
+    <Compile Include="DAL\Repositories\FoodCategoryRepository.cs" />
+    <Compile Include="DAL\Repositories\FoodRepository.cs" />
+    <Compile Include="DAL\Repositories\TableFoodRepository.cs" />
+    <Compile Include="DAL\Repositories\UserRepository.cs" />
+    <Compile Include="DAL\Repositories\VATRepository.cs" />
     <Compile Include="DTO\Abstract\Auditable.cs" />
     <Compile Include="DTO\Abstract\IAuditable.cs" />
     <Compile Include="DTO\Entities\Area.cs" />
@@ -229,9 +247,7 @@
   <ItemGroup>
     <None Include="Resources\unchecked_radio_button_48px.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DAL\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
