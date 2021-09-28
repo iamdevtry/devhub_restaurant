@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace Dev69Restaurant.DAL.Repositories
 {
-    public interface IAreaRepository : IRepository<Area>
+    public interface IFoodRepository : IRepository<Food>
     {
 
     }
-    public class AreaRepository : RepositoryBase<Area>, IAreaRepository
+    public class FoodRepository : RepositoryBase<Food>, IFoodRepository
     {
-        public AreaRepository(IDbFactory dbFactory) : base(dbFactory)
+        public FoodRepository(IDbFactory dbFactory) : base(dbFactory)
         {
         }
     }

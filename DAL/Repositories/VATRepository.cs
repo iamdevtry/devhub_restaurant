@@ -8,13 +8,14 @@ using System.Threading.Tasks;
 
 namespace Dev69Restaurant.DAL.Repositories
 {
-    public interface IAreaRepository : IRepository<Area>
+
+    public interface IVATRepository : IRepository<VAT>
     {
 
     }
-    public class AreaRepository : RepositoryBase<Area>, IAreaRepository
+    public class VATRepository : RepositoryBase<VAT>, IVATRepository
     {
-        public AreaRepository(IDbFactory dbFactory) : base(dbFactory)
+        public VATRepository(IDbFactory dbFactory) : base(dbFactory)
         {
         }
     }
