@@ -28,8 +28,8 @@
 -- Ex: DiscountService.cs
 - Declare 2 private variables:         
 
-private IDiscountRepository _discountRepository;
-private IUnitOfWork _unitOfWork;
+                                       private IDiscountRepository _discountRepository;
+                                       private IUnitOfWork _unitOfWork;
 
 - Config Constructor method:
                                        //Constructor
@@ -41,6 +41,7 @@ private IUnitOfWork _unitOfWork;
                                        }
 - Code your method:
 -EX:
+```
                                        //Add a new Discount 
                                        public Discount Add(Discount discount)
                                        {
@@ -56,3 +57,4 @@ private IUnitOfWork _unitOfWork;
                                        {
                                             return _discountRepository.GetAll();
                                        }
+```
