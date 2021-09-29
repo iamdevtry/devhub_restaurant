@@ -102,9 +102,13 @@
     <Compile Include="GUI\TableFood\TableFoodForm.Designer.cs">
       <DependentUpon>TableFoodForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202109271535513_InitialDb.cs" />
-    <Compile Include="Migrations\202109271535513_InitialDb.designer.cs">
-      <DependentUpon>202109271535513_InitialDb.cs</DependentUpon>
+    <Compile Include="Migrations\202109291137127_InitialDB.cs" />
+    <Compile Include="Migrations\202109291137127_InitialDB.designer.cs">
+      <DependentUpon>202109291137127_InitialDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109291152064_add_seed_data.cs" />
+    <Compile Include="Migrations\202109291152064_add_seed_data.designer.cs">
+      <DependentUpon>202109291152064_add_seed_data.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="RestaurantDbContext.cs" />
@@ -124,8 +128,11 @@
     <EmbeddedResource Include="GUI\TableFood\TableFoodForm.resx">
       <DependentUpon>TableFoodForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202109271535513_InitialDb.resx">
-      <DependentUpon>202109271535513_InitialDb.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202109291137127_InitialDB.resx">
+      <DependentUpon>202109291137127_InitialDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109291152064_add_seed_data.resx">
+      <DependentUpon>202109291152064_add_seed_data.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
