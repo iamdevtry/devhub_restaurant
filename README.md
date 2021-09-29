@@ -26,9 +26,13 @@
 ## How to use CRUD ?
 - Create new file in --DAL--Services
 -- Ex: DiscountService.cs
-- Declare 2 private variables:         private IDiscountRepository _discountRepository;
-                                       private IUnitOfWork _unitOfWork;
+- Declare 2 private variables:         
+
+private IDiscountRepository _discountRepository;
+private IUnitOfWork _unitOfWork;
+
 - Config Constructor method:
+                                       //Constructor
                                        public DiscountService()
                                        {
                                             var dbFactory = new DbFactory();
@@ -36,8 +40,9 @@
                                             _unitOfWork = new UnitOfWork(dbFactory);
                                        }
 - Code your method:
+-EX:
                                        //Add a new Discount 
---Ex:                                  public Discount Add(Discount discount)
+                                       public Discount Add(Discount discount)
                                        {
                                             Discount newDis = discount;
                                             _discountRepository.Add(newDis);
