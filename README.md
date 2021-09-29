@@ -4,7 +4,7 @@
 - Entity Framework
 - Guna UI Framework
 ## Project structure
-
+```
 --|DAL (Data Access Layer)
 --|--|Infrastructure (Contains base files that interact with the DB)
 --|--|Repositories
@@ -22,7 +22,7 @@
 
 --|Migrations (Contains changes when updating the database)
 --|Resources (Contains the application's resources)
-
+```
 ## How to use CRUD ?
 - Create new file in --DAL--Services
 -- Ex: DiscountService.cs
