@@ -178,6 +178,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="README.md" />
     <None Include="Resources\banner_LoginForm.jpg" />
   </ItemGroup>
   <ItemGroup>
