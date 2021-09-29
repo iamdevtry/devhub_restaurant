@@ -23,6 +23,14 @@
 --|Migrations (Contains changes when updating the database)
 --|Resources (Contains the application's resources)
 ```
+## Creat Database
+-- add connection string in App.config file
+``
+-- enable-migrations
+-- add-migration InitialDb
+-- update-database
+
+``
 ## How to use CRUD ?
 - Create new file in --DAL--Services
 -- Ex: DiscountService.cs
