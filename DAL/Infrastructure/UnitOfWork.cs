@@ -1,29 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Dev69Restaurant.DAL.Infrastructure
+﻿namespace Dev69Restaurant.DAL.Infrastructure
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private readonly IDbFactory _dbFactory;
-        private RestaurantDbContext _dbContext;
-
-        public UnitOfWork(IDbFactory dbFactory)
+        public RestaurantDbContext DataContext
         {
-            _dbFactory = dbFactory;
+            get;
+            set;
         }
 
-        public RestaurantDbContext DbContext
+        public UnitOfWork(DbFactory dbFactory)
         {
-            get { return _dbContext ?? (_dbContext = _dbFactory.Init()); }
+            DataContext = dbFactory.Init();
+        }
+
+        public UnitOfWork()
+        {
+            DataContext = new RestaurantDbContext();
         }
 
         public void Commit()
         {
-            _dbContext.SaveChanges();
+            DataContext.SaveChanges();
         }
     }
 }
