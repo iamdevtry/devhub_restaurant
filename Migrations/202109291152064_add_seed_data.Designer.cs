@@ -7,13 +7,13 @@ namespace Dev69Restaurant.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class InitialDb : IMigrationMetadata
+    public sealed partial class add_seed_data : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialDb));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(add_seed_data));
         
         string IMigrationMetadata.Id
         {
-            get { return "202109271535513_InitialDb"; }
+            get { return "202109291152064_add_seed_data"; }
         }
         
         string IMigrationMetadata.Source
