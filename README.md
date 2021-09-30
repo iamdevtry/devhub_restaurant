@@ -26,9 +26,9 @@
 ## Creat Database
 -- add connection string in App.config file
 ``
--- enable-migrations
--- add-migration InitialDb
--- update-database
+                                        enable-migrations
+                                        add-migration InitialDb
+                                        update-database
 
 ``
 ## How to use CRUD ?
