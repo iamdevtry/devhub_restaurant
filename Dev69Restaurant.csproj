@@ -122,6 +122,9 @@
     <Compile Include="GUI\TableFood\TableFoodForm.Designer.cs">
       <DependentUpon>TableFoodForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\Components\UserControls\UCToggleButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Migrations\202109291137127_InitialDB.cs" />
     <Compile Include="Migrations\202109291137127_InitialDB.designer.cs">
       <DependentUpon>202109291137127_InitialDB.cs</DependentUpon>

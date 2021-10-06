@@ -126,5 +126,16 @@ namespace Dev69Restaurant.GUI.Home
         }
         #endregion
 
+        private void tgbtnSwitchTheme_CheckedChanged(object sender, EventArgs e)
+        {
+            if (tgbtnSwitchTheme.Checked)
+            {
+                this.BackColor = Color.Black;
+            }
+            else
+            {
+                this.BackColor = BaseColor.BACK_COLOR_LIGHT;
+            }
+        }
     }
 }
