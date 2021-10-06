@@ -83,7 +83,6 @@
     <Compile Include="DAL\Repositories\TableFoodRepository.cs" />
     <Compile Include="DAL\Repositories\UserRepository.cs" />
     <Compile Include="DAL\Repositories\VATRepository.cs" />
-    <Compile Include="DAL\Services\DiscountService.cs" />
     <Compile Include="DTO\Abstract\Auditable.cs" />
     <Compile Include="DTO\Abstract\IAuditable.cs" />
     <Compile Include="DTO\Entities\Area.cs" />
@@ -265,7 +264,9 @@
   <ItemGroup>
     <None Include="Resources\unchecked_radio_button_48px.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="DAL\Services\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
