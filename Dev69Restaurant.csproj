@@ -94,8 +94,10 @@
     <Compile Include="DTO\Entities\Discount.cs" />
     <Compile Include="DTO\Entities\FoodCategory.cs" />
     <Compile Include="DTO\Entities\Food.cs" />
+    <Compile Include="DTO\Entities\Role.cs" />
     <Compile Include="DTO\Entities\TableFood.cs" />
     <Compile Include="DTO\Entities\User.cs" />
+    <Compile Include="DTO\Entities\UserRole.cs" />
     <Compile Include="DTO\Entities\VAT.cs" />
     <Compile Include="Infrastructure\Components\UserControls\UCTableFood.cs">
       <SubType>UserControl</SubType>
@@ -129,6 +131,10 @@
     <Compile Include="Migrations\202109291152064_add_seed_data.designer.cs">
       <DependentUpon>202109291152064_add_seed_data.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202110061433493_add-role-of-user.cs" />
+    <Compile Include="Migrations\202110061433493_add-role-of-user.designer.cs">
+      <DependentUpon>202110061433493_add-role-of-user.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="RestaurantDbContext.cs" />
     <Compile Include="Program.cs" />
@@ -152,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202109291152064_add_seed_data.resx">
       <DependentUpon>202109291152064_add_seed_data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110061433493_add-role-of-user.resx">
+      <DependentUpon>202110061433493_add-role-of-user.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
