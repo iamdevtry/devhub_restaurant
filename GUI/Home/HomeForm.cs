@@ -1,4 +1,5 @@
-﻿using Dev69Restaurant.GUI.TableFood;
+﻿using Dev69Restaurant.GUI.Manager;
+using Dev69Restaurant.GUI.TableFood;
 using Dev69Restaurant.Infrastructure.Settings;
 using Guna.UI2.WinForms;
 using System;
@@ -70,6 +71,26 @@ namespace Dev69Restaurant.GUI.Home
             ActivateButton(sender,BaseIcon.ABOUT_ACTIVE);
         }
 
+        private void btnManageUser_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, BaseIcon.USER_GROUP_ACTIVE);
+            ManagerForm managerForm = new ManagerForm();
+            managerForm.StartPosition = FormStartPosition.CenterScreen;
+            managerForm.Show();
+        }
+
+        private void tgbtnSwitchTheme_CheckedChanged(object sender, EventArgs e)
+        {
+            if (tgbtnSwitchTheme.Checked)
+            {
+                this.BackColor = Color.Black;
+            }
+            else
+            {
+                this.BackColor = BaseColor.BACK_COLOR_LIGHT;
+            }
+        }
+
         #endregion
 
         #region methods
@@ -125,17 +146,5 @@ namespace Dev69Restaurant.GUI.Home
             }
         }
         #endregion
-
-        private void tgbtnSwitchTheme_CheckedChanged(object sender, EventArgs e)
-        {
-            if (tgbtnSwitchTheme.Checked)
-            {
-                this.BackColor = Color.Black;
-            }
-            else
-            {
-                this.BackColor = BaseColor.BACK_COLOR_LIGHT;
-            }
-        }
     }
 }
