@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -40,5 +41,7 @@ namespace Dev69Restaurant.DTO.Entities
         public string Email { get; set; }
 
         public bool Status { get; set; }
+
+        public virtual IEnumerable<UserRole> UserRoles{ set; get; }
     }
 }
