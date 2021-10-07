@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dev69Restaurant.GUI.User;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,17 @@ namespace Dev69Restaurant.GUI.Manager
         public ManagerForm()
         {
             InitializeComponent();
+        }
+
+        private void btnManageStaff_Click(object sender, EventArgs e)
+        {
+            UserForm userForm = new UserForm();
+            userForm.TopLevel = false;
+            userForm.AutoScroll = true;
+            //childForm.FormBorderStyle = FormBorderStyle.None;
+            userForm.Dock = DockStyle.Fill;
+            pnMain.Controls.Add(userForm);
+            userForm.Show();
         }
     }
 }
