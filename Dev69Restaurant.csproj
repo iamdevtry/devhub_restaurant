@@ -98,6 +98,18 @@
     <Compile Include="DTO\Entities\User.cs" />
     <Compile Include="DTO\Entities\UserRole.cs" />
     <Compile Include="DTO\Entities\VAT.cs" />
+    <Compile Include="GUI\Manager\ManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Manager\ManagerForm.Designer.cs">
+      <DependentUpon>ManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\User\UserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\User\UserForm.Designer.cs">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Infrastructure\Components\UserControls\UCTableFood.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -122,6 +134,9 @@
     <Compile Include="GUI\TableFood\TableFoodForm.Designer.cs">
       <DependentUpon>TableFoodForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\Components\UserControls\UCToggleButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Migrations\202109291137127_InitialDB.cs" />
     <Compile Include="Migrations\202109291137127_InitialDB.designer.cs">
       <DependentUpon>202109291137127_InitialDB.cs</DependentUpon>
@@ -140,6 +155,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Infrastructure\Settings\BaseColor.cs" />
     <Compile Include="Infrastructure\Settings\BaseIcon.cs" />
+    <EmbeddedResource Include="GUI\Manager\ManagerForm.resx">
+      <DependentUpon>ManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\User\UserForm.resx">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Infrastructure\Components\UserControls\UCTableFood.resx">
       <DependentUpon>UCTableFood.cs</DependentUpon>
     </EmbeddedResource>
@@ -266,6 +287,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DAL\Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_group_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_group_hover_48px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

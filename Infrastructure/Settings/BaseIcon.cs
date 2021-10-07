@@ -26,5 +26,8 @@ namespace Dev69Restaurant.Infrastructure.Settings
         public static readonly string ABOUT = @"..\..\Resources\info_48px.png";
         public static readonly string ABOUT_ACTIVE = @"..\..\Resources\info_hover_48px.png";
 
+        public static readonly string USER_GROUP = @"..\..\Resources\user_group_48px.png";
+        public static readonly string USER_GROUP_ACTIVE = @"..\..\Resources\user_group_hover_48px.png";
+
     }
 }
