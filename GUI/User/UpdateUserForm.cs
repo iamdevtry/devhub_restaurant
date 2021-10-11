@@ -42,9 +42,6 @@ namespace Dev69Restaurant.GUI.User
             txtPassword.Text = user.Password;
             txtDisplayName.Text= user.DisplayName;
             txtFullName.Text= user.FullName;
-            txtPhone.Text= user.Phone;
-            txtEmail.Text= user.Email;
-            txtAddress.Text= user.Address;
         }
         #endregion
 
@@ -57,9 +54,6 @@ namespace Dev69Restaurant.GUI.User
                 user.Password = txtPassword.Text;
                 user.DisplayName = txtDisplayName.Text;
                 user.FullName = txtFullName.Text;
-                user.Phone = txtPhone.Text;
-                user.Email = txtEmail.Text;
-                user.Address = txtAddress.Text;
                 user.Status = true;
 
                 _userService.Update(user);

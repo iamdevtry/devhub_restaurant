@@ -83,7 +83,6 @@
     <Compile Include="DAL\Repositories\TableFoodRepository.cs" />
     <Compile Include="DAL\Repositories\UserRepository.cs" />
     <Compile Include="DAL\Repositories\VATRepository.cs" />
-    <Compile Include="DAL\Services\Class.cs" />
     <Compile Include="DAL\Services\UserService.cs" />
     <Compile Include="DTO\Abstract\Auditable.cs" />
     <Compile Include="DTO\Abstract\IAuditable.cs" />

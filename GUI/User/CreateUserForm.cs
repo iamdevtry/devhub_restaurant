@@ -34,14 +34,24 @@ namespace Dev69Restaurant.GUI.User
                 user.Password = txtPassword.Text;
                 user.DisplayName = txtDisplayName.Text;
                 user.FullName = txtFullName.Text;
+                user.BirthDay = Convert.ToDateTime(dtpBirthDay.Value.ToShortDateString());
                 user.Phone = txtPhone.Text;
                 user.Email = txtEmail.Text;
                 user.Address = txtAddress.Text;
                 user.Status = true;
 
-                _userService.Add(user);
-                MessageBox.Show("Thêm mới người thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ResetFields();
+                if (_userService.CheckExist(user.Username))
+                {
+                    _userService.Add(user);
+                    MessageBox.Show("Thêm mới người thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ResetFields();
+                }
+                else
+                {
+                    MessageBox.Show("Tên đăng nhập đã tồn tại!", "Thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+
             }
             catch
             {

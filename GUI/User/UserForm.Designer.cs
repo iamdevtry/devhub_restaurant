@@ -39,11 +39,10 @@ namespace Dev69Restaurant.GUI.User
             this.btnUpdateUser = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddUser = new Guna.UI2.WinForms.Guna2Button();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.gunaShadowPanel1 = new Guna.UI.WinForms.GunaShadowPanel();
             this.dgvListUser = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.gnElipseDgv = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.gnShadowForm2 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DisplayName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,6 +51,8 @@ namespace Dev69Restaurant.GUI.User
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gnElipseDgv = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.gnShadowForm2 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.pnHeader.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -63,6 +64,7 @@ namespace Dev69Restaurant.GUI.User
             // 
             this.pnHeader.Controls.Add(this.panel9);
             this.pnHeader.Controls.Add(this.txtSearch);
+            this.pnHeader.Controls.Add(this.btnSearch);
             this.pnHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnHeader.Location = new System.Drawing.Point(0, 0);
             this.pnHeader.Name = "pnHeader";
@@ -88,12 +90,13 @@ namespace Dev69Restaurant.GUI.User
             this.btnDeleteUser.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnDeleteUser.ForeColor = System.Drawing.Color.White;
             this.btnDeleteUser.HoverState.Parent = this.btnDeleteUser;
-            this.btnDeleteUser.Location = new System.Drawing.Point(358, 26);
+            this.btnDeleteUser.Location = new System.Drawing.Point(358, 28);
             this.btnDeleteUser.Name = "btnDeleteUser";
             this.btnDeleteUser.ShadowDecoration.Parent = this.btnDeleteUser;
             this.btnDeleteUser.Size = new System.Drawing.Size(138, 45);
             this.btnDeleteUser.TabIndex = 0;
             this.btnDeleteUser.Text = "Xóa";
+            this.btnDeleteUser.Click += new System.EventHandler(this.btnDeleteUser_Click);
             // 
             // btnUpdateUser
             // 
@@ -103,7 +106,7 @@ namespace Dev69Restaurant.GUI.User
             this.btnUpdateUser.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnUpdateUser.ForeColor = System.Drawing.Color.White;
             this.btnUpdateUser.HoverState.Parent = this.btnUpdateUser;
-            this.btnUpdateUser.Location = new System.Drawing.Point(195, 26);
+            this.btnUpdateUser.Location = new System.Drawing.Point(195, 28);
             this.btnUpdateUser.Name = "btnUpdateUser";
             this.btnUpdateUser.ShadowDecoration.Parent = this.btnUpdateUser;
             this.btnUpdateUser.Size = new System.Drawing.Size(138, 45);
@@ -119,7 +122,7 @@ namespace Dev69Restaurant.GUI.User
             this.btnAddUser.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnAddUser.ForeColor = System.Drawing.Color.White;
             this.btnAddUser.HoverState.Parent = this.btnAddUser;
-            this.btnAddUser.Location = new System.Drawing.Point(32, 26);
+            this.btnAddUser.Location = new System.Drawing.Point(32, 28);
             this.btnAddUser.Name = "btnAddUser";
             this.btnAddUser.ShadowDecoration.Parent = this.btnAddUser;
             this.btnAddUser.Size = new System.Drawing.Size(138, 45);
@@ -149,8 +152,25 @@ namespace Dev69Restaurant.GUI.User
             this.txtSearch.PlaceholderText = "Search everything...";
             this.txtSearch.SelectedText = "";
             this.txtSearch.ShadowDecoration.Parent = this.txtSearch;
-            this.txtSearch.Size = new System.Drawing.Size(623, 44);
+            this.txtSearch.Size = new System.Drawing.Size(481, 44);
             this.txtSearch.TabIndex = 0;
+            this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BorderRadius = 8;
+            this.btnSearch.CheckedState.Parent = this.btnSearch;
+            this.btnSearch.CustomImages.Parent = this.btnSearch;
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.HoverState.Parent = this.btnSearch;
+            this.btnSearch.Location = new System.Drawing.Point(523, 28);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.ShadowDecoration.Parent = this.btnSearch;
+            this.btnSearch.Size = new System.Drawing.Size(138, 45);
+            this.btnSearch.TabIndex = 0;
+            this.btnSearch.Text = "Tìm kiếm";
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // panel1
             // 
@@ -249,10 +269,6 @@ namespace Dev69Restaurant.GUI.User
             this.dgvListUser.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(185)))), ((int)(((byte)(246)))));
             this.dgvListUser.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
-            // gnElipseDgv
-            // 
-            this.gnElipseDgv.BorderRadius = 8;
-            // 
             // STT
             // 
             this.STT.FillWeight = 20F;
@@ -316,6 +332,10 @@ namespace Dev69Restaurant.GUI.User
             this.Status.Name = "Status";
             this.Status.ReadOnly = true;
             // 
+            // gnElipseDgv
+            // 
+            this.gnElipseDgv.BorderRadius = 8;
+            // 
             // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -357,5 +377,6 @@ namespace Dev69Restaurant.GUI.User
         private System.Windows.Forms.DataGridViewTextBoxColumn Address;
         private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private Guna.UI2.WinForms.Guna2Button btnSearch;
     }
 }

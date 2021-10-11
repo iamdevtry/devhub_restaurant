@@ -32,29 +32,25 @@ namespace Dev69Restaurant.GUI.User
             this.components = new System.ComponentModel.Container();
             this.gnShadowForm = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.btnUpdateUser = new Guna.UI.WinForms.GunaGradientButton();
-            this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.lblPassword = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.txtPhone = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtAddress = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtFullName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtDisplayName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.pnTop = new System.Windows.Forms.Panel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.txtBirthDay = new Guna.UI2.WinForms.Guna2TextBox();
             this.gunaGradient2Panel1 = new Guna.UI.WinForms.GunaGradient2Panel();
             this.label8 = new System.Windows.Forms.Label();
+            this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cmbRole = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtDisplayName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cmbStatus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.pnTop.SuspendLayout();
             this.gunaGradient2Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -89,81 +85,41 @@ namespace Dev69Restaurant.GUI.User
             this.btnUpdateUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnUpdateUser.Click += new System.EventHandler(this.btnUpdateUser_Click);
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(671, 529);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(51, 23);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Email";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(671, 403);
+            this.label5.Location = new System.Drawing.Point(670, 444);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 23);
+            this.label5.Size = new System.Drawing.Size(87, 23);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Địa chỉ";
+            this.label5.Text = "Trạng thái";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(671, 275);
+            this.label3.Location = new System.Drawing.Point(669, 215);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 23);
             this.label3.TabIndex = 8;
             this.label3.Text = "Họ và tên";
             // 
-            // lblPassword
-            // 
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(672, 158);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(84, 23);
-            this.lblPassword.TabIndex = 8;
-            this.lblPassword.Text = "Mật khẩu";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(207, 529);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(111, 23);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Số điện thoại";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(207, 403);
+            this.label4.Location = new System.Drawing.Point(206, 444);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 23);
+            this.label4.Size = new System.Drawing.Size(129, 23);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Ngày sinh";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(207, 275);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 23);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Tên hiển thị";
+            this.label4.Text = "Quyền sử dụng";
             // 
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(208, 158);
+            this.lblUsername.Location = new System.Drawing.Point(205, 215);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(124, 23);
             this.lblUsername.TabIndex = 9;
@@ -178,32 +134,6 @@ namespace Dev69Restaurant.GUI.User
             this.label1.Size = new System.Drawing.Size(112, 28);
             this.label1.TabIndex = 10;
             this.label1.Text = "XIN CHÀO!";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.BorderRadius = 8;
-            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEmail.DefaultText = "";
-            this.txtEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEmail.DisabledState.Parent = this.txtEmail;
-            this.txtEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.FocusedState.Parent = this.txtEmail;
-            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.ForeColor = System.Drawing.Color.Black;
-            this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.HoverState.Parent = this.txtEmail;
-            this.txtEmail.Location = new System.Drawing.Point(676, 576);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.PasswordChar = '\0';
-            this.txtEmail.PlaceholderText = "Nhập Email";
-            this.txtEmail.SelectedText = "";
-            this.txtEmail.ShadowDecoration.Parent = this.txtEmail;
-            this.txtEmail.Size = new System.Drawing.Size(394, 42);
-            this.txtEmail.TabIndex = 7;
             // 
             // guna2ControlBox2
             // 
@@ -230,58 +160,6 @@ namespace Dev69Restaurant.GUI.User
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox1.TabIndex = 0;
             // 
-            // txtPhone
-            // 
-            this.txtPhone.BorderRadius = 8;
-            this.txtPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPhone.DefaultText = "";
-            this.txtPhone.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPhone.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPhone.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPhone.DisabledState.Parent = this.txtPhone;
-            this.txtPhone.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPhone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPhone.FocusedState.Parent = this.txtPhone;
-            this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhone.ForeColor = System.Drawing.Color.Black;
-            this.txtPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPhone.HoverState.Parent = this.txtPhone;
-            this.txtPhone.Location = new System.Drawing.Point(210, 576);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.PasswordChar = '\0';
-            this.txtPhone.PlaceholderText = "Nhập số điện thoại";
-            this.txtPhone.SelectedText = "";
-            this.txtPhone.ShadowDecoration.Parent = this.txtPhone;
-            this.txtPhone.Size = new System.Drawing.Size(394, 42);
-            this.txtPhone.TabIndex = 7;
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.BorderRadius = 8;
-            this.txtAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtAddress.DefaultText = "";
-            this.txtAddress.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtAddress.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtAddress.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAddress.DisabledState.Parent = this.txtAddress;
-            this.txtAddress.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAddress.FocusedState.Parent = this.txtAddress;
-            this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress.ForeColor = System.Drawing.Color.Black;
-            this.txtAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAddress.HoverState.Parent = this.txtAddress;
-            this.txtAddress.Location = new System.Drawing.Point(676, 450);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.PasswordChar = '\0';
-            this.txtAddress.PlaceholderText = "Nhập địa chỉ";
-            this.txtAddress.SelectedText = "";
-            this.txtAddress.ShadowDecoration.Parent = this.txtAddress;
-            this.txtAddress.Size = new System.Drawing.Size(394, 42);
-            this.txtAddress.TabIndex = 7;
-            // 
             // txtFullName
             // 
             this.txtFullName.BorderRadius = 8;
@@ -298,7 +176,7 @@ namespace Dev69Restaurant.GUI.User
             this.txtFullName.ForeColor = System.Drawing.Color.Black;
             this.txtFullName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFullName.HoverState.Parent = this.txtFullName;
-            this.txtFullName.Location = new System.Drawing.Point(676, 322);
+            this.txtFullName.Location = new System.Drawing.Point(672, 242);
             this.txtFullName.Margin = new System.Windows.Forms.Padding(4);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.PasswordChar = '\0';
@@ -307,59 +185,6 @@ namespace Dev69Restaurant.GUI.User
             this.txtFullName.ShadowDecoration.Parent = this.txtFullName;
             this.txtFullName.Size = new System.Drawing.Size(394, 42);
             this.txtFullName.TabIndex = 7;
-            // 
-            // txtDisplayName
-            // 
-            this.txtDisplayName.BorderRadius = 8;
-            this.txtDisplayName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDisplayName.DefaultText = "";
-            this.txtDisplayName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtDisplayName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtDisplayName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDisplayName.DisabledState.Parent = this.txtDisplayName;
-            this.txtDisplayName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDisplayName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDisplayName.FocusedState.Parent = this.txtDisplayName;
-            this.txtDisplayName.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDisplayName.ForeColor = System.Drawing.Color.Black;
-            this.txtDisplayName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDisplayName.HoverState.Parent = this.txtDisplayName;
-            this.txtDisplayName.Location = new System.Drawing.Point(210, 322);
-            this.txtDisplayName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtDisplayName.Name = "txtDisplayName";
-            this.txtDisplayName.PasswordChar = '\0';
-            this.txtDisplayName.PlaceholderText = "Nhập tên hiển thị";
-            this.txtDisplayName.SelectedText = "";
-            this.txtDisplayName.ShadowDecoration.Parent = this.txtDisplayName;
-            this.txtDisplayName.Size = new System.Drawing.Size(394, 42);
-            this.txtDisplayName.TabIndex = 7;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.BorderRadius = 8;
-            this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPassword.DefaultText = "";
-            this.txtPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPassword.DisabledState.Parent = this.txtPassword;
-            this.txtPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassword.FocusedState.Parent = this.txtPassword;
-            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.ForeColor = System.Drawing.Color.Black;
-            this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassword.HoverState.Parent = this.txtPassword;
-            this.txtPassword.Location = new System.Drawing.Point(675, 205);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '\0';
-            this.txtPassword.PlaceholderText = "Nhập mật khẩu";
-            this.txtPassword.SelectedText = "";
-            this.txtPassword.ShadowDecoration.Parent = this.txtPassword;
-            this.txtPassword.Size = new System.Drawing.Size(394, 42);
-            this.txtPassword.TabIndex = 6;
-            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // txtUsername
             // 
@@ -377,11 +202,12 @@ namespace Dev69Restaurant.GUI.User
             this.txtUsername.ForeColor = System.Drawing.Color.Black;
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUsername.HoverState.Parent = this.txtUsername;
-            this.txtUsername.Location = new System.Drawing.Point(211, 205);
+            this.txtUsername.Location = new System.Drawing.Point(210, 242);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.PlaceholderText = "Nhập tên tài khoản";
+            this.txtUsername.ReadOnly = true;
             this.txtUsername.SelectedText = "";
             this.txtUsername.ShadowDecoration.Parent = this.txtUsername;
             this.txtUsername.Size = new System.Drawing.Size(394, 42);
@@ -401,50 +227,20 @@ namespace Dev69Restaurant.GUI.User
             // 
             this.guna2Elipse1.BorderRadius = 3;
             // 
-            // txtBirthDay
-            // 
-            this.txtBirthDay.BorderRadius = 8;
-            this.txtBirthDay.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBirthDay.DefaultText = "";
-            this.txtBirthDay.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtBirthDay.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtBirthDay.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBirthDay.DisabledState.Parent = this.txtBirthDay;
-            this.txtBirthDay.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBirthDay.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBirthDay.FocusedState.Parent = this.txtBirthDay;
-            this.txtBirthDay.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBirthDay.ForeColor = System.Drawing.Color.Black;
-            this.txtBirthDay.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBirthDay.HoverState.Parent = this.txtBirthDay;
-            this.txtBirthDay.Location = new System.Drawing.Point(210, 450);
-            this.txtBirthDay.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBirthDay.Name = "txtBirthDay";
-            this.txtBirthDay.PasswordChar = '\0';
-            this.txtBirthDay.PlaceholderText = "Nhập ngày sinh";
-            this.txtBirthDay.SelectedText = "";
-            this.txtBirthDay.ShadowDecoration.Parent = this.txtBirthDay;
-            this.txtBirthDay.Size = new System.Drawing.Size(394, 42);
-            this.txtBirthDay.TabIndex = 7;
-            // 
             // gunaGradient2Panel1
             // 
             this.gunaGradient2Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaGradient2Panel1.Controls.Add(this.cmbStatus);
+            this.gunaGradient2Panel1.Controls.Add(this.cmbRole);
             this.gunaGradient2Panel1.Controls.Add(this.label8);
             this.gunaGradient2Panel1.Controls.Add(this.btnUpdateUser);
-            this.gunaGradient2Panel1.Controls.Add(this.label7);
             this.gunaGradient2Panel1.Controls.Add(this.label5);
             this.gunaGradient2Panel1.Controls.Add(this.label3);
-            this.gunaGradient2Panel1.Controls.Add(this.lblPassword);
-            this.gunaGradient2Panel1.Controls.Add(this.label6);
+            this.gunaGradient2Panel1.Controls.Add(this.label9);
             this.gunaGradient2Panel1.Controls.Add(this.label4);
             this.gunaGradient2Panel1.Controls.Add(this.label2);
             this.gunaGradient2Panel1.Controls.Add(this.lblUsername);
             this.gunaGradient2Panel1.Controls.Add(this.label1);
-            this.gunaGradient2Panel1.Controls.Add(this.txtEmail);
-            this.gunaGradient2Panel1.Controls.Add(this.txtPhone);
-            this.gunaGradient2Panel1.Controls.Add(this.txtAddress);
-            this.gunaGradient2Panel1.Controls.Add(this.txtBirthDay);
             this.gunaGradient2Panel1.Controls.Add(this.txtFullName);
             this.gunaGradient2Panel1.Controls.Add(this.txtDisplayName);
             this.gunaGradient2Panel1.Controls.Add(this.txtPassword);
@@ -469,6 +265,119 @@ namespace Dev69Restaurant.GUI.User
             this.label8.TabIndex = 15;
             this.label8.Text = "Chỉnh sửa tài khoản";
             // 
+            // txtPassword
+            // 
+            this.txtPassword.BorderRadius = 8;
+            this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPassword.DefaultText = "";
+            this.txtPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPassword.DisabledState.Parent = this.txtPassword;
+            this.txtPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPassword.FocusedState.Parent = this.txtPassword;
+            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.ForeColor = System.Drawing.Color.Black;
+            this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPassword.HoverState.Parent = this.txtPassword;
+            this.txtPassword.Location = new System.Drawing.Point(672, 359);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '\0';
+            this.txtPassword.PlaceholderText = "Nhập mật khẩu";
+            this.txtPassword.SelectedText = "";
+            this.txtPassword.ShadowDecoration.Parent = this.txtPassword;
+            this.txtPassword.Size = new System.Drawing.Size(394, 42);
+            this.txtPassword.TabIndex = 6;
+            this.txtPassword.UseSystemPasswordChar = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(670, 332);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(84, 23);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "Mật khẩu";
+            // 
+            // cmbRole
+            // 
+            this.cmbRole.BackColor = System.Drawing.Color.Transparent;
+            this.cmbRole.BorderRadius = 8;
+            this.cmbRole.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRole.FocusedColor = System.Drawing.Color.Empty;
+            this.cmbRole.FocusedState.Parent = this.cmbRole;
+            this.cmbRole.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbRole.FormattingEnabled = true;
+            this.cmbRole.HoverState.Parent = this.cmbRole;
+            this.cmbRole.ItemHeight = 30;
+            this.cmbRole.ItemsAppearance.Parent = this.cmbRole;
+            this.cmbRole.Location = new System.Drawing.Point(210, 470);
+            this.cmbRole.Name = "cmbRole";
+            this.cmbRole.ShadowDecoration.Parent = this.cmbRole;
+            this.cmbRole.Size = new System.Drawing.Size(393, 36);
+            this.cmbRole.TabIndex = 16;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(206, 332);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(99, 23);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Tên hiển thị";
+            // 
+            // txtDisplayName
+            // 
+            this.txtDisplayName.BorderRadius = 8;
+            this.txtDisplayName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDisplayName.DefaultText = "";
+            this.txtDisplayName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtDisplayName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtDisplayName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDisplayName.DisabledState.Parent = this.txtDisplayName;
+            this.txtDisplayName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDisplayName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDisplayName.FocusedState.Parent = this.txtDisplayName;
+            this.txtDisplayName.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDisplayName.ForeColor = System.Drawing.Color.Black;
+            this.txtDisplayName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDisplayName.HoverState.Parent = this.txtDisplayName;
+            this.txtDisplayName.Location = new System.Drawing.Point(209, 359);
+            this.txtDisplayName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDisplayName.Name = "txtDisplayName";
+            this.txtDisplayName.PasswordChar = '\0';
+            this.txtDisplayName.PlaceholderText = "Nhập tên hiển thị";
+            this.txtDisplayName.SelectedText = "";
+            this.txtDisplayName.ShadowDecoration.Parent = this.txtDisplayName;
+            this.txtDisplayName.Size = new System.Drawing.Size(394, 42);
+            this.txtDisplayName.TabIndex = 7;
+            // 
+            // cmbStatus
+            // 
+            this.cmbStatus.BackColor = System.Drawing.Color.Transparent;
+            this.cmbStatus.BorderRadius = 8;
+            this.cmbStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbStatus.FocusedColor = System.Drawing.Color.Empty;
+            this.cmbStatus.FocusedState.Parent = this.cmbStatus;
+            this.cmbStatus.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbStatus.FormattingEnabled = true;
+            this.cmbStatus.HoverState.Parent = this.cmbStatus;
+            this.cmbStatus.ItemHeight = 30;
+            this.cmbStatus.ItemsAppearance.Parent = this.cmbStatus;
+            this.cmbStatus.Location = new System.Drawing.Point(674, 470);
+            this.cmbStatus.Name = "cmbStatus";
+            this.cmbStatus.ShadowDecoration.Parent = this.cmbStatus;
+            this.cmbStatus.Size = new System.Drawing.Size(393, 36);
+            this.cmbStatus.TabIndex = 16;
+            // 
             // UpdateUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -489,28 +398,24 @@ namespace Dev69Restaurant.GUI.User
 
         private Guna.UI2.WinForms.Guna2ShadowForm gnShadowForm;
         private Guna.UI.WinForms.GunaGradientButton btnUpdateUser;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2TextBox txtEmail;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
-        private Guna.UI2.WinForms.Guna2TextBox txtPhone;
-        private Guna.UI2.WinForms.Guna2TextBox txtAddress;
         private Guna.UI2.WinForms.Guna2TextBox txtFullName;
-        private Guna.UI2.WinForms.Guna2TextBox txtDisplayName;
-        private Guna.UI2.WinForms.Guna2TextBox txtPassword;
         private Guna.UI2.WinForms.Guna2TextBox txtUsername;
         private System.Windows.Forms.Panel pnTop;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private Guna.UI2.WinForms.Guna2TextBox txtBirthDay;
         private Guna.UI.WinForms.GunaGradient2Panel gunaGradient2Panel1;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private Guna.UI2.WinForms.Guna2TextBox txtPassword;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbStatus;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbRole;
+        private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2TextBox txtDisplayName;
     }
 }

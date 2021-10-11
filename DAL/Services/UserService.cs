@@ -37,10 +37,29 @@ namespace Dev69Restaurant.DAL.Services
             return _userRepository.GetAll();
         }
 
+        //Get all users 
+        public IEnumerable<User> GetAll(string keyword)
+        {
+            if (!string.IsNullOrEmpty(keyword))
+                return _userRepository.GetMulti(x => x.FullName.Contains(keyword) || x.Username.Contains(keyword));
+            else
+                return _userRepository.GetAll();
+        }
+
         //Get info user
         public User GetInfo(User user)
         {
             return _userRepository.GetSingleByCondition(x=>x.Username==user.Username);
+        }
+
+        //Get info user
+        public void Delete(string username)
+        {
+            User user = new User();
+            user = _userRepository.GetSingleByCondition(x=>x.Username==username);
+
+            _userRepository.Delete(user);
+            _unitOfWork.Commit();
         }
 
         //Update user
@@ -51,14 +70,25 @@ namespace Dev69Restaurant.DAL.Services
             currentUser.DisplayName = user.DisplayName;
             currentUser.FullName = user.FullName;
             currentUser.Password = user.Password;
-            currentUser.Address = user.Address;
-            currentUser.Phone = user.Phone;
-            currentUser.Email = user.Email;
             currentUser.Status = user.Status;
 
 
             _userRepository.Update(currentUser);
             _unitOfWork.Commit();
+        }
+
+        //Check username exist
+        public bool CheckExist(string username)
+        {
+            var result = _userRepository.GetSingleByCondition(x => x.Username == username);
+            if (result == null)
+            {
+                return true;
+            }
+            else
+            {
+                return false; 
+            }
         }
     }
 }

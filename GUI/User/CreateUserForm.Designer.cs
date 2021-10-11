@@ -45,7 +45,6 @@ namespace Dev69Restaurant.GUI.User
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPhone = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtAddress = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtBirthDay = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtFullName = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtDisplayName = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
@@ -56,6 +55,7 @@ namespace Dev69Restaurant.GUI.User
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.gnShadowForm = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.gunaDragControl = new Guna.UI.WinForms.GunaDragControl(this.components);
+            this.dtpBirthDay = new Guna.UI.WinForms.GunaDateTimePicker();
             this.gunaGradient2Panel1.SuspendLayout();
             this.pnTop.SuspendLayout();
             this.SuspendLayout();
@@ -63,6 +63,7 @@ namespace Dev69Restaurant.GUI.User
             // gunaGradient2Panel1
             // 
             this.gunaGradient2Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaGradient2Panel1.Controls.Add(this.dtpBirthDay);
             this.gunaGradient2Panel1.Controls.Add(this.lblWelcome);
             this.gunaGradient2Panel1.Controls.Add(this.btnRegisterUser);
             this.gunaGradient2Panel1.Controls.Add(this.label7);
@@ -77,7 +78,6 @@ namespace Dev69Restaurant.GUI.User
             this.gunaGradient2Panel1.Controls.Add(this.txtEmail);
             this.gunaGradient2Panel1.Controls.Add(this.txtPhone);
             this.gunaGradient2Panel1.Controls.Add(this.txtAddress);
-            this.gunaGradient2Panel1.Controls.Add(this.txtBirthDay);
             this.gunaGradient2Panel1.Controls.Add(this.txtFullName);
             this.gunaGradient2Panel1.Controls.Add(this.txtDisplayName);
             this.gunaGradient2Panel1.Controls.Add(this.txtPassword);
@@ -299,32 +299,6 @@ namespace Dev69Restaurant.GUI.User
             this.txtAddress.Size = new System.Drawing.Size(394, 42);
             this.txtAddress.TabIndex = 7;
             // 
-            // txtBirthDay
-            // 
-            this.txtBirthDay.BorderRadius = 8;
-            this.txtBirthDay.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBirthDay.DefaultText = "";
-            this.txtBirthDay.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtBirthDay.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtBirthDay.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBirthDay.DisabledState.Parent = this.txtBirthDay;
-            this.txtBirthDay.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBirthDay.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBirthDay.FocusedState.Parent = this.txtBirthDay;
-            this.txtBirthDay.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBirthDay.ForeColor = System.Drawing.Color.Black;
-            this.txtBirthDay.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBirthDay.HoverState.Parent = this.txtBirthDay;
-            this.txtBirthDay.Location = new System.Drawing.Point(210, 450);
-            this.txtBirthDay.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBirthDay.Name = "txtBirthDay";
-            this.txtBirthDay.PasswordChar = '\0';
-            this.txtBirthDay.PlaceholderText = "Nhập ngày sinh";
-            this.txtBirthDay.SelectedText = "";
-            this.txtBirthDay.ShadowDecoration.Parent = this.txtBirthDay;
-            this.txtBirthDay.Size = new System.Drawing.Size(394, 42);
-            this.txtBirthDay.TabIndex = 7;
-            // 
             // txtFullName
             // 
             this.txtFullName.BorderRadius = 8;
@@ -474,6 +448,30 @@ namespace Dev69Restaurant.GUI.User
             // 
             this.gunaDragControl.TargetControl = this.pnTop;
             // 
+            // dtpBirthDay
+            // 
+            this.dtpBirthDay.BaseColor = System.Drawing.Color.White;
+            this.dtpBirthDay.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.dtpBirthDay.BorderSize = 1;
+            this.dtpBirthDay.CustomFormat = null;
+            this.dtpBirthDay.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dtpBirthDay.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.dtpBirthDay.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpBirthDay.ForeColor = System.Drawing.Color.Black;
+            this.dtpBirthDay.Location = new System.Drawing.Point(212, 450);
+            this.dtpBirthDay.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpBirthDay.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpBirthDay.Name = "dtpBirthDay";
+            this.dtpBirthDay.OnHoverBaseColor = System.Drawing.Color.White;
+            this.dtpBirthDay.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.dtpBirthDay.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.dtpBirthDay.OnPressedColor = System.Drawing.Color.Black;
+            this.dtpBirthDay.Radius = 8;
+            this.dtpBirthDay.Size = new System.Drawing.Size(392, 42);
+            this.dtpBirthDay.TabIndex = 16;
+            this.dtpBirthDay.Text = "Monday, October 11, 2021";
+            this.dtpBirthDay.Value = new System.DateTime(2021, 10, 11, 20, 55, 55, 404);
+            // 
             // CreateUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -509,7 +507,6 @@ namespace Dev69Restaurant.GUI.User
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2TextBox txtBirthDay;
         private Guna.UI2.WinForms.Guna2TextBox txtDisplayName;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -520,5 +517,6 @@ namespace Dev69Restaurant.GUI.User
         private Guna.UI2.WinForms.Guna2ShadowForm gnShadowForm;
         private System.Windows.Forms.Label lblWelcome;
         private Guna.UI.WinForms.GunaDragControl gunaDragControl;
+        private Guna.UI.WinForms.GunaDateTimePicker dtpBirthDay;
     }
 }
