@@ -1,7 +1,7 @@
 ﻿
 namespace Dev69Restaurant.GUI.User
 {
-    partial class CreateUserForm
+    partial class UpdateUserForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,9 +30,8 @@ namespace Dev69Restaurant.GUI.User
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.gunaGradient2Panel1 = new Guna.UI.WinForms.GunaGradient2Panel();
-            this.lblWelcome = new System.Windows.Forms.Label();
-            this.btnRegisterUser = new Guna.UI.WinForms.GunaGradientButton();
+            this.gnShadowForm = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
+            this.btnUpdateUser = new Guna.UI.WinForms.GunaGradientButton();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,93 +42,52 @@ namespace Dev69Restaurant.GUI.User
             this.lblUsername = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.txtPhone = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtAddress = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtBirthDay = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtFullName = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtDisplayName = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.pnTop = new System.Windows.Forms.Panel();
-            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.gnShadowForm = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
-            this.gunaDragControl = new Guna.UI.WinForms.GunaDragControl(this.components);
-            this.gunaGradient2Panel1.SuspendLayout();
+            this.txtBirthDay = new Guna.UI2.WinForms.Guna2TextBox();
+            this.gunaGradient2Panel1 = new Guna.UI.WinForms.GunaGradient2Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.pnTop.SuspendLayout();
+            this.gunaGradient2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // gunaGradient2Panel1
+            // btnUpdateUser
             // 
-            this.gunaGradient2Panel1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradient2Panel1.Controls.Add(this.lblWelcome);
-            this.gunaGradient2Panel1.Controls.Add(this.btnRegisterUser);
-            this.gunaGradient2Panel1.Controls.Add(this.label7);
-            this.gunaGradient2Panel1.Controls.Add(this.label5);
-            this.gunaGradient2Panel1.Controls.Add(this.label3);
-            this.gunaGradient2Panel1.Controls.Add(this.lblPassword);
-            this.gunaGradient2Panel1.Controls.Add(this.label6);
-            this.gunaGradient2Panel1.Controls.Add(this.label4);
-            this.gunaGradient2Panel1.Controls.Add(this.label2);
-            this.gunaGradient2Panel1.Controls.Add(this.lblUsername);
-            this.gunaGradient2Panel1.Controls.Add(this.label1);
-            this.gunaGradient2Panel1.Controls.Add(this.txtEmail);
-            this.gunaGradient2Panel1.Controls.Add(this.txtPhone);
-            this.gunaGradient2Panel1.Controls.Add(this.txtAddress);
-            this.gunaGradient2Panel1.Controls.Add(this.txtBirthDay);
-            this.gunaGradient2Panel1.Controls.Add(this.txtFullName);
-            this.gunaGradient2Panel1.Controls.Add(this.txtDisplayName);
-            this.gunaGradient2Panel1.Controls.Add(this.txtPassword);
-            this.gunaGradient2Panel1.Controls.Add(this.txtUsername);
-            this.gunaGradient2Panel1.Controls.Add(this.pnTop);
-            this.gunaGradient2Panel1.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.gunaGradient2Panel1.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
-            this.gunaGradient2Panel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
-            this.gunaGradient2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.gunaGradient2Panel1.Name = "gunaGradient2Panel1";
-            this.gunaGradient2Panel1.Size = new System.Drawing.Size(1280, 720);
-            this.gunaGradient2Panel1.TabIndex = 0;
-            // 
-            // lblWelcome
-            // 
-            this.lblWelcome.AutoSize = true;
-            this.lblWelcome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.Location = new System.Drawing.Point(537, 110);
-            this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(185, 28);
-            this.lblWelcome.TabIndex = 15;
-            this.lblWelcome.Text = "Thêm mới tài khoản";
-            // 
-            // btnRegisterUser
-            // 
-            this.btnRegisterUser.AnimationHoverSpeed = 0.07F;
-            this.btnRegisterUser.AnimationSpeed = 0.03F;
-            this.btnRegisterUser.BackColor = System.Drawing.Color.Transparent;
-            this.btnRegisterUser.BaseColor1 = System.Drawing.Color.SlateBlue;
-            this.btnRegisterUser.BaseColor2 = System.Drawing.Color.Fuchsia;
-            this.btnRegisterUser.BorderColor = System.Drawing.Color.Black;
-            this.btnRegisterUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRegisterUser.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnRegisterUser.FocusedColor = System.Drawing.Color.Empty;
-            this.btnRegisterUser.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegisterUser.ForeColor = System.Drawing.Color.White;
-            this.btnRegisterUser.Image = null;
-            this.btnRegisterUser.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnRegisterUser.Location = new System.Drawing.Point(448, 649);
-            this.btnRegisterUser.Name = "btnRegisterUser";
-            this.btnRegisterUser.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
-            this.btnRegisterUser.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
-            this.btnRegisterUser.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnRegisterUser.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnRegisterUser.OnHoverImage = null;
-            this.btnRegisterUser.OnPressedColor = System.Drawing.Color.Black;
-            this.btnRegisterUser.Radius = 8;
-            this.btnRegisterUser.Size = new System.Drawing.Size(394, 45);
-            this.btnRegisterUser.TabIndex = 14;
-            this.btnRegisterUser.Text = "Đăng ký";
-            this.btnRegisterUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnRegisterUser.Click += new System.EventHandler(this.btnRegisterUser_Click);
+            this.btnUpdateUser.AnimationHoverSpeed = 0.07F;
+            this.btnUpdateUser.AnimationSpeed = 0.03F;
+            this.btnUpdateUser.BackColor = System.Drawing.Color.Transparent;
+            this.btnUpdateUser.BaseColor1 = System.Drawing.Color.SlateBlue;
+            this.btnUpdateUser.BaseColor2 = System.Drawing.Color.Fuchsia;
+            this.btnUpdateUser.BorderColor = System.Drawing.Color.Black;
+            this.btnUpdateUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUpdateUser.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnUpdateUser.FocusedColor = System.Drawing.Color.Empty;
+            this.btnUpdateUser.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateUser.ForeColor = System.Drawing.Color.White;
+            this.btnUpdateUser.Image = null;
+            this.btnUpdateUser.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnUpdateUser.Location = new System.Drawing.Point(448, 649);
+            this.btnUpdateUser.Name = "btnUpdateUser";
+            this.btnUpdateUser.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
+            this.btnUpdateUser.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
+            this.btnUpdateUser.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnUpdateUser.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnUpdateUser.OnHoverImage = null;
+            this.btnUpdateUser.OnPressedColor = System.Drawing.Color.Black;
+            this.btnUpdateUser.Radius = 8;
+            this.btnUpdateUser.Size = new System.Drawing.Size(394, 45);
+            this.btnUpdateUser.TabIndex = 14;
+            this.btnUpdateUser.Text = "Cập nhật";
+            this.btnUpdateUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnUpdateUser.Click += new System.EventHandler(this.btnUpdateUser_Click);
             // 
             // label7
             // 
@@ -247,6 +205,31 @@ namespace Dev69Restaurant.GUI.User
             this.txtEmail.Size = new System.Drawing.Size(394, 42);
             this.txtEmail.TabIndex = 7;
             // 
+            // guna2ControlBox2
+            // 
+            this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox2.HoverState.Parent = this.guna2ControlBox2;
+            this.guna2ControlBox2.IconColor = System.Drawing.Color.Black;
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1163, 12);
+            this.guna2ControlBox2.Name = "guna2ControlBox2";
+            this.guna2ControlBox2.ShadowDecoration.Parent = this.guna2ControlBox2;
+            this.guna2ControlBox2.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox2.TabIndex = 0;
+            // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1223, 12);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
+            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox1.TabIndex = 0;
+            // 
             // txtPhone
             // 
             this.txtPhone.BorderRadius = 8;
@@ -298,32 +281,6 @@ namespace Dev69Restaurant.GUI.User
             this.txtAddress.ShadowDecoration.Parent = this.txtAddress;
             this.txtAddress.Size = new System.Drawing.Size(394, 42);
             this.txtAddress.TabIndex = 7;
-            // 
-            // txtBirthDay
-            // 
-            this.txtBirthDay.BorderRadius = 8;
-            this.txtBirthDay.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBirthDay.DefaultText = "";
-            this.txtBirthDay.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtBirthDay.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtBirthDay.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBirthDay.DisabledState.Parent = this.txtBirthDay;
-            this.txtBirthDay.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBirthDay.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBirthDay.FocusedState.Parent = this.txtBirthDay;
-            this.txtBirthDay.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBirthDay.ForeColor = System.Drawing.Color.Black;
-            this.txtBirthDay.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBirthDay.HoverState.Parent = this.txtBirthDay;
-            this.txtBirthDay.Location = new System.Drawing.Point(210, 450);
-            this.txtBirthDay.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBirthDay.Name = "txtBirthDay";
-            this.txtBirthDay.PasswordChar = '\0';
-            this.txtBirthDay.PlaceholderText = "Nhập ngày sinh";
-            this.txtBirthDay.SelectedText = "";
-            this.txtBirthDay.ShadowDecoration.Parent = this.txtBirthDay;
-            this.txtBirthDay.Size = new System.Drawing.Size(394, 42);
-            this.txtBirthDay.TabIndex = 7;
             // 
             // txtFullName
             // 
@@ -440,85 +397,120 @@ namespace Dev69Restaurant.GUI.User
             this.pnTop.Size = new System.Drawing.Size(1280, 51);
             this.pnTop.TabIndex = 0;
             // 
-            // guna2ControlBox2
-            // 
-            this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox2.HoverState.Parent = this.guna2ControlBox2;
-            this.guna2ControlBox2.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(1163, 12);
-            this.guna2ControlBox2.Name = "guna2ControlBox2";
-            this.guna2ControlBox2.ShadowDecoration.Parent = this.guna2ControlBox2;
-            this.guna2ControlBox2.Size = new System.Drawing.Size(45, 29);
-            this.guna2ControlBox2.TabIndex = 0;
-            // 
-            // guna2ControlBox1
-            // 
-            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1223, 12);
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
-            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
-            this.guna2ControlBox1.TabIndex = 0;
-            // 
             // guna2Elipse1
             // 
             this.guna2Elipse1.BorderRadius = 3;
-            this.guna2Elipse1.TargetControl = this;
             // 
-            // gunaDragControl
+            // txtBirthDay
             // 
-            this.gunaDragControl.TargetControl = this.pnTop;
+            this.txtBirthDay.BorderRadius = 8;
+            this.txtBirthDay.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBirthDay.DefaultText = "";
+            this.txtBirthDay.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtBirthDay.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtBirthDay.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBirthDay.DisabledState.Parent = this.txtBirthDay;
+            this.txtBirthDay.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBirthDay.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBirthDay.FocusedState.Parent = this.txtBirthDay;
+            this.txtBirthDay.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBirthDay.ForeColor = System.Drawing.Color.Black;
+            this.txtBirthDay.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBirthDay.HoverState.Parent = this.txtBirthDay;
+            this.txtBirthDay.Location = new System.Drawing.Point(210, 450);
+            this.txtBirthDay.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBirthDay.Name = "txtBirthDay";
+            this.txtBirthDay.PasswordChar = '\0';
+            this.txtBirthDay.PlaceholderText = "Nhập ngày sinh";
+            this.txtBirthDay.SelectedText = "";
+            this.txtBirthDay.ShadowDecoration.Parent = this.txtBirthDay;
+            this.txtBirthDay.Size = new System.Drawing.Size(394, 42);
+            this.txtBirthDay.TabIndex = 7;
             // 
-            // CreateUserForm
+            // gunaGradient2Panel1
+            // 
+            this.gunaGradient2Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaGradient2Panel1.Controls.Add(this.label8);
+            this.gunaGradient2Panel1.Controls.Add(this.btnUpdateUser);
+            this.gunaGradient2Panel1.Controls.Add(this.label7);
+            this.gunaGradient2Panel1.Controls.Add(this.label5);
+            this.gunaGradient2Panel1.Controls.Add(this.label3);
+            this.gunaGradient2Panel1.Controls.Add(this.lblPassword);
+            this.gunaGradient2Panel1.Controls.Add(this.label6);
+            this.gunaGradient2Panel1.Controls.Add(this.label4);
+            this.gunaGradient2Panel1.Controls.Add(this.label2);
+            this.gunaGradient2Panel1.Controls.Add(this.lblUsername);
+            this.gunaGradient2Panel1.Controls.Add(this.label1);
+            this.gunaGradient2Panel1.Controls.Add(this.txtEmail);
+            this.gunaGradient2Panel1.Controls.Add(this.txtPhone);
+            this.gunaGradient2Panel1.Controls.Add(this.txtAddress);
+            this.gunaGradient2Panel1.Controls.Add(this.txtBirthDay);
+            this.gunaGradient2Panel1.Controls.Add(this.txtFullName);
+            this.gunaGradient2Panel1.Controls.Add(this.txtDisplayName);
+            this.gunaGradient2Panel1.Controls.Add(this.txtPassword);
+            this.gunaGradient2Panel1.Controls.Add(this.txtUsername);
+            this.gunaGradient2Panel1.Controls.Add(this.pnTop);
+            this.gunaGradient2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gunaGradient2Panel1.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.gunaGradient2Panel1.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.gunaGradient2Panel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
+            this.gunaGradient2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.gunaGradient2Panel1.Name = "gunaGradient2Panel1";
+            this.gunaGradient2Panel1.Size = new System.Drawing.Size(1280, 720);
+            this.gunaGradient2Panel1.TabIndex = 1;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(539, 108);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(183, 28);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Chỉnh sửa tài khoản";
+            // 
+            // UpdateUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.gunaGradient2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "CreateUserForm";
-            this.Text = "Thêm mới tài khoản";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CreateUserForm_FormClosed);
-            this.Load += new System.EventHandler(this.CreateUserForm_Load);
+            this.Name = "UpdateUserForm";
+            this.Text = "UpdateUserForm";
+            this.pnTop.ResumeLayout(false);
             this.gunaGradient2Panel1.ResumeLayout(false);
             this.gunaGradient2Panel1.PerformLayout();
-            this.pnTop.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private Guna.UI.WinForms.GunaGradient2Panel gunaGradient2Panel1;
-        private System.Windows.Forms.Panel pnTop;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private Guna.UI.WinForms.GunaGradientButton btnRegisterUser;
-        private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.Label lblUsername;
-        private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2TextBox txtPassword;
-        private Guna.UI2.WinForms.Guna2TextBox txtUsername;
+
+        private Guna.UI2.WinForms.Guna2ShadowForm gnShadowForm;
+        private Guna.UI.WinForms.GunaGradientButton btnUpdateUser;
+        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblPassword;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2TextBox txtBirthDay;
-        private Guna.UI2.WinForms.Guna2TextBox txtDisplayName;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2TextBox txtPhone;
+        private System.Windows.Forms.Label lblUsername;
+        private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtPhone;
         private Guna.UI2.WinForms.Guna2TextBox txtAddress;
         private Guna.UI2.WinForms.Guna2TextBox txtFullName;
-        private Guna.UI2.WinForms.Guna2ShadowForm gnShadowForm;
-        private System.Windows.Forms.Label lblWelcome;
-        private Guna.UI.WinForms.GunaDragControl gunaDragControl;
+        private Guna.UI2.WinForms.Guna2TextBox txtDisplayName;
+        private Guna.UI2.WinForms.Guna2TextBox txtPassword;
+        private Guna.UI2.WinForms.Guna2TextBox txtUsername;
+        private System.Windows.Forms.Panel pnTop;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2TextBox txtBirthDay;
+        private Guna.UI.WinForms.GunaGradient2Panel gunaGradient2Panel1;
+        private System.Windows.Forms.Label label8;
     }
 }

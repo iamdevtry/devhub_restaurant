@@ -25,6 +25,7 @@ namespace Dev69Restaurant.GUI.Home
         #region Fields
         private bool isCollapse = false;
         private Guna2GradientButton _currentButton;
+        public static bool isDefaulTheme = true;
         #endregion
 
         #region Events
@@ -82,7 +83,7 @@ namespace Dev69Restaurant.GUI.Home
 
         private void tgbtnSwitchTheme_CheckedChanged(object sender, EventArgs e)
         {
-            if (tgbtnSwitchTheme.Checked)
+            if (!isDefaulTheme)
             {
                 this.BackColor = BaseColor.BACK_COLOR_DARK;
                 pnLeft.BackColor = BaseColor.PANNEL_DARK;

@@ -18,6 +18,11 @@ namespace Dev69Restaurant.GUI.User
         {
             InitializeComponent();
             _userService = new UserService();
+
+        }
+        private void CreateUserForm_Load(object sender, EventArgs e)
+        {
+            gnShadowForm.SetShadowForm(this);
         }
 
         private void btnRegisterUser_Click(object sender, EventArgs e)
@@ -53,6 +58,11 @@ namespace Dev69Restaurant.GUI.User
             txtFullName.Text = "";
             txtPhone.Text = "";
             txtEmail.Text = "";
+        }
+
+        private void CreateUserForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
         }
     }
 }
