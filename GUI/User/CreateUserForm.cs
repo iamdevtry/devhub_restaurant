@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dev69Restaurant.DAL.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,46 @@ namespace Dev69Restaurant.GUI.User
 {
     public partial class CreateUserForm : Form
     {
+        private UserService _userService;
         public CreateUserForm()
         {
             InitializeComponent();
+            _userService = new UserService();
         }
 
+        private void btnRegisterUser_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DTO.Entities.User user = new DTO.Entities.User();
+                user.Username = txtUsername.Text;
+                user.Password = txtPassword.Text;
+                user.DisplayName = txtDisplayName.Text;
+                user.FullName = txtFullName.Text;
+                user.Phone = txtPhone.Text;
+                user.Email = txtEmail.Text;
+                user.Address = txtAddress.Text;
+                user.Status = true;
+
+                _userService.Add(user);
+                MessageBox.Show("Thêm mới người thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ResetFields();
+            }
+            catch
+            {
+                MessageBox.Show("Thêm mới người dùng không thành công!", "Thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void ResetFields()
+        {
+            txtUsername.Text = "";
+            txtPassword.Text = "";
+            txtDisplayName.Text = "";
+            txtFullName.Text = "";
+            txtPhone.Text = "";
+            txtEmail.Text = "";
+        }
     }
 }
