@@ -105,6 +105,12 @@
     <Compile Include="GUI\Manager\ManagerForm.Designer.cs">
       <DependentUpon>ManagerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\User\CreateUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\User\CreateUserForm.Designer.cs">
+      <DependentUpon>CreateUserForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\User\UserForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +164,9 @@
     <Compile Include="Infrastructure\Settings\BaseIcon.cs" />
     <EmbeddedResource Include="GUI\Manager\ManagerForm.resx">
       <DependentUpon>ManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\User\CreateUserForm.resx">
+      <DependentUpon>CreateUserForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\User\UserForm.resx">
       <DependentUpon>UserForm.cs</DependentUpon>

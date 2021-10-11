@@ -31,10 +31,9 @@ namespace Dev69Restaurant.GUI.User
         {
             this.pnHeader = new Guna.UI.WinForms.GunaPanel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.btnDeleteUser = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAddUser = new Guna.UI2.WinForms.Guna2Button();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.pnHeader.SuspendLayout();
             this.panel9.SuspendLayout();
             this.SuspendLayout();
@@ -51,14 +50,44 @@ namespace Dev69Restaurant.GUI.User
             // 
             // panel9
             // 
-            this.panel9.Controls.Add(this.guna2Button3);
-            this.panel9.Controls.Add(this.guna2Button2);
-            this.panel9.Controls.Add(this.guna2Button1);
+            this.panel9.Controls.Add(this.btnDeleteUser);
+            this.panel9.Controls.Add(this.btnAddUser);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel9.Location = new System.Drawing.Point(756, 0);
+            this.panel9.Location = new System.Drawing.Point(913, 0);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(524, 100);
+            this.panel9.Size = new System.Drawing.Size(367, 100);
             this.panel9.TabIndex = 11;
+            // 
+            // btnDeleteUser
+            // 
+            this.btnDeleteUser.BorderRadius = 8;
+            this.btnDeleteUser.CheckedState.Parent = this.btnDeleteUser;
+            this.btnDeleteUser.CustomImages.Parent = this.btnDeleteUser;
+            this.btnDeleteUser.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDeleteUser.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteUser.HoverState.Parent = this.btnDeleteUser;
+            this.btnDeleteUser.Location = new System.Drawing.Point(198, 26);
+            this.btnDeleteUser.Name = "btnDeleteUser";
+            this.btnDeleteUser.ShadowDecoration.Parent = this.btnDeleteUser;
+            this.btnDeleteUser.Size = new System.Drawing.Size(138, 45);
+            this.btnDeleteUser.TabIndex = 0;
+            this.btnDeleteUser.Text = "Xóa";
+            // 
+            // btnAddUser
+            // 
+            this.btnAddUser.BorderRadius = 8;
+            this.btnAddUser.CheckedState.Parent = this.btnAddUser;
+            this.btnAddUser.CustomImages.Parent = this.btnAddUser;
+            this.btnAddUser.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAddUser.ForeColor = System.Drawing.Color.White;
+            this.btnAddUser.HoverState.Parent = this.btnAddUser;
+            this.btnAddUser.Location = new System.Drawing.Point(32, 26);
+            this.btnAddUser.Name = "btnAddUser";
+            this.btnAddUser.ShadowDecoration.Parent = this.btnAddUser;
+            this.btnAddUser.Size = new System.Drawing.Size(138, 45);
+            this.btnAddUser.TabIndex = 0;
+            this.btnAddUser.Text = "Thêm";
+            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
             // txtSearch
             // 
@@ -75,7 +104,7 @@ namespace Dev69Restaurant.GUI.User
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.HoverState.Parent = this.txtSearch;
             this.txtSearch.IconLeft = global::Dev69Restaurant.Properties.Resources.search_24px;
-            this.txtSearch.Location = new System.Drawing.Point(28, 26);
+            this.txtSearch.Location = new System.Drawing.Point(124, 27);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
@@ -85,52 +114,11 @@ namespace Dev69Restaurant.GUI.User
             this.txtSearch.Size = new System.Drawing.Size(623, 44);
             this.txtSearch.TabIndex = 0;
             // 
-            // guna2Button1
-            // 
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(58, 26);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(138, 45);
-            this.guna2Button1.TabIndex = 0;
-            this.guna2Button1.Text = "Thêm";
-            // 
-            // guna2Button2
-            // 
-            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
-            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.HoverState.Parent = this.guna2Button2;
-            this.guna2Button2.Location = new System.Drawing.Point(216, 26);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
-            this.guna2Button2.Size = new System.Drawing.Size(138, 45);
-            this.guna2Button2.TabIndex = 0;
-            this.guna2Button2.Text = "Cập nhật";
-            // 
-            // guna2Button3
-            // 
-            this.guna2Button3.CheckedState.Parent = this.guna2Button3;
-            this.guna2Button3.CustomImages.Parent = this.guna2Button3;
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.HoverState.Parent = this.guna2Button3;
-            this.guna2Button3.Location = new System.Drawing.Point(374, 26);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
-            this.guna2Button3.Size = new System.Drawing.Size(138, 45);
-            this.guna2Button3.TabIndex = 0;
-            this.guna2Button3.Text = "Xóa";
-            // 
             // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.pnHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -147,8 +135,7 @@ namespace Dev69Restaurant.GUI.User
         private Guna.UI.WinForms.GunaPanel pnHeader;
         private System.Windows.Forms.Panel panel9;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnDeleteUser;
+        private Guna.UI2.WinForms.Guna2Button btnAddUser;
     }
 }
