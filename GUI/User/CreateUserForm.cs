@@ -20,6 +20,8 @@ namespace Dev69Restaurant.GUI.User
             _userService = new UserService();
 
         }
+
+        #region events
         private void CreateUserForm_Load(object sender, EventArgs e)
         {
             gnShadowForm.SetShadowForm(this);
@@ -29,35 +31,74 @@ namespace Dev69Restaurant.GUI.User
         {
             try
             {
-                DTO.Entities.User user = new DTO.Entities.User();
-                user.Username = txtUsername.Text;
-                user.Password = txtPassword.Text;
-                user.DisplayName = txtDisplayName.Text;
-                user.FullName = txtFullName.Text;
-                user.BirthDay = Convert.ToDateTime(dtpBirthDay.Value.ToShortDateString());
-                user.Phone = txtPhone.Text;
-                user.Email = txtEmail.Text;
-                user.Address = txtAddress.Text;
-                user.Status = true;
-
-                if (_userService.CheckExist(user.Username))
-                {
-                    _userService.Add(user);
-                    MessageBox.Show("Thêm mới người thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    ResetFields();
-                }
-                else
-                {
-                    MessageBox.Show("Tên đăng nhập đã tồn tại!", "Thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-
+                ValidateForm();
             }
             catch
             {
                 MessageBox.Show("Thêm mới người dùng không thành công!", "Thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+        }
+
+        private void CreateUserForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+        }
+
+        #endregion
+
+        #region methods
+        private void ValidateForm()
+        {
+            DTO.Entities.User user = new DTO.Entities.User();
+            if (string.IsNullOrEmpty(txtUsername.Text) || txtUsername.Text.Any(Char.IsWhiteSpace))
+            {
+                MessageBox.Show("Loi");
+                return;
+            }
+            else
+            {
+                user.Username = txtUsername.Text;
+            }
+
+            if (string.IsNullOrEmpty(txtPassword.Text) || txtPassword.Text.Length < 6)
+            {
+                MessageBox.Show("Mật khẩu phải chứa ít nhất 6 kí tự.");
+                return;
+            }
+            else
+            {
+                user.Password = txtPassword.Text;
+            }
+
+            if (string.IsNullOrEmpty(txtFullName.Text))
+            {
+                MessageBox.Show("Bạn chưa nhập tên. ");
+                return;
+            }
+            else
+            {
+                user.FullName = txtFullName.Text;
+            }
+
+
+            user.DisplayName = txtDisplayName.Text;
+            user.BirthDay = Convert.ToDateTime(dtpBirthDay.Value.ToShortDateString());
+            user.Phone = txtPhone.Text;
+            user.Email = txtEmail.Text;
+            user.Address = txtAddress.Text;
+            user.Status = true;
+
+            if (_userService.CheckExist(user.Username))
+            {
+                _userService.Add(user);
+                MessageBox.Show("Thêm mới người thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ResetFields();
+            }
+            else
+            {
+                MessageBox.Show("Tên đăng nhập đã tồn tại!", "Thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void ResetFields()
@@ -70,9 +111,6 @@ namespace Dev69Restaurant.GUI.User
             txtEmail.Text = "";
         }
 
-        private void CreateUserForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-
-        }
+        #endregion
     }
 }
