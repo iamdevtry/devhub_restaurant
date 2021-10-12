@@ -33,16 +33,13 @@ namespace Dev69Restaurant.GUI.User
             this.gunaGradient2Panel1 = new Guna.UI.WinForms.GunaGradient2Panel();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.btnRegisterUser = new Guna.UI.WinForms.GunaGradientButton();
-            this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPhone = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtAddress = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtFullName = new Guna.UI2.WinForms.Guna2TextBox();
@@ -55,7 +52,10 @@ namespace Dev69Restaurant.GUI.User
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.gnShadowForm = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.gunaDragControl = new Guna.UI.WinForms.GunaDragControl(this.components);
-            this.dtpBirthDay = new Guna.UI.WinForms.GunaDateTimePicker();
+            this.cmbStatus = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cmbRole = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.gunaGradient2Panel1.SuspendLayout();
             this.pnTop.SuspendLayout();
             this.SuspendLayout();
@@ -63,19 +63,19 @@ namespace Dev69Restaurant.GUI.User
             // gunaGradient2Panel1
             // 
             this.gunaGradient2Panel1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradient2Panel1.Controls.Add(this.dtpBirthDay);
+            this.gunaGradient2Panel1.Controls.Add(this.cmbStatus);
+            this.gunaGradient2Panel1.Controls.Add(this.cmbRole);
+            this.gunaGradient2Panel1.Controls.Add(this.label4);
+            this.gunaGradient2Panel1.Controls.Add(this.label7);
             this.gunaGradient2Panel1.Controls.Add(this.lblWelcome);
             this.gunaGradient2Panel1.Controls.Add(this.btnRegisterUser);
-            this.gunaGradient2Panel1.Controls.Add(this.label7);
             this.gunaGradient2Panel1.Controls.Add(this.label5);
             this.gunaGradient2Panel1.Controls.Add(this.label3);
             this.gunaGradient2Panel1.Controls.Add(this.lblPassword);
             this.gunaGradient2Panel1.Controls.Add(this.label6);
-            this.gunaGradient2Panel1.Controls.Add(this.label4);
             this.gunaGradient2Panel1.Controls.Add(this.label2);
             this.gunaGradient2Panel1.Controls.Add(this.lblUsername);
             this.gunaGradient2Panel1.Controls.Add(this.label1);
-            this.gunaGradient2Panel1.Controls.Add(this.txtEmail);
             this.gunaGradient2Panel1.Controls.Add(this.txtPhone);
             this.gunaGradient2Panel1.Controls.Add(this.txtAddress);
             this.gunaGradient2Panel1.Controls.Add(this.txtFullName);
@@ -131,16 +131,6 @@ namespace Dev69Restaurant.GUI.User
             this.btnRegisterUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnRegisterUser.Click += new System.EventHandler(this.btnRegisterUser_Click);
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(671, 529);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(51, 23);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Email";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -175,21 +165,11 @@ namespace Dev69Restaurant.GUI.User
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(207, 529);
+            this.label6.Location = new System.Drawing.Point(209, 403);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(111, 23);
             this.label6.TabIndex = 9;
             this.label6.Text = "Số điện thoại";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(207, 403);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 23);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Ngày sinh";
             // 
             // label2
             // 
@@ -221,32 +201,6 @@ namespace Dev69Restaurant.GUI.User
             this.label1.TabIndex = 10;
             this.label1.Text = "XIN CHÀO!";
             // 
-            // txtEmail
-            // 
-            this.txtEmail.BorderRadius = 8;
-            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEmail.DefaultText = "";
-            this.txtEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEmail.DisabledState.Parent = this.txtEmail;
-            this.txtEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.FocusedState.Parent = this.txtEmail;
-            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.ForeColor = System.Drawing.Color.Black;
-            this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.HoverState.Parent = this.txtEmail;
-            this.txtEmail.Location = new System.Drawing.Point(676, 576);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.PasswordChar = '\0';
-            this.txtEmail.PlaceholderText = "Nhập Email";
-            this.txtEmail.SelectedText = "";
-            this.txtEmail.ShadowDecoration.Parent = this.txtEmail;
-            this.txtEmail.Size = new System.Drawing.Size(394, 42);
-            this.txtEmail.TabIndex = 7;
-            // 
             // txtPhone
             // 
             this.txtPhone.BorderRadius = 8;
@@ -263,7 +217,7 @@ namespace Dev69Restaurant.GUI.User
             this.txtPhone.ForeColor = System.Drawing.Color.Black;
             this.txtPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPhone.HoverState.Parent = this.txtPhone;
-            this.txtPhone.Location = new System.Drawing.Point(210, 576);
+            this.txtPhone.Location = new System.Drawing.Point(212, 450);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.PasswordChar = '\0';
@@ -448,29 +402,65 @@ namespace Dev69Restaurant.GUI.User
             // 
             this.gunaDragControl.TargetControl = this.pnTop;
             // 
-            // dtpBirthDay
+            // cmbStatus
             // 
-            this.dtpBirthDay.BaseColor = System.Drawing.Color.White;
-            this.dtpBirthDay.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.dtpBirthDay.BorderSize = 1;
-            this.dtpBirthDay.CustomFormat = null;
-            this.dtpBirthDay.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dtpBirthDay.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.dtpBirthDay.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dtpBirthDay.ForeColor = System.Drawing.Color.Black;
-            this.dtpBirthDay.Location = new System.Drawing.Point(212, 450);
-            this.dtpBirthDay.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtpBirthDay.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtpBirthDay.Name = "dtpBirthDay";
-            this.dtpBirthDay.OnHoverBaseColor = System.Drawing.Color.White;
-            this.dtpBirthDay.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.dtpBirthDay.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.dtpBirthDay.OnPressedColor = System.Drawing.Color.Black;
-            this.dtpBirthDay.Radius = 8;
-            this.dtpBirthDay.Size = new System.Drawing.Size(392, 42);
-            this.dtpBirthDay.TabIndex = 16;
-            this.dtpBirthDay.Text = "Monday, October 11, 2021";
-            this.dtpBirthDay.Value = new System.DateTime(2021, 10, 11, 20, 55, 55, 404);
+            this.cmbStatus.BackColor = System.Drawing.Color.Transparent;
+            this.cmbStatus.BorderRadius = 8;
+            this.cmbStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbStatus.FocusedColor = System.Drawing.Color.Empty;
+            this.cmbStatus.FocusedState.Parent = this.cmbStatus;
+            this.cmbStatus.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbStatus.FormattingEnabled = true;
+            this.cmbStatus.HoverState.Parent = this.cmbStatus;
+            this.cmbStatus.ItemHeight = 30;
+            this.cmbStatus.ItemsAppearance.Parent = this.cmbStatus;
+            this.cmbStatus.Location = new System.Drawing.Point(677, 564);
+            this.cmbStatus.Name = "cmbStatus";
+            this.cmbStatus.ShadowDecoration.Parent = this.cmbStatus;
+            this.cmbStatus.Size = new System.Drawing.Size(393, 36);
+            this.cmbStatus.TabIndex = 19;
+            // 
+            // cmbRole
+            // 
+            this.cmbRole.BackColor = System.Drawing.Color.Transparent;
+            this.cmbRole.BorderRadius = 8;
+            this.cmbRole.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRole.FocusedColor = System.Drawing.Color.Empty;
+            this.cmbRole.FocusedState.Parent = this.cmbRole;
+            this.cmbRole.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbRole.FormattingEnabled = true;
+            this.cmbRole.HoverState.Parent = this.cmbRole;
+            this.cmbRole.ItemHeight = 30;
+            this.cmbRole.ItemsAppearance.Parent = this.cmbRole;
+            this.cmbRole.Location = new System.Drawing.Point(213, 564);
+            this.cmbRole.Name = "cmbRole";
+            this.cmbRole.ShadowDecoration.Parent = this.cmbRole;
+            this.cmbRole.Size = new System.Drawing.Size(393, 36);
+            this.cmbRole.TabIndex = 20;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(673, 521);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(87, 23);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Trạng thái";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(209, 521);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(129, 23);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Quyền sử dụng";
             // 
             // CreateUserForm
             // 
@@ -505,18 +495,18 @@ namespace Dev69Restaurant.GUI.User
         private Guna.UI2.WinForms.Guna2TextBox txtUsername;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2TextBox txtDisplayName;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2TextBox txtPhone;
-        private Guna.UI2.WinForms.Guna2TextBox txtEmail;
         private Guna.UI2.WinForms.Guna2TextBox txtAddress;
         private Guna.UI2.WinForms.Guna2TextBox txtFullName;
         private Guna.UI2.WinForms.Guna2ShadowForm gnShadowForm;
         private System.Windows.Forms.Label lblWelcome;
         private Guna.UI.WinForms.GunaDragControl gunaDragControl;
-        private Guna.UI.WinForms.GunaDateTimePicker dtpBirthDay;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbStatus;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbRole;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label7;
     }
 }

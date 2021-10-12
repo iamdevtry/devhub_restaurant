@@ -12,12 +12,16 @@ namespace Dev69Restaurant.DAL.Services
     public class UserService
     {
         private IUserRepository _userRepository;
+        private IRoleRepository _roleRepository;
+        private IUserRoleRepository _userRoleRepository;
         private IUnitOfWork _unitOfWork;
 
         public UserService()
         {
             var dbFactory = new DbFactory();
             _userRepository = new UserRepository(dbFactory);
+            _roleRepository = new RoleRepository(dbFactory);
+            _userRoleRepository = new UserRoleRepository(dbFactory);
             _unitOfWork = new UnitOfWork(dbFactory);
         }
 
@@ -89,6 +93,23 @@ namespace Dev69Restaurant.DAL.Services
             {
                 return false; 
             }
+        }
+
+        //Get all Roles
+        public IEnumerable<Role> GetAllRole()
+        {
+            return _roleRepository.GetAll();
+        }
+
+        //Add user into roles user
+        public void AddUserIntoUserRole(string username, int roleId)
+        {
+            UserRole userRole = new UserRole();
+            userRole.Username = username;
+            userRole.RoleId = roleId;
+            _userRoleRepository.Add(userRole);
+            _unitOfWork.Commit();
+
         }
     }
 }

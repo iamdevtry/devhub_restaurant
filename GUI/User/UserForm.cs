@@ -56,7 +56,15 @@ namespace Dev69Restaurant.GUI.User
         {
             CreateUserForm createUserForm = new CreateUserForm();
             createUserForm.StartPosition = FormStartPosition.CenterScreen;
+
+            createUserForm.userDelegate += CreateUserForm_userDelegate;
+
             createUserForm.ShowDialog();
+        }
+
+        private void CreateUserForm_userDelegate()
+        {
+            LoadDataUser();
         }
 
         private void btnUpdateUser_Click(object sender, EventArgs e)
@@ -114,7 +122,8 @@ namespace Dev69Restaurant.GUI.User
             foreach (var item in listUsers)
             {
                 index++;
-                dgvListUser.Rows.Add(index, item.FullName, item.DisplayName, item.Username, item.BirthDay, item.Address, item.Phone, item.Status);
+                string status = item.Status ? "Kích Hoạt" : "Khóa";
+                dgvListUser.Rows.Add(index, item.FullName, item.DisplayName, item.Username, item.BirthDay, item.Address, item.Phone, status);
             }
         }
 

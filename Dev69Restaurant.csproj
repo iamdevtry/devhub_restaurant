@@ -65,6 +65,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\CommonDelegate.cs" />
     <Compile Include="DAL\Infrastructure\DbFactory.cs" />
     <Compile Include="DAL\Infrastructure\Disposable.cs" />
     <Compile Include="DAL\Infrastructure\IDbFactory.cs" />
@@ -80,8 +81,10 @@
     <Compile Include="DAL\Repositories\DiscountRepository.cs" />
     <Compile Include="DAL\Repositories\FoodCategoryRepository.cs" />
     <Compile Include="DAL\Repositories\FoodRepository.cs" />
+    <Compile Include="DAL\Repositories\RoleRepository.cs" />
     <Compile Include="DAL\Repositories\TableFoodRepository.cs" />
     <Compile Include="DAL\Repositories\UserRepository.cs" />
+    <Compile Include="DAL\Repositories\UserRoleRepository.cs" />
     <Compile Include="DAL\Repositories\VATRepository.cs" />
     <Compile Include="DAL\Services\UserService.cs" />
     <Compile Include="DTO\Abstract\Auditable.cs" />
