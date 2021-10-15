@@ -50,7 +50,8 @@ namespace Dev69Restaurant.GUI.Home
             this.picLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnHeader = new Guna.UI.WinForms.GunaPanel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.lblWelcome = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblDisplayName = new System.Windows.Forms.Label();
             this.picAvatarUser = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnToogleMenu = new Guna.UI2.WinForms.Guna2ImageButton();
@@ -440,7 +441,8 @@ namespace Dev69Restaurant.GUI.Home
             // 
             // panel9
             // 
-            this.panel9.Controls.Add(this.lblWelcome);
+            this.panel9.Controls.Add(this.label1);
+            this.panel9.Controls.Add(this.lblDisplayName);
             this.panel9.Controls.Add(this.picAvatarUser);
             this.gnTransition.SetDecoration(this.panel9, Guna.UI2.AnimatorNS.DecorationType.None);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Right;
@@ -449,23 +451,34 @@ namespace Dev69Restaurant.GUI.Home
             this.panel9.Size = new System.Drawing.Size(351, 100);
             this.panel9.TabIndex = 11;
             // 
-            // lblWelcome
+            // label1
             // 
-            this.lblWelcome.AutoSize = true;
-            this.gnTransition.SetDecoration(this.lblWelcome, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.lblWelcome.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.Location = new System.Drawing.Point(13, 50);
-            this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(154, 23);
-            this.lblWelcome.TabIndex = 0;
-            this.lblWelcome.Text = "Xin chào, Dev69... !";
+            this.label1.AutoSize = true;
+            this.gnTransition.SetDecoration(this.label1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 50);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 23);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Xin chào:";
+            // 
+            // lblDisplayName
+            // 
+            this.lblDisplayName.AutoSize = true;
+            this.gnTransition.SetDecoration(this.lblDisplayName, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblDisplayName.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDisplayName.Location = new System.Drawing.Point(89, 50);
+            this.lblDisplayName.Name = "lblDisplayName";
+            this.lblDisplayName.Size = new System.Drawing.Size(80, 23);
+            this.lblDisplayName.TabIndex = 0;
+            this.lblDisplayName.Text = "Dev69... !";
             // 
             // picAvatarUser
             // 
             this.picAvatarUser.BaseColor = System.Drawing.Color.White;
             this.gnTransition.SetDecoration(this.picAvatarUser, Guna.UI2.AnimatorNS.DecorationType.None);
             this.picAvatarUser.Image = global::Dev69Restaurant.Properties.Resources.user_50px;
-            this.picAvatarUser.Location = new System.Drawing.Point(213, 25);
+            this.picAvatarUser.Location = new System.Drawing.Point(249, 25);
             this.picAvatarUser.Name = "picAvatarUser";
             this.picAvatarUser.Size = new System.Drawing.Size(48, 48);
             this.picAvatarUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -727,6 +740,7 @@ namespace Dev69Restaurant.GUI.Home
             this.Name = "HomeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomeForm";
+            this.Load += new System.EventHandler(this.HomeForm_Load);
             this.pnTop.ResumeLayout(false);
             this.pnLeft.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
@@ -765,7 +779,7 @@ namespace Dev69Restaurant.GUI.Home
         private System.Windows.Forms.Panel pnDetail;
         private Guna.UI.WinForms.GunaPanel panel8;
         private Guna.UI.WinForms.GunaPanel panel7;
-        private System.Windows.Forms.Label lblWelcome;
+        private System.Windows.Forms.Label lblDisplayName;
         private Guna.UI.WinForms.GunaCirclePictureBox picAvatarUser;
         private Guna.UI.WinForms.GunaGroupBox grbDetail;
         private System.Windows.Forms.Panel panel3;
@@ -785,5 +799,6 @@ namespace Dev69Restaurant.GUI.Home
         private Guna.UI.WinForms.GunaSeparator gnSeparator2;
         private Guna.UI.WinForms.GunaSeparator gnSeparator1;
         private Guna.UI2.WinForms.Guna2Elipse gnElipsePnDetail;
+        private System.Windows.Forms.Label label1;
     }
 }

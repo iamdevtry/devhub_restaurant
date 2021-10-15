@@ -86,6 +86,7 @@
     <Compile Include="DAL\Repositories\UserRepository.cs" />
     <Compile Include="DAL\Repositories\UserRoleRepository.cs" />
     <Compile Include="DAL\Repositories\VATRepository.cs" />
+    <Compile Include="DAL\Services\LoginService.cs" />
     <Compile Include="DAL\Services\UserService.cs" />
     <Compile Include="DTO\Abstract\Auditable.cs" />
     <Compile Include="DTO\Abstract\IAuditable.cs" />

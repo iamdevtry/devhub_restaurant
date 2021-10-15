@@ -1,4 +1,5 @@
-﻿using Dev69Restaurant.GUI.Manager;
+﻿using Dev69Restaurant.DAL.Services;
+using Dev69Restaurant.GUI.Manager;
 using Dev69Restaurant.GUI.TableFood;
 using Dev69Restaurant.Infrastructure.Settings;
 using Guna.UI.WinForms;
@@ -17,18 +18,35 @@ namespace Dev69Restaurant.GUI.Home
 {
     public partial class HomeForm : Form
     {
-        public HomeForm()
-        {
-            InitializeComponent();
-        }
 
         #region Fields
+        private DTO.Entities.User _currentUser;
+        public string _roleName;
+        private UserService _userService;
+
         private bool isCollapse = false;
         private Guna2GradientButton _currentButton;
         public static bool isDefaulTheme = true;
         #endregion
+        public HomeForm()
+        {
+            InitializeComponent();
+        }
+        public HomeForm(DTO.Entities.User user, string roleShortName)
+        {
+            InitializeComponent();
+            _currentUser = user;
+            _roleName = roleShortName;
+            _userService = new UserService();
+            LoadData();
+        }
 
         #region Events
+        private void HomeForm_Load(object sender, EventArgs e)
+        {
+            CheckUser();
+        }
+
         private void btnToogleMenu_Click(object sender, EventArgs e)
         {
             ShowHideLeftBar();
@@ -162,6 +180,30 @@ namespace Dev69Restaurant.GUI.Home
         #endregion
 
         #region methods
+        private void LoadData()
+        {
+            LoadInfoUser();
+        }
+
+        private void LoadInfoUser()
+        {
+            lblDisplayName.Text = _currentUser.DisplayName;
+        }
+
+        private void CheckUser()
+        {
+            if (_roleName != "admin")
+            {
+                btnManage.Enabled = false;
+                btnManage.Visible = false;
+            }
+            else
+            {
+                btnManage.Enabled = true;
+                btnManage.Visible = true;
+            }
+        }
+
         private void ShowHideLeftBar()
         {
             if (!isCollapse)
@@ -214,5 +256,7 @@ namespace Dev69Restaurant.GUI.Home
             }
         }
         #endregion
+
+
     }
 }

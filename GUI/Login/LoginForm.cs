@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Dev69Restaurant.DAL.Services;
+using Dev69Restaurant.GUI.Home;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,11 @@ namespace Dev69Restaurant.GUI.Login
 {
     public partial class LoginForm : Form
     {
+        private LoginService _loginService;
         public LoginForm()
         {
             InitializeComponent();
+            _loginService = new LoginService();
             LoadForm();
         }
 
@@ -52,6 +56,25 @@ namespace Dev69Restaurant.GUI.Login
             ShowPassword();
         }
 
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            var user = _loginService.Login(txtUsername.Text, txtPassword.Text);
+            var userRole = _loginService.GetRoleByUsername(txtUsername.Text);
+
+            if (user != null)
+            {
+                HomeForm homeForm = new HomeForm(user,userRole.ShortName);
+                this.Hide();
+                homeForm.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng.", "Đăng nhập thất bại", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+        }
         #endregion
+
+
     }
 }

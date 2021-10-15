@@ -1,12 +1,7 @@
 ﻿using Dev69Restaurant.DAL.Services;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace Dev69Restaurant.GUI.User
@@ -14,14 +9,18 @@ namespace Dev69Restaurant.GUI.User
     public partial class UserForm : Form
     {
         private UserService _userService;
+        Thread loadDataUserThread;
         public UserForm()
         {
             InitializeComponent();
+            Control.CheckForIllegalCrossThreadCalls = false;
+
             _userService = new UserService();
             LoadData();
         }
 
         #region Events
+
         private void txtSearch_KeyDown(object sender, KeyEventArgs e)
         {
             try
@@ -42,9 +41,17 @@ namespace Dev69Restaurant.GUI.User
             try
             {
                 string username = dgvListUser.SelectedCells[3].Value.ToString();
-                _userService.Delete(username);
-                MessageBox.Show("Xóa bản ghi thành công!", "Thành công!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LoadDataUser();
+                DialogResult result = MessageBox.Show($"Bạn có chắc chắn muốn xóa tài khoản {username} ?", "Cảnh báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    _userService.Delete(username);
+                    MessageBox.Show("Xóa bản ghi thành công!", "Thành công!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadDataUser();
+                }
+                else
+                {
+                    return;
+                }
             }
             catch
             {
@@ -62,22 +69,16 @@ namespace Dev69Restaurant.GUI.User
             createUserForm.ShowDialog();
         }
 
-        private void CreateUserForm_userDelegate()
-        {
-            LoadDataUser();
-        }
-
         private void btnUpdateUser_Click(object sender, EventArgs e)
         {
             try
             {
                 ShowUpdateUserForm();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -92,12 +93,23 @@ namespace Dev69Restaurant.GUI.User
             }
         }
 
+        private void CreateUserForm_userDelegate()
+        {
+            LoadDataUser();
+        }
+        private void UpdateUserForm_userDelegate()
+        {
+            LoadDataUser();
+        }
         #endregion
 
         #region Methods
+
         private void LoadData()
         {
-            LoadDataUser();
+            loadDataUserThread = new Thread(() => LoadDataUser());
+            loadDataUserThread.IsBackground = true;
+            loadDataUserThread.Start();
         }
 
         private void SearchUser()
@@ -113,6 +125,7 @@ namespace Dev69Restaurant.GUI.User
                 MessageBox.Show("Không tìm thấy bản ghi nào.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
         private void LoadDataUser(string keyword = null)
         {
             dgvListUser.Rows.Clear();
@@ -144,13 +157,14 @@ namespace Dev69Restaurant.GUI.User
 
                     UpdateUserForm updateUserForm = new UpdateUserForm(user);
                     updateUserForm.StartPosition = FormStartPosition.CenterScreen;
+                    updateUserForm.userDelegate += UpdateUserForm_userDelegate;
+
                     updateUserForm.ShowDialog();
                 }
                 else
                 {
                     MessageBox.Show("Không tìm thấy tài khoản.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
             }
         }
 

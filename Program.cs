@@ -1,5 +1,6 @@
 ﻿using Dev69Restaurant.GUI.Home;
 using Dev69Restaurant.GUI.Login;
+using Dev69Restaurant.GUI.TableFood;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,8 +19,8 @@ namespace Dev69Restaurant
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new HomeForm());
-            //Application.Run(new LoginForm());
+            //Application.Run(new HomeForm());
+            Application.Run(new LoginForm());
         }
     }
 }

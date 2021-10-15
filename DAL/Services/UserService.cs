@@ -76,7 +76,6 @@ namespace Dev69Restaurant.DAL.Services
             currentUser.Password = user.Password;
             currentUser.Status = user.Status;
 
-
             _userRepository.Update(currentUser);
             _unitOfWork.Commit();
         }
@@ -99,6 +98,22 @@ namespace Dev69Restaurant.DAL.Services
         public IEnumerable<Role> GetAllRole()
         {
             return _roleRepository.GetAll();
+        }
+
+        //Get UserRole by username
+        public UserRole GetRoleByUsername(string username)
+        {
+            return _userRoleRepository.GetSingleByCondition(x=>x.Username == username);
+        }
+
+        //Update UserRole by username
+        public void UpdateRoleByUsername(string username, int roleId)
+        {
+            var currentUserRole = _userRoleRepository.GetSingleByCondition(x => x.Username == username);
+            currentUserRole.RoleId = roleId;
+
+            _userRoleRepository.Update(currentUserRole);
+            _unitOfWork.Commit();
         }
 
         //Add user into roles user
