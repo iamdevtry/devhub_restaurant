@@ -1,47 +1,52 @@
-﻿using Dev69Restaurant.DAL.Services;
+﻿using Dev69Restaurant.Common;
+using Dev69Restaurant.DAL.Services;
+using Dev69Restaurant.DTO.Entities;
+using Dev69Restaurant.GUI.Food;
 using Dev69Restaurant.GUI.Manager;
 using Dev69Restaurant.GUI.TableFood;
+using Dev69Restaurant.Infrastructure.Components.UserControls;
 using Dev69Restaurant.Infrastructure.Settings;
 using Guna.UI.WinForms;
 using Guna.UI2.WinForms;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+using System.Collections;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Dev69Restaurant.GUI.Home
 {
     public partial class HomeForm : Form
     {
-
         #region Fields
-        private DTO.Entities.User _currentUser;
-        public string _roleName;
-        private UserService _userService;
 
+        private DTO.Entities.User _currentUser;
+        private BillService _billService;
+        private string _roleName;
+        private UserService _userService;
+        private int idTable = -1;
         private bool isCollapse = false;
         private Guna2GradientButton _currentButton;
         public static bool isDefaulTheme = true;
-        #endregion
+
+        #endregion Fields
+
         public HomeForm()
         {
             InitializeComponent();
         }
+
         public HomeForm(DTO.Entities.User user, string roleShortName)
         {
             InitializeComponent();
             _currentUser = user;
             _roleName = roleShortName;
             _userService = new UserService();
+            _billService = new BillService();
             LoadData();
         }
 
         #region Events
+
         private void HomeForm_Load(object sender, EventArgs e)
         {
             CheckUser();
@@ -53,10 +58,27 @@ namespace Dev69Restaurant.GUI.Home
         }
 
         private Form activeForm = null;
+
         private void btnHome_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, BaseIcon.HOME_ACTIVE);
+        }
+
+        private void HideFormActive()
+        {
+            if (activeForm != null)
+            {
+                activeForm.Hide();
+            }
+        }
+
+        private void btnTableFood_Click(object sender, EventArgs e)
+        {
+            HideFormActive();
+            ActivateButton(sender, BaseIcon.TABLE_FOOD_ACTIVE);
             TableFoodForm tableFood = new TableFoodForm();
+
+            tableFood.selectTableFoodDelegate += TableFood_selectTableFoodDelegate;
             activeForm = tableFood;
             tableFood.TopLevel = false;
             tableFood.AutoScroll = true;
@@ -66,14 +88,85 @@ namespace Dev69Restaurant.GUI.Home
             tableFood.Show();
         }
 
-        private void btnTableFood_Click(object sender, EventArgs e)
+        private void TableFood_selectTableFoodDelegate(object o)
         {
-            ActivateButton(sender, BaseIcon.TABLE_FOOD_ACTIVE);
+            string[] infoTable = o as string[];
+            idTable = int.Parse(infoTable[0]);
+            lblDetailTableName.Text = infoTable[2];
+        }
+
+        private void btnCheckout_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CheckOut();
+                MessageBox.Show("Thanh toán thành công!", "Đã Thanh toán", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                idTable = -1;
+            }
+            catch
+            {
+                MessageBox.Show("Thanh toán không thành công!", "Thanh toán thất bại", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
         }
 
         private void btnFood_Click(object sender, EventArgs e)
         {
+            HideFormActive();
             ActivateButton(sender, BaseIcon.FOOD_ACTIVE);
+            FoodForm food = new FoodForm();
+            food.selectFoodDelegate += Food_selectFoodDelegate;
+            activeForm = food;
+            food.TopLevel = false;
+            food.AutoScroll = true;
+            //childForm.FormBorderStyle = FormBorderStyle.None;
+            food.Dock = DockStyle.Fill;
+            pnMain.Controls.Add(food);
+            food.Show();
+        }
+
+        private void Food_selectFoodDelegate(object obj)
+        {
+            if(idTable == -1)
+            {
+                MessageBox.Show("Vui lòng chọn bàn trước khi chọn món!", "Không thể chọn món", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                return;
+            }
+            else
+            {
+                string[] food = obj as string[];
+                string foodId = food[0];
+                string foodPrice = food[1];
+                string foodName = food[2];
+
+                if (pnBillDetail.Controls.Count > 0)
+                {
+                    if (CheckFoodExist(int.Parse(foodId)) == -1)
+                    {
+                        findItemOfBill(foodId).nmrQuantity_ValueChanged(1 + "");
+                    }
+                    else
+                    {
+                        CreateNewItemOfBill(foodId, foodPrice, foodName);
+                    }
+                }
+                else
+                {
+                    CreateNewItemOfBill(foodId, foodPrice, foodName);
+                }
+                LoadTotalPrice();
+            }
+
+        }
+
+        private void UCItemOfBill_updateQuantityFoodDelegate()
+        {
+            LoadTotalPrice();
+        }
+
+        private void UCItemOfBill_deleteFoodDelegate(object obj)
+        {
+            pnBillDetail.Controls.Remove((UCItemOfBill)obj);
+            LoadTotalPrice();
         }
 
         private void btnStatistic_Click(object sender, EventArgs e)
@@ -177,9 +270,74 @@ namespace Dev69Restaurant.GUI.Home
             }
         }
 
-        #endregion
+        #endregion Events
 
         #region methods
+
+        private void CreateNewItemOfBill(string foodId, string foodPrice, string foodName)
+        {
+            UCItemOfBill uCItemOfBill = new UCItemOfBill(foodId, foodPrice, foodName);
+            uCItemOfBill.deleteFoodDelegate += UCItemOfBill_deleteFoodDelegate;
+            uCItemOfBill.updateQuantityFoodDelegate += UCItemOfBill_updateQuantityFoodDelegate;
+            pnBillDetail.Controls.Add(uCItemOfBill);
+        }
+
+        private void CheckOut()
+        {
+            Bill bill = new Bill();
+            bill.TableId = idTable;
+            bill.CustomerCategoryId = 1;
+            bill.VATId = 1;
+            bill.PaymentMethod = "Tiền mặt";
+            bill.TotalPrice = decimal.Parse(txtTotalPrice.Text);
+            _billService.Add(bill);
+
+            foreach (UCItemOfBill item in pnBillDetail.Controls)
+            {
+                BillDetail billDetail = new BillDetail();
+                billDetail.BillId = bill.Id;
+                billDetail.FoodId = item.idFood;
+                billDetail.Quantity = item.quantity;
+                billDetail.DateCheckin = DateTime.Now;
+                billDetail.DateCheckout = DateTime.Now;
+                _billService.Add(billDetail);
+            }
+        }
+        private int CheckFoodExist(int foodId)
+        {
+            foreach (UCItemOfBill item in pnBillDetail.Controls)
+            {
+                if (item.idFood == foodId)
+                {
+                    return -1;
+                }
+            }
+            return 1;
+        }
+
+        private UCItemOfBill findItemOfBill(string id)
+        {
+            UCItemOfBill uCItemOfBill = new UCItemOfBill();
+            foreach (UCItemOfBill item in pnBillDetail.Controls)
+            {
+                if (item.idFood == int.Parse(id))
+                {
+                    return uCItemOfBill = item;
+                }
+            }
+            return uCItemOfBill;
+        }
+
+        private void LoadTotalPrice()
+        {
+            double sum = 0;
+            foreach (UCItemOfBill item in pnBillDetail.Controls)
+            {
+                sum += item.totalPrice;
+            }
+            txtTotalPrice.Text = sum + "";
+        }
+
         private void LoadData()
         {
             LoadInfoUser();
@@ -236,7 +394,6 @@ namespace Dev69Restaurant.GUI.Home
                 _currentButton.FillColor2 = BaseColor.PRESS_COLOR_PRIMARY_ACTIVE;
                 _currentButton.ForeColor = BaseColor.FORE_COLOR_LIGHT_ACTIVE;
                 _currentButton.CustomImages.Image = Image.FromFile(iconActive);
-
             }
         }
 
@@ -255,8 +412,7 @@ namespace Dev69Restaurant.GUI.Home
                 }
             }
         }
-        #endregion
 
-
+        #endregion methods
     }
 }

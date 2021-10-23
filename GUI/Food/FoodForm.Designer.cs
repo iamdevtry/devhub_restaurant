@@ -1,7 +1,7 @@
 ﻿
-namespace Dev69Restaurant.GUI.TableFood
+namespace Dev69Restaurant.GUI.Food
 {
-    partial class TableFoodForm
+    partial class FoodForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,34 +29,33 @@ namespace Dev69Restaurant.GUI.TableFood
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnTableFood = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnFood = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
-            // pnTableFood
+            // pnFood
             // 
-            this.pnTableFood.AutoScroll = true;
-            this.pnTableFood.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnTableFood.Location = new System.Drawing.Point(0, 0);
-            this.pnTableFood.Name = "pnTableFood";
-            this.pnTableFood.Size = new System.Drawing.Size(800, 450);
-            this.pnTableFood.TabIndex = 0;
+            this.pnFood.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnFood.Location = new System.Drawing.Point(0, 0);
+            this.pnFood.Name = "pnFood";
+            this.pnFood.Size = new System.Drawing.Size(800, 450);
+            this.pnFood.TabIndex = 1;
             // 
-            // TableFoodForm
+            // FoodForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pnTableFood);
+            this.Controls.Add(this.pnFood);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "TableFoodForm";
-            this.Text = "TableFoodForm";
+            this.Name = "FoodForm";
+            this.Text = "FoodForm";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel pnTableFood;
+        private System.Windows.Forms.FlowLayoutPanel pnFood;
     }
 }

@@ -125,7 +125,7 @@ namespace Dev69Restaurant.Infrastructure.Components.UserControls
             this.Controls.Add(this.pnTableName);
             this.Controls.Add(this.pnStatus);
             this.Controls.Add(this.pnlineTableFood);
-            this.Margin = new System.Windows.Forms.Padding(15);
+            this.Margin = new System.Windows.Forms.Padding(15, 15, 0, 15);
             this.Name = "UCTableFood";
             this.Size = new System.Drawing.Size(220, 200);
             this.Click += new System.EventHandler(this.UCTableFood_Click);
