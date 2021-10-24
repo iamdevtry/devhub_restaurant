@@ -80,6 +80,22 @@ namespace Dev69Restaurant.DAL.Services
             _unitOfWork.Commit();
         }
 
+        //Update user
+        public void UpdateInfo(User user)
+        {
+            var currentUser = _userRepository.GetSingleByCondition(x => x.Username == user.Username);
+
+            currentUser.DisplayName = user.DisplayName;
+            currentUser.FullName = user.FullName;
+            currentUser.Avatar = user.Avatar;
+            currentUser.BirthDay = user.BirthDay;
+            currentUser.Address = user.Address;
+            currentUser.Phone = user.Phone;
+
+            _userRepository.Update(currentUser);
+            _unitOfWork.Commit();
+        }
+
         //Check username exist
         public bool CheckExist(string username)
         {

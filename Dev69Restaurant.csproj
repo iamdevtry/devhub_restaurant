@@ -112,6 +112,12 @@
     <Compile Include="GUI\Food\FoodForm.Designer.cs">
       <DependentUpon>FoodForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\InfoUser\InfoUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\InfoUser\InfoUserForm.Designer.cs">
+      <DependentUpon>InfoUserForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Manager\ManagerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +199,10 @@
     <Compile Include="Migrations\202110061433493_add-role-of-user.designer.cs">
       <DependentUpon>202110061433493_add-role-of-user.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202110231520290_add_field_avatar_of_tbUser.cs" />
+    <Compile Include="Migrations\202110231520290_add_field_avatar_of_tbUser.designer.cs">
+      <DependentUpon>202110231520290_add_field_avatar_of_tbUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="RestaurantDbContext.cs" />
     <Compile Include="Program.cs" />
@@ -201,6 +211,9 @@
     <Compile Include="Infrastructure\Settings\BaseIcon.cs" />
     <EmbeddedResource Include="GUI\Food\FoodForm.resx">
       <DependentUpon>FoodForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\InfoUser\InfoUserForm.resx">
+      <DependentUpon>InfoUserForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Manager\ManagerForm.resx">
       <DependentUpon>ManagerForm.cs</DependentUpon>
@@ -243,6 +256,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202110061433493_add-role-of-user.resx">
       <DependentUpon>202110061433493_add-role-of-user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110231520290_add_field_avatar_of_tbUser.resx">
+      <DependentUpon>202110231520290_add_field_avatar_of_tbUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -379,6 +395,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\delete_bin_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expand_arrow_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expand_arrow_defaut_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\slr_back_side_48px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

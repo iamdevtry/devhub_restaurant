@@ -30,7 +30,7 @@ namespace Dev69Restaurant.GUI.Home
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation3 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForm));
             this.btnHome = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnAbout = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -51,6 +51,7 @@ namespace Dev69Restaurant.GUI.Home
             this.picLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnHeader = new Guna.UI.WinForms.GunaPanel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.btnUser = new Guna.UI.WinForms.GunaImageButton();
             this.label1 = new System.Windows.Forms.Label();
             this.lblDisplayName = new System.Windows.Forms.Label();
             this.picAvatarUser = new Guna.UI.WinForms.GunaCirclePictureBox();
@@ -59,15 +60,15 @@ namespace Dev69Restaurant.GUI.Home
             this.pnDetail = new System.Windows.Forms.Panel();
             this.grbDetail = new Guna.UI.WinForms.GunaGroupBox();
             this.pnRight = new System.Windows.Forms.Panel();
-            this.pnBillDetail = new System.Windows.Forms.FlowLayoutPanel();
-            this.pnDetailHeader = new Guna.UI.WinForms.GunaGradient2Panel();
-            this.lblDetailTableName = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.txtTotalPrice = new Guna.UI2.WinForms.Guna2TextBox();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gnSeparator2 = new Guna.UI.WinForms.GunaSeparator();
             this.btnCheckout = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.pnDetailHeader = new Guna.UI.WinForms.GunaGradient2Panel();
+            this.lblDetailTableName = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
+            this.pnBillDetail = new System.Windows.Forms.FlowLayoutPanel();
             this.panel8 = new Guna.UI.WinForms.GunaPanel();
             this.pnFeature = new Guna.UI2.WinForms.Guna2Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -86,8 +87,8 @@ namespace Dev69Restaurant.GUI.Home
             this.pnDetail.SuspendLayout();
             this.grbDetail.SuspendLayout();
             this.pnRight.SuspendLayout();
-            this.pnDetailHeader.SuspendLayout();
             this.panel11.SuspendLayout();
+            this.pnDetailHeader.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
@@ -354,22 +355,22 @@ namespace Dev69Restaurant.GUI.Home
             // 
             this.gnTransition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.HorizSlide;
             this.gnTransition.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.gnTransition.DefaultAnimation = animation1;
+            animation3.AnimateOnlyDifferences = true;
+            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
+            animation3.LeafCoeff = 0F;
+            animation3.MaxTime = 1F;
+            animation3.MinTime = 0F;
+            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
+            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
+            animation3.MosaicSize = 0;
+            animation3.Padding = new System.Windows.Forms.Padding(0);
+            animation3.RotateCoeff = 0F;
+            animation3.RotateLimit = 0F;
+            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
+            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
+            animation3.TimeCoeff = 0F;
+            animation3.TransparencyCoeff = 0F;
+            this.gnTransition.DefaultAnimation = animation3;
             // 
             // pnLeft
             // 
@@ -456,6 +457,7 @@ namespace Dev69Restaurant.GUI.Home
             // 
             // panel9
             // 
+            this.panel9.Controls.Add(this.btnUser);
             this.panel9.Controls.Add(this.label1);
             this.panel9.Controls.Add(this.lblDisplayName);
             this.panel9.Controls.Add(this.picAvatarUser);
@@ -465,6 +467,21 @@ namespace Dev69Restaurant.GUI.Home
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(400, 100);
             this.panel9.TabIndex = 11;
+            // 
+            // btnUser
+            // 
+            this.btnUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.gnTransition.SetDecoration(this.btnUser, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnUser.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnUser.Image = global::Dev69Restaurant.Properties.Resources.expand_arrow_defaut_48px;
+            this.btnUser.ImageSize = new System.Drawing.Size(24, 24);
+            this.btnUser.Location = new System.Drawing.Point(323, 41);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.OnHoverImage = global::Dev69Restaurant.Properties.Resources.expand_arrow_48px;
+            this.btnUser.OnHoverImageOffset = new System.Drawing.Point(0, 0);
+            this.btnUser.Size = new System.Drawing.Size(24, 24);
+            this.btnUser.TabIndex = 12;
+            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
             // label1
             // 
@@ -493,9 +510,9 @@ namespace Dev69Restaurant.GUI.Home
             this.picAvatarUser.BaseColor = System.Drawing.Color.White;
             this.gnTransition.SetDecoration(this.picAvatarUser, Guna.UI2.AnimatorNS.DecorationType.None);
             this.picAvatarUser.Image = global::Dev69Restaurant.Properties.Resources.user_50px;
-            this.picAvatarUser.Location = new System.Drawing.Point(249, 25);
+            this.picAvatarUser.Location = new System.Drawing.Point(233, 20);
             this.picAvatarUser.Name = "picAvatarUser";
-            this.picAvatarUser.Size = new System.Drawing.Size(48, 48);
+            this.picAvatarUser.Size = new System.Drawing.Size(64, 64);
             this.picAvatarUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picAvatarUser.TabIndex = 11;
             this.picAvatarUser.TabStop = false;
@@ -571,9 +588,9 @@ namespace Dev69Restaurant.GUI.Home
             // 
             // pnRight
             // 
-            this.pnRight.Controls.Add(this.pnBillDetail);
-            this.pnRight.Controls.Add(this.pnDetailHeader);
             this.pnRight.Controls.Add(this.panel11);
+            this.pnRight.Controls.Add(this.pnDetailHeader);
+            this.pnRight.Controls.Add(this.pnBillDetail);
             this.gnTransition.SetDecoration(this.pnRight, Guna.UI2.AnimatorNS.DecorationType.None);
             this.pnRight.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnRight.Location = new System.Drawing.Point(0, 0);
@@ -581,16 +598,84 @@ namespace Dev69Restaurant.GUI.Home
             this.pnRight.Size = new System.Drawing.Size(400, 762);
             this.pnRight.TabIndex = 1;
             // 
-            // pnBillDetail
+            // panel11
             // 
-            this.pnBillDetail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.pnBillDetail.AutoScroll = true;
-            this.gnTransition.SetDecoration(this.pnBillDetail, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.pnBillDetail.Location = new System.Drawing.Point(0, 58);
-            this.pnBillDetail.Name = "pnBillDetail";
-            this.pnBillDetail.Size = new System.Drawing.Size(400, 474);
-            this.pnBillDetail.TabIndex = 5;
+            this.panel11.Controls.Add(this.txtTotalPrice);
+            this.panel11.Controls.Add(this.gunaLabel1);
+            this.panel11.Controls.Add(this.gnSeparator2);
+            this.panel11.Controls.Add(this.btnCheckout);
+            this.gnTransition.SetDecoration(this.panel11, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel11.Location = new System.Drawing.Point(0, 538);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(400, 224);
+            this.panel11.TabIndex = 1;
+            // 
+            // txtTotalPrice
+            // 
+            this.txtTotalPrice.BorderRadius = 8;
+            this.txtTotalPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gnTransition.SetDecoration(this.txtTotalPrice, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.txtTotalPrice.DefaultText = "";
+            this.txtTotalPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTotalPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTotalPrice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTotalPrice.DisabledState.Parent = this.txtTotalPrice;
+            this.txtTotalPrice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTotalPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTotalPrice.FocusedState.Parent = this.txtTotalPrice;
+            this.txtTotalPrice.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalPrice.ForeColor = System.Drawing.Color.Black;
+            this.txtTotalPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTotalPrice.HoverState.Parent = this.txtTotalPrice;
+            this.txtTotalPrice.Location = new System.Drawing.Point(69, 60);
+            this.txtTotalPrice.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtTotalPrice.Name = "txtTotalPrice";
+            this.txtTotalPrice.PasswordChar = '\0';
+            this.txtTotalPrice.PlaceholderText = "";
+            this.txtTotalPrice.ReadOnly = true;
+            this.txtTotalPrice.SelectedText = "";
+            this.txtTotalPrice.ShadowDecoration.Parent = this.txtTotalPrice;
+            this.txtTotalPrice.Size = new System.Drawing.Size(263, 44);
+            this.txtTotalPrice.TabIndex = 2;
+            this.txtTotalPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // gunaLabel1
+            // 
+            this.gunaLabel1.AutoSize = true;
+            this.gnTransition.SetDecoration(this.gunaLabel1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel1.Location = new System.Drawing.Point(20, 24);
+            this.gunaLabel1.Name = "gunaLabel1";
+            this.gunaLabel1.Size = new System.Drawing.Size(78, 20);
+            this.gunaLabel1.TabIndex = 1;
+            this.gunaLabel1.Text = "Thành tiền";
+            // 
+            // gnSeparator2
+            // 
+            this.gnTransition.SetDecoration(this.gnSeparator2, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.gnSeparator2.LineColor = System.Drawing.Color.Silver;
+            this.gnSeparator2.Location = new System.Drawing.Point(3, 11);
+            this.gnSeparator2.Name = "gnSeparator2";
+            this.gnSeparator2.Size = new System.Drawing.Size(394, 10);
+            this.gnSeparator2.TabIndex = 0;
+            // 
+            // btnCheckout
+            // 
+            this.btnCheckout.BorderRadius = 8;
+            this.btnCheckout.CheckedState.Parent = this.btnCheckout;
+            this.btnCheckout.CustomImages.Parent = this.btnCheckout;
+            this.gnTransition.SetDecoration(this.btnCheckout, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnCheckout.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCheckout.ForeColor = System.Drawing.Color.White;
+            this.btnCheckout.HoverState.Parent = this.btnCheckout;
+            this.btnCheckout.Location = new System.Drawing.Point(117, 149);
+            this.btnCheckout.Name = "btnCheckout";
+            this.btnCheckout.ShadowDecoration.Parent = this.btnCheckout;
+            this.btnCheckout.Size = new System.Drawing.Size(180, 45);
+            this.btnCheckout.TabIndex = 0;
+            this.btnCheckout.Text = "Thanh Toán";
+            this.btnCheckout.Click += new System.EventHandler(this.btnCheckout_Click);
             // 
             // pnDetailHeader
             // 
@@ -629,80 +714,16 @@ namespace Dev69Restaurant.GUI.Home
             this.gunaLabel2.TabIndex = 0;
             this.gunaLabel2.Text = "Chi tiết hóa đơn:";
             // 
-            // panel11
+            // pnBillDetail
             // 
-            this.panel11.Controls.Add(this.txtTotalPrice);
-            this.panel11.Controls.Add(this.gunaLabel1);
-            this.panel11.Controls.Add(this.gnSeparator2);
-            this.panel11.Controls.Add(this.btnCheckout);
-            this.gnTransition.SetDecoration(this.panel11, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel11.Location = new System.Drawing.Point(0, 538);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(400, 224);
-            this.panel11.TabIndex = 1;
-            // 
-            // txtTotalPrice
-            // 
-            this.txtTotalPrice.BorderRadius = 8;
-            this.txtTotalPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gnTransition.SetDecoration(this.txtTotalPrice, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.txtTotalPrice.DefaultText = "";
-            this.txtTotalPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTotalPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTotalPrice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTotalPrice.DisabledState.Parent = this.txtTotalPrice;
-            this.txtTotalPrice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTotalPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTotalPrice.FocusedState.Parent = this.txtTotalPrice;
-            this.txtTotalPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTotalPrice.HoverState.Parent = this.txtTotalPrice;
-            this.txtTotalPrice.Location = new System.Drawing.Point(69, 60);
-            this.txtTotalPrice.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.txtTotalPrice.Name = "txtTotalPrice";
-            this.txtTotalPrice.PasswordChar = '\0';
-            this.txtTotalPrice.PlaceholderText = "";
-            this.txtTotalPrice.SelectedText = "";
-            this.txtTotalPrice.ShadowDecoration.Parent = this.txtTotalPrice;
-            this.txtTotalPrice.Size = new System.Drawing.Size(263, 44);
-            this.txtTotalPrice.TabIndex = 2;
-            // 
-            // gunaLabel1
-            // 
-            this.gunaLabel1.AutoSize = true;
-            this.gnTransition.SetDecoration(this.gunaLabel1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel1.Location = new System.Drawing.Point(20, 24);
-            this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(78, 20);
-            this.gunaLabel1.TabIndex = 1;
-            this.gunaLabel1.Text = "Thành tiền";
-            // 
-            // gnSeparator2
-            // 
-            this.gnTransition.SetDecoration(this.gnSeparator2, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.gnSeparator2.LineColor = System.Drawing.Color.Silver;
-            this.gnSeparator2.Location = new System.Drawing.Point(3, 11);
-            this.gnSeparator2.Name = "gnSeparator2";
-            this.gnSeparator2.Size = new System.Drawing.Size(394, 10);
-            this.gnSeparator2.TabIndex = 0;
-            // 
-            // btnCheckout
-            // 
-            this.btnCheckout.BorderRadius = 8;
-            this.btnCheckout.CheckedState.Parent = this.btnCheckout;
-            this.btnCheckout.CustomImages.Parent = this.btnCheckout;
-            this.gnTransition.SetDecoration(this.btnCheckout, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.btnCheckout.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnCheckout.ForeColor = System.Drawing.Color.White;
-            this.btnCheckout.HoverState.Parent = this.btnCheckout;
-            this.btnCheckout.Location = new System.Drawing.Point(117, 149);
-            this.btnCheckout.Name = "btnCheckout";
-            this.btnCheckout.ShadowDecoration.Parent = this.btnCheckout;
-            this.btnCheckout.Size = new System.Drawing.Size(180, 45);
-            this.btnCheckout.TabIndex = 0;
-            this.btnCheckout.Text = "Thanh Toán";
-            this.btnCheckout.Click += new System.EventHandler(this.btnCheckout_Click);
+            this.pnBillDetail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.pnBillDetail.AutoScroll = true;
+            this.gnTransition.SetDecoration(this.pnBillDetail, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.pnBillDetail.Location = new System.Drawing.Point(0, 58);
+            this.pnBillDetail.Name = "pnBillDetail";
+            this.pnBillDetail.Size = new System.Drawing.Size(400, 474);
+            this.pnBillDetail.TabIndex = 5;
             // 
             // panel8
             // 
@@ -808,10 +829,10 @@ namespace Dev69Restaurant.GUI.Home
             this.pnDetail.ResumeLayout(false);
             this.grbDetail.ResumeLayout(false);
             this.pnRight.ResumeLayout(false);
-            this.pnDetailHeader.ResumeLayout(false);
-            this.pnDetailHeader.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
+            this.pnDetailHeader.ResumeLayout(false);
+            this.pnDetailHeader.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -863,5 +884,6 @@ namespace Dev69Restaurant.GUI.Home
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private Guna.UI.WinForms.GunaLabel lblDetailTableName;
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
+        private Guna.UI.WinForms.GunaImageButton btnUser;
     }
 }

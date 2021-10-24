@@ -39,5 +39,7 @@ namespace Dev69Restaurant.Infrastructure.Settings
         public static readonly string TOOGLE_MENU = @"..\..\Resources\menu_48px.png";
         public static readonly string TOOGLE_MENU_DARK = @"..\..\Resources\menu_dark_48px.png";
 
+        public static readonly string USER = @"..\..\Resources\user_50px.png";
+
     }
 }

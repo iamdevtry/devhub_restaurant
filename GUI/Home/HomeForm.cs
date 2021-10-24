@@ -1,7 +1,7 @@
-﻿using Dev69Restaurant.Common;
-using Dev69Restaurant.DAL.Services;
+﻿using Dev69Restaurant.DAL.Services;
 using Dev69Restaurant.DTO.Entities;
 using Dev69Restaurant.GUI.Food;
+using Dev69Restaurant.GUI.InfoUser;
 using Dev69Restaurant.GUI.Manager;
 using Dev69Restaurant.GUI.TableFood;
 using Dev69Restaurant.Infrastructure.Components.UserControls;
@@ -9,8 +9,8 @@ using Dev69Restaurant.Infrastructure.Settings;
 using Guna.UI.WinForms;
 using Guna.UI2.WinForms;
 using System;
-using System.Collections;
 using System.Drawing;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace Dev69Restaurant.GUI.Home
@@ -99,14 +99,30 @@ namespace Dev69Restaurant.GUI.Home
         {
             try
             {
-                CheckOut();
-                MessageBox.Show("Thanh toán thành công!", "Đã Thanh toán", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-                idTable = -1;
+                if (pnBillDetail.Controls.Count < 1)
+                {
+                    MessageBox.Show("Hóa đơn trống, vui lòng chọn món.", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                    return;
+                }
+                else
+                {
+                    CheckOut();
+                    MessageBox.Show("Thanh toán thành công!", "Đã Thanh toán", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                    idTable = -1;
+                    ResetBill();
+                }
             }
             catch
             {
                 MessageBox.Show("Thanh toán không thành công!", "Thanh toán thất bại", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
+        }
+
+        private void ResetBill()
+        {
+            pnBillDetail.Controls.Clear();
+            lblDetailTableName.Text = "Chưa chọn bàn!";
+            txtTotalPrice.Text = "";
         }
 
         private void btnFood_Click(object sender, EventArgs e)
@@ -126,7 +142,7 @@ namespace Dev69Restaurant.GUI.Home
 
         private void Food_selectFoodDelegate(object obj)
         {
-            if(idTable == -1)
+            if (idTable == -1)
             {
                 MessageBox.Show("Vui lòng chọn bàn trước khi chọn món!", "Không thể chọn món", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 return;
@@ -155,7 +171,6 @@ namespace Dev69Restaurant.GUI.Home
                 }
                 LoadTotalPrice();
             }
-
         }
 
         private void UCItemOfBill_updateQuantityFoodDelegate()
@@ -289,7 +304,7 @@ namespace Dev69Restaurant.GUI.Home
             bill.CustomerCategoryId = 1;
             bill.VATId = 1;
             bill.PaymentMethod = "Tiền mặt";
-            bill.TotalPrice = decimal.Parse(txtTotalPrice.Text);
+            bill.TotalPrice = decimal.Parse(sum.ToString());
             _billService.Add(bill);
 
             foreach (UCItemOfBill item in pnBillDetail.Controls)
@@ -303,6 +318,7 @@ namespace Dev69Restaurant.GUI.Home
                 _billService.Add(billDetail);
             }
         }
+
         private int CheckFoodExist(int foodId)
         {
             foreach (UCItemOfBill item in pnBillDetail.Controls)
@@ -328,14 +344,17 @@ namespace Dev69Restaurant.GUI.Home
             return uCItemOfBill;
         }
 
+        double sum;
         private void LoadTotalPrice()
         {
-            double sum = 0;
+            sum = 0;
             foreach (UCItemOfBill item in pnBillDetail.Controls)
             {
                 sum += item.totalPrice;
             }
-            txtTotalPrice.Text = sum + "";
+
+            var info = System.Globalization.CultureInfo.GetCultureInfo("vi-VN");
+            txtTotalPrice.Text = String.Format(info, "{0:c}", sum);
         }
 
         private void LoadData()
@@ -346,6 +365,14 @@ namespace Dev69Restaurant.GUI.Home
         private void LoadInfoUser()
         {
             lblDisplayName.Text = _currentUser.DisplayName;
+            try
+            {
+                picAvatarUser.Image = Image.FromFile(_currentUser.Avatar);
+            }
+            catch
+            {
+                picAvatarUser.Image = Image.FromFile(BaseIcon.USER);
+            }
         }
 
         private void CheckUser()
@@ -414,5 +441,12 @@ namespace Dev69Restaurant.GUI.Home
         }
 
         #endregion methods
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+            InfoUserForm infoUserForm = new InfoUserForm(_currentUser);
+            infoUserForm.StartPosition = FormStartPosition.CenterScreen;
+            infoUserForm.ShowDialog();
+        }
     }
 }
