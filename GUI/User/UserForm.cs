@@ -136,6 +136,7 @@ namespace Dev69Restaurant.GUI.User
             {
                 index++;
                 string status = item.Status ? "Kích Hoạt" : "Khóa";
+                var topLeftHeaderCell = dgvListUser.TopLeftHeaderCell;
                 dgvListUser.Rows.Add(index, item.FullName, item.DisplayName, item.Username, item.BirthDay, item.Address, item.Phone, status);
             }
         }

@@ -304,6 +304,7 @@ namespace Dev69Restaurant.GUI.Home
             bill.CustomerCategoryId = 1;
             bill.VATId = 1;
             bill.PaymentMethod = "Tiền mặt";
+            bill.CreatedDate = DateTime.Now;
             bill.TotalPrice = decimal.Parse(sum.ToString());
             _billService.Add(bill);
 

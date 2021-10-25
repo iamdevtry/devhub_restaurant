@@ -35,7 +35,11 @@ namespace Dev69Restaurant.DAL.Services
             _billDetailRepository.Add(billDetail);
             _unitOfWork.Commit();
             return billDetail;
+        }
 
+        public IEnumerable<Bill> GetBills()
+        {
+            return _billRepository.GetAll();
         }
     }
 }
