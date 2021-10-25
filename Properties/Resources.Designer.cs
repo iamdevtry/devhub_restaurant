@@ -93,9 +93,69 @@ namespace Dev69Restaurant.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bar_chart_48px {
+            get {
+                object obj = ResourceManager.GetObject("bar_chart_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bar_chart_hover_48px {
+            get {
+                object obj = ResourceManager.GetObject("bar_chart_hover_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cash_receipt_48px {
+            get {
+                object obj = ResourceManager.GetObject("cash_receipt_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap checked_radio_button_48px {
             get {
                 object obj = ResourceManager.GetObject("checked_radio_button_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap delete_bin_48px {
+            get {
+                object obj = ResourceManager.GetObject("delete_bin_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap expand_arrow_48px {
+            get {
+                object obj = ResourceManager.GetObject("expand_arrow_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap expand_arrow_defaut_48px {
+            get {
+                object obj = ResourceManager.GetObject("expand_arrow_defaut_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,6 +193,16 @@ namespace Dev69Restaurant.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap food_bar_dark_48px {
+            get {
+                object obj = ResourceManager.GetObject("food_bar_dark_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap food_bar_hover_48px {
             get {
                 object obj = ResourceManager.GetObject("food_bar_hover_48px", resourceCulture);
@@ -153,6 +223,16 @@ namespace Dev69Restaurant.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap home_dark_48px {
+            get {
+                object obj = ResourceManager.GetObject("home_dark_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap home_hover_48px {
             get {
                 object obj = ResourceManager.GetObject("home_hover_48px", resourceCulture);
@@ -166,6 +246,16 @@ namespace Dev69Restaurant.Properties {
         internal static System.Drawing.Bitmap info_48px {
             get {
                 object obj = ResourceManager.GetObject("info_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap info_dark_48px {
+            get {
+                object obj = ResourceManager.GetObject("info_dark_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,9 +293,29 @@ namespace Dev69Restaurant.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap menu_dark_48px {
+            get {
+                object obj = ResourceManager.GetObject("menu_dark_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap menu_hover_48px {
             get {
                 object obj = ResourceManager.GetObject("menu_hover_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap milkshake_48px {
+            get {
+                object obj = ResourceManager.GetObject("milkshake_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,6 +363,16 @@ namespace Dev69Restaurant.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap settings_dark_48px {
+            get {
+                object obj = ResourceManager.GetObject("settings_dark_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap settings_hover_48px {
             get {
                 object obj = ResourceManager.GetObject("settings_hover_48px", resourceCulture);
@@ -263,9 +383,39 @@ namespace Dev69Restaurant.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap slr_back_side_48px {
+            get {
+                object obj = ResourceManager.GetObject("slr_back_side_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap staff_dark_48px {
+            get {
+                object obj = ResourceManager.GetObject("staff_dark_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap statistics_48px {
             get {
                 object obj = ResourceManager.GetObject("statistics_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap statistics_dark_48px {
+            get {
+                object obj = ResourceManager.GetObject("statistics_dark_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -293,6 +443,16 @@ namespace Dev69Restaurant.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap table_top_view_dark_48px {
+            get {
+                object obj = ResourceManager.GetObject("table_top_view_dark_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap table_top_view_hover_48px {
             get {
                 object obj = ResourceManager.GetObject("table_top_view_hover_48px", resourceCulture);
@@ -306,6 +466,16 @@ namespace Dev69Restaurant.Properties {
         internal static System.Drawing.Bitmap unchecked_radio_button_48px {
             get {
                 object obj = ResourceManager.GetObject("unchecked_radio_button_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap us_dollar_48px {
+            get {
+                object obj = ResourceManager.GetObject("us_dollar_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

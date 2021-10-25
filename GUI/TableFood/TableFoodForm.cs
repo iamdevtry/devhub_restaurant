@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Dev69Restaurant.Common;
+using Dev69Restaurant.DAL.Services;
+using Dev69Restaurant.Infrastructure.Components.UserControls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +15,38 @@ namespace Dev69Restaurant.GUI.TableFood
 {
     public partial class TableFoodForm : Form
     {
+        private TableService _tableService;
+        public event SelectTableFoodDelegate selectTableFoodDelegate;
         public TableFoodForm()
         {
             InitializeComponent();
+            _tableService = new TableService();
+            LoadTableFood();
         }
+
+        private void LoadTableFood()
+        {
+            var listTableFoods = _tableService.GetAll();
+            foreach(var table in listTableFoods)
+            {
+                string status = table.Status ? "Có người" : "Trống";
+                UCTableFood ucTableFood = new UCTableFood(table.Id.ToString(), status, table.Name);
+                ucTableFood.Click += UcTableFood_Click;
+                pnTableFood.Controls.Add(ucTableFood);
+            }
+        }
+
+        private void UcTableFood_Click(object sender, EventArgs e)
+        {
+            foreach (UCTableFood item in pnTableFood.Controls)
+            {
+                item.unCheckedFood();
+            }
+
+            UCTableFood ucTableFood = sender as UCTableFood;
+            ucTableFood.isCheckedFood();
+            selectTableFoodDelegate(ucTableFood.Tag);
+        }
+
     }
 }

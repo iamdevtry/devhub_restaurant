@@ -118,11 +118,26 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="menu_hover_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu_hover_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="settings_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\settings_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete_bin_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete_bin_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="checked_radio_button_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\checked_radio_button_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="settings_hover_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\settings_hover_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="milkshake_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\milkshake_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="info_dark_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\info_dark_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="eye_hide_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\eye_hide_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -130,11 +145,17 @@
   <data name="banner_Logo_Light" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\banner_Logo_Light.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bar_chart_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bar_chart_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="search-hover_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search-hover_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="search_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="table_top_view_dark_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\table_top_view_dark_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="info_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\info_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,29 +163,47 @@
   <data name="no_image" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\no_image.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="staff_dark_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\staff_dark_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menu_dark_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu_dark_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="home_dark_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home_dark_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bar_chart_hover_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bar_chart_hover_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="home_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="food_bar_hover_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\food_bar_hover_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="eye_show_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\eye_show_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="food_bar_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\food_bar_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="statistics_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\statistics_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="banner_LoginForm" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\banner_LoginForm.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="info_hover_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\info_hover_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="food_bar_dark_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\food_bar_dark_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="home_hover_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home_hover_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="banner_Logo_Dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\banner_Logo_Dark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="statistics_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\statistics_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="us_dollar_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\us_dollar_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="info_hover_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\info_hover_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="statistics-hover_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\statistics-hover_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user_group_hover_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user_group_hover_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="table_top_view_hover_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\table_top_view_hover_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,8 +211,8 @@
   <data name="user_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="food_bar_hover_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\food_bar_hover_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="settings_dark_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\settings_dark_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="lock_26px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lock_26px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,25 +220,37 @@
   <data name="table_top_view_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\table_top_view_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="banner_Logo_Dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\banner_Logo_Dark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="expand_arrow_defaut_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\expand_arrow_defaut_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="banner_LoginForm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\banner_LoginForm.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="unchecked_radio_button_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\unchecked_radio_button_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="menu_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\menu_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="statistics-hover_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\statistics-hover_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="user_group_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user_group_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="settings_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\settings_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="expand_arrow_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\expand_arrow_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="menu_hover_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\menu_hover_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="food_bar_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\food_bar_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="user_group_hover_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user_group_hover_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="slr_back_side_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\slr_back_side_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="statistics_dark_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\statistics_dark_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cash_receipt_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cash_receipt_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -26,6 +26,9 @@ namespace Dev69Restaurant.DTO.Entities
         [MaxLength(256)]
         public string FullName { get; set; }
 
+        [MaxLength(256)]
+        public string Avatar { set; get; }
+
         public DateTime? BirthDay { get; set; }
 
         [Column(TypeName = "nvarchar")]

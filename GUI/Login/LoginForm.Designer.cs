@@ -35,7 +35,6 @@ namespace Dev69Restaurant.GUI.Login
             this.btnLogin = new Guna.UI.WinForms.GunaGradientButton();
             this.btnHidePassword = new Guna.UI.WinForms.GunaButton();
             this.btnShowPassword = new Guna.UI.WinForms.GunaButton();
-            this.chbRememberMe = new Guna.UI.WinForms.GunaCheckBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblWelcome = new System.Windows.Forms.Label();
@@ -74,7 +73,6 @@ namespace Dev69Restaurant.GUI.Login
             this.pnRight.Controls.Add(this.btnLogin);
             this.pnRight.Controls.Add(this.btnHidePassword);
             this.pnRight.Controls.Add(this.btnShowPassword);
-            this.pnRight.Controls.Add(this.chbRememberMe);
             this.pnRight.Controls.Add(this.lblPassword);
             this.pnRight.Controls.Add(this.lblUsername);
             this.pnRight.Controls.Add(this.lblWelcome);
@@ -103,7 +101,7 @@ namespace Dev69Restaurant.GUI.Login
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Image = null;
             this.btnLogin.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnLogin.Location = new System.Drawing.Point(128, 588);
+            this.btnLogin.Location = new System.Drawing.Point(128, 514);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btnLogin.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -115,6 +113,7 @@ namespace Dev69Restaurant.GUI.Login
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnHidePassword
             // 
@@ -161,19 +160,6 @@ namespace Dev69Restaurant.GUI.Login
             this.btnShowPassword.Size = new System.Drawing.Size(35, 42);
             this.btnShowPassword.TabIndex = 4;
             this.btnShowPassword.Click += new System.EventHandler(this.btnShowPassword_Click);
-            // 
-            // chbRememberMe
-            // 
-            this.chbRememberMe.BaseColor = System.Drawing.Color.White;
-            this.chbRememberMe.CheckedOffColor = System.Drawing.Color.Gray;
-            this.chbRememberMe.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.chbRememberMe.FillColor = System.Drawing.Color.White;
-            this.chbRememberMe.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chbRememberMe.Location = new System.Drawing.Point(128, 489);
-            this.chbRememberMe.Name = "chbRememberMe";
-            this.chbRememberMe.Size = new System.Drawing.Size(181, 27);
-            this.chbRememberMe.TabIndex = 3;
-            this.chbRememberMe.Text = "Ghi nhớ đăng nhập";
             // 
             // lblPassword
             // 
@@ -317,7 +303,6 @@ namespace Dev69Restaurant.GUI.Login
         private Guna.UI.WinForms.GunaControlBox gunaControlBox2;
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
         private Guna.UI2.WinForms.Guna2TextBox txtUsername;
-        private Guna.UI.WinForms.GunaCheckBox chbRememberMe;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label lblWelcome;
