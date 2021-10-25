@@ -25,5 +25,36 @@ namespace Dev69Restaurant.DAL.Services
         {
             return _tableFoodRepository.GetAll();
         }
+
+        public IEnumerable<TableFood> GetAll(string keyword)
+        {
+            if (!string.IsNullOrEmpty(keyword))
+            {
+                return _tableFoodRepository.GetMulti(x => x.Name.Contains(keyword));
+            }
+            else
+            {
+                return _tableFoodRepository.GetAll();
+            }
+
+        }
+        public TableFood Add(TableFood tableFood)
+        {
+            TableFood newTable = tableFood;
+            _tableFoodRepository.Add(newTable);
+            _unitOfWork.Commit();
+            return newTable;
+        }
+        public void Delete(int Id)
+        {
+            _tableFoodRepository.Delete(Id);
+            _unitOfWork.Commit();
+        }
+        public void Update(TableFood tableFood)
+        {
+            _tableFoodRepository.Update(tableFood);
+            _unitOfWork.Commit();
+
+        }
     }
 }
