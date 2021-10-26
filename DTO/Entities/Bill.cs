@@ -13,9 +13,6 @@ namespace Dev69Restaurant.DTO.Entities
         public int Id { get; set; }
 
         [Required]
-        public int CustomerCategoryId { get; set; }
-
-        [Required]
         public int TableId { get; set; }
 
         [Required]
@@ -28,9 +25,6 @@ namespace Dev69Restaurant.DTO.Entities
 
         public decimal Discount { get; set; }
         public decimal TotalPrice { get; set; }
-
-        [ForeignKey("CustomerCategoryId")]
-        public virtual CustomerCategory CustomerCategory { set; get; }
 
         [ForeignKey("TableId")]
         public virtual TableFood TableFood { set; get; }

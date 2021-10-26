@@ -29,9 +29,9 @@ namespace Dev69Restaurant.GUI.TableFood
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
@@ -42,17 +42,14 @@ namespace Dev69Restaurant.GUI.TableFood
             this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cbArea = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.picAvatar = new Guna.UI2.WinForms.Guna2ImageButton();
             this.label7 = new System.Windows.Forms.Label();
-            this.lblPassword = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvListTable = new Guna.UI2.WinForms.Guna2DataGridView();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TableName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AreaName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.picAvatar = new Guna.UI2.WinForms.Guna2ImageButton();
             this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -211,9 +208,7 @@ namespace Dev69Restaurant.GUI.TableFood
             // panel1
             // 
             this.panel1.Controls.Add(this.picAvatar);
-            this.panel1.Controls.Add(this.cbArea);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.lblPassword);
             this.panel1.Controls.Add(this.lblUsername);
             this.panel1.Controls.Add(this.txtName);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
@@ -222,25 +217,18 @@ namespace Dev69Restaurant.GUI.TableFood
             this.panel1.Size = new System.Drawing.Size(413, 620);
             this.panel1.TabIndex = 5;
             // 
-            // cbArea
+            // picAvatar
             // 
-            this.cbArea.BackColor = System.Drawing.Color.Transparent;
-            this.cbArea.BorderRadius = 8;
-            this.cbArea.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbArea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbArea.FocusedColor = System.Drawing.Color.Empty;
-            this.cbArea.FocusedState.Parent = this.cbArea;
-            this.cbArea.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbArea.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbArea.FormattingEnabled = true;
-            this.cbArea.HoverState.Parent = this.cbArea;
-            this.cbArea.ItemHeight = 30;
-            this.cbArea.ItemsAppearance.Parent = this.cbArea;
-            this.cbArea.Location = new System.Drawing.Point(53, 455);
-            this.cbArea.Name = "cbArea";
-            this.cbArea.ShadowDecoration.Parent = this.cbArea;
-            this.cbArea.Size = new System.Drawing.Size(323, 36);
-            this.cbArea.TabIndex = 22;
+            this.picAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picAvatar.CheckedState.Parent = this.picAvatar;
+            this.picAvatar.HoverState.ImageSize = new System.Drawing.Size(160, 160);
+            this.picAvatar.HoverState.Parent = this.picAvatar;
+            this.picAvatar.ImageSize = new System.Drawing.Size(160, 160);
+            this.picAvatar.Location = new System.Drawing.Point(117, 108);
+            this.picAvatar.Name = "picAvatar";
+            this.picAvatar.PressedState.Parent = this.picAvatar;
+            this.picAvatar.Size = new System.Drawing.Size(160, 160);
+            this.picAvatar.TabIndex = 23;
             // 
             // label7
             // 
@@ -251,16 +239,6 @@ namespace Dev69Restaurant.GUI.TableFood
             this.label7.Size = new System.Drawing.Size(41, 23);
             this.label7.TabIndex = 20;
             this.label7.Text = "Ảnh";
-            // 
-            // lblPassword
-            // 
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(49, 414);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(73, 23);
-            this.lblPassword.TabIndex = 3;
-            this.lblPassword.Text = "Khu vực";
             // 
             // lblUsername
             // 
@@ -286,36 +264,35 @@ namespace Dev69Restaurant.GUI.TableFood
             // 
             this.dgvListTable.AllowUserToAddRows = false;
             this.dgvListTable.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(223)))), ((int)(((byte)(251)))));
-            this.dgvListTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(223)))), ((int)(((byte)(251)))));
+            this.dgvListTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvListTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListTable.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvListTable.BackgroundColor = System.Drawing.Color.White;
             this.dgvListTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvListTable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvListTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(242)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(242)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvListTable.ColumnHeadersHeight = 35;
             this.dgvListTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.STT,
             this.TableName,
-            this.AreaName,
             this.Status});
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(233)))), ((int)(((byte)(252)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(185)))), ((int)(((byte)(246)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvListTable.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(233)))), ((int)(((byte)(252)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(185)))), ((int)(((byte)(246)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvListTable.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvListTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvListTable.EnableHeadersVisualStyles = false;
             this.dgvListTable.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(222)))), ((int)(((byte)(251)))));
@@ -367,14 +344,6 @@ namespace Dev69Restaurant.GUI.TableFood
             this.TableName.Name = "TableName";
             this.TableName.ReadOnly = true;
             // 
-            // AreaName
-            // 
-            this.AreaName.FillWeight = 105.8642F;
-            this.AreaName.HeaderText = "Khu vực";
-            this.AreaName.MinimumWidth = 6;
-            this.AreaName.Name = "AreaName";
-            this.AreaName.ReadOnly = true;
-            // 
             // Status
             // 
             this.Status.FillWeight = 105.8642F;
@@ -382,19 +351,6 @@ namespace Dev69Restaurant.GUI.TableFood
             this.Status.MinimumWidth = 6;
             this.Status.Name = "Status";
             this.Status.ReadOnly = true;
-            // 
-            // picAvatar
-            // 
-            this.picAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picAvatar.CheckedState.Parent = this.picAvatar;
-            this.picAvatar.HoverState.ImageSize = new System.Drawing.Size(160, 160);
-            this.picAvatar.HoverState.Parent = this.picAvatar;
-            this.picAvatar.ImageSize = new System.Drawing.Size(160, 160);
-            this.picAvatar.Location = new System.Drawing.Point(117, 108);
-            this.picAvatar.Name = "picAvatar";
-            this.picAvatar.PressedState.Parent = this.picAvatar;
-            this.picAvatar.Size = new System.Drawing.Size(160, 160);
-            this.picAvatar.TabIndex = 23;
             // 
             // ManageTableFoodForm
             // 
@@ -428,19 +384,16 @@ namespace Dev69Restaurant.GUI.TableFood
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2DataGridView dgvListTable;
-        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TableName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AreaName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
-        private Guna.UI2.WinForms.Guna2ComboBox cbArea;
         private System.Windows.Forms.Panel panel7;
         private Guna.UI2.WinForms.Guna2Button btnUpdate;
         private Guna.UI2.WinForms.Guna2Button btnDelete;
         private Guna.UI2.WinForms.Guna2Button btnAdd;
         private Guna.UI2.WinForms.Guna2ImageButton picAvatar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TableName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
     }
 }

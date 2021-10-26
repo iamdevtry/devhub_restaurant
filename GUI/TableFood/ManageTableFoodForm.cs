@@ -17,12 +17,10 @@ namespace Dev69Restaurant.GUI.TableFood
     public partial class ManageTableFoodForm : Form
     {
         private TableService _tableFoodService;
-        private AreaService _areaService;
         public ManageTableFoodForm()
         {
             InitializeComponent();
             _tableFoodService = new TableService();
-            _areaService = new AreaService();
             LoadData();
             picAvatar.Image = Image.FromFile(BaseIcon.TABLE_FOOD_IMAGE);
         }
@@ -80,7 +78,6 @@ namespace Dev69Restaurant.GUI.TableFood
                         if (GetSelectedRow(txtName.Text) != -1)
                         {
                             tableFood.Name = txtName.Text;
-                            tableFood.AreaId = int.Parse(cbArea.SelectedValue.ToString());
                             _tableFoodService.Update(tableFood);
                             MessageBox.Show("Thêm thành công! ");
                             LoadData();
@@ -96,7 +93,7 @@ namespace Dev69Restaurant.GUI.TableFood
                 }
                 else
                 {
-                    MessageBox.Show("Không tìm thấy tài khoản.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Không tìm thấy bàn.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -107,18 +104,6 @@ namespace Dev69Restaurant.GUI.TableFood
             if (e.RowIndex != -1)
             {
                 txtName.Text = dgvListTable.Rows[e.RowIndex].Cells[1].Value.ToString();
-                //DTO.Entities.TableFood table = _tableFoodService.Find(tableName);
-
-                string areaName = dgvListTable.Rows[e.RowIndex].Cells[2].Value.ToString();
-                var listAreas = GetAllAreas();
-                foreach (var item in listAreas)
-                {
-                    if (item.Name == areaName)
-                    {
-                        cbArea.SelectedValue = item.Id;
-                    }
-                }
-
             }
         }
 
@@ -151,7 +136,6 @@ namespace Dev69Restaurant.GUI.TableFood
         {
             DTO.Entities.TableFood tableFood = new DTO.Entities.TableFood();
             tableFood.Name = txtName.Text;
-            tableFood.AreaId = int.Parse(cbArea.SelectedValue.ToString());
             tableFood.Status = true;
             _tableFoodService.Add(tableFood);
         }
@@ -159,12 +143,10 @@ namespace Dev69Restaurant.GUI.TableFood
         private void LoadData(string keyword=null)
         {
             var listTables = _tableFoodService.GetAll(keyword).ToList();
-            var listAreas = _areaService.GetAll().ToList();
-            LoadComboArea();
-            LoadDatagridView(listTables, listAreas);
+            LoadDatagridView(listTables);
         }
 
-        private void LoadDatagridView(List<DTO.Entities.TableFood> tableFoods, List<Area> areas)
+        private void LoadDatagridView(List<DTO.Entities.TableFood> tableFoods)
         {
             dgvListTable.Rows.Clear();
             int index = dgvListTable.Rows.Count;
@@ -172,22 +154,10 @@ namespace Dev69Restaurant.GUI.TableFood
             foreach (var item in tableFoods)
             {
                 index++;
-                Area area = areas.Where(x => x.Id == item.AreaId).FirstOrDefault();
                 string status = item.Status ? "Kích Hoạt" : "Khóa";
                 var topLeftHeaderCell = dgvListTable.TopLeftHeaderCell;
-                dgvListTable.Rows.Add(index, item.Name, area.Name, status);
+                dgvListTable.Rows.Add(index, item.Name, status);
             }
-        }
-
-        private IEnumerable<Area> GetAllAreas()
-        {
-            return _areaService.GetAll();
-        }
-        private void LoadComboArea()
-        {
-            cbArea.DataSource = GetAllAreas().ToList();
-            cbArea.DisplayMember = "Name";
-            cbArea.ValueMember = "Id";
         }
 
         private int GetSelectedRow(string name)

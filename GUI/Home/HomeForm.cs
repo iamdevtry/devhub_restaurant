@@ -301,7 +301,6 @@ namespace Dev69Restaurant.GUI.Home
         {
             Bill bill = new Bill();
             bill.TableId = idTable;
-            bill.CustomerCategoryId = 1;
             bill.VATId = 1;
             bill.PaymentMethod = "Tiền mặt";
             bill.CreatedDate = DateTime.Now;

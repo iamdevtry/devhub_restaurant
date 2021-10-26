@@ -13,11 +13,8 @@ namespace Dev69Restaurant
             this.Configuration.LazyLoadingEnabled = false;
         }
 
-        public DbSet<Area> Areas { set; get; }
         public DbSet<Bill> Bills { set; get; }
         public DbSet<BillDetail> BillDetails { set; get; }
-        public DbSet<Customer> Customers { set; get; }
-        public DbSet<CustomerCategory> CustomerCategories { set; get; }
         public DbSet<Discount> Discounts { set; get; }
         public DbSet<Food> Foods { set; get; }
         public DbSet<FoodCategory> FoodCategories { set; get; }

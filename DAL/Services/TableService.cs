@@ -59,7 +59,6 @@ namespace Dev69Restaurant.DAL.Services
         {
             var currentTable = _tableFoodRepository.GetSingleByCondition(x => x.Name == tableFood.Name);
             currentTable.Name = tableFood.Name;
-            currentTable.AreaId = tableFood.AreaId;
             _tableFoodRepository.Update(currentTable);
             _unitOfWork.Commit();
 

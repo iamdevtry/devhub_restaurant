@@ -1,6 +1,5 @@
 ﻿using Dev69Restaurant.GUI.Home;
 using Dev69Restaurant.GUI.Login;
-using Dev69Restaurant.GUI.ManageArea;
 using Dev69Restaurant.GUI.Manager;
 using Dev69Restaurant.GUI.TableFood;
 using System;

@@ -17,12 +17,6 @@ namespace Dev69Restaurant.DTO.Entities
         [MaxLength(256)]
         public string Name { get; set; }
 
-        [Required]
-        public int AreaId { get; set; }
-
-        [ForeignKey("AreaId")]
-        public virtual Area Area { set; get; }
-
         public virtual IEnumerable<Bill> Bills { set; get; }
     }
 }
