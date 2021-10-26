@@ -1,4 +1,5 @@
 ﻿using Dev69Restaurant.Common;
+using Dev69Restaurant.Infrastructure.Settings;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,6 +25,7 @@ namespace Dev69Restaurant.Infrastructure.Components.UserControls
             InitializeComponent();
             lblStatus.Text = status;
             lblTableName.Text = tableName;
+            this.BackgroundImage = Image.FromFile(BaseIcon.TABLE_FOOD_IMAGE);
             string[] foods = { idTable, status, tableName};
             this.Tag = foods;
         }

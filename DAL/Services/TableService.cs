@@ -36,8 +36,13 @@ namespace Dev69Restaurant.DAL.Services
             {
                 return _tableFoodRepository.GetAll();
             }
-
         }
+
+        public TableFood Find(string name)
+        {
+            return _tableFoodRepository.GetSingleByCondition(x=>x.Name==name);
+        }
+
         public TableFood Add(TableFood tableFood)
         {
             TableFood newTable = tableFood;
@@ -52,7 +57,10 @@ namespace Dev69Restaurant.DAL.Services
         }
         public void Update(TableFood tableFood)
         {
-            _tableFoodRepository.Update(tableFood);
+            var currentTable = _tableFoodRepository.GetSingleByCondition(x => x.Name == tableFood.Name);
+            currentTable.Name = tableFood.Name;
+            currentTable.AreaId = tableFood.AreaId;
+            _tableFoodRepository.Update(currentTable);
             _unitOfWork.Commit();
 
         }

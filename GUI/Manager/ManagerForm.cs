@@ -1,4 +1,5 @@
 ﻿using Dev69Restaurant.GUI.Revenue;
+using Dev69Restaurant.GUI.TableFood;
 using Dev69Restaurant.GUI.User;
 using System;
 using System.Collections.Generic;
@@ -39,6 +40,17 @@ namespace Dev69Restaurant.GUI.Manager
             revenueForm.Dock = DockStyle.Fill;
             pnMain.Controls.Add(revenueForm);
             revenueForm.Show();
+        }
+
+        private void btnTableFood_Click(object sender, EventArgs e)
+        {
+            ManageTableFoodForm manageTableFoodForm = new ManageTableFoodForm();
+            manageTableFoodForm.TopLevel = false;
+            manageTableFoodForm.AutoScroll = true;
+            //childForm.FormBorderStyle = FormBorderStyle.None;
+            manageTableFoodForm.Dock = DockStyle.Fill;
+            pnMain.Controls.Add(manageTableFoodForm);
+            manageTableFoodForm.Show();
         }
     }
 }

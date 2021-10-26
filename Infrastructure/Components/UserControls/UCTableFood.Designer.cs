@@ -121,7 +121,7 @@ namespace Dev69Restaurant.Infrastructure.Components.UserControls
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Dev69Restaurant.Properties.Resources.no_image;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.pnTableName);
             this.Controls.Add(this.pnStatus);
             this.Controls.Add(this.pnlineTableFood);
