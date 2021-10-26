@@ -41,6 +41,7 @@ namespace Dev69Restaurant.Infrastructure.Settings
 
         public static readonly string USER = @"..\..\Resources\user_50px.png";
         public static readonly string TABLE_FOOD_IMAGE = @"..\..\Resources\table_image.jpg";
+        public static readonly string NO_IMAGE = @"..\..\Resources\no_image.jpg";
 
     }
 }

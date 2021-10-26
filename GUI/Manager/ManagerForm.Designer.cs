@@ -308,6 +308,7 @@ namespace Dev69Restaurant.GUI.Manager
             this.btnFood.Size = new System.Drawing.Size(275, 50);
             this.btnFood.TabIndex = 6;
             this.btnFood.Text = "Quản lý món ";
+            this.btnFood.Click += new System.EventHandler(this.btnFood_Click);
             // 
             // pnTop
             // 

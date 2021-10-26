@@ -100,7 +100,8 @@
     <Compile Include="DAL\Repositories\UserRoleRepository.cs" />
     <Compile Include="DAL\Repositories\VATRepository.cs" />
     <Compile Include="DAL\Services\BillService.cs" />
-    <Compile Include="DAL\Services\FoodTestService.cs" />
+    <Compile Include="DAL\Services\FoodCategoryService.cs" />
+    <Compile Include="DAL\Services\FoodService.cs" />
     <Compile Include="DAL\Services\LoginService.cs" />
     <Compile Include="DAL\Services\TableService.cs" />
     <Compile Include="DAL\Services\UserService.cs" />
@@ -128,11 +129,29 @@
     <Compile Include="GUI\InfoUser\InfoUserForm.Designer.cs">
       <DependentUpon>InfoUserForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ManageFoodCategory\FoodCategoriesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ManageFoodCategory\FoodCategoriesForm.Designer.cs">
+      <DependentUpon>FoodCategoriesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ManageFood\ManageFoodForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ManageFood\ManageFoodForm.Designer.cs">
+      <DependentUpon>ManageFoodForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Manager\ManagerForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\Manager\ManagerForm.Designer.cs">
       <DependentUpon>ManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Stastic\StasticForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Stastic\StasticForm.Designer.cs">
+      <DependentUpon>StasticForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\TableFood\ManageTableFoodForm.cs">
       <SubType>Form</SubType>
@@ -245,8 +264,17 @@
     <EmbeddedResource Include="GUI\InfoUser\InfoUserForm.resx">
       <DependentUpon>InfoUserForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ManageFoodCategory\FoodCategoriesForm.resx">
+      <DependentUpon>FoodCategoriesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ManageFood\ManageFoodForm.resx">
+      <DependentUpon>ManageFoodForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Manager\ManagerForm.resx">
       <DependentUpon>ManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Stastic\StasticForm.resx">
+      <DependentUpon>StasticForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\TableFood\ManageTableFoodForm.resx">
       <DependentUpon>ManageTableFoodForm.cs</DependentUpon>

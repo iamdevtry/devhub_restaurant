@@ -1,5 +1,6 @@
 ﻿using Dev69Restaurant.GUI.Home;
 using Dev69Restaurant.GUI.Login;
+using Dev69Restaurant.GUI.ManageFoodCategory;
 using Dev69Restaurant.GUI.Manager;
 using Dev69Restaurant.GUI.TableFood;
 using System;
@@ -23,6 +24,8 @@ namespace Dev69Restaurant
             //Application.Run(new HomeForm());
             //Application.Run(new LoginForm());
             Application.Run(new ManagerForm());
+            //Application.Run(new FoodCategoryForm());
+
             //Application.Run(new ManageTableFoodForm());
         }
     }

@@ -30,7 +30,7 @@ namespace Dev69Restaurant.GUI.Home
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation3 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForm));
             this.btnHome = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnAbout = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -120,7 +120,7 @@ namespace Dev69Restaurant.GUI.Home
             this.btnHome.ShadowDecoration.Parent = this.btnHome;
             this.btnHome.Size = new System.Drawing.Size(275, 50);
             this.btnHome.TabIndex = 6;
-            this.btnHome.Text = "Home";
+            this.btnHome.Text = "Trang chính";
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // btnAbout
@@ -180,7 +180,7 @@ namespace Dev69Restaurant.GUI.Home
             this.btnStatistic.ShadowDecoration.Parent = this.btnStatistic;
             this.btnStatistic.Size = new System.Drawing.Size(275, 50);
             this.btnStatistic.TabIndex = 6;
-            this.btnStatistic.Text = "Statistic";
+            this.btnStatistic.Text = "Thống kê";
             this.btnStatistic.Click += new System.EventHandler(this.btnStatistic_Click);
             // 
             // btnFood
@@ -211,7 +211,7 @@ namespace Dev69Restaurant.GUI.Home
             this.btnFood.ShadowDecoration.Parent = this.btnFood;
             this.btnFood.Size = new System.Drawing.Size(275, 50);
             this.btnFood.TabIndex = 6;
-            this.btnFood.Text = "Food";
+            this.btnFood.Text = "Món ăn";
             this.btnFood.Click += new System.EventHandler(this.btnFood_Click);
             // 
             // btnTableFood
@@ -242,7 +242,7 @@ namespace Dev69Restaurant.GUI.Home
             this.btnTableFood.ShadowDecoration.Parent = this.btnTableFood;
             this.btnTableFood.Size = new System.Drawing.Size(275, 50);
             this.btnTableFood.TabIndex = 6;
-            this.btnTableFood.Text = "Table Food";
+            this.btnTableFood.Text = "Bàn ăn";
             this.btnTableFood.Click += new System.EventHandler(this.btnTableFood_Click);
             // 
             // btnMinimize
@@ -355,22 +355,22 @@ namespace Dev69Restaurant.GUI.Home
             // 
             this.gnTransition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.HorizSlide;
             this.gnTransition.Cursor = null;
-            animation3.AnimateOnlyDifferences = true;
-            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 0F;
-            animation3.MaxTime = 1F;
-            animation3.MinTime = 0F;
-            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
-            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
-            animation3.MosaicSize = 0;
-            animation3.Padding = new System.Windows.Forms.Padding(0);
-            animation3.RotateCoeff = 0F;
-            animation3.RotateLimit = 0F;
-            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
-            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
-            animation3.TimeCoeff = 0F;
-            animation3.TransparencyCoeff = 0F;
-            this.gnTransition.DefaultAnimation = animation3;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.gnTransition.DefaultAnimation = animation1;
             // 
             // pnLeft
             // 

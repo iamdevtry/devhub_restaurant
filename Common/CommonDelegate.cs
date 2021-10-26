@@ -13,4 +13,5 @@ namespace Dev69Restaurant.Common
     public delegate void UpdateQuantityFoodDelegate();
     public delegate void UpdateFoodForm();
     public delegate void UpdateBillDetail();
+    public delegate void UpdateFoodCategory();
 }
