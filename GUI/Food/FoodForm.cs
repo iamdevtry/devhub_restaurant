@@ -25,12 +25,34 @@ namespace Dev69Restaurant.GUI.Food
             _foodService = new FoodService();
             LoadFood();
         }
-        private void LoadFood()
+
+        public FoodForm(string keyword)
         {
-            var listFoods = _foodService.GetAll();
+            InitializeComponent();
+            _foodService = new FoodService();
+            GetAllByCategory(keyword);
+        }
+
+        private void GetAllByCategory(string keyword)
+        {
+            var listFoods = _foodService.GetAllByCategory(keyword);
             foreach (var food in listFoods)
             {
                 UCTableFood ucTableFood = new UCTableFood(food.Id.ToString(), food.Price.ToString(), food.Name);
+                ucTableFood.BackgroundImage = Image.FromFile(food.Image);
+                ucTableFood.Click += UcTableFood_Click;
+
+                pnFood.Controls.Add(ucTableFood);
+            }
+        }
+
+        private void LoadFood(string keyword=null)
+        {
+            var listFoods = _foodService.GetAll(keyword);
+            foreach (var food in listFoods)
+            {
+                UCTableFood ucTableFood = new UCTableFood(food.Id.ToString(), food.Price.ToString(), food.Name);
+                ucTableFood.BackgroundImage = Image.FromFile(food.Image);
                 ucTableFood.Click += UcTableFood_Click;
 
                 pnFood.Controls.Add(ucTableFood);

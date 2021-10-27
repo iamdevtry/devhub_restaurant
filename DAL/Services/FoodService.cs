@@ -40,11 +40,30 @@ namespace Dev69Restaurant.DAL.Services
             return _foodCategoryRepository.GetAll();
         }
 
+        public List<FoodCategory> GetAllCategory()
+        {
+            return _foodCategoryRepository.GetAll().ToList();
+        }
+
         public IEnumerable<Food> GetAll(string keywork)
         {
             if (!string.IsNullOrEmpty(keywork))
             {
                 return _foodRepository.GetMulti(x => x.Name.Contains(keywork));
+            }
+            else
+            {
+                return _foodRepository.GetAll();
+            }
+        }
+
+        public IEnumerable<Food> GetAllByCategory(string keywork)
+        {
+
+            if (!string.IsNullOrEmpty(keywork))
+            {
+                int categoryId = int.Parse(keywork);
+                return _foodRepository.GetMulti(x => x.CategoryId.Equals(categoryId));
             }
             else
             {

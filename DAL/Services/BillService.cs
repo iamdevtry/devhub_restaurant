@@ -41,5 +41,32 @@ namespace Dev69Restaurant.DAL.Services
         {
             return _billRepository.GetAll();
         }
+
+        public IEnumerable<Bill> GetBills(string keyword)
+        {
+            if (!string.IsNullOrEmpty(keyword))
+                return _billRepository.GetMulti(x=>x.TableFood.Name.Contains(keyword) || x.CreatedBy.Contains(keyword));
+            else
+                return _billRepository.GetAll();
+        }
+
+        public Bill GetBillById(int id)
+        {
+            return _billRepository.GetSingleById(id);
+        }
+
+        public IEnumerable<BillDetail> GetBillDetails()
+        {
+            return _billDetailRepository.GetAll();
+        }
+
+        public IEnumerable<BillDetail> GetBillByBillId(int id)
+        {
+            if (!string.IsNullOrEmpty(id+""))
+                return _billDetailRepository.GetMulti(x => x.BillId == id);
+            else
+                return _billDetailRepository.GetAll();
+        }
+
     }
 }

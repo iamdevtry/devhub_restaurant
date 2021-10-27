@@ -34,7 +34,6 @@ namespace Dev69Restaurant.GUI.Home
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForm));
             this.btnHome = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnAbout = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnStatistic = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnFood = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnTableFood = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnMinimize = new Guna.UI.WinForms.GunaControlBox();
@@ -55,7 +54,6 @@ namespace Dev69Restaurant.GUI.Home
             this.label1 = new System.Windows.Forms.Label();
             this.lblDisplayName = new System.Windows.Forms.Label();
             this.picAvatarUser = new Guna.UI.WinForms.GunaCirclePictureBox();
-            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnToogleMenu = new Guna.UI2.WinForms.Guna2ImageButton();
             this.pnDetail = new System.Windows.Forms.Panel();
             this.grbDetail = new Guna.UI.WinForms.GunaGroupBox();
@@ -71,6 +69,8 @@ namespace Dev69Restaurant.GUI.Home
             this.pnBillDetail = new System.Windows.Forms.FlowLayoutPanel();
             this.panel8 = new Guna.UI.WinForms.GunaPanel();
             this.pnFeature = new Guna.UI2.WinForms.Guna2Panel();
+            this.cbCategoryFood = new Guna.UI.WinForms.GunaComboBox();
+            this.lblFoodCategory = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel7 = new Guna.UI.WinForms.GunaPanel();
@@ -90,6 +90,7 @@ namespace Dev69Restaurant.GUI.Home
             this.panel11.SuspendLayout();
             this.pnDetailHeader.SuspendLayout();
             this.panel8.SuspendLayout();
+            this.pnFeature.SuspendLayout();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -153,36 +154,6 @@ namespace Dev69Restaurant.GUI.Home
             this.btnAbout.Text = "About";
             this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
             // 
-            // btnStatistic
-            // 
-            this.btnStatistic.BorderRadius = 8;
-            this.btnStatistic.CheckedState.Parent = this.btnStatistic;
-            this.btnStatistic.CustomImages.CheckedImage = global::Dev69Restaurant.Properties.Resources.statistics_48px;
-            this.btnStatistic.CustomImages.HoveredImage = ((System.Drawing.Image)(resources.GetObject("btnStatistic.CustomImages.HoveredImage")));
-            this.btnStatistic.CustomImages.Image = global::Dev69Restaurant.Properties.Resources.statistics_48px;
-            this.btnStatistic.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnStatistic.CustomImages.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnStatistic.CustomImages.Parent = this.btnStatistic;
-            this.gnTransition.SetDecoration(this.btnStatistic, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.btnStatistic.FillColor = System.Drawing.Color.White;
-            this.btnStatistic.FillColor2 = System.Drawing.Color.White;
-            this.btnStatistic.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStatistic.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnStatistic.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(235)))), ((int)(((byte)(237)))));
-            this.btnStatistic.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(235)))), ((int)(((byte)(237)))));
-            this.btnStatistic.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(165)))));
-            this.btnStatistic.HoverState.Parent = this.btnStatistic;
-            this.btnStatistic.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnStatistic.Location = new System.Drawing.Point(14, 471);
-            this.btnStatistic.Name = "btnStatistic";
-            this.btnStatistic.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(217)))), ((int)(((byte)(220)))));
-            this.btnStatistic.PressedDepth = 100;
-            this.btnStatistic.ShadowDecoration.Parent = this.btnStatistic;
-            this.btnStatistic.Size = new System.Drawing.Size(275, 50);
-            this.btnStatistic.TabIndex = 6;
-            this.btnStatistic.Text = "Thống kê";
-            this.btnStatistic.Click += new System.EventHandler(this.btnStatistic_Click);
-            // 
             // btnFood
             // 
             this.btnFood.BackColor = System.Drawing.Color.White;
@@ -204,7 +175,7 @@ namespace Dev69Restaurant.GUI.Home
             this.btnFood.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(165)))));
             this.btnFood.HoverState.Parent = this.btnFood;
             this.btnFood.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnFood.Location = new System.Drawing.Point(14, 403);
+            this.btnFood.Location = new System.Drawing.Point(14, 414);
             this.btnFood.Name = "btnFood";
             this.btnFood.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(217)))), ((int)(((byte)(220)))));
             this.btnFood.PressedDepth = 100;
@@ -234,7 +205,7 @@ namespace Dev69Restaurant.GUI.Home
             this.btnTableFood.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(165)))));
             this.btnTableFood.HoverState.Parent = this.btnTableFood;
             this.btnTableFood.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnTableFood.Location = new System.Drawing.Point(14, 334);
+            this.btnTableFood.Location = new System.Drawing.Point(14, 340);
             this.btnTableFood.Margin = new System.Windows.Forms.Padding(3, 3, 15, 3);
             this.btnTableFood.Name = "btnTableFood";
             this.btnTableFood.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(217)))), ((int)(((byte)(220)))));
@@ -254,7 +225,7 @@ namespace Dev69Restaurant.GUI.Home
             this.gnTransition.SetDecoration(this.btnMinimize, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnMinimize.IconColor = System.Drawing.Color.Black;
             this.btnMinimize.IconSize = 15F;
-            this.btnMinimize.Location = new System.Drawing.Point(1116, 4);
+            this.btnMinimize.Location = new System.Drawing.Point(1122, 4);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
             this.btnMinimize.OnHoverIconColor = System.Drawing.Color.White;
@@ -271,7 +242,7 @@ namespace Dev69Restaurant.GUI.Home
             this.gnTransition.SetDecoration(this.btnMaximize, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnMaximize.IconColor = System.Drawing.Color.Black;
             this.btnMaximize.IconSize = 15F;
-            this.btnMaximize.Location = new System.Drawing.Point(1167, 4);
+            this.btnMaximize.Location = new System.Drawing.Point(1173, 4);
             this.btnMaximize.Name = "btnMaximize";
             this.btnMaximize.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
             this.btnMaximize.OnHoverIconColor = System.Drawing.Color.White;
@@ -287,7 +258,7 @@ namespace Dev69Restaurant.GUI.Home
             this.gnTransition.SetDecoration(this.btnClose, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnClose.IconColor = System.Drawing.Color.Black;
             this.btnClose.IconSize = 15F;
-            this.btnClose.Location = new System.Drawing.Point(1218, 4);
+            this.btnClose.Location = new System.Drawing.Point(1224, 4);
             this.btnClose.Name = "btnClose";
             this.btnClose.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
             this.btnClose.OnHoverIconColor = System.Drawing.Color.White;
@@ -306,10 +277,10 @@ namespace Dev69Restaurant.GUI.Home
             this.pnTop.Controls.Add(this.btnMaximize);
             this.gnTransition.SetDecoration(this.pnTop, Guna.UI2.AnimatorNS.DecorationType.None);
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnTop.Location = new System.Drawing.Point(320, 0);
+            this.pnTop.Location = new System.Drawing.Point(314, 0);
             this.pnTop.Name = "pnTop";
             this.pnTop.ShadowDecoration.Parent = this.pnTop;
-            this.pnTop.Size = new System.Drawing.Size(1280, 38);
+            this.pnTop.Size = new System.Drawing.Size(1286, 38);
             this.pnTop.TabIndex = 12;
             // 
             // gnSeparate
@@ -379,14 +350,13 @@ namespace Dev69Restaurant.GUI.Home
             this.pnLeft.Controls.Add(this.btnHome);
             this.pnLeft.Controls.Add(this.btnFood);
             this.pnLeft.Controls.Add(this.btnManage);
-            this.pnLeft.Controls.Add(this.btnStatistic);
             this.pnLeft.Controls.Add(this.picLogo);
             this.pnLeft.Controls.Add(this.btnTableFood);
             this.gnTransition.SetDecoration(this.pnLeft, Guna.UI2.AnimatorNS.DecorationType.None);
             this.pnLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnLeft.Location = new System.Drawing.Point(0, 0);
             this.pnLeft.Name = "pnLeft";
-            this.pnLeft.Size = new System.Drawing.Size(320, 900);
+            this.pnLeft.Size = new System.Drawing.Size(314, 900);
             this.pnLeft.TabIndex = 11;
             // 
             // panel10
@@ -398,7 +368,7 @@ namespace Dev69Restaurant.GUI.Home
             this.panel10.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel10.Location = new System.Drawing.Point(0, 742);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(320, 158);
+            this.panel10.Size = new System.Drawing.Size(314, 158);
             this.panel10.TabIndex = 9;
             // 
             // btnManage
@@ -421,7 +391,7 @@ namespace Dev69Restaurant.GUI.Home
             this.btnManage.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(165)))));
             this.btnManage.HoverState.Parent = this.btnManage;
             this.btnManage.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnManage.Location = new System.Drawing.Point(14, 540);
+            this.btnManage.Location = new System.Drawing.Point(14, 488);
             this.btnManage.Name = "btnManage";
             this.btnManage.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(217)))), ((int)(((byte)(220)))));
             this.btnManage.PressedDepth = 100;
@@ -446,13 +416,12 @@ namespace Dev69Restaurant.GUI.Home
             // pnHeader
             // 
             this.pnHeader.Controls.Add(this.panel9);
-            this.pnHeader.Controls.Add(this.txtSearch);
             this.pnHeader.Controls.Add(this.btnToogleMenu);
             this.gnTransition.SetDecoration(this.pnHeader, Guna.UI2.AnimatorNS.DecorationType.None);
             this.pnHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnHeader.Location = new System.Drawing.Point(320, 38);
+            this.pnHeader.Location = new System.Drawing.Point(314, 38);
             this.pnHeader.Name = "pnHeader";
-            this.pnHeader.Size = new System.Drawing.Size(1280, 100);
+            this.pnHeader.Size = new System.Drawing.Size(1286, 100);
             this.pnHeader.TabIndex = 13;
             // 
             // panel9
@@ -463,7 +432,7 @@ namespace Dev69Restaurant.GUI.Home
             this.panel9.Controls.Add(this.picAvatarUser);
             this.gnTransition.SetDecoration(this.panel9, Guna.UI2.AnimatorNS.DecorationType.None);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel9.Location = new System.Drawing.Point(880, 0);
+            this.panel9.Location = new System.Drawing.Point(886, 0);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(400, 100);
             this.panel9.TabIndex = 11;
@@ -517,32 +486,6 @@ namespace Dev69Restaurant.GUI.Home
             this.picAvatarUser.TabIndex = 11;
             this.picAvatarUser.TabStop = false;
             this.picAvatarUser.UseTransfarantBackground = false;
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.BorderRadius = 8;
-            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gnTransition.SetDecoration(this.txtSearch, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.txtSearch.DefaultText = "";
-            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch.DisabledState.Parent = this.txtSearch;
-            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.FocusedState.Parent = this.txtSearch;
-            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.HoverState.Parent = this.txtSearch;
-            this.txtSearch.IconLeft = global::Dev69Restaurant.Properties.Resources.search_24px;
-            this.txtSearch.Location = new System.Drawing.Point(128, 29);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.PasswordChar = '\0';
-            this.txtSearch.PlaceholderText = "Search everything...";
-            this.txtSearch.SelectedText = "";
-            this.txtSearch.ShadowDecoration.Parent = this.txtSearch;
-            this.txtSearch.Size = new System.Drawing.Size(623, 44);
-            this.txtSearch.TabIndex = 0;
             // 
             // btnToogleMenu
             // 
@@ -606,9 +549,9 @@ namespace Dev69Restaurant.GUI.Home
             this.panel11.Controls.Add(this.btnCheckout);
             this.gnTransition.SetDecoration(this.panel11, Guna.UI2.AnimatorNS.DecorationType.None);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel11.Location = new System.Drawing.Point(0, 538);
+            this.panel11.Location = new System.Drawing.Point(0, 532);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(400, 224);
+            this.panel11.Size = new System.Drawing.Size(400, 230);
             this.panel11.TabIndex = 1;
             // 
             // txtTotalPrice
@@ -628,7 +571,7 @@ namespace Dev69Restaurant.GUI.Home
             this.txtTotalPrice.ForeColor = System.Drawing.Color.Black;
             this.txtTotalPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTotalPrice.HoverState.Parent = this.txtTotalPrice;
-            this.txtTotalPrice.Location = new System.Drawing.Point(69, 60);
+            this.txtTotalPrice.Location = new System.Drawing.Point(69, 65);
             this.txtTotalPrice.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtTotalPrice.Name = "txtTotalPrice";
             this.txtTotalPrice.PasswordChar = '\0';
@@ -645,7 +588,7 @@ namespace Dev69Restaurant.GUI.Home
             this.gunaLabel1.AutoSize = true;
             this.gnTransition.SetDecoration(this.gunaLabel1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel1.Location = new System.Drawing.Point(20, 24);
+            this.gunaLabel1.Location = new System.Drawing.Point(20, 39);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(78, 20);
             this.gunaLabel1.TabIndex = 1;
@@ -669,7 +612,7 @@ namespace Dev69Restaurant.GUI.Home
             this.btnCheckout.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnCheckout.ForeColor = System.Drawing.Color.White;
             this.btnCheckout.HoverState.Parent = this.btnCheckout;
-            this.btnCheckout.Location = new System.Drawing.Point(117, 149);
+            this.btnCheckout.Location = new System.Drawing.Point(117, 129);
             this.btnCheckout.Name = "btnCheckout";
             this.btnCheckout.ShadowDecoration.Parent = this.btnCheckout;
             this.btnCheckout.Size = new System.Drawing.Size(180, 45);
@@ -722,7 +665,7 @@ namespace Dev69Restaurant.GUI.Home
             this.gnTransition.SetDecoration(this.pnBillDetail, Guna.UI2.AnimatorNS.DecorationType.None);
             this.pnBillDetail.Location = new System.Drawing.Point(0, 58);
             this.pnBillDetail.Name = "pnBillDetail";
-            this.pnBillDetail.Size = new System.Drawing.Size(400, 474);
+            this.pnBillDetail.Size = new System.Drawing.Size(400, 468);
             this.pnBillDetail.TabIndex = 5;
             // 
             // panel8
@@ -732,28 +675,67 @@ namespace Dev69Restaurant.GUI.Home
             this.panel8.Controls.Add(this.panel2);
             this.gnTransition.SetDecoration(this.panel8, Guna.UI2.AnimatorNS.DecorationType.None);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(320, 138);
+            this.panel8.Location = new System.Drawing.Point(314, 138);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(880, 58);
+            this.panel8.Size = new System.Drawing.Size(886, 58);
             this.panel8.TabIndex = 15;
             // 
             // pnFeature
             // 
             this.pnFeature.BackColor = System.Drawing.Color.White;
             this.pnFeature.BorderRadius = 8;
+            this.pnFeature.Controls.Add(this.cbCategoryFood);
+            this.pnFeature.Controls.Add(this.lblFoodCategory);
             this.gnTransition.SetDecoration(this.pnFeature, Guna.UI2.AnimatorNS.DecorationType.None);
             this.pnFeature.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnFeature.Location = new System.Drawing.Point(30, 0);
             this.pnFeature.Name = "pnFeature";
             this.pnFeature.ShadowDecoration.Parent = this.pnFeature;
-            this.pnFeature.Size = new System.Drawing.Size(820, 58);
+            this.pnFeature.Size = new System.Drawing.Size(826, 58);
             this.pnFeature.TabIndex = 3;
+            // 
+            // cbCategoryFood
+            // 
+            this.cbCategoryFood.BackColor = System.Drawing.Color.Transparent;
+            this.cbCategoryFood.BaseColor = System.Drawing.Color.White;
+            this.cbCategoryFood.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.cbCategoryFood.BorderSize = 1;
+            this.gnTransition.SetDecoration(this.cbCategoryFood, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.cbCategoryFood.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbCategoryFood.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCategoryFood.FocusedColor = System.Drawing.Color.Empty;
+            this.cbCategoryFood.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbCategoryFood.ForeColor = System.Drawing.Color.Black;
+            this.cbCategoryFood.FormattingEnabled = true;
+            this.cbCategoryFood.Items.AddRange(new object[] {
+            "Tất cả"});
+            this.cbCategoryFood.Location = new System.Drawing.Point(190, 15);
+            this.cbCategoryFood.Name = "cbCategoryFood";
+            this.cbCategoryFood.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.cbCategoryFood.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.cbCategoryFood.Radius = 8;
+            this.cbCategoryFood.Size = new System.Drawing.Size(259, 31);
+            this.cbCategoryFood.TabIndex = 0;
+            this.cbCategoryFood.Visible = false;
+            this.cbCategoryFood.SelectedValueChanged += new System.EventHandler(this.cbCategoryFood_SelectedValueChanged);
+            // 
+            // lblFoodCategory
+            // 
+            this.lblFoodCategory.AutoSize = true;
+            this.gnTransition.SetDecoration(this.lblFoodCategory, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblFoodCategory.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFoodCategory.Location = new System.Drawing.Point(6, 19);
+            this.lblFoodCategory.Name = "lblFoodCategory";
+            this.lblFoodCategory.Size = new System.Drawing.Size(157, 23);
+            this.lblFoodCategory.TabIndex = 0;
+            this.lblFoodCategory.Text = "Danh mục thức ăn:";
+            this.lblFoodCategory.Visible = false;
             // 
             // panel3
             // 
             this.gnTransition.SetDecoration(this.panel3, Guna.UI2.AnimatorNS.DecorationType.None);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(850, 0);
+            this.panel3.Location = new System.Drawing.Point(856, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(30, 58);
             this.panel3.TabIndex = 2;
@@ -772,10 +754,10 @@ namespace Dev69Restaurant.GUI.Home
             this.panel7.Controls.Add(this.pnMain);
             this.gnTransition.SetDecoration(this.panel7, Guna.UI2.AnimatorNS.DecorationType.None);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(320, 196);
+            this.panel7.Location = new System.Drawing.Point(314, 196);
             this.panel7.Name = "panel7";
             this.panel7.Padding = new System.Windows.Forms.Padding(30);
-            this.panel7.Size = new System.Drawing.Size(880, 704);
+            this.panel7.Size = new System.Drawing.Size(886, 704);
             this.panel7.TabIndex = 16;
             // 
             // pnMain
@@ -788,7 +770,7 @@ namespace Dev69Restaurant.GUI.Home
             this.pnMain.Location = new System.Drawing.Point(30, 30);
             this.pnMain.Name = "pnMain";
             this.pnMain.ShadowDecoration.Parent = this.pnMain;
-            this.pnMain.Size = new System.Drawing.Size(820, 644);
+            this.pnMain.Size = new System.Drawing.Size(826, 644);
             this.pnMain.TabIndex = 4;
             // 
             // gnElipsePnFeature
@@ -834,6 +816,8 @@ namespace Dev69Restaurant.GUI.Home
             this.pnDetailHeader.ResumeLayout(false);
             this.pnDetailHeader.PerformLayout();
             this.panel8.ResumeLayout(false);
+            this.pnFeature.ResumeLayout(false);
+            this.pnFeature.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -846,10 +830,8 @@ namespace Dev69Restaurant.GUI.Home
         private Guna.UI.WinForms.GunaDragControl gnDragControl;
         private Guna.UI2.WinForms.Guna2GradientButton btnHome;
         private Guna.UI2.WinForms.Guna2GradientButton btnAbout;
-        private Guna.UI2.WinForms.Guna2GradientButton btnStatistic;
         private Guna.UI2.WinForms.Guna2GradientButton btnTableFood;
         private Guna.UI2.WinForms.Guna2GradientButton btnFood;
-        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private Guna.UI2.WinForms.Guna2ImageButton btnToogleMenu;
         private Guna.UI2.WinForms.Guna2PictureBox picLogo;
         private Guna.UI.WinForms.GunaSeparator gnSeparate;
@@ -885,5 +867,7 @@ namespace Dev69Restaurant.GUI.Home
         private Guna.UI.WinForms.GunaLabel lblDetailTableName;
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
         private Guna.UI.WinForms.GunaImageButton btnUser;
+        private Guna.UI.WinForms.GunaComboBox cbCategoryFood;
+        private System.Windows.Forms.Label lblFoodCategory;
     }
 }

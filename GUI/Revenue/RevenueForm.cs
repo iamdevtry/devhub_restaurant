@@ -18,11 +18,12 @@ namespace Dev69Restaurant.GUI.Revenue
     public partial class RevenueForm : Form
     {
         private BillService _billService;
-
+        private FoodService _foodService;
         public RevenueForm()
         {
             InitializeComponent();
             _billService = new BillService();
+            _foodService = new FoodService();
         }
 
         private void RevenueForm_Load(object sender, EventArgs e)
@@ -30,6 +31,10 @@ namespace Dev69Restaurant.GUI.Revenue
             LoadData();
             ShowChartAWeek();
             BindChartDefault();
+
+            var info = System.Globalization.CultureInfo.GetCultureInfo("vi-VN");
+            lblRevenueToday.Text = String.Format(info, "{0:c}", GetRevenueToday());
+            GetPopularItem();
         }
 
         List<RevenueChart> revenueCharts = new List<RevenueChart>();
@@ -68,6 +73,35 @@ namespace Dev69Restaurant.GUI.Revenue
             return totalPrice;
         }
 
+
+        private decimal GetRevenueToday()
+        {
+            var bills = _billService.GetBills();
+            var retrievedInvoices = bills.Where(n => n.CreatedDate.Value.Date == DateTime.Now.Date).Select(x => x.CreatedDate.Value.Date);
+
+            decimal totalPrice = bills
+            .Where(n => retrievedInvoices.Contains(n.CreatedDate.Value.Date))
+            .Sum(n => n.TotalPrice);
+
+            return totalPrice;
+        }
+
+        private void GetPopularItem()
+        {
+            var billDetails = _billService.GetBillDetails().ToList();
+            var sells = billDetails
+                .Where(n => n.DateCheckout.Date == DateTime.Now.Date)
+                .GroupBy(a => a.FoodId)
+                .Select(a => new { Amount = a.Sum(b => b.Quantity), Name = a.Key})
+                .OrderByDescending(a => a.Amount)
+                .ToList();
+            var billDetail = sells.OrderByDescending(item => item.Amount).First();
+            var food = _foodService.Find(billDetail.Name);
+
+            lblPopularItem.Text = food.Name;
+            lblQuantity.Text = billDetail.Amount.ToString();
+
+        }
 
         private void ShowChartAWeek()
         {

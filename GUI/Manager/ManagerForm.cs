@@ -1,5 +1,6 @@
 ﻿using Dev69Restaurant.GUI.ManageFood;
 using Dev69Restaurant.GUI.Revenue;
+using Dev69Restaurant.GUI.Stastic;
 using Dev69Restaurant.GUI.TableFood;
 using Dev69Restaurant.GUI.User;
 using System;
@@ -63,6 +64,17 @@ namespace Dev69Restaurant.GUI.Manager
             manageFoodForm.Dock = DockStyle.Fill;
             pnMain.Controls.Add(manageFoodForm);
             manageFoodForm.Show();
+        }
+
+        private void btnBill_Click(object sender, EventArgs e)
+        {
+            StasticForm stasticForm = new StasticForm();
+            stasticForm.TopLevel = false;
+            stasticForm.AutoScroll = true;
+            //childForm.FormBorderStyle = FormBorderStyle.None;
+            stasticForm.Dock = DockStyle.Fill;
+            pnMain.Controls.Add(stasticForm);
+            stasticForm.Show();
         }
     }
 }

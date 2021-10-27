@@ -9,6 +9,7 @@ using Dev69Restaurant.Infrastructure.Settings;
 using Guna.UI.WinForms;
 using Guna.UI2.WinForms;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
@@ -21,6 +22,7 @@ namespace Dev69Restaurant.GUI.Home
 
         private DTO.Entities.User _currentUser;
         private BillService _billService;
+        private FoodService _foodService;
         private string _roleName;
         private UserService _userService;
         private int idTable = -1;
@@ -33,6 +35,7 @@ namespace Dev69Restaurant.GUI.Home
         public HomeForm()
         {
             InitializeComponent();
+
         }
 
         public HomeForm(DTO.Entities.User user, string roleShortName)
@@ -42,6 +45,8 @@ namespace Dev69Restaurant.GUI.Home
             _roleName = roleShortName;
             _userService = new UserService();
             _billService = new BillService();
+            _foodService = new FoodService();
+            LoadFoodCategory();
             LoadData();
         }
 
@@ -50,6 +55,17 @@ namespace Dev69Restaurant.GUI.Home
         private void HomeForm_Load(object sender, EventArgs e)
         {
             CheckUser();
+        }
+
+        private void LoadFoodCategory()
+        {
+            List<FoodCategory> foodCategories = _foodService.GetAllCategory();
+            foodCategories.Add(new FoodCategory { Name = "Tất cả" });
+            cbCategoryFood.DataSource = foodCategories;
+            cbCategoryFood.DisplayMember = "Name";
+            cbCategoryFood.ValueMember = "Id";
+
+            cbCategoryFood.SelectedItem = null;
         }
 
         private void btnToogleMenu_Click(object sender, EventArgs e)
@@ -61,6 +77,8 @@ namespace Dev69Restaurant.GUI.Home
 
         private void btnHome_Click(object sender, EventArgs e)
         {
+            cbCategoryFood.Visible = false;
+            lblFoodCategory.Visible = false;
             ActivateButton(sender, BaseIcon.HOME_ACTIVE);
         }
 
@@ -74,6 +92,8 @@ namespace Dev69Restaurant.GUI.Home
 
         private void btnTableFood_Click(object sender, EventArgs e)
         {
+            cbCategoryFood.Visible = false;
+            lblFoodCategory.Visible = false;
             HideFormActive();
             ActivateButton(sender, BaseIcon.TABLE_FOOD_ACTIVE);
             TableFoodForm tableFood = new TableFoodForm();
@@ -127,6 +147,8 @@ namespace Dev69Restaurant.GUI.Home
 
         private void btnFood_Click(object sender, EventArgs e)
         {
+            cbCategoryFood.Visible = true;
+            lblFoodCategory.Visible = true;
             HideFormActive();
             ActivateButton(sender, BaseIcon.FOOD_ACTIVE);
             FoodForm food = new FoodForm();
@@ -201,89 +223,15 @@ namespace Dev69Restaurant.GUI.Home
 
         private void btnManageUser_Click(object sender, EventArgs e)
         {
+            cbCategoryFood.Visible = false;
+            lblFoodCategory.Visible = false;
+
             ActivateButton(sender, BaseIcon.USER_GROUP_ACTIVE);
             ManagerForm managerForm = new ManagerForm();
             managerForm.StartPosition = FormStartPosition.CenterScreen;
             managerForm.Show();
         }
 
-        private void tgbtnSwitchTheme_CheckedChanged(object sender, EventArgs e)
-        {
-            if (!isDefaulTheme)
-            {
-                this.BackColor = BaseColor.BACK_COLOR_DARK;
-                pnLeft.BackColor = BaseColor.PANNEL_DARK;
-                pnFeature.BackColor = BaseColor.PANNEL_DARK;
-                pnRight.BackColor = BaseColor.PANNEL_DARK;
-                pnMain.BackColor = BaseColor.PANNEL_DARK;
-
-                foreach (Control button in pnLeft.Controls)
-                {
-                    if (button is Guna2GradientButton)
-                    {
-                        (button as Guna2GradientButton).BackColor = BaseColor.BUTTON_DARK;
-                        (button as Guna2GradientButton).ForeColor = BaseColor.FORE_COLOR_DARK;
-                        (button as Guna2GradientButton).FillColor = BaseColor.BUTTON_DARK;
-                        (button as Guna2GradientButton).FillColor2 = BaseColor.BUTTON_DARK;
-                    }
-                }
-
-                foreach (Control button in pnTop.Controls)
-                {
-                    if (button is GunaControlBox)
-                    {
-                        (button as GunaControlBox).BackColor = BaseColor.BUTTON_DARK;
-                        (button as GunaControlBox).IconColor = BaseColor.FORE_COLOR_DARK;
-                    }
-                }
-
-                btnHome.CustomImages.Image = Image.FromFile(BaseIcon.HOME_DARK);
-                btnTableFood.CustomImages.Image = Image.FromFile(BaseIcon.TABLE_FOOD_DARK);
-                btnFood.CustomImages.Image = Image.FromFile(BaseIcon.FOOD_DARK);
-                btnStatistic.CustomImages.Image = Image.FromFile(BaseIcon.STATISTIC_DARK);
-                btnManage.CustomImages.Image = Image.FromFile(BaseIcon.USER_GROUP_DARK);
-                btnSetting.CustomImages.Image = Image.FromFile(BaseIcon.SETTING_DARK);
-                btnAbout.CustomImages.Image = Image.FromFile(BaseIcon.ABOUT_DARK);
-                btnToogleMenu.Image = Image.FromFile(BaseIcon.TOOGLE_MENU_DARK);
-            }
-            else
-            {
-                this.BackColor = BaseColor.BACK_COLOR_LIGHT;
-                pnLeft.BackColor = BaseColor.PANNEL_LIGHT;
-                pnFeature.BackColor = BaseColor.PANNEL_LIGHT;
-                pnRight.BackColor = BaseColor.PANNEL_LIGHT;
-                pnMain.BackColor = BaseColor.PANNEL_LIGHT;
-
-                foreach (Control button in pnTop.Controls)
-                {
-                    if (button is GunaControlBox)
-                    {
-                        (button as GunaControlBox).BackColor = BaseColor.BUTTON_LIGHT;
-                        (button as GunaControlBox).IconColor = BaseColor.FORE_COLOR_LIGHT;
-                    }
-                }
-
-                foreach (Control button in pnLeft.Controls)
-                {
-                    if (button is Guna2GradientButton)
-                    {
-                        (button as Guna2GradientButton).BackColor = BaseColor.BUTTON_LIGHT;
-                        (button as Guna2GradientButton).ForeColor = BaseColor.FORE_COLOR_LIGHT;
-                        (button as Guna2GradientButton).FillColor = BaseColor.BUTTON_LIGHT;
-                        (button as Guna2GradientButton).FillColor2 = BaseColor.BUTTON_LIGHT;
-                    }
-                }
-
-                btnHome.CustomImages.Image = Image.FromFile(BaseIcon.HOME);
-                btnTableFood.CustomImages.Image = Image.FromFile(BaseIcon.TABLE_FOOD);
-                btnFood.CustomImages.Image = Image.FromFile(BaseIcon.FOOD);
-                btnStatistic.CustomImages.Image = Image.FromFile(BaseIcon.STATISTIC);
-                btnManage.CustomImages.Image = Image.FromFile(BaseIcon.USER_GROUP);
-                btnSetting.CustomImages.Image = Image.FromFile(BaseIcon.SETTING);
-                btnAbout.CustomImages.Image = Image.FromFile(BaseIcon.ABOUT);
-                btnToogleMenu.Image = Image.FromFile(BaseIcon.TOOGLE_MENU);
-            }
-        }
 
         #endregion Events
 
@@ -304,6 +252,7 @@ namespace Dev69Restaurant.GUI.Home
             bill.VATId = 1;
             bill.PaymentMethod = "Tiền mặt";
             bill.CreatedDate = DateTime.Now;
+            bill.CreatedBy = _currentUser.Username;
             bill.TotalPrice = decimal.Parse(sum.ToString());
             _billService.Add(bill);
 
@@ -394,14 +343,14 @@ namespace Dev69Restaurant.GUI.Home
             if (!isCollapse)
             {
                 pnLeft.Visible = false;
-                pnLeft.Width = 80;
+                pnLeft.Width = 76;
                 gnTransition.ShowSync(pnLeft);
                 isCollapse = true;
             }
             else
             {
                 pnLeft.Visible = false;
-                pnLeft.Width = 320 - 80;
+                pnLeft.Width = 320 - 76;
                 gnTransition.ShowSync(pnLeft);
                 isCollapse = false;
             }
@@ -447,6 +396,33 @@ namespace Dev69Restaurant.GUI.Home
             InfoUserForm infoUserForm = new InfoUserForm(_currentUser);
             infoUserForm.StartPosition = FormStartPosition.CenterScreen;
             infoUserForm.ShowDialog();
+        }
+
+        private void cbCategoryFood_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if(activeForm!= null)
+            {
+                activeForm.Close();
+
+                HideFormActive();
+                //ActivateButton(sender, BaseIcon.FOOD_ACTIVE);
+
+                string keyword = cbCategoryFood.SelectedValue.ToString();
+                if(keyword == 0+"")
+                {
+                    keyword = "";
+                }
+                FoodForm food = new FoodForm(keyword);
+                food.selectFoodDelegate += Food_selectFoodDelegate;
+                activeForm = food;
+                food.TopLevel = false;
+                food.AutoScroll = true;
+                //childForm.FormBorderStyle = FormBorderStyle.None;
+                food.Dock = DockStyle.Fill;
+                pnMain.Controls.Add(food);
+                food.Show();
+            }
+
         }
     }
 }
