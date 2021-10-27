@@ -125,9 +125,5 @@ namespace Dev69Restaurant.GUI.Stastic
             GetAllData(txtSearch.Text);
         }
 
-        private void btnExportReport_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

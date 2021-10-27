@@ -136,9 +136,9 @@ namespace Dev69Restaurant.GUI.ManageFoodCategory
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(12, 8);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(254, 25);
+            this.label3.Size = new System.Drawing.Size(235, 25);
             this.label3.TabIndex = 23;
-            this.label3.Text = "Thêm mới danh mục món ăn";
+            this.label3.Text = "Quản lý danh mục món ăn";
             // 
             // panel2
             // 

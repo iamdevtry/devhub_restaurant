@@ -137,11 +137,18 @@
     <Compile Include="DTO\Entities\UserRole.cs" />
     <Compile Include="DTO\Entities\VAT.cs" />
     <Compile Include="DTO\EntityReports\BillDetailRpt.cs" />
+    <Compile Include="DTO\EntityReports\CheckoutRpt.cs" />
     <Compile Include="GUI\Checkout\CheckoutForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\Checkout\CheckoutForm.Designer.cs">
       <DependentUpon>CheckoutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Discount\DiscountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Discount\DiscountForm.Designer.cs">
+      <DependentUpon>DiscountForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Food\FoodForm.cs">
       <SubType>Form</SubType>
@@ -293,6 +300,9 @@
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="GUI\Checkout\CheckoutForm.resx">
       <DependentUpon>CheckoutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Discount\DiscountForm.resx">
+      <DependentUpon>DiscountForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Food\FoodForm.resx">
       <DependentUpon>FoodForm.cs</DependentUpon>
