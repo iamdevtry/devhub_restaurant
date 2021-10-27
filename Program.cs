@@ -1,4 +1,5 @@
-﻿using Dev69Restaurant.GUI.Home;
+﻿using Dev69Restaurant.GUI.ManageDiscount;
+using Dev69Restaurant.GUI.Home;
 using Dev69Restaurant.GUI.Login;
 using Dev69Restaurant.GUI.ManageFoodCategory;
 using Dev69Restaurant.GUI.Manager;
@@ -30,6 +31,8 @@ namespace Dev69Restaurant
 
             //Application.Run(new ManageTableFoodForm());
             //Application.Run(new BillDetailForm());
+            //Application.Run(new DiscountForm());
+
         }
     }
 }

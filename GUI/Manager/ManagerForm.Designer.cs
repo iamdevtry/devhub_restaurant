@@ -242,6 +242,7 @@ namespace Dev69Restaurant.GUI.Manager
             this.btnDiscount.Size = new System.Drawing.Size(275, 50);
             this.btnDiscount.TabIndex = 6;
             this.btnDiscount.Text = "Mã giảm giá";
+            this.btnDiscount.Click += new System.EventHandler(this.btnDiscount_Click);
             // 
             // btnManageStaff
             // 

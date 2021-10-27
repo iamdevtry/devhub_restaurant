@@ -119,6 +119,7 @@
     <Compile Include="DAL\Repositories\UserRoleRepository.cs" />
     <Compile Include="DAL\Repositories\VATRepository.cs" />
     <Compile Include="DAL\Services\BillService.cs" />
+    <Compile Include="DAL\Services\DiscountService.cs" />
     <Compile Include="DAL\Services\FoodCategoryService.cs" />
     <Compile Include="DAL\Services\FoodService.cs" />
     <Compile Include="DAL\Services\LoginService.cs" />
@@ -144,10 +145,10 @@
     <Compile Include="GUI\Checkout\CheckoutForm.Designer.cs">
       <DependentUpon>CheckoutForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Discount\DiscountForm.cs">
+    <Compile Include="GUI\ManageDiscount\DiscountForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Discount\DiscountForm.Designer.cs">
+    <Compile Include="GUI\ManageDiscount\DiscountForm.Designer.cs">
       <DependentUpon>DiscountForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Food\FoodForm.cs">
@@ -301,7 +302,7 @@
     <EmbeddedResource Include="GUI\Checkout\CheckoutForm.resx">
       <DependentUpon>CheckoutForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Discount\DiscountForm.resx">
+    <EmbeddedResource Include="GUI\ManageDiscount\DiscountForm.resx">
       <DependentUpon>DiscountForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Food\FoodForm.resx">
