@@ -23,19 +23,22 @@ namespace Dev69Restaurant.GUI.Home
         private DTO.Entities.User _currentUser;
         private BillService _billService;
         private FoodService _foodService;
+        private DiscountService _discountService;
         private string _roleName;
         private UserService _userService;
         private int idTable = -1;
         private bool isCollapse = false;
         private Guna2GradientButton _currentButton;
         public static bool isDefaulTheme = true;
+        double sum;
+        double discountPrice;
+        private Form activeForm = null;
 
         #endregion Fields
 
         public HomeForm()
         {
             InitializeComponent();
-
         }
 
         public HomeForm(DTO.Entities.User user, string roleShortName)
@@ -46,6 +49,7 @@ namespace Dev69Restaurant.GUI.Home
             _userService = new UserService();
             _billService = new BillService();
             _foodService = new FoodService();
+            _discountService = new DiscountService();
             LoadFoodCategory();
             LoadData();
         }
@@ -73,21 +77,11 @@ namespace Dev69Restaurant.GUI.Home
             ShowHideLeftBar();
         }
 
-        private Form activeForm = null;
-
         private void btnHome_Click(object sender, EventArgs e)
         {
             cbCategoryFood.Visible = false;
             lblFoodCategory.Visible = false;
             ActivateButton(sender, BaseIcon.HOME_ACTIVE);
-        }
-
-        private void HideFormActive()
-        {
-            if (activeForm != null)
-            {
-                activeForm.Hide();
-            }
         }
 
         private void btnTableFood_Click(object sender, EventArgs e)
@@ -127,22 +121,12 @@ namespace Dev69Restaurant.GUI.Home
                 else
                 {
                     CheckOut();
-                    MessageBox.Show("Thanh toán thành công!", "Đã Thanh toán", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-                    idTable = -1;
-                    ResetBill();
                 }
             }
             catch
             {
                 MessageBox.Show("Thanh toán không thành công!", "Thanh toán thất bại", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
-        }
-
-        private void ResetBill()
-        {
-            pnBillDetail.Controls.Clear();
-            lblDetailTableName.Text = "Chưa chọn bàn!";
-            txtTotalPrice.Text = "";
         }
 
         private void btnFood_Click(object sender, EventArgs e)
@@ -232,11 +216,57 @@ namespace Dev69Restaurant.GUI.Home
             managerForm.Show();
         }
 
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+            InfoUserForm infoUserForm = new InfoUserForm(_currentUser);
+            infoUserForm.StartPosition = FormStartPosition.CenterScreen;
+            infoUserForm.ShowDialog();
+        }
+
+        private void cbCategoryFood_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+
+                HideFormActive();
+                //ActivateButton(sender, BaseIcon.FOOD_ACTIVE);
+
+                string keyword = cbCategoryFood.SelectedValue.ToString();
+                if (keyword == 0 + "")
+                {
+                    keyword = "";
+                }
+                FoodForm food = new FoodForm(keyword);
+                food.selectFoodDelegate += Food_selectFoodDelegate;
+                activeForm = food;
+                food.TopLevel = false;
+                food.AutoScroll = true;
+                //childForm.FormBorderStyle = FormBorderStyle.None;
+                food.Dock = DockStyle.Fill;
+                pnMain.Controls.Add(food);
+                food.Show();
+            }
+
+        }
 
         #endregion Events
 
         #region methods
+        private void ResetBill()
+        {
+            pnBillDetail.Controls.Clear();
+            lblDetailTableName.Text = "Chưa chọn bàn!";
+            txtTotalPrice.Text = "";
+        }
 
+        private void HideFormActive()
+        {
+            if (activeForm != null)
+            {
+                activeForm.Hide();
+            }
+        }
         private void CreateNewItemOfBill(string foodId, string foodPrice, string foodName)
         {
             UCItemOfBill uCItemOfBill = new UCItemOfBill(foodId, foodPrice, foodName);
@@ -253,13 +283,57 @@ namespace Dev69Restaurant.GUI.Home
             bill.PaymentMethod = "Tiền mặt";
             bill.CreatedDate = DateTime.Now;
             bill.CreatedBy = _currentUser.Username;
-            bill.TotalPrice = decimal.Parse(sum.ToString());
-            _billService.Add(bill);
 
+            if (!string.IsNullOrEmpty(txtDiscount.Text))
+            {
+                if (CheckDiscountExist() == 1)
+                {
+                    var discount = _discountService.GetByCode(txtDiscount.Text);
+                    double condition = double.Parse(discount.ConditionPrice.ToString());
+
+                    if (ValidateDiscount(condition)==1)
+                    {
+                        bill.DiscountCode = txtDiscount.Text;
+                        double discountPercent = double.Parse(discount.DiscountPercent.ToString());
+                        discountPrice = sum * discountPercent / 100;
+                        double totalPrice = sum - discountPrice;
+                        bill.Discount = decimal.Parse(discountPrice.ToString());
+                        bill.TotalPrice = decimal.Parse(totalPrice.ToString());
+                        _billService.Add(bill);
+                        AddBillDetail(bill.Id);
+                        MessageBox.Show("Thanh toán thành công!", "Đã Thanh toán", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                        idTable = -1;
+                        ResetBill();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Mã giảm giá không hợp lệ!", "Thanh toán thất bại", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                        return;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Mã giảm giá không tồn tại!", "Thanh toán thất bại", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+            else
+            {
+                bill.TotalPrice = decimal.Parse(sum.ToString());
+                _billService.Add(bill);
+                AddBillDetail(bill.Id);
+                MessageBox.Show("Thanh toán thành công!", "Đã Thanh toán", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                idTable = -1;
+                ResetBill();
+            }
+        }
+
+        private void AddBillDetail(int idBill)
+        {
             foreach (UCItemOfBill item in pnBillDetail.Controls)
             {
                 BillDetail billDetail = new BillDetail();
-                billDetail.BillId = bill.Id;
+                billDetail.BillId = idBill;
                 billDetail.FoodId = item.idFood;
                 billDetail.Quantity = item.quantity;
                 billDetail.DateCheckin = DateTime.Now;
@@ -293,7 +367,6 @@ namespace Dev69Restaurant.GUI.Home
             return uCItemOfBill;
         }
 
-        double sum;
         private void LoadTotalPrice()
         {
             sum = 0;
@@ -389,40 +462,34 @@ namespace Dev69Restaurant.GUI.Home
             }
         }
 
-        #endregion methods
-
-        private void btnUser_Click(object sender, EventArgs e)
+        private int CheckDiscountExist()
         {
-            InfoUserForm infoUserForm = new InfoUserForm(_currentUser);
-            infoUserForm.StartPosition = FormStartPosition.CenterScreen;
-            infoUserForm.ShowDialog();
-        }
-
-        private void cbCategoryFood_SelectedValueChanged(object sender, EventArgs e)
-        {
-            if(activeForm!= null)
+            var discount = _discountService.GetByCode(txtDiscount.Text);
+            if(discount != null)
             {
-                activeForm.Close();
-
-                HideFormActive();
-                //ActivateButton(sender, BaseIcon.FOOD_ACTIVE);
-
-                string keyword = cbCategoryFood.SelectedValue.ToString();
-                if(keyword == 0+"")
-                {
-                    keyword = "";
-                }
-                FoodForm food = new FoodForm(keyword);
-                food.selectFoodDelegate += Food_selectFoodDelegate;
-                activeForm = food;
-                food.TopLevel = false;
-                food.AutoScroll = true;
-                //childForm.FormBorderStyle = FormBorderStyle.None;
-                food.Dock = DockStyle.Fill;
-                pnMain.Controls.Add(food);
-                food.Show();
+                return 1;
             }
-
+            else
+            {
+                return -1;
+            }
         }
+
+        private int ValidateDiscount(double condition)
+        {
+            //var discount = _discountService.GetByCode(txtDiscount.Text);
+            //double conditionPrice = double.Parse(discount.ConditionPrice.ToString());
+
+            if (sum >= condition)
+            {
+                return 1;
+            }
+            else
+            {
+                return -1;
+            }
+        }
+
+        #endregion methods
     }
 }

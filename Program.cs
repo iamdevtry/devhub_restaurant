@@ -24,9 +24,9 @@ namespace Dev69Restaurant
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new HomeForm());
-            //Application.Run(new LoginForm());
+            Application.Run(new LoginForm());
 
-            Application.Run(new ManagerForm());
+            //Application.Run(new ManagerForm());
             //Application.Run(new FoodCategoryForm());
 
             //Application.Run(new ManageTableFoodForm());

@@ -42,6 +42,11 @@ namespace Dev69Restaurant.DAL.Services
             return discount;
         }
 
+        public Discount GetByCode(string code)
+        {
+            return _discountRepository.GetSingleByCondition(x => x.Code == code && x.EndDate.Value>=DateTime.Now);
+        }
+
         public void Update(Discount discount)
         {
             var currenDiscount = _discountRepository.GetSingleById(discount.Id);
