@@ -4,6 +4,8 @@ using Dev69Restaurant.GUI.Revenue;
 using Dev69Restaurant.GUI.Stastic;
 using Dev69Restaurant.GUI.TableFood;
 using Dev69Restaurant.GUI.User;
+using Dev69Restaurant.Infrastructure.Settings;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +20,8 @@ namespace Dev69Restaurant.GUI.Manager
 {
     public partial class ManagerForm : Form
     {
+        private Form activeForm = null;
+        private Guna2GradientButton _currentButton;
         public ManagerForm()
         {
             InitializeComponent();
@@ -25,7 +29,10 @@ namespace Dev69Restaurant.GUI.Manager
 
         private void btnManageStaff_Click(object sender, EventArgs e)
         {
+            HideFormActive();
+            ActivateButton(sender, BaseIcon.FOOD_ACTIVE);
             UserForm userForm = new UserForm();
+            activeForm = userForm;
             userForm.TopLevel = false;
             userForm.AutoScroll = true;
             //childForm.FormBorderStyle = FormBorderStyle.None;
@@ -36,7 +43,10 @@ namespace Dev69Restaurant.GUI.Manager
 
         private void btnRevenue_Click(object sender, EventArgs e)
         {
+            HideFormActive();
+            ActivateButton(sender, BaseIcon.FOOD_ACTIVE);
             RevenueForm revenueForm = new RevenueForm();
+            activeForm = revenueForm;
             revenueForm.TopLevel = false;
             revenueForm.AutoScroll = true;
             //childForm.FormBorderStyle = FormBorderStyle.None;
@@ -47,18 +57,25 @@ namespace Dev69Restaurant.GUI.Manager
 
         private void btnTableFood_Click(object sender, EventArgs e)
         {
+            HideFormActive();
+            ActivateButton(sender, BaseIcon.FOOD_ACTIVE);
             ManageTableFoodForm manageTableFoodForm = new ManageTableFoodForm();
+            activeForm = manageTableFoodForm;
             manageTableFoodForm.TopLevel = false;
             manageTableFoodForm.AutoScroll = true;
             //childForm.FormBorderStyle = FormBorderStyle.None;
             manageTableFoodForm.Dock = DockStyle.Fill;
             pnMain.Controls.Add(manageTableFoodForm);
             manageTableFoodForm.Show();
+
         }
 
         private void btnFood_Click(object sender, EventArgs e)
         {
+            HideFormActive();
+            ActivateButton(sender, BaseIcon.FOOD_ACTIVE);
             ManageFoodForm manageFoodForm = new ManageFoodForm();
+            activeForm = manageFoodForm;
             manageFoodForm.TopLevel = false;
             manageFoodForm.AutoScroll = true;
             //childForm.FormBorderStyle = FormBorderStyle.None;
@@ -69,7 +86,10 @@ namespace Dev69Restaurant.GUI.Manager
 
         private void btnBill_Click(object sender, EventArgs e)
         {
+            HideFormActive();
+            ActivateButton(sender, BaseIcon.FOOD_ACTIVE);
             StasticForm stasticForm = new StasticForm();
+            activeForm = stasticForm;
             stasticForm.TopLevel = false;
             stasticForm.AutoScroll = true;
             //childForm.FormBorderStyle = FormBorderStyle.None;
@@ -80,13 +100,57 @@ namespace Dev69Restaurant.GUI.Manager
 
         private void btnDiscount_Click(object sender, EventArgs e)
         {
+            HideFormActive();
+            ActivateButton(sender, BaseIcon.FOOD_ACTIVE);
             DiscountForm discountForm = new DiscountForm();
+            activeForm = discountForm;
             discountForm.TopLevel = false;
             discountForm.AutoScroll = true;
             //childForm.FormBorderStyle = FormBorderStyle.None;
             discountForm.Dock = DockStyle.Fill;
             pnMain.Controls.Add(discountForm);
             discountForm.Show();
+        }
+
+        private void HideFormActive()
+        {
+            if (activeForm != null)
+            {
+                activeForm.Hide();
+            }
+        }
+
+        private void ActivateButton(object sender, string iconActive)
+        {
+            if (sender != null)
+            {
+                DisableButton();
+
+                _currentButton = (Guna2GradientButton)sender;
+
+                _currentButton.CustomImages.CheckedImage = _currentButton.CustomImages.Image;
+
+                _currentButton.FillColor = BaseColor.PRESS_COLOR_PRIMARY_ACTIVE;
+                _currentButton.FillColor2 = BaseColor.PRESS_COLOR_PRIMARY_ACTIVE;
+                _currentButton.ForeColor = BaseColor.FORE_COLOR_LIGHT_ACTIVE;
+                _currentButton.CustomImages.Image = Image.FromFile(iconActive);
+            }
+        }
+
+        private void DisableButton()
+        {
+            foreach (Control previousBtn in pnLeft.Controls)
+            {
+                if (previousBtn.GetType() == typeof(Guna2GradientButton))
+                {
+                    _currentButton = (Guna2GradientButton)previousBtn;
+
+                    _currentButton.FillColor = BaseColor.BUTTON_LIGHT;
+                    _currentButton.FillColor2 = BaseColor.BUTTON_LIGHT;
+                    _currentButton.ForeColor = BaseColor.FORE_COLOR_LIGHT;
+                    _currentButton.CustomImages.Image = _currentButton.CustomImages.CheckedImage;
+                }
+            }
         }
     }
 }

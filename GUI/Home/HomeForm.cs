@@ -61,17 +61,6 @@ namespace Dev69Restaurant.GUI.Home
             CheckUser();
         }
 
-        private void LoadFoodCategory()
-        {
-            List<FoodCategory> foodCategories = _foodService.GetAllCategory();
-            foodCategories.Add(new FoodCategory { Name = "Tất cả" });
-            cbCategoryFood.DataSource = foodCategories;
-            cbCategoryFood.DisplayMember = "Name";
-            cbCategoryFood.ValueMember = "Id";
-
-            cbCategoryFood.SelectedItem = null;
-        }
-
         private void btnToogleMenu_Click(object sender, EventArgs e)
         {
             ShowHideLeftBar();
@@ -253,11 +242,23 @@ namespace Dev69Restaurant.GUI.Home
         #endregion Events
 
         #region methods
+
+        private void LoadFoodCategory()
+        {
+            List<FoodCategory> foodCategories = _foodService.GetAllCategory();
+            foodCategories.Add(new FoodCategory { Name = "Tất cả" });
+            cbCategoryFood.DataSource = foodCategories;
+            cbCategoryFood.DisplayMember = "Name";
+            cbCategoryFood.ValueMember = "Id";
+
+            cbCategoryFood.SelectedItem = null;
+        }
         private void ResetBill()
         {
             pnBillDetail.Controls.Clear();
             lblDetailTableName.Text = "Chưa chọn bàn!";
             txtTotalPrice.Text = "";
+            txtDiscount.Text = "";
         }
 
         private void HideFormActive()

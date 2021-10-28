@@ -553,6 +553,10 @@
     <None Include="Resources\table_image.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\revenue_48px.png" />
+    <None Include="Resources\revenue_hover_48px.png" />
+    <None Include="Resources\discount_48px.png" />
+    <None Include="Resources\discount_hover_48px.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
