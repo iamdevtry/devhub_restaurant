@@ -81,6 +81,15 @@ namespace Dev69Restaurant.DAL.Services
         }
 
         //Update user
+        public void UpdatePassword(User user)
+        {
+            var currentUser = _userRepository.GetSingleByCondition(x => x.Username == user.Username);
+            currentUser.Password = user.Password;
+            _userRepository.Update(currentUser);
+            _unitOfWork.Commit();
+        }
+
+        //Update user
         public void UpdateInfo(User user)
         {
             var currentUser = _userRepository.GetSingleByCondition(x => x.Username == user.Username);

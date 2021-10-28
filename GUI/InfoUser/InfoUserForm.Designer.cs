@@ -54,6 +54,7 @@ namespace Dev69Restaurant.GUI.InfoUser
             this.label7 = new System.Windows.Forms.Label();
             this.txtPhone = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtAddress = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnChangePassword = new Guna.UI.WinForms.GunaLinkLabel();
             this.pnTop.SuspendLayout();
             this.gunaGradient2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnChangeAvatar)).BeginInit();
@@ -251,6 +252,7 @@ namespace Dev69Restaurant.GUI.InfoUser
             // gunaGradient2Panel1
             // 
             this.gunaGradient2Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaGradient2Panel1.Controls.Add(this.btnChangePassword);
             this.gunaGradient2Panel1.Controls.Add(this.btnChangeAvatar);
             this.gunaGradient2Panel1.Controls.Add(this.dtpBirthDay);
             this.gunaGradient2Panel1.Controls.Add(this.picAvatar);
@@ -397,7 +399,7 @@ namespace Dev69Restaurant.GUI.InfoUser
             this.txtPhone.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.PasswordChar = '\0';
-            this.txtPhone.PlaceholderText = "Nhập tên hiển thị";
+            this.txtPhone.PlaceholderText = "Nhập số điện thoại";
             this.txtPhone.SelectedText = "";
             this.txtPhone.ShadowDecoration.Parent = this.txtPhone;
             this.txtPhone.Size = new System.Drawing.Size(394, 42);
@@ -423,11 +425,23 @@ namespace Dev69Restaurant.GUI.InfoUser
             this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.PasswordChar = '\0';
-            this.txtAddress.PlaceholderText = "Nhập tên hiển thị";
+            this.txtAddress.PlaceholderText = "Nhập địa chỉ";
             this.txtAddress.SelectedText = "";
             this.txtAddress.ShadowDecoration.Parent = this.txtAddress;
             this.txtAddress.Size = new System.Drawing.Size(394, 42);
             this.txtAddress.TabIndex = 7;
+            // 
+            // btnChangePassword
+            // 
+            this.btnChangePassword.AutoSize = true;
+            this.btnChangePassword.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChangePassword.Location = new System.Drawing.Point(489, 288);
+            this.btnChangePassword.Name = "btnChangePassword";
+            this.btnChangePassword.Size = new System.Drawing.Size(113, 23);
+            this.btnChangePassword.TabIndex = 20;
+            this.btnChangePassword.TabStop = true;
+            this.btnChangePassword.Text = "Đổi mật khẩu";
+            this.btnChangePassword.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.btnChangePassword_LinkClicked);
             // 
             // InfoUserForm
             // 
@@ -472,5 +486,6 @@ namespace Dev69Restaurant.GUI.InfoUser
         private System.Windows.Forms.Label label7;
         private Guna.UI.WinForms.GunaDateTimePicker dtpBirthDay;
         private Guna.UI.WinForms.GunaPictureBox btnChangeAvatar;
+        private Guna.UI.WinForms.GunaLinkLabel btnChangePassword;
     }
 }

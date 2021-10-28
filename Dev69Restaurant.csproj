@@ -145,6 +145,12 @@
     <Compile Include="GUI\Checkout\CheckoutForm.Designer.cs">
       <DependentUpon>CheckoutForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\InfoUser\ChangePasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\InfoUser\ChangePasswordForm.Designer.cs">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\ManageDiscount\DiscountForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -301,6 +307,9 @@
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="GUI\Checkout\CheckoutForm.resx">
       <DependentUpon>CheckoutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\InfoUser\ChangePasswordForm.resx">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ManageDiscount\DiscountForm.resx">
       <DependentUpon>DiscountForm.cs</DependentUpon>

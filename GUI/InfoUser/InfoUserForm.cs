@@ -149,7 +149,21 @@ namespace Dev69Restaurant.GUI.InfoUser
                 }
             }
             txtAddress.Text = us.Address;
-            dtpBirthDay.Value = us.BirthDay.Value;
+            if(us.BirthDay != null)
+            {
+                dtpBirthDay.Value = us.BirthDay.Value;
+            }
+            else
+            {
+                dtpBirthDay.CustomFormat = "dd-MM-yy";
+            }
+        }
+
+        private void btnChangePassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ChangePasswordForm changePasswordForm = new ChangePasswordForm(_currentUser);
+            changePasswordForm.StartPosition = FormStartPosition.CenterScreen;
+            changePasswordForm.Show();
         }
     }
 }
