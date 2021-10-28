@@ -395,6 +395,7 @@
     <None Include="Properties\DataSources\Dev69Restaurant.Common.RevenueChart.datasource" />
     <None Include="Properties\DataSources\Dev69Restaurant.DTO.EntityReports.BillDetailReport.datasource" />
     <None Include="Properties\DataSources\Dev69Restaurant.DTO.EntityReports.BillDetailRpt.datasource" />
+    <None Include="Properties\DataSources\Dev69Restaurant.DTO.EntityReports.CheckoutRpt.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

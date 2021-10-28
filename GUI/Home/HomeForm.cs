@@ -1,5 +1,6 @@
 ﻿using Dev69Restaurant.DAL.Services;
 using Dev69Restaurant.DTO.Entities;
+using Dev69Restaurant.GUI.Checkout;
 using Dev69Restaurant.GUI.Food;
 using Dev69Restaurant.GUI.InfoUser;
 using Dev69Restaurant.GUI.Manager;
@@ -302,6 +303,7 @@ namespace Dev69Restaurant.GUI.Home
                         bill.TotalPrice = decimal.Parse(totalPrice.ToString());
                         _billService.Add(bill);
                         AddBillDetail(bill.Id);
+                        ExportBill(bill.Id);
                         MessageBox.Show("Thanh toán thành công!", "Đã Thanh toán", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                         idTable = -1;
                         ResetBill();
@@ -326,6 +328,16 @@ namespace Dev69Restaurant.GUI.Home
                 MessageBox.Show("Thanh toán thành công!", "Đã Thanh toán", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                 idTable = -1;
                 ResetBill();
+            }
+        }
+
+        private void ExportBill(int id)
+        {
+            if(ckbExportBill.Checked == true)
+            {
+                CheckoutForm checkoutForm = new CheckoutForm(id);
+                checkoutForm.StartPosition = FormStartPosition.CenterScreen;
+                checkoutForm.Show();
             }
         }
 

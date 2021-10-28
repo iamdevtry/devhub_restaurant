@@ -59,7 +59,9 @@ namespace Dev69Restaurant.GUI.Home
             this.grbDetail = new Guna.UI.WinForms.GunaGroupBox();
             this.pnRight = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.txtDiscount = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTotalPrice = new Guna.UI2.WinForms.Guna2TextBox();
+            this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gnSeparator2 = new Guna.UI.WinForms.GunaSeparator();
             this.btnCheckout = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -77,8 +79,7 @@ namespace Dev69Restaurant.GUI.Home
             this.pnMain = new Guna.UI2.WinForms.Guna2Panel();
             this.gnElipsePnFeature = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.gnElipsePnMain = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
-            this.txtDiscount = new Guna.UI2.WinForms.Guna2TextBox();
+            this.ckbExportBill = new System.Windows.Forms.CheckBox();
             this.pnTop.SuspendLayout();
             this.pnLeft.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -545,6 +546,7 @@ namespace Dev69Restaurant.GUI.Home
             // 
             // panel11
             // 
+            this.panel11.Controls.Add(this.ckbExportBill);
             this.panel11.Controls.Add(this.txtDiscount);
             this.panel11.Controls.Add(this.txtTotalPrice);
             this.panel11.Controls.Add(this.gunaLabel3);
@@ -557,6 +559,31 @@ namespace Dev69Restaurant.GUI.Home
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(400, 309);
             this.panel11.TabIndex = 1;
+            // 
+            // txtDiscount
+            // 
+            this.txtDiscount.BorderRadius = 8;
+            this.txtDiscount.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gnTransition.SetDecoration(this.txtDiscount, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.txtDiscount.DefaultText = "";
+            this.txtDiscount.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtDiscount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtDiscount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDiscount.DisabledState.Parent = this.txtDiscount;
+            this.txtDiscount.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDiscount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDiscount.FocusedState.Parent = this.txtDiscount;
+            this.txtDiscount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDiscount.HoverState.Parent = this.txtDiscount;
+            this.txtDiscount.Location = new System.Drawing.Point(69, 57);
+            this.txtDiscount.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtDiscount.Name = "txtDiscount";
+            this.txtDiscount.PasswordChar = '\0';
+            this.txtDiscount.PlaceholderText = "Nhập mã giảm giá";
+            this.txtDiscount.SelectedText = "";
+            this.txtDiscount.ShadowDecoration.Parent = this.txtDiscount;
+            this.txtDiscount.Size = new System.Drawing.Size(263, 44);
+            this.txtDiscount.TabIndex = 3;
             // 
             // txtTotalPrice
             // 
@@ -575,7 +602,7 @@ namespace Dev69Restaurant.GUI.Home
             this.txtTotalPrice.ForeColor = System.Drawing.Color.Black;
             this.txtTotalPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTotalPrice.HoverState.Parent = this.txtTotalPrice;
-            this.txtTotalPrice.Location = new System.Drawing.Point(69, 170);
+            this.txtTotalPrice.Location = new System.Drawing.Point(69, 144);
             this.txtTotalPrice.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtTotalPrice.Name = "txtTotalPrice";
             this.txtTotalPrice.PasswordChar = '\0';
@@ -587,12 +614,23 @@ namespace Dev69Restaurant.GUI.Home
             this.txtTotalPrice.TabIndex = 2;
             this.txtTotalPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // gunaLabel3
+            // 
+            this.gunaLabel3.AutoSize = true;
+            this.gnTransition.SetDecoration(this.gunaLabel3, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel3.Location = new System.Drawing.Point(20, 24);
+            this.gunaLabel3.Name = "gunaLabel3";
+            this.gunaLabel3.Size = new System.Drawing.Size(93, 20);
+            this.gunaLabel3.TabIndex = 1;
+            this.gunaLabel3.Text = "Mã giảm giá";
+            // 
             // gunaLabel1
             // 
             this.gunaLabel1.AutoSize = true;
             this.gnTransition.SetDecoration(this.gunaLabel1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel1.Location = new System.Drawing.Point(20, 144);
+            this.gunaLabel1.Location = new System.Drawing.Point(20, 118);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(78, 20);
             this.gunaLabel1.TabIndex = 1;
@@ -786,41 +824,16 @@ namespace Dev69Restaurant.GUI.Home
             // 
             this.gnElipsePnMain.BorderRadius = 8;
             // 
-            // gunaLabel3
+            // ckbExportBill
             // 
-            this.gunaLabel3.AutoSize = true;
-            this.gnTransition.SetDecoration(this.gunaLabel3, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel3.Location = new System.Drawing.Point(20, 50);
-            this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(93, 20);
-            this.gunaLabel3.TabIndex = 1;
-            this.gunaLabel3.Text = "Mã giảm giá";
-            // 
-            // txtDiscount
-            // 
-            this.txtDiscount.BorderRadius = 8;
-            this.txtDiscount.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gnTransition.SetDecoration(this.txtDiscount, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.txtDiscount.DefaultText = "";
-            this.txtDiscount.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtDiscount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtDiscount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDiscount.DisabledState.Parent = this.txtDiscount;
-            this.txtDiscount.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDiscount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDiscount.FocusedState.Parent = this.txtDiscount;
-            this.txtDiscount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDiscount.HoverState.Parent = this.txtDiscount;
-            this.txtDiscount.Location = new System.Drawing.Point(69, 83);
-            this.txtDiscount.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.txtDiscount.Name = "txtDiscount";
-            this.txtDiscount.PasswordChar = '\0';
-            this.txtDiscount.PlaceholderText = "Nhập mã giảm giá";
-            this.txtDiscount.SelectedText = "";
-            this.txtDiscount.ShadowDecoration.Parent = this.txtDiscount;
-            this.txtDiscount.Size = new System.Drawing.Size(263, 44);
-            this.txtDiscount.TabIndex = 3;
+            this.ckbExportBill.AutoSize = true;
+            this.gnTransition.SetDecoration(this.ckbExportBill, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.ckbExportBill.Location = new System.Drawing.Point(196, 197);
+            this.ckbExportBill.Name = "ckbExportBill";
+            this.ckbExportBill.Size = new System.Drawing.Size(136, 27);
+            this.ckbExportBill.TabIndex = 4;
+            this.ckbExportBill.Text = "Xuất hóa đơn";
+            this.ckbExportBill.UseVisualStyleBackColor = true;
             // 
             // HomeForm
             // 
@@ -911,5 +924,6 @@ namespace Dev69Restaurant.GUI.Home
         private System.Windows.Forms.Label lblFoodCategory;
         private Guna.UI.WinForms.GunaLabel gunaLabel3;
         private Guna.UI2.WinForms.Guna2TextBox txtDiscount;
+        private System.Windows.Forms.CheckBox ckbExportBill;
     }
 }

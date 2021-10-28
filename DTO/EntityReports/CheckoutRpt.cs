@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Dev69Restaurant.DTO.EntityReports
 {
-    class CheckoutRpt
+    public class CheckoutRpt
     {
+        public string FoodName { get; set; }
+        public int Quantity { get; set; }
+        public double Price { get; set; }
+        
     }
 }
