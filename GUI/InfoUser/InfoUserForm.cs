@@ -123,6 +123,7 @@ namespace Dev69Restaurant.GUI.InfoUser
             }
 
             user.Address = txtAddress.Text;
+            user.Email = txtEmail.Text;
             user.Phone = txtPhone.Text;
             user.BirthDay = dtpBirthDay.Value.Date;
 

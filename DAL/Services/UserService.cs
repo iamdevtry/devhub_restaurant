@@ -106,6 +106,7 @@ namespace Dev69Restaurant.DAL.Services
             currentUser.BirthDay = user.BirthDay;
             currentUser.Address = user.Address;
             currentUser.Phone = user.Phone;
+            currentUser.Email = user.Email;
 
             _userRepository.Update(currentUser);
             _unitOfWork.Commit();
