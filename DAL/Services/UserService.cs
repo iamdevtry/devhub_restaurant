@@ -55,6 +55,12 @@ namespace Dev69Restaurant.DAL.Services
         {
             return _userRepository.GetSingleByCondition(x=>x.Username==user.Username);
         }
+        //Get info user
+        public User GetByUsername(string username)
+        {
+            return _userRepository.GetSingleByCondition(x => x.Username == username);
+        }
+
 
         //Get info user
         public void Delete(string username)
@@ -116,6 +122,20 @@ namespace Dev69Restaurant.DAL.Services
             else
             {
                 return false; 
+            }
+        }
+
+        //Check username exist
+        public bool CheckExistByUserNameAndEmail(string username, string email)
+        {
+            var result = _userRepository.GetSingleByCondition(x => x.Username == username && x.Email==email);
+            if (result == null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
 

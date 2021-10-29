@@ -80,6 +80,7 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
     <Reference Include="System.Runtime.Serialization" />
@@ -99,6 +100,7 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\ConfigHelper.cs" />
     <Compile Include="Common\CommonDelegate.cs" />
     <Compile Include="Common\CryptoLib.cs" />
     <Compile Include="Common\RevenueChart.cs" />
@@ -187,6 +189,18 @@
     </Compile>
     <Compile Include="GUI\Manager\ManagerForm.Designer.cs">
       <DependentUpon>ManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ResetPassword\ResetPasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ResetPassword\ResetPasswordForm.Designer.cs">
+      <DependentUpon>ResetPasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ResetPassword\VerifyCodeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ResetPassword\VerifyCodeForm.Designer.cs">
+      <DependentUpon>VerifyCodeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Stastic\BillDetailForm.cs">
       <SubType>Form</SubType>
@@ -330,6 +344,12 @@
     <EmbeddedResource Include="GUI\Manager\ManagerForm.resx">
       <DependentUpon>ManagerForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ResetPassword\ResetPasswordForm.resx">
+      <DependentUpon>ResetPasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ResetPassword\VerifyCodeForm.resx">
+      <DependentUpon>VerifyCodeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Stastic\BillDetailForm.resx">
       <DependentUpon>BillDetailForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -401,6 +421,9 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="AppSettings.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Dev69Restaurant.Common.RevenueChart.datasource" />
     <None Include="Properties\DataSources\Dev69Restaurant.DTO.EntityReports.BillDetailReport.datasource" />

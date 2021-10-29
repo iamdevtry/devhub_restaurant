@@ -42,6 +42,7 @@ namespace Dev69Restaurant.GUI.Login
             this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.gunaControlBox2 = new Guna.UI.WinForms.GunaControlBox();
             this.gunaControlBox1 = new Guna.UI.WinForms.GunaControlBox();
+            this.lblForgotPassword = new Guna.UI.WinForms.GunaLinkLabel();
             this.pnLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.pnRight.SuspendLayout();
@@ -70,6 +71,7 @@ namespace Dev69Restaurant.GUI.Login
             // pnRight
             // 
             this.pnRight.BackColor = System.Drawing.Color.White;
+            this.pnRight.Controls.Add(this.lblForgotPassword);
             this.pnRight.Controls.Add(this.btnLogin);
             this.pnRight.Controls.Add(this.btnHidePassword);
             this.pnRight.Controls.Add(this.btnShowPassword);
@@ -274,6 +276,18 @@ namespace Dev69Restaurant.GUI.Login
             this.gunaControlBox1.Size = new System.Drawing.Size(39, 31);
             this.gunaControlBox1.TabIndex = 0;
             // 
+            // lblForgotPassword
+            // 
+            this.lblForgotPassword.AutoSize = true;
+            this.lblForgotPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lblForgotPassword.Location = new System.Drawing.Point(410, 472);
+            this.lblForgotPassword.Name = "lblForgotPassword";
+            this.lblForgotPassword.Size = new System.Drawing.Size(109, 20);
+            this.lblForgotPassword.TabIndex = 6;
+            this.lblForgotPassword.TabStop = true;
+            this.lblForgotPassword.Text = "Quên mật khẩu";
+            this.lblForgotPassword.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblForgotPassword_LinkClicked);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -309,5 +323,6 @@ namespace Dev69Restaurant.GUI.Login
         private Guna.UI.WinForms.GunaButton btnShowPassword;
         private Guna.UI.WinForms.GunaButton btnHidePassword;
         private Guna.UI.WinForms.GunaGradientButton btnLogin;
+        private Guna.UI.WinForms.GunaLinkLabel lblForgotPassword;
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Dev69Restaurant.Common;
 using Dev69Restaurant.DAL.Services;
 using Dev69Restaurant.GUI.Home;
+using Dev69Restaurant.GUI.ResetPassword;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -75,8 +76,14 @@ namespace Dev69Restaurant.GUI.Login
                 MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng.", "Đăng nhập thất bại", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
         }
+
         #endregion
 
-
+        private void lblForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            VerifyCodeForm verifyCodeForm = new VerifyCodeForm();
+            verifyCodeForm.StartPosition = FormStartPosition.CenterScreen;
+            verifyCodeForm.Show();
+        }
     }
 }

@@ -25,7 +25,7 @@ namespace Dev69Restaurant
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new HomeForm());
-            //Application.Run(new LoginForm());
+            Application.Run(new LoginForm());
 
             //Application.Run(new ManagerForm());
             //Application.Run(new FoodCategoryForm());
@@ -33,7 +33,7 @@ namespace Dev69Restaurant
             //Application.Run(new ManageTableFoodForm());
             //Application.Run(new BillDetailForm());
             //Application.Run(new DiscountForm());
-            Application.Run(new RevenueForm());
+            //Application.Run(new RevenueForm());
 
         }
     }
