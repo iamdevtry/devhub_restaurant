@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Dev69Restaurant.GUI.Revenue;
 
 namespace Dev69Restaurant
 {
@@ -24,7 +25,7 @@ namespace Dev69Restaurant
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new HomeForm());
-            Application.Run(new LoginForm());
+            //Application.Run(new LoginForm());
 
             //Application.Run(new ManagerForm());
             //Application.Run(new FoodCategoryForm());
@@ -32,6 +33,7 @@ namespace Dev69Restaurant
             //Application.Run(new ManageTableFoodForm());
             //Application.Run(new BillDetailForm());
             //Application.Run(new DiscountForm());
+            Application.Run(new RevenueForm());
 
         }
     }

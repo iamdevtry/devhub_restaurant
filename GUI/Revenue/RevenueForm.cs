@@ -43,7 +43,8 @@ namespace Dev69Restaurant.GUI.Revenue
         {
             DateTime dateStart = DateTime.Now.Date;
 
-            var firstDayOfMonth = new DateTime(2021, 10, 22);
+            //var firstDayOfMonth = new DateTime(2021, 10, 22);
+            var firstDayOfMonth = dateStart.AddDays(-6);
             var lastDayOfMonth = firstDayOfMonth.AddDays(6);
 
             List<Bill> bills = _billService.GetBills().ToList();
@@ -95,20 +96,30 @@ namespace Dev69Restaurant.GUI.Revenue
                 .Select(a => new { Amount = a.Sum(b => b.Quantity), Name = a.Key})
                 .OrderByDescending(a => a.Amount)
                 .ToList();
-            var billDetail = sells.OrderByDescending(item => item.Amount).First();
-            var food = _foodService.Find(billDetail.Name);
+            if (sells.Count < 1)
+            {
+                MessageBox.Show("Chưa có dữ liệu để thống kê!");
+                return;
+            }
+            else
+            {
+                var billDetail = sells.OrderByDescending(item => item.Amount).First();
+                var food = _foodService.Find(billDetail.Name);
 
-            lblPopularItem.Text = food.Name;
-            lblQuantity.Text = billDetail.Amount.ToString();
-
+                lblPopularItem.Text = food.Name;
+                lblQuantity.Text = billDetail.Amount.ToString();
+            }
         }
 
         private void ShowChartAWeek()
         {
             revenueChartBindingSource.DataSource = new List<RevenueChart>();
 
-            var startDate = new DateTime(2021,10,22);
-            var endDate = startDate.AddDays(7);
+            DateTime date = DateTime.Now.Date;
+
+            var startDate = date.AddDays(-6);
+            var endDate = date;
+
 
             var numDays = (int)((endDate - startDate).TotalDays);
             List<DateTime> myDates = Enumerable
@@ -136,11 +147,8 @@ namespace Dev69Restaurant.GUI.Revenue
 
         private void BindChartDefault()
         {
-            DateTime dateStart = DateTime.Now.Date;
-            var firstDayOfMonth = new DateTime(dateStart.Year, dateStart.Month, dateStart.Day);
-
-            var firstDayOfMonth2 = new DateTime(2021, 10, 22);
-            var lastDayOfMonth = firstDayOfMonth2.AddDays(6);
+            var lastDayOfMonth = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+            var firstDayOfMonth = lastDayOfMonth.AddDays(-6);
 
             chartRevenue.Series.Clear();
             SeriesCollection series = new SeriesCollection();
@@ -151,7 +159,7 @@ namespace Dev69Restaurant.GUI.Revenue
                 List<double> values = new List<double>();
                 double value = 0;
                 var data = from o in revenueCharts
-                           where o.Date >= firstDayOfMonth2.Date.Day && o.Date <= lastDayOfMonth.Date.Day
+                           where o.Date >= firstDayOfMonth.Date.Day && o.Date <= lastDayOfMonth.Date.Day
                            orderby o.Date ascending
                            select new { o.Value, o.Date };
                 foreach (var item in data)

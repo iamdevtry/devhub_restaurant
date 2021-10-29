@@ -325,6 +325,7 @@ namespace Dev69Restaurant.GUI.Home
                 bill.TotalPrice = decimal.Parse(sum.ToString());
                 _billService.Add(bill);
                 AddBillDetail(bill.Id);
+                ExportBill(bill.Id);
                 MessageBox.Show("Thanh toán thành công!", "Đã Thanh toán", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                 idTable = -1;
                 ResetBill();

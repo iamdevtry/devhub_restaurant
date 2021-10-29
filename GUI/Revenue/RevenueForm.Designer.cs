@@ -39,13 +39,13 @@ namespace Dev69Restaurant.GUI.Revenue
             this.gunaImageButton1 = new Guna.UI.WinForms.GunaImageButton();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.lblPopularItem = new System.Windows.Forms.Label();
+            this.lblQuantity = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.gunaImageButton2 = new Guna.UI.WinForms.GunaImageButton();
             this.gnElipseDgv = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.chartRevenue = new LiveCharts.WinForms.CartesianChart();
-            this.lblQuantity = new System.Windows.Forms.Label();
             this.revenueChartBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnHeader.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -97,7 +97,7 @@ namespace Dev69Restaurant.GUI.Revenue
             this.lblRevenueToday.Name = "lblRevenueToday";
             this.lblRevenueToday.Size = new System.Drawing.Size(173, 37);
             this.lblRevenueToday.TabIndex = 2;
-            this.lblRevenueToday.Text = "1.000.000 đ";
+            this.lblRevenueToday.Text = "Chưa có dữ liệu";
             this.lblRevenueToday.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
@@ -146,8 +146,19 @@ namespace Dev69Restaurant.GUI.Revenue
             this.lblPopularItem.Name = "lblPopularItem";
             this.lblPopularItem.Size = new System.Drawing.Size(173, 37);
             this.lblPopularItem.TabIndex = 2;
-            this.lblPopularItem.Text = "1.000.000 đ";
+            this.lblPopularItem.Text = "Chưa có dữ liệu";
             this.lblPopularItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblQuantity
+            // 
+            this.lblQuantity.BackColor = System.Drawing.Color.Transparent;
+            this.lblQuantity.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuantity.Location = new System.Drawing.Point(250, 18);
+            this.lblQuantity.Name = "lblQuantity";
+            this.lblQuantity.Size = new System.Drawing.Size(99, 64);
+            this.lblQuantity.TabIndex = 1;
+            this.lblQuantity.Text = "0";
+            this.lblQuantity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
@@ -204,17 +215,6 @@ namespace Dev69Restaurant.GUI.Revenue
             this.chartRevenue.Size = new System.Drawing.Size(1220, 573);
             this.chartRevenue.TabIndex = 4;
             this.chartRevenue.Text = "cartesianChart1";
-            // 
-            // lblQuantity
-            // 
-            this.lblQuantity.BackColor = System.Drawing.Color.Transparent;
-            this.lblQuantity.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuantity.Location = new System.Drawing.Point(250, 18);
-            this.lblQuantity.Name = "lblQuantity";
-            this.lblQuantity.Size = new System.Drawing.Size(99, 64);
-            this.lblQuantity.TabIndex = 1;
-            this.lblQuantity.Text = "10";
-            this.lblQuantity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // revenueChartBindingSource
             // 
