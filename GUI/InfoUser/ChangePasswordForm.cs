@@ -1,4 +1,5 @@
-﻿using Dev69Restaurant.DAL.Services;
+﻿using Dev69Restaurant.Common;
+using Dev69Restaurant.DAL.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -34,7 +35,8 @@ namespace Dev69Restaurant.GUI.InfoUser
                 var user = _userService.GetInfo(_currentUser);
                 if (ValidateForm(user) == 1)
                 {
-                    user.Password = txtNewPass.Text;
+                    string password = Encryptor.MD5Hash(txtNewPass.Text);
+                    user.Password = password;
                     _userService.UpdatePassword(user);
                     MessageBox.Show("Đổi mật khẩu thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
@@ -49,7 +51,8 @@ namespace Dev69Restaurant.GUI.InfoUser
 
         private int ValidateForm(DTO.Entities.User user)
         {
-            if (txtOldPass.Text != user.Password)
+            string password = Encryptor.MD5Hash(txtOldPass.Text);
+            if (password != user.Password)
             {
                 MessageBox.Show("Mật khẩu cũ không đúng. Hãy nhập lại!", "Sai mật khẩu", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return -1;

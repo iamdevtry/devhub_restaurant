@@ -60,14 +60,28 @@ namespace Dev69Restaurant.GUI.User
             DTO.Entities.User user = new DTO.Entities.User();
             user.Username = txtUsername.Text;
 
-            if (string.IsNullOrEmpty(txtPassword.Text) || txtPassword.Text.Length < 6)
+            //if (string.IsNullOrEmpty(txtPassword.Text) || txtPassword.Text.Length < 6)
+            //{
+            //    MessageBox.Show("Mật khẩu phải chứa ít nhất 6 kí tự.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    return;
+            //}
+            if (!string.IsNullOrEmpty(txtPassword.Text))
             {
-                MessageBox.Show("Mật khẩu phải chứa ít nhất 6 kí tự.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                if(txtPassword.Text.Length < 6)
+                {
+                    MessageBox.Show("Mật khẩu phải chứa ít nhất 6 kí tự.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                else
+                {
+                    string password = Encryptor.MD5Hash(txtPassword.Text);
+                    user.Password = password;
+                }
+
             }
             else
             {
-                user.Password = txtPassword.Text;
+                user.Password = _userService.GetInfo(_currentUser).Password;
             }
             user.DisplayName = txtDisplayName.Text;
 
@@ -101,7 +115,7 @@ namespace Dev69Restaurant.GUI.User
         {
             var user = _userService.GetInfo(_currentUser);
             txtUsername.Text= user.Username;
-            txtPassword.Text = user.Password;
+            //txtPassword.Text = user.Password;
             txtDisplayName.Text= user.DisplayName;
             txtFullName.Text= user.FullName;
             

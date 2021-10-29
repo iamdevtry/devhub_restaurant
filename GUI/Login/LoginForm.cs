@@ -1,4 +1,5 @@
-﻿using Dev69Restaurant.DAL.Services;
+﻿using Dev69Restaurant.Common;
+using Dev69Restaurant.DAL.Services;
 using Dev69Restaurant.GUI.Home;
 using System;
 using System.Collections.Generic;
@@ -58,7 +59,8 @@ namespace Dev69Restaurant.GUI.Login
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            var user = _loginService.Login(txtUsername.Text, txtPassword.Text);
+            string password = Encryptor.MD5Hash(txtPassword.Text);
+            var user = _loginService.Login(txtUsername.Text, password);
             var userRole = _loginService.GetRoleByUsername(txtUsername.Text);
 
             if (user != null)

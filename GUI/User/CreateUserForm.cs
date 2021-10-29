@@ -82,7 +82,8 @@ namespace Dev69Restaurant.GUI.User
             }
             else
             {
-                user.Password = txtPassword.Text;
+                string password = Encryptor.MD5Hash(txtPassword.Text);
+                user.Password = password;
             }
 
             if (string.IsNullOrEmpty(txtFullName.Text))
