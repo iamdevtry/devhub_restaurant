@@ -59,6 +59,7 @@ namespace Dev69Restaurant.GUI.Home
             this.grbDetail = new Guna.UI.WinForms.GunaGroupBox();
             this.pnRight = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.ckbExportBill = new System.Windows.Forms.CheckBox();
             this.txtDiscount = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTotalPrice = new Guna.UI2.WinForms.Guna2TextBox();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
@@ -79,7 +80,6 @@ namespace Dev69Restaurant.GUI.Home
             this.pnMain = new Guna.UI2.WinForms.Guna2Panel();
             this.gnElipsePnFeature = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.gnElipsePnMain = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.ckbExportBill = new System.Windows.Forms.CheckBox();
             this.pnTop.SuspendLayout();
             this.pnLeft.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -560,6 +560,19 @@ namespace Dev69Restaurant.GUI.Home
             this.panel11.Size = new System.Drawing.Size(400, 309);
             this.panel11.TabIndex = 1;
             // 
+            // ckbExportBill
+            // 
+            this.ckbExportBill.AutoSize = true;
+            this.ckbExportBill.Checked = true;
+            this.ckbExportBill.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.gnTransition.SetDecoration(this.ckbExportBill, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.ckbExportBill.Location = new System.Drawing.Point(196, 197);
+            this.ckbExportBill.Name = "ckbExportBill";
+            this.ckbExportBill.Size = new System.Drawing.Size(136, 27);
+            this.ckbExportBill.TabIndex = 4;
+            this.ckbExportBill.Text = "Xuất hóa đơn";
+            this.ckbExportBill.UseVisualStyleBackColor = true;
+            // 
             // txtDiscount
             // 
             this.txtDiscount.BorderRadius = 8;
@@ -823,17 +836,6 @@ namespace Dev69Restaurant.GUI.Home
             // gnElipsePnMain
             // 
             this.gnElipsePnMain.BorderRadius = 8;
-            // 
-            // ckbExportBill
-            // 
-            this.ckbExportBill.AutoSize = true;
-            this.gnTransition.SetDecoration(this.ckbExportBill, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.ckbExportBill.Location = new System.Drawing.Point(196, 197);
-            this.ckbExportBill.Name = "ckbExportBill";
-            this.ckbExportBill.Size = new System.Drawing.Size(136, 27);
-            this.ckbExportBill.TabIndex = 4;
-            this.ckbExportBill.Text = "Xuất hóa đơn";
-            this.ckbExportBill.UseVisualStyleBackColor = true;
             // 
             // HomeForm
             // 

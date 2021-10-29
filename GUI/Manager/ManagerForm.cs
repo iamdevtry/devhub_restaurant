@@ -30,7 +30,7 @@ namespace Dev69Restaurant.GUI.Manager
         private void btnManageStaff_Click(object sender, EventArgs e)
         {
             HideFormActive();
-            ActivateButton(sender, BaseIcon.FOOD_ACTIVE);
+            ActivateButton(sender, BaseIcon.USER_GROUP_HOVER);
             UserForm userForm = new UserForm();
             activeForm = userForm;
             userForm.TopLevel = false;
@@ -44,7 +44,7 @@ namespace Dev69Restaurant.GUI.Manager
         private void btnRevenue_Click(object sender, EventArgs e)
         {
             HideFormActive();
-            ActivateButton(sender, BaseIcon.FOOD_ACTIVE);
+            ActivateButton(sender, BaseIcon.BAR_CHART_HOVER);
             RevenueForm revenueForm = new RevenueForm();
             activeForm = revenueForm;
             revenueForm.TopLevel = false;
@@ -58,7 +58,7 @@ namespace Dev69Restaurant.GUI.Manager
         private void btnTableFood_Click(object sender, EventArgs e)
         {
             HideFormActive();
-            ActivateButton(sender, BaseIcon.FOOD_ACTIVE);
+            ActivateButton(sender, BaseIcon.TABLE_FOOD_ACTIVE);
             ManageTableFoodForm manageTableFoodForm = new ManageTableFoodForm();
             activeForm = manageTableFoodForm;
             manageTableFoodForm.TopLevel = false;
@@ -87,7 +87,7 @@ namespace Dev69Restaurant.GUI.Manager
         private void btnBill_Click(object sender, EventArgs e)
         {
             HideFormActive();
-            ActivateButton(sender, BaseIcon.FOOD_ACTIVE);
+            ActivateButton(sender, BaseIcon.REVENUE_HOVER);
             StasticForm stasticForm = new StasticForm();
             activeForm = stasticForm;
             stasticForm.TopLevel = false;
@@ -101,7 +101,7 @@ namespace Dev69Restaurant.GUI.Manager
         private void btnDiscount_Click(object sender, EventArgs e)
         {
             HideFormActive();
-            ActivateButton(sender, BaseIcon.FOOD_ACTIVE);
+            ActivateButton(sender, BaseIcon.DISCOUNT_HOVER);
             DiscountForm discountForm = new DiscountForm();
             activeForm = discountForm;
             discountForm.TopLevel = false;

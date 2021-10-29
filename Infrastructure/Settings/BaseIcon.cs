@@ -42,6 +42,10 @@ namespace Dev69Restaurant.Infrastructure.Settings
         public static readonly string USER = @"..\..\Resources\user_50px.png";
         public static readonly string TABLE_FOOD_IMAGE = @"..\..\Resources\table_image.jpg";
         public static readonly string NO_IMAGE = @"..\..\Resources\no_image.jpg";
+        public static readonly string BAR_CHART_HOVER = @"..\..\Resources\bar_chart_hover_48px.png";
+        public static readonly string REVENUE_HOVER = @"..\..\Resources\revenue_hover_48px.png";
+        public static readonly string DISCOUNT_HOVER = @"..\..\Resources\discount_hover_48px.png";
+        public static readonly string USER_GROUP_HOVER = @"..\..\Resources\user_group_hover_48px.png";
 
     }
 }
