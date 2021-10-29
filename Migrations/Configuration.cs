@@ -50,5 +50,21 @@
                 context.SaveChanges();
             }
         }
+
+        private void CreateUser(RestaurantDbContext context)
+        {
+            if (context.Foods.Count() == 0)
+            {
+                List<Food> listFoods = new List<Food>()
+            {
+                new Food() { Name="Bánh Mì",Price=30000,CategoryId=1,Status=true },
+                 new Food() { Name="Sữa bò",Price=35000,CategoryId=2,Status=true },
+                  new Food() { Name="Gà rán",Price=90000,CategoryId=3,Status=true },
+                   new Food() { Name="Hamburger",Price=45000,CategoryId=4,Status=true }
+            };
+                context.Foods.AddRange(listFoods);
+                context.SaveChanges();
+            }
+        }
     }
 }

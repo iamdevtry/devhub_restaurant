@@ -143,6 +143,16 @@ namespace Dev69Restaurant.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dev69_banner_blackandWhite {
+            get {
+                object obj = ResourceManager.GetObject("dev69_banner_blackandWhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap discount_48px {
             get {
                 object obj = ResourceManager.GetObject("discount_48px", resourceCulture);
