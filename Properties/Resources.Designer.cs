@@ -303,6 +303,26 @@ namespace Dev69Restaurant.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logo_Dark_new {
+            get {
+                object obj = ResourceManager.GetObject("logo_Dark_new", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_Hutech {
+            get {
+                object obj = ResourceManager.GetObject("logo_Hutech", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap menu_48px {
             get {
                 object obj = ResourceManager.GetObject("menu_48px", resourceCulture);

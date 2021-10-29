@@ -30,7 +30,7 @@ namespace Dev69Restaurant.GUI.Home
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation2 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForm));
             this.btnHome = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnAbout = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -42,7 +42,6 @@ namespace Dev69Restaurant.GUI.Home
             this.gnDragControl = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.pnTop = new Guna.UI2.WinForms.Guna2Panel();
             this.gnSeparate = new Guna.UI.WinForms.GunaSeparator();
-            this.btnSetting = new Guna.UI2.WinForms.Guna2GradientButton();
             this.gnTransition = new Guna.UI2.WinForms.Guna2Transition();
             this.pnLeft = new Guna.UI.WinForms.GunaPanel();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -147,7 +146,7 @@ namespace Dev69Restaurant.GUI.Home
             this.btnAbout.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(165)))));
             this.btnAbout.HoverState.Parent = this.btnAbout;
             this.btnAbout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAbout.Location = new System.Drawing.Point(14, 87);
+            this.btnAbout.Location = new System.Drawing.Point(14, 36);
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(217)))), ((int)(((byte)(220)))));
             this.btnAbout.PressedDepth = 100;
@@ -295,56 +294,26 @@ namespace Dev69Restaurant.GUI.Home
             this.gnSeparate.Size = new System.Drawing.Size(315, 10);
             this.gnSeparate.TabIndex = 8;
             // 
-            // btnSetting
-            // 
-            this.btnSetting.BorderRadius = 8;
-            this.btnSetting.CheckedState.Parent = this.btnSetting;
-            this.btnSetting.CustomImages.CheckedImage = global::Dev69Restaurant.Properties.Resources.settings_48px;
-            this.btnSetting.CustomImages.HoveredImage = global::Dev69Restaurant.Properties.Resources.settings_hover_48px;
-            this.btnSetting.CustomImages.Image = global::Dev69Restaurant.Properties.Resources.settings_48px;
-            this.btnSetting.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnSetting.CustomImages.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnSetting.CustomImages.Parent = this.btnSetting;
-            this.gnTransition.SetDecoration(this.btnSetting, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.btnSetting.FillColor = System.Drawing.Color.White;
-            this.btnSetting.FillColor2 = System.Drawing.Color.White;
-            this.btnSetting.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSetting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnSetting.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(235)))), ((int)(((byte)(237)))));
-            this.btnSetting.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(235)))), ((int)(((byte)(237)))));
-            this.btnSetting.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(165)))));
-            this.btnSetting.HoverState.Parent = this.btnSetting;
-            this.btnSetting.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnSetting.Location = new System.Drawing.Point(14, 19);
-            this.btnSetting.Name = "btnSetting";
-            this.btnSetting.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(217)))), ((int)(((byte)(220)))));
-            this.btnSetting.PressedDepth = 100;
-            this.btnSetting.ShadowDecoration.Parent = this.btnSetting;
-            this.btnSetting.Size = new System.Drawing.Size(275, 50);
-            this.btnSetting.TabIndex = 6;
-            this.btnSetting.Text = "Setting";
-            this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
-            // 
             // gnTransition
             // 
             this.gnTransition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.HorizSlide;
             this.gnTransition.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.gnTransition.DefaultAnimation = animation2;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.gnTransition.DefaultAnimation = animation1;
             // 
             // pnLeft
             // 
@@ -364,7 +333,6 @@ namespace Dev69Restaurant.GUI.Home
             // 
             // panel10
             // 
-            this.panel10.Controls.Add(this.btnSetting);
             this.panel10.Controls.Add(this.btnAbout);
             this.panel10.Controls.Add(this.gnSeparate);
             this.gnTransition.SetDecoration(this.panel10, Guna.UI2.AnimatorNS.DecorationType.None);
@@ -890,7 +858,6 @@ namespace Dev69Restaurant.GUI.Home
         private Guna.UI2.WinForms.Guna2ImageButton btnToogleMenu;
         private Guna.UI2.WinForms.Guna2PictureBox picLogo;
         private Guna.UI.WinForms.GunaSeparator gnSeparate;
-        private Guna.UI2.WinForms.Guna2GradientButton btnSetting;
         private Guna.UI2.WinForms.Guna2Transition gnTransition;
         private Guna.UI.WinForms.GunaPanel pnLeft;
         private Guna.UI2.WinForms.Guna2Panel pnTop;

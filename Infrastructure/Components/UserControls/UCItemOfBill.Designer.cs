@@ -37,11 +37,11 @@ namespace Dev69Restaurant.Infrastructure.Components.UserControls
             this.nmrQuantity = new Guna.UI.WinForms.GunaNumeric();
             this.gunaLinePanel1 = new Guna.UI.WinForms.GunaLinePanel();
             this.panel1.SuspendLayout();
+            this.gunaLinePanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.lblTotalPrice);
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.lblPrice);
             this.panel1.Controls.Add(this.lblFoodName);
@@ -50,14 +50,14 @@ namespace Dev69Restaurant.Infrastructure.Components.UserControls
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(300, 75);
+            this.panel1.Size = new System.Drawing.Size(300, 57);
             this.panel1.TabIndex = 0;
             // 
             // lblTotalPrice
             // 
             this.lblTotalPrice.AutoSize = true;
             this.lblTotalPrice.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalPrice.Location = new System.Drawing.Point(191, 18);
+            this.lblTotalPrice.Location = new System.Drawing.Point(212, 17);
             this.lblTotalPrice.Name = "lblTotalPrice";
             this.lblTotalPrice.Size = new System.Drawing.Size(75, 20);
             this.lblTotalPrice.TabIndex = 9;
@@ -108,7 +108,7 @@ namespace Dev69Restaurant.Infrastructure.Components.UserControls
             this.nmrQuantity.ButtonForeColor = System.Drawing.Color.White;
             this.nmrQuantity.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.nmrQuantity.ForeColor = System.Drawing.Color.Black;
-            this.nmrQuantity.Location = new System.Drawing.Point(127, 12);
+            this.nmrQuantity.Location = new System.Drawing.Point(146, 12);
             this.nmrQuantity.Maximum = ((long)(9999999));
             this.nmrQuantity.Minimum = ((long)(0));
             this.nmrQuantity.Name = "nmrQuantity";
@@ -121,13 +121,14 @@ namespace Dev69Restaurant.Infrastructure.Components.UserControls
             // 
             // gunaLinePanel1
             // 
+            this.gunaLinePanel1.Controls.Add(this.lblTotalPrice);
             this.gunaLinePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gunaLinePanel1.LineBottom = 1;
             this.gunaLinePanel1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(170)))), ((int)(((byte)(229)))));
             this.gunaLinePanel1.LineStyle = System.Windows.Forms.BorderStyle.None;
             this.gunaLinePanel1.Location = new System.Drawing.Point(0, 0);
             this.gunaLinePanel1.Name = "gunaLinePanel1";
-            this.gunaLinePanel1.Size = new System.Drawing.Size(300, 75);
+            this.gunaLinePanel1.Size = new System.Drawing.Size(300, 57);
             this.gunaLinePanel1.TabIndex = 10;
             // 
             // UCItemOfBill
@@ -136,9 +137,11 @@ namespace Dev69Restaurant.Infrastructure.Components.UserControls
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.Name = "UCItemOfBill";
-            this.Size = new System.Drawing.Size(300, 75);
+            this.Size = new System.Drawing.Size(300, 57);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.gunaLinePanel1.ResumeLayout(false);
+            this.gunaLinePanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

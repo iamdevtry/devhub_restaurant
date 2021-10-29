@@ -57,5 +57,6 @@ namespace Dev69Restaurant.GUI.Food
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel pnFood;
+
     }
 }

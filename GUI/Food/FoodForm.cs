@@ -18,7 +18,6 @@ namespace Dev69Restaurant.GUI.Food
     {
         private FoodService _foodService;
         public event SelectFoodDelegate selectFoodDelegate;
-
         public FoodForm()
         {
             InitializeComponent();
@@ -63,7 +62,14 @@ namespace Dev69Restaurant.GUI.Food
         {
             UCTableFood ucTableFood = sender as UCTableFood;
             selectFoodDelegate(ucTableFood.Tag);
+        }
 
+        public void UnChecked()
+        {
+            foreach (UCTableFood item in pnFood.Controls)
+            {
+                item.unCheckedFood();
+            }
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Dev69Restaurant.DAL.Services;
 using Dev69Restaurant.DTO.Entities;
+using Dev69Restaurant.GUI.About;
 using Dev69Restaurant.GUI.Checkout;
 using Dev69Restaurant.GUI.Food;
 using Dev69Restaurant.GUI.InfoUser;
@@ -126,7 +127,16 @@ namespace Dev69Restaurant.GUI.Home
             HideFormActive();
             ActivateButton(sender, BaseIcon.FOOD_ACTIVE);
             FoodForm food = new FoodForm();
-            food.selectFoodDelegate += Food_selectFoodDelegate;
+            if(idTable == -1)
+            {
+                MessageBox.Show("Vui lòng chọn bàn trước khi chọn món!", "Không thể chọn món", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                return;
+            }
+            else
+            {
+                food.selectFoodDelegate += Food_selectFoodDelegate;
+            }
+            //food.selectFoodDelegate += Food_selectFoodDelegate;
             activeForm = food;
             food.TopLevel = false;
             food.AutoScroll = true;
@@ -192,7 +202,12 @@ namespace Dev69Restaurant.GUI.Home
 
         private void btnAbout_Click(object sender, EventArgs e)
         {
+            HideFormActive();
             ActivateButton(sender, BaseIcon.ABOUT_ACTIVE);
+
+            AboutForm aboutForm = new AboutForm();
+            aboutForm.StartPosition = FormStartPosition.CenterScreen;
+            aboutForm.ShowDialog();
         }
 
         private void btnManageUser_Click(object sender, EventArgs e)
