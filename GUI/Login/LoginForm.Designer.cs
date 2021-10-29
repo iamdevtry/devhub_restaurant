@@ -32,6 +32,7 @@ namespace Dev69Restaurant.GUI.Login
             this.pnLeft = new System.Windows.Forms.Panel();
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.pnRight = new System.Windows.Forms.Panel();
+            this.lblForgotPassword = new Guna.UI.WinForms.GunaLinkLabel();
             this.btnLogin = new Guna.UI.WinForms.GunaGradientButton();
             this.btnHidePassword = new Guna.UI.WinForms.GunaButton();
             this.btnShowPassword = new Guna.UI.WinForms.GunaButton();
@@ -42,7 +43,6 @@ namespace Dev69Restaurant.GUI.Login
             this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.gunaControlBox2 = new Guna.UI.WinForms.GunaControlBox();
             this.gunaControlBox1 = new Guna.UI.WinForms.GunaControlBox();
-            this.lblForgotPassword = new Guna.UI.WinForms.GunaLinkLabel();
             this.pnLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.pnRight.SuspendLayout();
@@ -88,6 +88,18 @@ namespace Dev69Restaurant.GUI.Login
             this.pnRight.Name = "pnRight";
             this.pnRight.Size = new System.Drawing.Size(622, 715);
             this.pnRight.TabIndex = 1;
+            // 
+            // lblForgotPassword
+            // 
+            this.lblForgotPassword.AutoSize = true;
+            this.lblForgotPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lblForgotPassword.Location = new System.Drawing.Point(410, 472);
+            this.lblForgotPassword.Name = "lblForgotPassword";
+            this.lblForgotPassword.Size = new System.Drawing.Size(109, 20);
+            this.lblForgotPassword.TabIndex = 6;
+            this.lblForgotPassword.TabStop = true;
+            this.lblForgotPassword.Text = "Quên mật khẩu";
+            this.lblForgotPassword.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblForgotPassword_LinkClicked);
             // 
             // btnLogin
             // 
@@ -276,18 +288,6 @@ namespace Dev69Restaurant.GUI.Login
             this.gunaControlBox1.Size = new System.Drawing.Size(39, 31);
             this.gunaControlBox1.TabIndex = 0;
             // 
-            // lblForgotPassword
-            // 
-            this.lblForgotPassword.AutoSize = true;
-            this.lblForgotPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lblForgotPassword.Location = new System.Drawing.Point(410, 472);
-            this.lblForgotPassword.Name = "lblForgotPassword";
-            this.lblForgotPassword.Size = new System.Drawing.Size(109, 20);
-            this.lblForgotPassword.TabIndex = 6;
-            this.lblForgotPassword.TabStop = true;
-            this.lblForgotPassword.Text = "Quên mật khẩu";
-            this.lblForgotPassword.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblForgotPassword_LinkClicked);
-            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -299,7 +299,7 @@ namespace Dev69Restaurant.GUI.Login
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "LoginForm";
+            this.Text = "Đăng nhập";
             this.pnLeft.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             this.pnRight.ResumeLayout(false);

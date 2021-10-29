@@ -491,7 +491,7 @@ namespace Dev69Restaurant.GUI.InfoUser
             this.Controls.Add(this.gunaGradient2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "InfoUserForm";
-            this.Text = "InfoUserForm";
+            this.Text = "Thông tin tài khoản";
             this.pnTop.ResumeLayout(false);
             this.gunaGradient2Panel1.ResumeLayout(false);
             this.gunaGradient2Panel1.PerformLayout();

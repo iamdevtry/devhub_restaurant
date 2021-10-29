@@ -610,7 +610,7 @@ namespace Dev69Restaurant.GUI.ManageFood
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ManageFoodForm";
-            this.Text = "ManageFoodForm";
+            this.Text = "Quản lý món ăn";
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);

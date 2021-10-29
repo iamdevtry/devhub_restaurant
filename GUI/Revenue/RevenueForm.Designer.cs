@@ -230,7 +230,7 @@ namespace Dev69Restaurant.GUI.Revenue
             this.Controls.Add(this.pnHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RevenueForm";
-            this.Text = "RevenueForm";
+            this.Text = "Tổng quan ";
             this.Load += new System.EventHandler(this.RevenueForm_Load);
             this.pnHeader.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);

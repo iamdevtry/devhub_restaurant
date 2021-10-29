@@ -1,5 +1,6 @@
 ﻿using Dev69Restaurant.Common;
 using Dev69Restaurant.DAL.Services;
+using Dev69Restaurant.Infrastructure.Settings;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,8 @@ namespace Dev69Restaurant.GUI.User
         public UpdateUserForm(DTO.Entities.User user)
         {
             InitializeComponent();
+            this.Icon = new Icon(BaseIcon.ICON);
+
             _currentUser = user;
             _userService = new UserService();
             LoadData();

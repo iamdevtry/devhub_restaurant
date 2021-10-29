@@ -1,6 +1,7 @@
 ﻿using Dev69Restaurant.Common;
 using Dev69Restaurant.DAL.Services;
 using Dev69Restaurant.Infrastructure.Components.UserControls;
+using Dev69Restaurant.Infrastructure.Settings;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,8 @@ namespace Dev69Restaurant.GUI.Food
         public FoodForm()
         {
             InitializeComponent();
+            this.Icon = new Icon(BaseIcon.ICON);
+
             _foodService = new FoodService();
             LoadFood();
         }
@@ -28,6 +31,8 @@ namespace Dev69Restaurant.GUI.Food
         public FoodForm(string keyword)
         {
             InitializeComponent();
+            this.Icon = new Icon(BaseIcon.ICON);
+
             _foodService = new FoodService();
             GetAllByCategory(keyword);
         }

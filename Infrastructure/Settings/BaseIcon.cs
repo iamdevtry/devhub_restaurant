@@ -8,6 +8,7 @@ namespace Dev69Restaurant.Infrastructure.Settings
 {
     public static class BaseIcon
     {
+        public static readonly string ICON = @"..\..\Resources\app.ico";
         public static readonly string HOME = @"..\..\Resources\home_48px.png";
         public static readonly string HOME_DARK = @"..\..\Resources\home_dark_48px.png";
         public static readonly string HOME_ACTIVE = @"..\..\Resources\home_hover_48px.png";

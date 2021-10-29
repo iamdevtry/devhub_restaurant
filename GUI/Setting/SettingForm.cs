@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dev69Restaurant.Infrastructure.Settings;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,8 @@ namespace Dev69Restaurant.GUI.Setting
         public SettingForm()
         {
             InitializeComponent();
+            this.Icon = new Icon(BaseIcon.ICON);
+
         }
 
         private void tgbtnSwitchTheme_CheckedChanged(object sender, EventArgs e)

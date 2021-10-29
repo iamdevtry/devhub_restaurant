@@ -106,7 +106,7 @@ namespace Dev69Restaurant.GUI.Stastic
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BillDetailForm";
-            this.Text = "BillDetail";
+            this.Text = "Chi tiết hóa đơn";
             this.Load += new System.EventHandler(this.BillDetailForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

@@ -112,7 +112,7 @@ namespace Dev69Restaurant.GUI.Checkout
             this.Controls.Add(this.panelTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CheckoutForm";
-            this.Text = "CheckoutForm";
+            this.Text = "In Hóa Đơn";
             this.Load += new System.EventHandler(this.CheckoutForm_Load);
             this.panelTop.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

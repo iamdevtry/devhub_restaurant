@@ -27,6 +27,8 @@ namespace Dev69Restaurant.GUI.ManageFood
         public ManageFoodForm()
         {
             InitializeComponent();
+            this.Icon = new Icon(BaseIcon.ICON);
+
             Control.CheckForIllegalCrossThreadCalls = false;
             _foodService = new FoodService();
 

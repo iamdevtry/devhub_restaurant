@@ -30,9 +30,9 @@ namespace Dev69Restaurant.GUI.Stastic
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gnShadowForm2 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.gunaShadowPanel1 = new Guna.UI.WinForms.GunaShadowPanel();
             this.dgvListUser = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -79,22 +79,22 @@ namespace Dev69Restaurant.GUI.Stastic
             // 
             this.dgvListUser.AllowUserToAddRows = false;
             this.dgvListUser.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(223)))), ((int)(((byte)(251)))));
-            this.dgvListUser.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(223)))), ((int)(((byte)(251)))));
+            this.dgvListUser.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvListUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListUser.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvListUser.BackgroundColor = System.Drawing.Color.White;
             this.dgvListUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvListUser.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvListUser.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(242)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(242)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvListUser.ColumnHeadersHeight = 35;
             this.dgvListUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.STT,
@@ -105,14 +105,14 @@ namespace Dev69Restaurant.GUI.Stastic
             this.BirthDay,
             this.Address,
             this.Phone});
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(233)))), ((int)(((byte)(252)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(185)))), ((int)(((byte)(246)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvListUser.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(233)))), ((int)(((byte)(252)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(185)))), ((int)(((byte)(246)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvListUser.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvListUser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvListUser.EnableHeadersVisualStyles = false;
             this.dgvListUser.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(222)))), ((int)(((byte)(251)))));
@@ -298,7 +298,7 @@ namespace Dev69Restaurant.GUI.Stastic
             // 
             this.gunaLabel2.AutoSize = true;
             this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel2.Location = new System.Drawing.Point(382, 30);
+            this.gunaLabel2.Location = new System.Drawing.Point(430, 30);
             this.gunaLabel2.Name = "gunaLabel2";
             this.gunaLabel2.Size = new System.Drawing.Size(34, 20);
             this.gunaLabel2.TabIndex = 14;
@@ -318,7 +318,7 @@ namespace Dev69Restaurant.GUI.Stastic
             // 
             this.ckbAllInMonth.AutoSize = true;
             this.ckbAllInMonth.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbAllInMonth.Location = new System.Drawing.Point(729, 26);
+            this.ckbAllInMonth.Location = new System.Drawing.Point(801, 26);
             this.ckbAllInMonth.Name = "ckbAllInMonth";
             this.ckbAllInMonth.Size = new System.Drawing.Size(184, 24);
             this.ckbAllInMonth.TabIndex = 13;
@@ -337,7 +337,7 @@ namespace Dev69Restaurant.GUI.Stastic
             this.DateEnd.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.DateEnd.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.DateEnd.ForeColor = System.Drawing.Color.Black;
-            this.DateEnd.Location = new System.Drawing.Point(434, 22);
+            this.DateEnd.Location = new System.Drawing.Point(486, 20);
             this.DateEnd.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.DateEnd.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.DateEnd.Name = "DateEnd";
@@ -346,7 +346,7 @@ namespace Dev69Restaurant.GUI.Stastic
             this.DateEnd.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.DateEnd.OnPressedColor = System.Drawing.Color.Black;
             this.DateEnd.Radius = 8;
-            this.DateEnd.Size = new System.Drawing.Size(249, 30);
+            this.DateEnd.Size = new System.Drawing.Size(293, 30);
             this.DateEnd.TabIndex = 12;
             this.DateEnd.Text = "Tuesday, October 26, 2021";
             this.DateEnd.Value = new System.DateTime(2021, 10, 26, 21, 38, 16, 514);
@@ -372,7 +372,7 @@ namespace Dev69Restaurant.GUI.Stastic
             this.DateStart.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.DateStart.OnPressedColor = System.Drawing.Color.Black;
             this.DateStart.Radius = 8;
-            this.DateStart.Size = new System.Drawing.Size(249, 30);
+            this.DateStart.Size = new System.Drawing.Size(293, 30);
             this.DateStart.TabIndex = 12;
             this.DateStart.Text = "Tuesday, October 26, 2021";
             this.DateStart.Value = new System.DateTime(2021, 10, 26, 21, 38, 16, 514);
@@ -392,7 +392,7 @@ namespace Dev69Restaurant.GUI.Stastic
             this.Controls.Add(this.pnHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StasticForm";
-            this.Text = "StasticForm";
+            this.Text = "Thống kê hóa đơn";
             this.gunaShadowPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListUser)).EndInit();
             this.panel1.ResumeLayout(false);

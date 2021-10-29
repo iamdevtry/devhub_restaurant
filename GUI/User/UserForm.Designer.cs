@@ -346,7 +346,7 @@ namespace Dev69Restaurant.GUI.User
             this.Controls.Add(this.pnHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UserForm";
-            this.Text = "UserForm";
+            this.Text = "Quản lý người dùng";
             this.pnHeader.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

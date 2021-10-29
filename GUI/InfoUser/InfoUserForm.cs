@@ -1,4 +1,5 @@
 ﻿using Dev69Restaurant.DAL.Services;
+using Dev69Restaurant.Infrastructure.Settings;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,11 +20,14 @@ namespace Dev69Restaurant.GUI.InfoUser
         public InfoUserForm()
         {
             InitializeComponent();
+            this.Icon = new Icon(BaseIcon.ICON);
         }
 
         public InfoUserForm(DTO.Entities.User user)
         {
             InitializeComponent();
+            this.Icon = new Icon(BaseIcon.ICON);
+
             _currentUser = user;
             _userService = new UserService();
             GetInfoUser(user);

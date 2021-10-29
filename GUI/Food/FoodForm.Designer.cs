@@ -49,7 +49,7 @@ namespace Dev69Restaurant.GUI.Food
             this.Controls.Add(this.pnFood);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FoodForm";
-            this.Text = "FoodForm";
+            this.Text = "Món ăn";
             this.ResumeLayout(false);
 
         }

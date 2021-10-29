@@ -386,7 +386,7 @@ namespace Dev69Restaurant.GUI.User
             this.Controls.Add(this.gunaGradient2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UpdateUserForm";
-            this.Text = "UpdateUserForm";
+            this.Text = "Cập nhật thông tin người dùng";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.UpdateUserForm_FormClosed);
             this.pnTop.ResumeLayout(false);
             this.gunaGradient2Panel1.ResumeLayout(false);

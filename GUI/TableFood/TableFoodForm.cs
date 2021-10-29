@@ -1,6 +1,7 @@
 ﻿using Dev69Restaurant.Common;
 using Dev69Restaurant.DAL.Services;
 using Dev69Restaurant.Infrastructure.Components.UserControls;
+using Dev69Restaurant.Infrastructure.Settings;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,6 +21,8 @@ namespace Dev69Restaurant.GUI.TableFood
         public TableFoodForm()
         {
             InitializeComponent();
+            this.Icon = new Icon(BaseIcon.ICON);
+
             _tableService = new TableService();
             LoadTableFood();
         }

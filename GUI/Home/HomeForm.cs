@@ -41,6 +41,7 @@ namespace Dev69Restaurant.GUI.Home
         public HomeForm()
         {
             InitializeComponent();
+            this.Icon = new Icon(BaseIcon.ICON);
         }
 
         public HomeForm(DTO.Entities.User user, string roleShortName)

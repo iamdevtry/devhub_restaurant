@@ -224,7 +224,7 @@ namespace Dev69Restaurant.GUI.ResetPassword
             this.Controls.Add(this.pnTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ResetPasswordForm";
-            this.Text = "ResetPasswordForm";
+            this.Text = "Tạo mật khẩu mới";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.pnTop.ResumeLayout(false);

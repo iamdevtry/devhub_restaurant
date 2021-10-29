@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using Dev69Restaurant.DAL.Services;
 using Dev69Restaurant.Common;
+using Dev69Restaurant.Infrastructure.Settings;
 
 namespace Dev69Restaurant.GUI.ResetPassword
 {
@@ -21,6 +22,8 @@ namespace Dev69Restaurant.GUI.ResetPassword
         public ResetPasswordForm()
         {
             InitializeComponent();
+            this.Icon = new Icon(BaseIcon.ICON);
+
             _userService = new UserService();
         }
 

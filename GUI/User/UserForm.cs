@@ -1,5 +1,7 @@
 ﻿using Dev69Restaurant.DAL.Services;
+using Dev69Restaurant.Infrastructure.Settings;
 using System;
+using System.Drawing;
 using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
@@ -13,6 +15,8 @@ namespace Dev69Restaurant.GUI.User
         public UserForm()
         {
             InitializeComponent();
+            this.Icon = new Icon(BaseIcon.ICON);
+
             Control.CheckForIllegalCrossThreadCalls = false;
 
             _userService = new UserService();

@@ -629,7 +629,7 @@ namespace Dev69Restaurant.GUI.ManageDiscount
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DiscountForm";
-            this.Text = "DiscountForm";
+            this.Text = "Quản lý giảm giá";
             this.panel9.ResumeLayout(false);
             this.pnHeader.ResumeLayout(false);
             this.panel6.ResumeLayout(false);

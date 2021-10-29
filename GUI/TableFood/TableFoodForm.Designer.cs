@@ -50,7 +50,7 @@ namespace Dev69Restaurant.GUI.TableFood
             this.Controls.Add(this.pnTableFood);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TableFoodForm";
-            this.Text = "TableFoodForm";
+            this.Text = "Bàn ăn";
             this.ResumeLayout(false);
 
         }

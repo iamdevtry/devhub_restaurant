@@ -819,9 +819,10 @@ namespace Dev69Restaurant.GUI.Home
             this.Controls.Add(this.pnLeft);
             this.gnTransition.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HomeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "HomeForm";
+            this.Text = "DevHub";
             this.Load += new System.EventHandler(this.HomeForm_Load);
             this.pnTop.ResumeLayout(false);
             this.pnLeft.ResumeLayout(false);

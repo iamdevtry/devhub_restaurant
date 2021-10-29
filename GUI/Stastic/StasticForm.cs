@@ -1,5 +1,6 @@
 ﻿using Dev69Restaurant.DAL.Services;
 using Dev69Restaurant.DTO.Entities;
+using Dev69Restaurant.Infrastructure.Settings;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,10 +22,15 @@ namespace Dev69Restaurant.GUI.Stastic
         public StasticForm()
         {
             InitializeComponent();
+            this.Icon = new Icon(BaseIcon.ICON);
+
             Control.CheckForIllegalCrossThreadCalls = false;
 
             _billService = new BillService();
             _tableService = new TableService();
+            DateStart.Value = DateTime.Now;
+            DateEnd.Value = DateTime.Now;
+
             LoadData();
         }
 

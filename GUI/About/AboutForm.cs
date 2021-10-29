@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dev69Restaurant.Infrastructure.Settings;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace Dev69Restaurant.GUI.About
         public AboutForm()
         {
             InitializeComponent();
+            this.Icon = new Icon(BaseIcon.ICON);
         }
     }
 }

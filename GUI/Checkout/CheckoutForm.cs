@@ -1,6 +1,7 @@
 ﻿using Dev69Restaurant.DAL.Services;
 using Dev69Restaurant.DTO.Entities;
 using Dev69Restaurant.DTO.EntityReports;
+using Dev69Restaurant.Infrastructure.Settings;
 using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
@@ -30,6 +31,7 @@ namespace Dev69Restaurant.GUI.Checkout
         public CheckoutForm(int billId)
         {
             InitializeComponent();
+            this.Icon = new Icon(BaseIcon.ICON);
             _billService = new BillService();
             _foodService = new FoodService();
             _userService = new UserService();

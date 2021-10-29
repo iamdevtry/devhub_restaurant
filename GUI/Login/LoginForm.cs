@@ -2,6 +2,7 @@
 using Dev69Restaurant.DAL.Services;
 using Dev69Restaurant.GUI.Home;
 using Dev69Restaurant.GUI.ResetPassword;
+using Dev69Restaurant.Infrastructure.Settings;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,6 +21,8 @@ namespace Dev69Restaurant.GUI.Login
         public LoginForm()
         {
             InitializeComponent();
+
+            this.Icon = new Icon(BaseIcon.ICON);
             _loginService = new LoginService();
             LoadForm();
         }

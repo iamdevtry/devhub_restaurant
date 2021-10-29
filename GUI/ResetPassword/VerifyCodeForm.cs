@@ -1,5 +1,6 @@
 ﻿using Dev69Restaurant.Common;
 using Dev69Restaurant.DAL.Services;
+using Dev69Restaurant.Infrastructure.Settings;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,6 +24,8 @@ namespace Dev69Restaurant.GUI.ResetPassword
         public VerifyCodeForm()
         {
             InitializeComponent();
+            this.Icon = new Icon(BaseIcon.ICON);
+
             _userService = new UserService();
         }
 

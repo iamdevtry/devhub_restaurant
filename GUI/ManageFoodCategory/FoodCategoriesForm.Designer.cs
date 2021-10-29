@@ -509,7 +509,7 @@ namespace Dev69Restaurant.GUI.ManageFoodCategory
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FoodCategoriesForm";
-            this.Text = "FoodCategoriesForm";
+            this.Text = "Quản lý danh mục món ăn";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FoodCategoriesForm_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -35,6 +35,7 @@ namespace Dev69Restaurant.GUI.Manager
             this.btnMinimize = new Guna.UI.WinForms.GunaControlBox();
             this.btnClose = new Guna.UI.WinForms.GunaControlBox();
             this.pnLeft = new Guna.UI.WinForms.GunaPanel();
+            this.picLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnBill = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnRevenue = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnTableFood = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -43,10 +44,9 @@ namespace Dev69Restaurant.GUI.Manager
             this.btnFood = new Guna.UI2.WinForms.Guna2GradientButton();
             this.pnTop = new System.Windows.Forms.Panel();
             this.pnMain = new System.Windows.Forms.Panel();
-            this.picLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnLeft.SuspendLayout();
-            this.pnTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
+            this.pnTop.SuspendLayout();
             this.SuspendLayout();
             // 
             // gnDragControl1
@@ -115,6 +115,17 @@ namespace Dev69Restaurant.GUI.Manager
             this.pnLeft.Name = "pnLeft";
             this.pnLeft.Size = new System.Drawing.Size(332, 900);
             this.pnLeft.TabIndex = 14;
+            // 
+            // picLogo
+            // 
+            this.picLogo.Image = global::Dev69Restaurant.Properties.Resources.banner_Logo_Dark;
+            this.picLogo.Location = new System.Drawing.Point(11, 38);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.ShadowDecoration.Parent = this.picLogo;
+            this.picLogo.Size = new System.Drawing.Size(315, 100);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogo.TabIndex = 9;
+            this.picLogo.TabStop = false;
             // 
             // btnBill
             // 
@@ -310,17 +321,6 @@ namespace Dev69Restaurant.GUI.Manager
             this.pnMain.Size = new System.Drawing.Size(1268, 862);
             this.pnMain.TabIndex = 17;
             // 
-            // picLogo
-            // 
-            this.picLogo.Image = global::Dev69Restaurant.Properties.Resources.banner_Logo_Dark;
-            this.picLogo.Location = new System.Drawing.Point(11, 38);
-            this.picLogo.Name = "picLogo";
-            this.picLogo.ShadowDecoration.Parent = this.picLogo;
-            this.picLogo.Size = new System.Drawing.Size(315, 100);
-            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picLogo.TabIndex = 9;
-            this.picLogo.TabStop = false;
-            // 
             // ManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -332,10 +332,10 @@ namespace Dev69Restaurant.GUI.Manager
             this.Controls.Add(this.pnLeft);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ManagerForm";
-            this.Text = "ManagerForm";
+            this.Text = "Quản trị";
             this.pnLeft.ResumeLayout(false);
-            this.pnTop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
+            this.pnTop.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

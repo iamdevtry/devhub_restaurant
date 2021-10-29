@@ -1,6 +1,7 @@
 ﻿using Dev69Restaurant.Common;
 using Dev69Restaurant.DAL.Services;
 using Dev69Restaurant.DTO.Entities;
+using Dev69Restaurant.Infrastructure.Settings;
 using LiveCharts;
 using LiveCharts.Wpf;
 using System;
@@ -22,6 +23,8 @@ namespace Dev69Restaurant.GUI.Revenue
         public RevenueForm()
         {
             InitializeComponent();
+            this.Icon = new Icon(BaseIcon.ICON);
+
             _billService = new BillService();
             _foodService = new FoodService();
         }

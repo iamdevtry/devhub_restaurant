@@ -1,6 +1,8 @@
 ﻿using Dev69Restaurant.DAL.Services;
 using Dev69Restaurant.DTO.Entities;
+using Dev69Restaurant.Infrastructure.Settings;
 using System;
+using System.Drawing;
 using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
@@ -15,6 +17,8 @@ namespace Dev69Restaurant.GUI.ManageDiscount
         public DiscountForm()
         {
             InitializeComponent();
+            this.Icon = new Icon(BaseIcon.ICON);
+
             Control.CheckForIllegalCrossThreadCalls = false;
             _discountService = new DiscountService();
             LoadData();

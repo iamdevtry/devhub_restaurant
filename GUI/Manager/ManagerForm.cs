@@ -25,6 +25,8 @@ namespace Dev69Restaurant.GUI.Manager
         public ManagerForm()
         {
             InitializeComponent();
+            this.Icon = new Icon(BaseIcon.ICON);
+
         }
 
         private void btnManageStaff_Click(object sender, EventArgs e)

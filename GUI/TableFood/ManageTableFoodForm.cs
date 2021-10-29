@@ -20,6 +20,8 @@ namespace Dev69Restaurant.GUI.TableFood
         public ManageTableFoodForm()
         {
             InitializeComponent();
+            this.Icon = new Icon(BaseIcon.ICON);
+
             _tableFoodService = new TableService();
             LoadData();
             picAvatar.Image = Image.FromFile(BaseIcon.TABLE_FOOD_IMAGE);
