@@ -138,6 +138,7 @@ namespace Dev69Restaurant.GUI.InfoUser
             txtFullName.Text = us.FullName;
             txtDisplayName.Text = us.DisplayName;
             txtPhone.Text = us.Phone;
+            txtEmail.Text = us.Email;
             if (us.Avatar != null)
             {
                 try
