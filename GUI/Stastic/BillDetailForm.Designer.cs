@@ -29,24 +29,29 @@ namespace Dev69Restaurant.GUI.Stastic
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.components = new System.ComponentModel.Container();
+            this.pnTop = new System.Windows.Forms.Panel();
             this.gunaControlBox2 = new Guna.UI.WinForms.GunaControlBox();
             this.gunaControlBox1 = new Guna.UI.WinForms.GunaControlBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.rptBillDetail = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.panel1.SuspendLayout();
+            this.drag = new Guna.UI.WinForms.GunaDragControl(this.components);
+            this.shadowForm = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
+            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.pnTop.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnTop
             // 
-            this.panel1.Controls.Add(this.gunaControlBox2);
-            this.panel1.Controls.Add(this.gunaControlBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(979, 47);
-            this.panel1.TabIndex = 0;
+            this.pnTop.Controls.Add(this.gunaLabel1);
+            this.pnTop.Controls.Add(this.gunaControlBox2);
+            this.pnTop.Controls.Add(this.gunaControlBox1);
+            this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnTop.Location = new System.Drawing.Point(0, 0);
+            this.pnTop.Name = "pnTop";
+            this.pnTop.Size = new System.Drawing.Size(979, 47);
+            this.pnTop.TabIndex = 0;
             // 
             // gunaControlBox2
             // 
@@ -97,18 +102,33 @@ namespace Dev69Restaurant.GUI.Stastic
             this.rptBillDetail.Size = new System.Drawing.Size(979, 673);
             this.rptBillDetail.TabIndex = 0;
             // 
+            // drag
+            // 
+            this.drag.TargetControl = this.pnTop;
+            // 
+            // gunaLabel1
+            // 
+            this.gunaLabel1.AutoSize = true;
+            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.Location = new System.Drawing.Point(13, 12);
+            this.gunaLabel1.Name = "gunaLabel1";
+            this.gunaLabel1.Size = new System.Drawing.Size(134, 23);
+            this.gunaLabel1.TabIndex = 2;
+            this.gunaLabel1.Text = "Chi tiết hóa đơn";
+            // 
             // BillDetailForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(979, 720);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BillDetailForm";
             this.Text = "Chi tiết hóa đơn";
             this.Load += new System.EventHandler(this.BillDetailForm_Load);
-            this.panel1.ResumeLayout(false);
+            this.pnTop.ResumeLayout(false);
+            this.pnTop.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -116,10 +136,13 @@ namespace Dev69Restaurant.GUI.Stastic
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnTop;
         private Guna.UI.WinForms.GunaControlBox gunaControlBox2;
         private Guna.UI.WinForms.GunaControlBox gunaControlBox1;
         private System.Windows.Forms.Panel panel2;
         private Microsoft.Reporting.WinForms.ReportViewer rptBillDetail;
+        private Guna.UI.WinForms.GunaDragControl drag;
+        private Guna.UI2.WinForms.Guna2ShadowForm shadowForm;
+        private Guna.UI.WinForms.GunaLabel gunaLabel1;
     }
 }

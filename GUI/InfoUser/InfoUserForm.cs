@@ -171,5 +171,10 @@ namespace Dev69Restaurant.GUI.InfoUser
             changePasswordForm.StartPosition = FormStartPosition.CenterScreen;
             changePasswordForm.Show();
         }
+
+        private void InfoUserForm_Load(object sender, EventArgs e)
+        {
+            shadowForm.SetShadowForm(this);
+        }
     }
 }

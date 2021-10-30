@@ -190,5 +190,10 @@ namespace Dev69Restaurant.GUI.ManageFoodCategory
         {
             updateFoodCategory();
         }
+
+        private void FoodCategoriesForm_Load(object sender, EventArgs e)
+        {
+            shadowForm.SetShadowForm(this);
+        }
     }
 }

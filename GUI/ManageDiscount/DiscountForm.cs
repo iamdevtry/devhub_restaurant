@@ -279,5 +279,6 @@ namespace Dev69Restaurant.GUI.ManageDiscount
         {
             LoadDataDiscount(txtSearch.Text);
         }
+
     }
 }

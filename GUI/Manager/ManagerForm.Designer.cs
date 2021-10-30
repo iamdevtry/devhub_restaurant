@@ -44,6 +44,7 @@ namespace Dev69Restaurant.GUI.Manager
             this.btnFood = new Guna.UI2.WinForms.Guna2GradientButton();
             this.pnTop = new System.Windows.Forms.Panel();
             this.pnMain = new System.Windows.Forms.Panel();
+            this.dragForm = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.pnLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.pnTop.SuspendLayout();
@@ -51,7 +52,7 @@ namespace Dev69Restaurant.GUI.Manager
             // 
             // gnDragControl1
             // 
-            this.gnDragControl1.TargetControl = this;
+            this.gnDragControl1.TargetControl = this.pnTop;
             // 
             // btnMaximize
             // 
@@ -321,6 +322,10 @@ namespace Dev69Restaurant.GUI.Manager
             this.pnMain.Size = new System.Drawing.Size(1268, 862);
             this.pnMain.TabIndex = 17;
             // 
+            // dragForm
+            // 
+            this.dragForm.TargetControl = this.pnLeft;
+            // 
             // ManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -356,5 +361,6 @@ namespace Dev69Restaurant.GUI.Manager
         private System.Windows.Forms.Panel pnTop;
         private Guna.UI2.WinForms.Guna2PictureBox picLogo;
         private Guna.UI2.WinForms.Guna2GradientButton btnBill;
+        private Guna.UI.WinForms.GunaDragControl dragForm;
     }
 }

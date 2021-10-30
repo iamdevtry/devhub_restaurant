@@ -77,18 +77,27 @@ namespace Dev69Restaurant.GUI.TableFood
                     }
                     else
                     {
-                        if (GetSelectedRow(txtName.Text) != -1)
+                        if (GetSelectedRow(int.Parse(dgvListTable.SelectedCells[1].Value.ToString())) == -1)
                         {
-                            tableFood.Name = txtName.Text;
-                            _tableFoodService.Update(tableFood);
-                            MessageBox.Show("Thêm thành công! ");
-                            LoadData();
+                            MessageBox.Show("Không tìm thấy bàn cần chỉnh sửa!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                         else
                         {
-                            MessageBox.Show("Tên bàn đã tồn tại, hãy nhập lại!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            return;
+                            if (GetSelectedRow(txtName.Text) == -1)
+                            {
+                                tableFood.Name = txtName.Text;
+                                tableFood.Id = int.Parse(dgvListTable.SelectedCells[1].Value.ToString());
+                                _tableFoodService.Update(tableFood);
+                                MessageBox.Show("Sửa thành công! ");
+                                LoadData();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Tên bàn đã tồn tại, hãy nhập lại!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                return;
+                            }
                         }
+
 
                     }
 
@@ -105,7 +114,7 @@ namespace Dev69Restaurant.GUI.TableFood
         {
             if (e.RowIndex != -1)
             {
-                txtName.Text = dgvListTable.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txtName.Text = dgvListTable.Rows[e.RowIndex].Cells[2].Value.ToString();
             }
         }
 
@@ -158,15 +167,15 @@ namespace Dev69Restaurant.GUI.TableFood
                 index++;
                 string status = item.Status ? "Kích Hoạt" : "Khóa";
                 var topLeftHeaderCell = dgvListTable.TopLeftHeaderCell;
-                dgvListTable.Rows.Add(index, item.Name, status);
+                dgvListTable.Rows.Add(index,item.Id, item.Name, status);
             }
         }
 
-        private int GetSelectedRow(string name)
+        private int GetSelectedRow(int id)
         {
             for (int i = 0; i < dgvListTable.Rows.Count; i++)
             {
-                if (dgvListTable.Rows[i].Cells[1].Value.ToString() == name)
+                if (dgvListTable.Rows[i].Cells[1].Value.ToString() == id.ToString())
                 {
                     return i;
                 }
@@ -174,5 +183,16 @@ namespace Dev69Restaurant.GUI.TableFood
             return -1;
         }
 
+        private int GetSelectedRow(string tableName)
+        {
+            for (int i = 0; i < dgvListTable.Rows.Count; i++)
+            {
+                if (dgvListTable.Rows[i].Cells[2].Value.ToString() == tableName)
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
     }
 }

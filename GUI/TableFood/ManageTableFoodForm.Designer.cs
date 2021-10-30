@@ -46,8 +46,10 @@ namespace Dev69Restaurant.GUI.TableFood
             this.label7 = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.gunaShadowPanel1 = new Guna.UI.WinForms.GunaShadowPanel();
             this.dgvListTable = new Guna.UI2.WinForms.Guna2DataGridView();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TableName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3.SuspendLayout();
@@ -55,6 +57,7 @@ namespace Dev69Restaurant.GUI.TableFood
             this.panel7.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.gunaShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListTable)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,11 +95,12 @@ namespace Dev69Restaurant.GUI.TableFood
             this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.FocusedState.Parent = this.txtSearch;
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.HoverState.Parent = this.txtSearch;
             this.txtSearch.IconLeft = global::Dev69Restaurant.Properties.Resources.search_24px;
             this.txtSearch.Location = new System.Drawing.Point(40, 29);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderText = "Search everything...";
@@ -110,7 +114,7 @@ namespace Dev69Restaurant.GUI.TableFood
             this.bntSearch.BorderRadius = 8;
             this.bntSearch.CheckedState.Parent = this.bntSearch;
             this.bntSearch.CustomImages.Parent = this.bntSearch;
-            this.bntSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bntSearch.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bntSearch.ForeColor = System.Drawing.Color.White;
             this.bntSearch.HoverState.Parent = this.bntSearch;
             this.bntSearch.Location = new System.Drawing.Point(528, 28);
@@ -138,10 +142,10 @@ namespace Dev69Restaurant.GUI.TableFood
             this.btnUpdate.BorderRadius = 8;
             this.btnUpdate.CheckedState.Parent = this.btnUpdate;
             this.btnUpdate.CustomImages.Parent = this.btnUpdate;
-            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
             this.btnUpdate.HoverState.Parent = this.btnUpdate;
-            this.btnUpdate.Location = new System.Drawing.Point(361, 28);
+            this.btnUpdate.Location = new System.Drawing.Point(194, 28);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.ShadowDecoration.Parent = this.btnUpdate;
             this.btnUpdate.Size = new System.Drawing.Size(138, 45);
@@ -154,10 +158,10 @@ namespace Dev69Restaurant.GUI.TableFood
             this.btnDelete.BorderRadius = 8;
             this.btnDelete.CheckedState.Parent = this.btnDelete;
             this.btnDelete.CustomImages.Parent = this.btnDelete;
-            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.HoverState.Parent = this.btnDelete;
-            this.btnDelete.Location = new System.Drawing.Point(193, 27);
+            this.btnDelete.Location = new System.Drawing.Point(363, 29);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.ShadowDecoration.Parent = this.btnDelete;
             this.btnDelete.Size = new System.Drawing.Size(138, 45);
@@ -170,7 +174,7 @@ namespace Dev69Restaurant.GUI.TableFood
             this.btnAdd.BorderRadius = 8;
             this.btnAdd.CheckedState.Parent = this.btnAdd;
             this.btnAdd.CustomImages.Parent = this.btnAdd;
-            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.HoverState.Parent = this.btnAdd;
             this.btnAdd.Location = new System.Drawing.Point(25, 28);
@@ -193,6 +197,7 @@ namespace Dev69Restaurant.GUI.TableFood
             this.txtName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.FocusedState.Parent = this.txtName;
+            this.txtName.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.HoverState.Parent = this.txtName;
             this.txtName.Location = new System.Drawing.Point(56, 335);
@@ -252,13 +257,27 @@ namespace Dev69Restaurant.GUI.TableFood
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.dgvListTable);
+            this.panel2.Controls.Add(this.gunaShadowPanel1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 100);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(30, 0, 0, 30);
             this.panel2.Size = new System.Drawing.Size(867, 620);
             this.panel2.TabIndex = 6;
+            // 
+            // gunaShadowPanel1
+            // 
+            this.gunaShadowPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaShadowPanel1.BaseColor = System.Drawing.Color.Transparent;
+            this.gunaShadowPanel1.Controls.Add(this.dgvListTable);
+            this.gunaShadowPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gunaShadowPanel1.Location = new System.Drawing.Point(30, 0);
+            this.gunaShadowPanel1.Name = "gunaShadowPanel1";
+            this.gunaShadowPanel1.Padding = new System.Windows.Forms.Padding(5, 3, 10, 10);
+            this.gunaShadowPanel1.ShadowColor = System.Drawing.Color.Black;
+            this.gunaShadowPanel1.ShadowDepth = 50;
+            this.gunaShadowPanel1.Size = new System.Drawing.Size(837, 590);
+            this.gunaShadowPanel1.TabIndex = 0;
             // 
             // dgvListTable
             // 
@@ -283,6 +302,7 @@ namespace Dev69Restaurant.GUI.TableFood
             this.dgvListTable.ColumnHeadersHeight = 35;
             this.dgvListTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.STT,
+            this.ID,
             this.TableName,
             this.Status});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -296,15 +316,15 @@ namespace Dev69Restaurant.GUI.TableFood
             this.dgvListTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvListTable.EnableHeadersVisualStyles = false;
             this.dgvListTable.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(222)))), ((int)(((byte)(251)))));
-            this.dgvListTable.Location = new System.Drawing.Point(30, 0);
+            this.dgvListTable.Location = new System.Drawing.Point(5, 3);
             this.dgvListTable.Name = "dgvListTable";
             this.dgvListTable.ReadOnly = true;
             this.dgvListTable.RowHeadersVisible = false;
             this.dgvListTable.RowHeadersWidth = 50;
             this.dgvListTable.RowTemplate.Height = 24;
             this.dgvListTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListTable.Size = new System.Drawing.Size(837, 590);
-            this.dgvListTable.TabIndex = 1;
+            this.dgvListTable.Size = new System.Drawing.Size(822, 577);
+            this.dgvListTable.TabIndex = 2;
             this.dgvListTable.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Blue;
             this.dgvListTable.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(223)))), ((int)(((byte)(251)))));
             this.dgvListTable.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -336,6 +356,13 @@ namespace Dev69Restaurant.GUI.TableFood
             this.STT.MinimumWidth = 6;
             this.STT.Name = "STT";
             this.STT.ReadOnly = true;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "Mã bàn";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
             // 
             // TableName
             // 
@@ -371,6 +398,7 @@ namespace Dev69Restaurant.GUI.TableFood
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.gunaShadowPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListTable)).EndInit();
             this.ResumeLayout(false);
 
@@ -386,13 +414,15 @@ namespace Dev69Restaurant.GUI.TableFood
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label label7;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvListTable;
         private System.Windows.Forms.Panel panel7;
         private Guna.UI2.WinForms.Guna2Button btnUpdate;
         private Guna.UI2.WinForms.Guna2Button btnDelete;
         private Guna.UI2.WinForms.Guna2Button btnAdd;
         private Guna.UI2.WinForms.Guna2ImageButton picAvatar;
+        private Guna.UI.WinForms.GunaShadowPanel gunaShadowPanel1;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvListTable;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn TableName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
     }

@@ -46,10 +46,14 @@ namespace Dev69Restaurant.GUI.Home
             this.pnLeft = new Guna.UI.WinForms.GunaPanel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.btnManage = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.picLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnHeader = new Guna.UI.WinForms.GunaPanel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.btnUser = new Guna.UI.WinForms.GunaImageButton();
             this.label1 = new System.Windows.Forms.Label();
             this.lblDisplayName = new System.Windows.Forms.Label();
+            this.picAvatarUser = new Guna.UI.WinForms.GunaCirclePictureBox();
+            this.btnToogleMenu = new Guna.UI2.WinForms.Guna2ImageButton();
             this.pnDetail = new System.Windows.Forms.Panel();
             this.grbDetail = new Guna.UI.WinForms.GunaGroupBox();
             this.pnRight = new System.Windows.Forms.Panel();
@@ -72,18 +76,16 @@ namespace Dev69Restaurant.GUI.Home
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel7 = new Guna.UI.WinForms.GunaPanel();
+            this.pnMain = new Guna.UI2.WinForms.Guna2Panel();
             this.gnElipsePnFeature = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.gnElipsePnMain = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.pnMain = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnUser = new Guna.UI.WinForms.GunaImageButton();
-            this.picAvatarUser = new Guna.UI.WinForms.GunaCirclePictureBox();
-            this.btnToogleMenu = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.picLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnTop.SuspendLayout();
             this.pnLeft.SuspendLayout();
             this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.pnHeader.SuspendLayout();
             this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatarUser)).BeginInit();
             this.pnDetail.SuspendLayout();
             this.grbDetail.SuspendLayout();
             this.pnRight.SuspendLayout();
@@ -92,8 +94,6 @@ namespace Dev69Restaurant.GUI.Home
             this.panel8.SuspendLayout();
             this.pnFeature.SuspendLayout();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picAvatarUser)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // btnHome
@@ -372,6 +372,18 @@ namespace Dev69Restaurant.GUI.Home
             this.btnManage.Text = "Quản lý ";
             this.btnManage.Click += new System.EventHandler(this.btnManageUser_Click);
             // 
+            // picLogo
+            // 
+            this.gnTransition.SetDecoration(this.picLogo, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.picLogo.Image = global::Dev69Restaurant.Properties.Resources.banner_Logo_Dark;
+            this.picLogo.Location = new System.Drawing.Point(0, 38);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.ShadowDecoration.Parent = this.picLogo;
+            this.picLogo.Size = new System.Drawing.Size(315, 100);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogo.TabIndex = 7;
+            this.picLogo.TabStop = false;
+            // 
             // pnHeader
             // 
             this.pnHeader.Controls.Add(this.panel9);
@@ -396,6 +408,21 @@ namespace Dev69Restaurant.GUI.Home
             this.panel9.Size = new System.Drawing.Size(400, 100);
             this.panel9.TabIndex = 11;
             // 
+            // btnUser
+            // 
+            this.btnUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.gnTransition.SetDecoration(this.btnUser, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnUser.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnUser.Image = global::Dev69Restaurant.Properties.Resources.expand_arrow_defaut_48px;
+            this.btnUser.ImageSize = new System.Drawing.Size(24, 24);
+            this.btnUser.Location = new System.Drawing.Point(323, 41);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.OnHoverImage = global::Dev69Restaurant.Properties.Resources.expand_arrow_48px;
+            this.btnUser.OnHoverImageOffset = new System.Drawing.Point(0, 0);
+            this.btnUser.Size = new System.Drawing.Size(24, 24);
+            this.btnUser.TabIndex = 12;
+            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -417,6 +444,35 @@ namespace Dev69Restaurant.GUI.Home
             this.lblDisplayName.Size = new System.Drawing.Size(80, 23);
             this.lblDisplayName.TabIndex = 0;
             this.lblDisplayName.Text = "Dev69... !";
+            // 
+            // picAvatarUser
+            // 
+            this.picAvatarUser.BaseColor = System.Drawing.Color.White;
+            this.gnTransition.SetDecoration(this.picAvatarUser, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.picAvatarUser.Image = global::Dev69Restaurant.Properties.Resources.user_50px;
+            this.picAvatarUser.Location = new System.Drawing.Point(233, 20);
+            this.picAvatarUser.Name = "picAvatarUser";
+            this.picAvatarUser.Size = new System.Drawing.Size(64, 64);
+            this.picAvatarUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picAvatarUser.TabIndex = 11;
+            this.picAvatarUser.TabStop = false;
+            this.picAvatarUser.UseTransfarantBackground = false;
+            // 
+            // btnToogleMenu
+            // 
+            this.btnToogleMenu.CheckedState.Parent = this.btnToogleMenu;
+            this.gnTransition.SetDecoration(this.btnToogleMenu, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnToogleMenu.HoverState.Image = global::Dev69Restaurant.Properties.Resources.menu_hover_48px;
+            this.btnToogleMenu.HoverState.ImageSize = new System.Drawing.Size(32, 32);
+            this.btnToogleMenu.HoverState.Parent = this.btnToogleMenu;
+            this.btnToogleMenu.Image = global::Dev69Restaurant.Properties.Resources.menu_48px;
+            this.btnToogleMenu.ImageSize = new System.Drawing.Size(32, 32);
+            this.btnToogleMenu.Location = new System.Drawing.Point(30, 29);
+            this.btnToogleMenu.Name = "btnToogleMenu";
+            this.btnToogleMenu.PressedState.Parent = this.btnToogleMenu;
+            this.btnToogleMenu.Size = new System.Drawing.Size(40, 44);
+            this.btnToogleMenu.TabIndex = 10;
+            this.btnToogleMenu.Click += new System.EventHandler(this.btnToogleMenu_Click);
             // 
             // pnDetail
             // 
@@ -498,6 +554,7 @@ namespace Dev69Restaurant.GUI.Home
             this.txtDiscount.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtDiscount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDiscount.FocusedState.Parent = this.txtDiscount;
+            this.txtDiscount.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiscount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDiscount.HoverState.Parent = this.txtDiscount;
             this.txtDiscount.Location = new System.Drawing.Point(69, 57);
@@ -543,10 +600,10 @@ namespace Dev69Restaurant.GUI.Home
             // 
             this.gunaLabel3.AutoSize = true;
             this.gnTransition.SetDecoration(this.gunaLabel3, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel3.Location = new System.Drawing.Point(20, 24);
             this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(93, 20);
+            this.gunaLabel3.Size = new System.Drawing.Size(105, 23);
             this.gunaLabel3.TabIndex = 1;
             this.gunaLabel3.Text = "Mã giảm giá";
             // 
@@ -554,10 +611,10 @@ namespace Dev69Restaurant.GUI.Home
             // 
             this.gunaLabel1.AutoSize = true;
             this.gnTransition.SetDecoration(this.gunaLabel1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel1.Location = new System.Drawing.Point(20, 118);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(78, 20);
+            this.gunaLabel1.Size = new System.Drawing.Size(92, 23);
             this.gunaLabel1.TabIndex = 1;
             this.gunaLabel1.Text = "Thành tiền";
             // 
@@ -576,7 +633,7 @@ namespace Dev69Restaurant.GUI.Home
             this.btnCheckout.CheckedState.Parent = this.btnCheckout;
             this.btnCheckout.CustomImages.Parent = this.btnCheckout;
             this.gnTransition.SetDecoration(this.btnCheckout, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.btnCheckout.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCheckout.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheckout.ForeColor = System.Drawing.Color.White;
             this.btnCheckout.HoverState.Parent = this.btnCheckout;
             this.btnCheckout.Location = new System.Drawing.Point(117, 234);
@@ -617,10 +674,10 @@ namespace Dev69Restaurant.GUI.Home
             // 
             this.gunaLabel2.AutoSize = true;
             this.gnTransition.SetDecoration(this.gunaLabel2, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel2.Location = new System.Drawing.Point(20, 20);
+            this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel2.Location = new System.Drawing.Point(20, 17);
             this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(118, 20);
+            this.gunaLabel2.Size = new System.Drawing.Size(138, 23);
             this.gunaLabel2.TabIndex = 0;
             this.gunaLabel2.Text = "Chi tiết hóa đơn:";
             // 
@@ -727,15 +784,6 @@ namespace Dev69Restaurant.GUI.Home
             this.panel7.Size = new System.Drawing.Size(886, 704);
             this.panel7.TabIndex = 16;
             // 
-            // gnElipsePnFeature
-            // 
-            this.gnElipsePnFeature.BorderRadius = 8;
-            this.gnElipsePnFeature.TargetControl = this.pnFeature;
-            // 
-            // gnElipsePnMain
-            // 
-            this.gnElipsePnMain.BorderRadius = 8;
-            // 
             // pnMain
             // 
             this.pnMain.BackColor = System.Drawing.Color.White;
@@ -751,61 +799,14 @@ namespace Dev69Restaurant.GUI.Home
             this.pnMain.Size = new System.Drawing.Size(826, 644);
             this.pnMain.TabIndex = 4;
             // 
-            // btnUser
+            // gnElipsePnFeature
             // 
-            this.btnUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.gnTransition.SetDecoration(this.btnUser, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.btnUser.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnUser.Image = global::Dev69Restaurant.Properties.Resources.expand_arrow_defaut_48px;
-            this.btnUser.ImageSize = new System.Drawing.Size(24, 24);
-            this.btnUser.Location = new System.Drawing.Point(323, 41);
-            this.btnUser.Name = "btnUser";
-            this.btnUser.OnHoverImage = global::Dev69Restaurant.Properties.Resources.expand_arrow_48px;
-            this.btnUser.OnHoverImageOffset = new System.Drawing.Point(0, 0);
-            this.btnUser.Size = new System.Drawing.Size(24, 24);
-            this.btnUser.TabIndex = 12;
-            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
+            this.gnElipsePnFeature.BorderRadius = 8;
+            this.gnElipsePnFeature.TargetControl = this.pnFeature;
             // 
-            // picAvatarUser
+            // gnElipsePnMain
             // 
-            this.picAvatarUser.BaseColor = System.Drawing.Color.White;
-            this.gnTransition.SetDecoration(this.picAvatarUser, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.picAvatarUser.Image = global::Dev69Restaurant.Properties.Resources.user_50px;
-            this.picAvatarUser.Location = new System.Drawing.Point(233, 20);
-            this.picAvatarUser.Name = "picAvatarUser";
-            this.picAvatarUser.Size = new System.Drawing.Size(64, 64);
-            this.picAvatarUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picAvatarUser.TabIndex = 11;
-            this.picAvatarUser.TabStop = false;
-            this.picAvatarUser.UseTransfarantBackground = false;
-            // 
-            // btnToogleMenu
-            // 
-            this.btnToogleMenu.CheckedState.Parent = this.btnToogleMenu;
-            this.gnTransition.SetDecoration(this.btnToogleMenu, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.btnToogleMenu.HoverState.Image = global::Dev69Restaurant.Properties.Resources.menu_hover_48px;
-            this.btnToogleMenu.HoverState.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnToogleMenu.HoverState.Parent = this.btnToogleMenu;
-            this.btnToogleMenu.Image = global::Dev69Restaurant.Properties.Resources.menu_48px;
-            this.btnToogleMenu.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnToogleMenu.Location = new System.Drawing.Point(30, 29);
-            this.btnToogleMenu.Name = "btnToogleMenu";
-            this.btnToogleMenu.PressedState.Parent = this.btnToogleMenu;
-            this.btnToogleMenu.Size = new System.Drawing.Size(40, 44);
-            this.btnToogleMenu.TabIndex = 10;
-            this.btnToogleMenu.Click += new System.EventHandler(this.btnToogleMenu_Click);
-            // 
-            // picLogo
-            // 
-            this.gnTransition.SetDecoration(this.picLogo, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.picLogo.Image = global::Dev69Restaurant.Properties.Resources.banner_Logo_Dark;
-            this.picLogo.Location = new System.Drawing.Point(0, 38);
-            this.picLogo.Name = "picLogo";
-            this.picLogo.ShadowDecoration.Parent = this.picLogo;
-            this.picLogo.Size = new System.Drawing.Size(315, 100);
-            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picLogo.TabIndex = 7;
-            this.picLogo.TabStop = false;
+            this.gnElipsePnMain.BorderRadius = 8;
             // 
             // HomeForm
             // 
@@ -829,9 +830,11 @@ namespace Dev69Restaurant.GUI.Home
             this.pnTop.ResumeLayout(false);
             this.pnLeft.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.pnHeader.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatarUser)).EndInit();
             this.pnDetail.ResumeLayout(false);
             this.grbDetail.ResumeLayout(false);
             this.pnRight.ResumeLayout(false);
@@ -843,8 +846,6 @@ namespace Dev69Restaurant.GUI.Home
             this.pnFeature.ResumeLayout(false);
             this.pnFeature.PerformLayout();
             this.panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picAvatarUser)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
 
         }

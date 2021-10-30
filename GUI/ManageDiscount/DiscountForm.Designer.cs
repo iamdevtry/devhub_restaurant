@@ -42,14 +42,6 @@ namespace Dev69Restaurant.GUI.ManageDiscount
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.dgvListDiscount = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDiscount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FoodName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FoodId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.trangthai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rdBlock = new System.Windows.Forms.RadioButton();
             this.rdActive = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
@@ -66,13 +58,23 @@ namespace Dev69Restaurant.GUI.ManageDiscount
             this.label5 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.gunaShadowPanel1 = new Guna.UI.WinForms.GunaShadowPanel();
+            this.dgvListDiscount = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDiscount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FoodName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FoodId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.trangthai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel9.SuspendLayout();
             this.pnHeader.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListDiscount)).BeginInit();
             this.panel7.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.gunaShadowPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListDiscount)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSearch
@@ -80,7 +82,7 @@ namespace Dev69Restaurant.GUI.ManageDiscount
             this.btnSearch.BorderRadius = 8;
             this.btnSearch.CheckedState.Parent = this.btnSearch;
             this.btnSearch.CustomImages.Parent = this.btnSearch;
-            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.White;
             this.btnSearch.HoverState.Parent = this.btnSearch;
             this.btnSearch.Location = new System.Drawing.Point(523, 28);
@@ -96,7 +98,7 @@ namespace Dev69Restaurant.GUI.ManageDiscount
             this.btnDelete.BorderRadius = 8;
             this.btnDelete.CheckedState.Parent = this.btnDelete;
             this.btnDelete.CustomImages.Parent = this.btnDelete;
-            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.HoverState.Parent = this.btnDelete;
             this.btnDelete.Location = new System.Drawing.Point(358, 28);
@@ -112,7 +114,7 @@ namespace Dev69Restaurant.GUI.ManageDiscount
             this.btnUpdate.BorderRadius = 8;
             this.btnUpdate.CheckedState.Parent = this.btnUpdate;
             this.btnUpdate.CustomImages.Parent = this.btnUpdate;
-            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
             this.btnUpdate.HoverState.Parent = this.btnUpdate;
             this.btnUpdate.Location = new System.Drawing.Point(195, 28);
@@ -128,7 +130,7 @@ namespace Dev69Restaurant.GUI.ManageDiscount
             this.btnAdd.BorderRadius = 8;
             this.btnAdd.CheckedState.Parent = this.btnAdd;
             this.btnAdd.CustomImages.Parent = this.btnAdd;
-            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.HoverState.Parent = this.btnAdd;
             this.btnAdd.Location = new System.Drawing.Point(32, 28);
@@ -173,11 +175,12 @@ namespace Dev69Restaurant.GUI.ManageDiscount
             this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.FocusedState.Parent = this.txtSearch;
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.HoverState.Parent = this.txtSearch;
             this.txtSearch.IconLeft = global::Dev69Restaurant.Properties.Resources.search_24px;
             this.txtSearch.Location = new System.Drawing.Point(35, 28);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderText = "Search everything...";
@@ -209,7 +212,7 @@ namespace Dev69Restaurant.GUI.ManageDiscount
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.dgvListDiscount);
+            this.panel6.Controls.Add(this.gunaShadowPanel1);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Margin = new System.Windows.Forms.Padding(4);
@@ -217,133 +220,6 @@ namespace Dev69Restaurant.GUI.ManageDiscount
             this.panel6.Padding = new System.Windows.Forms.Padding(30, 0, 0, 30);
             this.panel6.Size = new System.Drawing.Size(879, 688);
             this.panel6.TabIndex = 0;
-            // 
-            // dgvListDiscount
-            // 
-            this.dgvListDiscount.AllowUserToAddRows = false;
-            this.dgvListDiscount.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(223)))), ((int)(((byte)(251)))));
-            this.dgvListDiscount.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvListDiscount.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvListDiscount.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dgvListDiscount.BackgroundColor = System.Drawing.Color.White;
-            this.dgvListDiscount.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvListDiscount.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvListDiscount.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(242)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListDiscount.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvListDiscount.ColumnHeadersHeight = 35;
-            this.dgvListDiscount.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.STT,
-            this.idDiscount,
-            this.FoodName,
-            this.FoodId,
-            this.Category,
-            this.Status,
-            this.trangthai});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(233)))), ((int)(((byte)(252)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(185)))), ((int)(((byte)(246)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvListDiscount.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvListDiscount.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvListDiscount.EnableHeadersVisualStyles = false;
-            this.dgvListDiscount.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(222)))), ((int)(((byte)(251)))));
-            this.dgvListDiscount.Location = new System.Drawing.Point(30, 0);
-            this.dgvListDiscount.Name = "dgvListDiscount";
-            this.dgvListDiscount.ReadOnly = true;
-            this.dgvListDiscount.RowHeadersVisible = false;
-            this.dgvListDiscount.RowHeadersWidth = 50;
-            this.dgvListDiscount.RowTemplate.Height = 24;
-            this.dgvListDiscount.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListDiscount.Size = new System.Drawing.Size(849, 658);
-            this.dgvListDiscount.TabIndex = 1;
-            this.dgvListDiscount.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Blue;
-            this.dgvListDiscount.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(223)))), ((int)(((byte)(251)))));
-            this.dgvListDiscount.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dgvListDiscount.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dgvListDiscount.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dgvListDiscount.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvListDiscount.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dgvListDiscount.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(222)))), ((int)(((byte)(251)))));
-            this.dgvListDiscount.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(242)))));
-            this.dgvListDiscount.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvListDiscount.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.dgvListDiscount.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvListDiscount.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvListDiscount.ThemeStyle.HeaderStyle.Height = 35;
-            this.dgvListDiscount.ThemeStyle.ReadOnly = true;
-            this.dgvListDiscount.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(233)))), ((int)(((byte)(252)))));
-            this.dgvListDiscount.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvListDiscount.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.dgvListDiscount.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvListDiscount.ThemeStyle.RowsStyle.Height = 24;
-            this.dgvListDiscount.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(185)))), ((int)(((byte)(246)))));
-            this.dgvListDiscount.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvListDiscount.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListDiscount_CellClick);
-            // 
-            // STT
-            // 
-            this.STT.FillWeight = 20F;
-            this.STT.HeaderText = "#";
-            this.STT.MinimumWidth = 6;
-            this.STT.Name = "STT";
-            this.STT.ReadOnly = true;
-            // 
-            // idDiscount
-            // 
-            this.idDiscount.FillWeight = 40F;
-            this.idDiscount.HeaderText = "ID";
-            this.idDiscount.MinimumWidth = 6;
-            this.idDiscount.Name = "idDiscount";
-            this.idDiscount.ReadOnly = true;
-            // 
-            // FoodName
-            // 
-            this.FoodName.HeaderText = "Tên khuyến mãi";
-            this.FoodName.MinimumWidth = 6;
-            this.FoodName.Name = "FoodName";
-            this.FoodName.ReadOnly = true;
-            // 
-            // FoodId
-            // 
-            this.FoodId.FillWeight = 105.8642F;
-            this.FoodId.HeaderText = "Mã CODE";
-            this.FoodId.MinimumWidth = 6;
-            this.FoodId.Name = "FoodId";
-            this.FoodId.ReadOnly = true;
-            // 
-            // Category
-            // 
-            this.Category.FillWeight = 105.8642F;
-            this.Category.HeaderText = "Ngày hết hạn";
-            this.Category.MinimumWidth = 6;
-            this.Category.Name = "Category";
-            this.Category.ReadOnly = true;
-            // 
-            // Status
-            // 
-            this.Status.FillWeight = 105.8642F;
-            this.Status.HeaderText = "Giảm giá (%)";
-            this.Status.MinimumWidth = 6;
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
-            // 
-            // trangthai
-            // 
-            this.trangthai.HeaderText = "Trạng thái";
-            this.trangthai.MinimumWidth = 6;
-            this.trangthai.Name = "trangthai";
-            this.trangthai.ReadOnly = true;
             // 
             // rdBlock
             // 
@@ -620,6 +496,147 @@ namespace Dev69Restaurant.GUI.ManageDiscount
             this.panel2.Size = new System.Drawing.Size(1280, 788);
             this.panel2.TabIndex = 3;
             // 
+            // gunaShadowPanel1
+            // 
+            this.gunaShadowPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaShadowPanel1.BaseColor = System.Drawing.Color.Transparent;
+            this.gunaShadowPanel1.Controls.Add(this.dgvListDiscount);
+            this.gunaShadowPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gunaShadowPanel1.Location = new System.Drawing.Point(30, 0);
+            this.gunaShadowPanel1.Name = "gunaShadowPanel1";
+            this.gunaShadowPanel1.Padding = new System.Windows.Forms.Padding(5, 3, 10, 10);
+            this.gunaShadowPanel1.ShadowColor = System.Drawing.Color.Black;
+            this.gunaShadowPanel1.ShadowDepth = 50;
+            this.gunaShadowPanel1.Size = new System.Drawing.Size(849, 658);
+            this.gunaShadowPanel1.TabIndex = 0;
+            // 
+            // dgvListDiscount
+            // 
+            this.dgvListDiscount.AllowUserToAddRows = false;
+            this.dgvListDiscount.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(223)))), ((int)(((byte)(251)))));
+            this.dgvListDiscount.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvListDiscount.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvListDiscount.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dgvListDiscount.BackgroundColor = System.Drawing.Color.White;
+            this.dgvListDiscount.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvListDiscount.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvListDiscount.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(242)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListDiscount.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvListDiscount.ColumnHeadersHeight = 35;
+            this.dgvListDiscount.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.STT,
+            this.idDiscount,
+            this.FoodName,
+            this.FoodId,
+            this.Category,
+            this.Status,
+            this.trangthai});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(233)))), ((int)(((byte)(252)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(185)))), ((int)(((byte)(246)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvListDiscount.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvListDiscount.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvListDiscount.EnableHeadersVisualStyles = false;
+            this.dgvListDiscount.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(222)))), ((int)(((byte)(251)))));
+            this.dgvListDiscount.Location = new System.Drawing.Point(5, 3);
+            this.dgvListDiscount.Name = "dgvListDiscount";
+            this.dgvListDiscount.ReadOnly = true;
+            this.dgvListDiscount.RowHeadersVisible = false;
+            this.dgvListDiscount.RowHeadersWidth = 50;
+            this.dgvListDiscount.RowTemplate.Height = 24;
+            this.dgvListDiscount.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvListDiscount.Size = new System.Drawing.Size(834, 645);
+            this.dgvListDiscount.TabIndex = 2;
+            this.dgvListDiscount.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Blue;
+            this.dgvListDiscount.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(223)))), ((int)(((byte)(251)))));
+            this.dgvListDiscount.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgvListDiscount.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgvListDiscount.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgvListDiscount.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgvListDiscount.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgvListDiscount.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(222)))), ((int)(((byte)(251)))));
+            this.dgvListDiscount.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(242)))));
+            this.dgvListDiscount.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvListDiscount.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.dgvListDiscount.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvListDiscount.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvListDiscount.ThemeStyle.HeaderStyle.Height = 35;
+            this.dgvListDiscount.ThemeStyle.ReadOnly = true;
+            this.dgvListDiscount.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(233)))), ((int)(((byte)(252)))));
+            this.dgvListDiscount.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvListDiscount.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.dgvListDiscount.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvListDiscount.ThemeStyle.RowsStyle.Height = 24;
+            this.dgvListDiscount.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(185)))), ((int)(((byte)(246)))));
+            this.dgvListDiscount.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvListDiscount.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListDiscount_CellClick);
+            // 
+            // STT
+            // 
+            this.STT.FillWeight = 20F;
+            this.STT.HeaderText = "#";
+            this.STT.MinimumWidth = 6;
+            this.STT.Name = "STT";
+            this.STT.ReadOnly = true;
+            // 
+            // idDiscount
+            // 
+            this.idDiscount.FillWeight = 40F;
+            this.idDiscount.HeaderText = "ID";
+            this.idDiscount.MinimumWidth = 6;
+            this.idDiscount.Name = "idDiscount";
+            this.idDiscount.ReadOnly = true;
+            // 
+            // FoodName
+            // 
+            this.FoodName.HeaderText = "Tên khuyến mãi";
+            this.FoodName.MinimumWidth = 6;
+            this.FoodName.Name = "FoodName";
+            this.FoodName.ReadOnly = true;
+            // 
+            // FoodId
+            // 
+            this.FoodId.FillWeight = 105.8642F;
+            this.FoodId.HeaderText = "Mã CODE";
+            this.FoodId.MinimumWidth = 6;
+            this.FoodId.Name = "FoodId";
+            this.FoodId.ReadOnly = true;
+            // 
+            // Category
+            // 
+            this.Category.FillWeight = 105.8642F;
+            this.Category.HeaderText = "Ngày hết hạn";
+            this.Category.MinimumWidth = 6;
+            this.Category.Name = "Category";
+            this.Category.ReadOnly = true;
+            // 
+            // Status
+            // 
+            this.Status.FillWeight = 105.8642F;
+            this.Status.HeaderText = "Giảm giá (%)";
+            this.Status.MinimumWidth = 6;
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            // 
+            // trangthai
+            // 
+            this.trangthai.HeaderText = "Trạng thái";
+            this.trangthai.MinimumWidth = 6;
+            this.trangthai.Name = "trangthai";
+            this.trangthai.ReadOnly = true;
+            // 
             // DiscountForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -633,11 +650,12 @@ namespace Dev69Restaurant.GUI.ManageDiscount
             this.panel9.ResumeLayout(false);
             this.pnHeader.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListDiscount)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.gunaShadowPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListDiscount)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -654,7 +672,6 @@ namespace Dev69Restaurant.GUI.ManageDiscount
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel6;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvListDiscount;
         private System.Windows.Forms.RadioButton rdBlock;
         private System.Windows.Forms.RadioButton rdActive;
         private System.Windows.Forms.Label label4;
@@ -671,6 +688,8 @@ namespace Dev69Restaurant.GUI.ManageDiscount
         private Guna.UI2.WinForms.Guna2TextBox txtPercent;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
+        private Guna.UI.WinForms.GunaShadowPanel gunaShadowPanel1;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvListDiscount;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDiscount;
         private System.Windows.Forms.DataGridViewTextBoxColumn FoodName;

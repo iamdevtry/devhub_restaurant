@@ -83,6 +83,11 @@ namespace Dev69Restaurant.GUI.ResetPassword
             }
         }
 
+        private void VerifyCodeForm_Load(object sender, EventArgs e)
+        {
+            shadowForm.SetShadowForm(this);
+        }
+
         private int ValidateAccount(string username, string email)
         {
             var user = _userService.CheckExistByUserNameAndEmail(username, email);

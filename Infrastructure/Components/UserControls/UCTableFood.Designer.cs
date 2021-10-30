@@ -55,7 +55,7 @@ namespace Dev69Restaurant.Infrastructure.Components.UserControls
             // lblStatus
             // 
             this.lblStatus.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblStatus.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStatus.ForeColor = System.Drawing.Color.White;
             this.lblStatus.Location = new System.Drawing.Point(0, 0);
             this.lblStatus.Name = "lblStatus";
@@ -78,7 +78,7 @@ namespace Dev69Restaurant.Infrastructure.Components.UserControls
             // lblTableName
             // 
             this.lblTableName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTableName.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTableName.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTableName.ForeColor = System.Drawing.Color.White;
             this.lblTableName.Location = new System.Drawing.Point(0, 0);
             this.lblTableName.Name = "lblTableName";

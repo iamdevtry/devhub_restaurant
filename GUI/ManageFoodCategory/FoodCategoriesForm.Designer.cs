@@ -29,10 +29,11 @@ namespace Dev69Restaurant.GUI.ManageFoodCategory
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnTop = new System.Windows.Forms.Panel();
             this.gunaControlBox3 = new Guna.UI.WinForms.GunaControlBox();
             this.gunaControlBox2 = new Guna.UI.WinForms.GunaControlBox();
             this.gunaControlBox1 = new Guna.UI.WinForms.GunaControlBox();
@@ -61,7 +62,9 @@ namespace Dev69Restaurant.GUI.ManageFoodCategory
             this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
-            this.panel1.SuspendLayout();
+            this.shadowForm = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
+            this.dragForm = new Guna.UI.WinForms.GunaDragControl(this.components);
+            this.pnTop.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -71,17 +74,17 @@ namespace Dev69Restaurant.GUI.ManageFoodCategory
             this.panel9.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnTop
             // 
-            this.panel1.Controls.Add(this.gunaControlBox3);
-            this.panel1.Controls.Add(this.gunaControlBox2);
-            this.panel1.Controls.Add(this.gunaControlBox1);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1280, 43);
-            this.panel1.TabIndex = 0;
+            this.pnTop.Controls.Add(this.gunaControlBox3);
+            this.pnTop.Controls.Add(this.gunaControlBox2);
+            this.pnTop.Controls.Add(this.gunaControlBox1);
+            this.pnTop.Controls.Add(this.label3);
+            this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnTop.Location = new System.Drawing.Point(0, 0);
+            this.pnTop.Name = "pnTop";
+            this.pnTop.Size = new System.Drawing.Size(1280, 43);
+            this.pnTop.TabIndex = 0;
             // 
             // gunaControlBox3
             // 
@@ -133,10 +136,10 @@ namespace Dev69Restaurant.GUI.ManageFoodCategory
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(12, 8);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(235, 25);
+            this.label3.Size = new System.Drawing.Size(238, 25);
             this.label3.TabIndex = 23;
             this.label3.Text = "Quản lý danh mục món ăn";
             // 
@@ -415,7 +418,7 @@ namespace Dev69Restaurant.GUI.ManageFoodCategory
             this.btnDelete.BorderRadius = 8;
             this.btnDelete.CheckedState.Parent = this.btnDelete;
             this.btnDelete.CustomImages.Parent = this.btnDelete;
-            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.HoverState.Parent = this.btnDelete;
             this.btnDelete.Location = new System.Drawing.Point(358, 28);
@@ -431,7 +434,7 @@ namespace Dev69Restaurant.GUI.ManageFoodCategory
             this.btnUpdate.BorderRadius = 8;
             this.btnUpdate.CheckedState.Parent = this.btnUpdate;
             this.btnUpdate.CustomImages.Parent = this.btnUpdate;
-            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
             this.btnUpdate.HoverState.Parent = this.btnUpdate;
             this.btnUpdate.Location = new System.Drawing.Point(195, 28);
@@ -447,7 +450,7 @@ namespace Dev69Restaurant.GUI.ManageFoodCategory
             this.btnAdd.BorderRadius = 8;
             this.btnAdd.CheckedState.Parent = this.btnAdd;
             this.btnAdd.CustomImages.Parent = this.btnAdd;
-            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.HoverState.Parent = this.btnAdd;
             this.btnAdd.Location = new System.Drawing.Point(32, 28);
@@ -470,6 +473,7 @@ namespace Dev69Restaurant.GUI.ManageFoodCategory
             this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.FocusedState.Parent = this.txtSearch;
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.HoverState.Parent = this.txtSearch;
             this.txtSearch.IconLeft = global::Dev69Restaurant.Properties.Resources.search_24px;
@@ -488,7 +492,7 @@ namespace Dev69Restaurant.GUI.ManageFoodCategory
             this.btnSearch.BorderRadius = 8;
             this.btnSearch.CheckedState.Parent = this.btnSearch;
             this.btnSearch.CustomImages.Parent = this.btnSearch;
-            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.White;
             this.btnSearch.HoverState.Parent = this.btnSearch;
             this.btnSearch.Location = new System.Drawing.Point(523, 28);
@@ -499,6 +503,10 @@ namespace Dev69Restaurant.GUI.ManageFoodCategory
             this.btnSearch.Text = "Tìm kiếm";
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
+            // dragForm
+            // 
+            this.dragForm.TargetControl = this.pnTop;
+            // 
             // FoodCategoriesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -506,13 +514,14 @@ namespace Dev69Restaurant.GUI.ManageFoodCategory
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FoodCategoriesForm";
             this.Text = "Quản lý danh mục món ăn";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FoodCategoriesForm_FormClosed);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Load += new System.EventHandler(this.FoodCategoriesForm_Load);
+            this.pnTop.ResumeLayout(false);
+            this.pnTop.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
@@ -527,7 +536,7 @@ namespace Dev69Restaurant.GUI.ManageFoodCategory
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnTop;
         private System.Windows.Forms.Panel panel2;
         private Guna.UI.WinForms.GunaPanel pnHeader;
         private System.Windows.Forms.Panel panel9;
@@ -556,5 +565,7 @@ namespace Dev69Restaurant.GUI.ManageFoodCategory
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private Guna.UI.WinForms.GunaControlBox gunaControlBox3;
+        private Guna.UI2.WinForms.Guna2ShadowForm shadowForm;
+        private Guna.UI.WinForms.GunaDragControl dragForm;
     }
 }

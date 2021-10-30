@@ -18,5 +18,10 @@ namespace Dev69Restaurant.GUI.About
             InitializeComponent();
             this.Icon = new Icon(BaseIcon.ICON);
         }
+
+        private void AboutForm_Load(object sender, EventArgs e)
+        {
+            shadowForm.SetShadowForm(this);
+        }
     }
 }

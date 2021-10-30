@@ -322,6 +322,10 @@
     <Compile Include="Migrations\202110260822566_update-db-v2.designer.cs">
       <DependentUpon>202110260822566_update-db-v2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202110300243111_update-database_rmPromotionPrice.cs" />
+    <Compile Include="Migrations\202110300243111_update-database_rmPromotionPrice.designer.cs">
+      <DependentUpon>202110300243111_update-database_rmPromotionPrice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -432,6 +436,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202110260822566_update-db-v2.resx">
       <DependentUpon>202110260822566_update-db-v2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110300243111_update-database_rmPromotionPrice.resx">
+      <DependentUpon>202110300243111_update-database_rmPromotionPrice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

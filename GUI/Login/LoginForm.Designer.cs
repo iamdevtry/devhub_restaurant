@@ -29,6 +29,7 @@ namespace Dev69Restaurant.GUI.Login
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnLeft = new System.Windows.Forms.Panel();
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.pnRight = new System.Windows.Forms.Panel();
@@ -43,6 +44,8 @@ namespace Dev69Restaurant.GUI.Login
             this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.gunaControlBox2 = new Guna.UI.WinForms.GunaControlBox();
             this.gunaControlBox1 = new Guna.UI.WinForms.GunaControlBox();
+            this.shadowForm = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
+            this.dragForm = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.pnLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.pnRight.SuspendLayout();
@@ -54,7 +57,7 @@ namespace Dev69Restaurant.GUI.Login
             this.pnLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnLeft.Location = new System.Drawing.Point(0, 0);
             this.pnLeft.Name = "pnLeft";
-            this.pnLeft.Size = new System.Drawing.Size(482, 715);
+            this.pnLeft.Size = new System.Drawing.Size(400, 580);
             this.pnLeft.TabIndex = 0;
             // 
             // gunaPictureBox1
@@ -64,7 +67,7 @@ namespace Dev69Restaurant.GUI.Login
             this.gunaPictureBox1.Image = global::Dev69Restaurant.Properties.Resources.banner_LoginForm;
             this.gunaPictureBox1.Location = new System.Drawing.Point(0, 0);
             this.gunaPictureBox1.Name = "gunaPictureBox1";
-            this.gunaPictureBox1.Size = new System.Drawing.Size(482, 715);
+            this.gunaPictureBox1.Size = new System.Drawing.Size(400, 580);
             this.gunaPictureBox1.TabIndex = 0;
             this.gunaPictureBox1.TabStop = false;
             // 
@@ -84,18 +87,18 @@ namespace Dev69Restaurant.GUI.Login
             this.pnRight.Controls.Add(this.gunaControlBox1);
             this.pnRight.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnRight.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnRight.Location = new System.Drawing.Point(482, 0);
+            this.pnRight.Location = new System.Drawing.Point(400, 0);
             this.pnRight.Name = "pnRight";
-            this.pnRight.Size = new System.Drawing.Size(622, 715);
+            this.pnRight.Size = new System.Drawing.Size(475, 580);
             this.pnRight.TabIndex = 1;
             // 
             // lblForgotPassword
             // 
             this.lblForgotPassword.AutoSize = true;
-            this.lblForgotPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lblForgotPassword.Location = new System.Drawing.Point(410, 472);
+            this.lblForgotPassword.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblForgotPassword.Location = new System.Drawing.Point(250, 436);
             this.lblForgotPassword.Name = "lblForgotPassword";
-            this.lblForgotPassword.Size = new System.Drawing.Size(109, 20);
+            this.lblForgotPassword.Size = new System.Drawing.Size(129, 23);
             this.lblForgotPassword.TabIndex = 6;
             this.lblForgotPassword.TabStop = true;
             this.lblForgotPassword.Text = "Quên mật khẩu";
@@ -105,6 +108,7 @@ namespace Dev69Restaurant.GUI.Login
             // 
             this.btnLogin.AnimationHoverSpeed = 0.07F;
             this.btnLogin.AnimationSpeed = 0.03F;
+            this.btnLogin.BackColor = System.Drawing.Color.Transparent;
             this.btnLogin.BaseColor1 = System.Drawing.Color.SlateBlue;
             this.btnLogin.BaseColor2 = System.Drawing.Color.Fuchsia;
             this.btnLogin.BorderColor = System.Drawing.Color.Black;
@@ -115,7 +119,7 @@ namespace Dev69Restaurant.GUI.Login
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Image = null;
             this.btnLogin.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnLogin.Location = new System.Drawing.Point(128, 514);
+            this.btnLogin.Location = new System.Drawing.Point(77, 480);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btnLogin.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -123,8 +127,9 @@ namespace Dev69Restaurant.GUI.Login
             this.btnLogin.OnHoverForeColor = System.Drawing.Color.White;
             this.btnLogin.OnHoverImage = null;
             this.btnLogin.OnPressedColor = System.Drawing.Color.Black;
-            this.btnLogin.Size = new System.Drawing.Size(394, 45);
-            this.btnLogin.TabIndex = 5;
+            this.btnLogin.Radius = 8;
+            this.btnLogin.Size = new System.Drawing.Size(302, 45);
+            this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -141,7 +146,7 @@ namespace Dev69Restaurant.GUI.Login
             this.btnHidePassword.ForeColor = System.Drawing.Color.White;
             this.btnHidePassword.Image = global::Dev69Restaurant.Properties.Resources.eye_hide_30px;
             this.btnHidePassword.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnHidePassword.Location = new System.Drawing.Point(529, 408);
+            this.btnHidePassword.Location = new System.Drawing.Point(386, 374);
             this.btnHidePassword.Name = "btnHidePassword";
             this.btnHidePassword.OnHoverBaseColor = System.Drawing.Color.Transparent;
             this.btnHidePassword.OnHoverBorderColor = System.Drawing.Color.Transparent;
@@ -164,7 +169,7 @@ namespace Dev69Restaurant.GUI.Login
             this.btnShowPassword.ForeColor = System.Drawing.Color.White;
             this.btnShowPassword.Image = global::Dev69Restaurant.Properties.Resources.eye_show_30px;
             this.btnShowPassword.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnShowPassword.Location = new System.Drawing.Point(529, 408);
+            this.btnShowPassword.Location = new System.Drawing.Point(386, 374);
             this.btnShowPassword.Name = "btnShowPassword";
             this.btnShowPassword.OnHoverBaseColor = System.Drawing.Color.Transparent;
             this.btnShowPassword.OnHoverBorderColor = System.Drawing.Color.Transparent;
@@ -179,7 +184,7 @@ namespace Dev69Restaurant.GUI.Login
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(125, 361);
+            this.lblPassword.Location = new System.Drawing.Point(74, 327);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(84, 23);
             this.lblPassword.TabIndex = 2;
@@ -189,7 +194,7 @@ namespace Dev69Restaurant.GUI.Login
             // 
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(125, 222);
+            this.lblUsername.Location = new System.Drawing.Point(74, 188);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(124, 23);
             this.lblUsername.TabIndex = 2;
@@ -198,7 +203,7 @@ namespace Dev69Restaurant.GUI.Login
             // lblWelcome
             // 
             this.lblWelcome.AutoSize = true;
-            this.lblWelcome.Location = new System.Drawing.Point(268, 122);
+            this.lblWelcome.Location = new System.Drawing.Point(187, 89);
             this.lblWelcome.Name = "lblWelcome";
             this.lblWelcome.Size = new System.Drawing.Size(102, 25);
             this.lblWelcome.TabIndex = 2;
@@ -220,15 +225,15 @@ namespace Dev69Restaurant.GUI.Login
             this.txtPassword.ForeColor = System.Drawing.Color.Black;
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.HoverState.Parent = this.txtPassword;
-            this.txtPassword.Location = new System.Drawing.Point(128, 408);
+            this.txtPassword.Location = new System.Drawing.Point(77, 374);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '\0';
             this.txtPassword.PlaceholderText = "Nhập mật khẩu";
             this.txtPassword.SelectedText = "";
             this.txtPassword.ShadowDecoration.Parent = this.txtPassword;
-            this.txtPassword.Size = new System.Drawing.Size(394, 42);
-            this.txtPassword.TabIndex = 1;
+            this.txtPassword.Size = new System.Drawing.Size(302, 42);
+            this.txtPassword.TabIndex = 2;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
             // txtUsername
@@ -247,14 +252,14 @@ namespace Dev69Restaurant.GUI.Login
             this.txtUsername.ForeColor = System.Drawing.Color.Black;
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUsername.HoverState.Parent = this.txtUsername;
-            this.txtUsername.Location = new System.Drawing.Point(128, 272);
+            this.txtUsername.Location = new System.Drawing.Point(77, 238);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.PlaceholderText = "Nhập tên tài khoản";
             this.txtUsername.SelectedText = "";
             this.txtUsername.ShadowDecoration.Parent = this.txtUsername;
-            this.txtUsername.Size = new System.Drawing.Size(394, 42);
+            this.txtUsername.Size = new System.Drawing.Size(302, 42);
             this.txtUsername.TabIndex = 1;
             // 
             // gunaControlBox2
@@ -265,7 +270,7 @@ namespace Dev69Restaurant.GUI.Login
             this.gunaControlBox2.ControlBoxType = Guna.UI.WinForms.FormControlBoxType.MinimizeBox;
             this.gunaControlBox2.IconColor = System.Drawing.Color.Black;
             this.gunaControlBox2.IconSize = 15F;
-            this.gunaControlBox2.Location = new System.Drawing.Point(528, 13);
+            this.gunaControlBox2.Location = new System.Drawing.Point(381, 13);
             this.gunaControlBox2.Name = "gunaControlBox2";
             this.gunaControlBox2.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
             this.gunaControlBox2.OnHoverIconColor = System.Drawing.Color.White;
@@ -280,7 +285,7 @@ namespace Dev69Restaurant.GUI.Login
             this.gunaControlBox1.AnimationSpeed = 0.03F;
             this.gunaControlBox1.IconColor = System.Drawing.Color.Black;
             this.gunaControlBox1.IconSize = 15F;
-            this.gunaControlBox1.Location = new System.Drawing.Point(572, 13);
+            this.gunaControlBox1.Location = new System.Drawing.Point(425, 13);
             this.gunaControlBox1.Name = "gunaControlBox1";
             this.gunaControlBox1.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
             this.gunaControlBox1.OnHoverIconColor = System.Drawing.Color.White;
@@ -288,11 +293,15 @@ namespace Dev69Restaurant.GUI.Login
             this.gunaControlBox1.Size = new System.Drawing.Size(39, 31);
             this.gunaControlBox1.TabIndex = 0;
             // 
+            // dragForm
+            // 
+            this.dragForm.TargetControl = this.pnRight;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1104, 715);
+            this.ClientSize = new System.Drawing.Size(875, 580);
             this.Controls.Add(this.pnRight);
             this.Controls.Add(this.pnLeft);
             this.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -300,6 +309,7 @@ namespace Dev69Restaurant.GUI.Login
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.pnLeft.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             this.pnRight.ResumeLayout(false);
@@ -324,5 +334,7 @@ namespace Dev69Restaurant.GUI.Login
         private Guna.UI.WinForms.GunaButton btnHidePassword;
         private Guna.UI.WinForms.GunaGradientButton btnLogin;
         private Guna.UI.WinForms.GunaLinkLabel lblForgotPassword;
+        private Guna.UI2.WinForms.Guna2ShadowForm shadowForm;
+        private Guna.UI.WinForms.GunaDragControl dragForm;
     }
 }

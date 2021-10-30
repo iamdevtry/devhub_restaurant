@@ -41,6 +41,7 @@ namespace Dev69Restaurant.GUI.ResetPassword
             this.gunaControlBox1 = new Guna.UI.WinForms.GunaControlBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dragForm = new Guna.UI.WinForms.GunaDragControl(this.components);
+            this.shadowForm = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.panel1.SuspendLayout();
             this.pnTop.SuspendLayout();
             this.SuspendLayout();
@@ -62,6 +63,7 @@ namespace Dev69Restaurant.GUI.ResetPassword
             // 
             this.btnVerify.AnimationHoverSpeed = 0.07F;
             this.btnVerify.AnimationSpeed = 0.03F;
+            this.btnVerify.BackColor = System.Drawing.Color.Transparent;
             this.btnVerify.BaseColor1 = System.Drawing.Color.SlateBlue;
             this.btnVerify.BaseColor2 = System.Drawing.Color.Fuchsia;
             this.btnVerify.BorderColor = System.Drawing.Color.Black;
@@ -80,6 +82,7 @@ namespace Dev69Restaurant.GUI.ResetPassword
             this.btnVerify.OnHoverForeColor = System.Drawing.Color.White;
             this.btnVerify.OnHoverImage = null;
             this.btnVerify.OnPressedColor = System.Drawing.Color.Black;
+            this.btnVerify.Radius = 8;
             this.btnVerify.Size = new System.Drawing.Size(394, 45);
             this.btnVerify.TabIndex = 13;
             this.btnVerify.Text = "Xác nhận";
@@ -207,9 +210,9 @@ namespace Dev69Restaurant.GUI.ResetPassword
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(174, 23);
+            this.label1.Size = new System.Drawing.Size(150, 23);
             this.label1.TabIndex = 9;
-            this.label1.Text = "TẠO MẬT KHẨU MỚI";
+            this.label1.Text = "Tạo mật khẩu mới";
             // 
             // dragForm
             // 
@@ -219,12 +222,14 @@ namespace Dev69Restaurant.GUI.ResetPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.ClientSize = new System.Drawing.Size(440, 540);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ResetPasswordForm";
             this.Text = "Tạo mật khẩu mới";
+            this.Load += new System.EventHandler(this.ResetPasswordForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.pnTop.ResumeLayout(false);
@@ -246,5 +251,6 @@ namespace Dev69Restaurant.GUI.ResetPassword
         private Guna.UI.WinForms.GunaControlBox gunaControlBox1;
         private System.Windows.Forms.Label label1;
         private Guna.UI.WinForms.GunaDragControl dragForm;
+        private Guna.UI2.WinForms.Guna2ShadowForm shadowForm;
     }
 }

@@ -42,5 +42,10 @@ namespace Dev69Restaurant.GUI.ResetPassword
                 MessageBox.Show("Mật khẩu xác nhận không trùng khớp!");
             }
         }
+
+        private void ResetPasswordForm_Load(object sender, EventArgs e)
+        {
+            shadowForm.SetShadowForm(this);
+        }
     }
 }

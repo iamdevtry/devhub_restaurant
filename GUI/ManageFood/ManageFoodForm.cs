@@ -86,7 +86,6 @@ namespace Dev69Restaurant.GUI.ManageFood
                         txtName.Text = "";
                         txtPrice.Text = "";
                         picAvatar.Image = null;
-                        txtPromotionPrice.Text = "";
                         optDisplay.Checked = false;
                         optHidden.Checked = false;
                     }
@@ -137,9 +136,8 @@ namespace Dev69Restaurant.GUI.ManageFood
             {
                 txtName.Text = dgvListFood.SelectedCells[1].Value.ToString();
                 txtPrice.Text = dgvListFood.SelectedCells[4].Value.ToString();
-                txtPromotionPrice.Text = dgvListFood.SelectedCells[5].Value.ToString();
 
-                if (dgvListFood.SelectedCells[6].Value.ToString() == "Ẩn")
+                if (dgvListFood.SelectedCells[5].Value.ToString() == "Ẩn")
                 {
                     optHidden.Checked = true;
                 }
@@ -196,11 +194,7 @@ namespace Dev69Restaurant.GUI.ManageFood
 
 
             double price = double.Parse(txtPrice.Text);
-            if (txtPromotionPrice.Text == "")
-            {
-                food.PromotionPrice = 0;
-            }
-            else if (price < 0)
+            if (price < 0)
             {
                 MessageBox.Show("Giá tiền không được nhỏ hơn 0.", "Thông báo", MessageBoxButtons.YesNo);
             }
@@ -208,21 +202,6 @@ namespace Dev69Restaurant.GUI.ManageFood
             {
                 food.Price = decimal.Parse(txtPrice.Text);
             }
-
-            double proPrice = double.Parse(txtPromotionPrice.Text);
-            if (txtPromotionPrice.Text == "")
-            {
-                food.PromotionPrice = 0;
-            }
-            else if (proPrice < 0)
-            {
-                MessageBox.Show("Giá tiền không được nhỏ hơn 0.", "Thông báo", MessageBoxButtons.YesNo);
-            }
-            else
-            {
-                food.PromotionPrice = decimal.Parse(txtPromotionPrice.Text);
-            }
-
 
             if (optDisplay.Checked == true)
             {
@@ -265,11 +244,7 @@ namespace Dev69Restaurant.GUI.ManageFood
             }
 
             double price = double.Parse(txtPrice.Text);
-            if (txtPromotionPrice.Text == "")
-            {
-                food.PromotionPrice = 0;
-            }
-            else if (price < 0)
+            if (price < 0)
             {
                 MessageBox.Show("Giá tiền không được nhỏ hơn 0.", "Thông báo", MessageBoxButtons.YesNo);
             }
@@ -277,21 +252,6 @@ namespace Dev69Restaurant.GUI.ManageFood
             {
                 food.Price = decimal.Parse(txtPrice.Text);
             }
-
-            double proPrice = double.Parse(txtPromotionPrice.Text);
-            if (txtPromotionPrice.Text == "")
-            {
-                food.PromotionPrice = 0;
-            }
-            else if (proPrice < 0)
-            {
-                MessageBox.Show("Giá tiền không được nhỏ hơn 0.", "Thông báo", MessageBoxButtons.YesNo);
-            }
-            else
-            {
-                food.PromotionPrice = decimal.Parse(txtPromotionPrice.Text);
-            }
-
 
             if (optDisplay.Checked == true)
             {
@@ -344,7 +304,7 @@ namespace Dev69Restaurant.GUI.ManageFood
                 var foodCategory = foodCategoryList.Where(x => x.Id == item.CategoryId).SingleOrDefault();
 
                 var topLeftHeaderCell = dgvListFood.TopLeftHeaderCell;
-                dgvListFood.Rows.Add(index, item.Name, item.Id, foodCategory.Name, item.Price, item.PromotionPrice, status);
+                dgvListFood.Rows.Add(index, item.Name, item.Id, foodCategory.Name, item.Price, status);
             }
         }
 

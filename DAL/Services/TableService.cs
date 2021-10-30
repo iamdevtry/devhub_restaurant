@@ -57,7 +57,7 @@ namespace Dev69Restaurant.DAL.Services
         }
         public void Update(TableFood tableFood)
         {
-            var currentTable = _tableFoodRepository.GetSingleByCondition(x => x.Name == tableFood.Name);
+            var currentTable = _tableFoodRepository.GetSingleByCondition(x => x.Id == tableFood.Id);
             currentTable.Name = tableFood.Name;
             _tableFoodRepository.Update(currentTable);
             _unitOfWork.Commit();

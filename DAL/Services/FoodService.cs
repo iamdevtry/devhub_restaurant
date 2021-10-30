@@ -88,7 +88,6 @@ namespace Dev69Restaurant.DAL.Services
             currentFood = _foodRepository.GetSingleById(food.Id);
             currentFood.Name = food.Name;
             currentFood.Price = food.Price;
-            currentFood.PromotionPrice = food.PromotionPrice;
             currentFood.CategoryId = food.CategoryId;
             currentFood.Status = food.Status;
             currentFood.UpdatedDate = food.UpdatedDate;

@@ -88,5 +88,10 @@ namespace Dev69Restaurant.GUI.Login
             verifyCodeForm.StartPosition = FormStartPosition.CenterScreen;
             verifyCodeForm.Show();
         }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            shadowForm.SetShadowForm(this);
+        }
     }
 }

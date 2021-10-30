@@ -36,12 +36,15 @@ namespace Dev69Restaurant.GUI.Checkout
             this.panel2 = new System.Windows.Forms.Panel();
             this.rptBillDetail = new Microsoft.Reporting.WinForms.ReportViewer();
             this.dragControl = new Guna.UI.WinForms.GunaDragControl(this.components);
+            this.shadowForm = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
+            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.panelTop.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelTop
             // 
+            this.panelTop.Controls.Add(this.gunaLabel1);
             this.panelTop.Controls.Add(this.gunaControlBox2);
             this.panelTop.Controls.Add(this.gunaControlBox1);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
@@ -103,6 +106,16 @@ namespace Dev69Restaurant.GUI.Checkout
             // 
             this.dragControl.TargetControl = this.panelTop;
             // 
+            // gunaLabel1
+            // 
+            this.gunaLabel1.AutoSize = true;
+            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.Location = new System.Drawing.Point(13, 13);
+            this.gunaLabel1.Name = "gunaLabel1";
+            this.gunaLabel1.Size = new System.Drawing.Size(79, 23);
+            this.gunaLabel1.TabIndex = 1;
+            this.gunaLabel1.Text = "Hóa Đơn";
+            // 
             // CheckoutForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -115,6 +128,7 @@ namespace Dev69Restaurant.GUI.Checkout
             this.Text = "In Hóa Đơn";
             this.Load += new System.EventHandler(this.CheckoutForm_Load);
             this.panelTop.ResumeLayout(false);
+            this.panelTop.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -128,5 +142,7 @@ namespace Dev69Restaurant.GUI.Checkout
         private System.Windows.Forms.Panel panel2;
         private Microsoft.Reporting.WinForms.ReportViewer rptBillDetail;
         private Guna.UI.WinForms.GunaDragControl dragControl;
+        private Guna.UI2.WinForms.Guna2ShadowForm shadowForm;
+        private Guna.UI.WinForms.GunaLabel gunaLabel1;
     }
 }

@@ -49,6 +49,7 @@ namespace Dev69Restaurant.GUI.About
             this.gunaImageButton1 = new Guna.UI.WinForms.GunaImageButton();
             this.gunaImageButton2 = new Guna.UI.WinForms.GunaImageButton();
             this.drag = new Guna.UI.WinForms.GunaDragControl(this.components);
+            this.shadowForm = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.pnTop.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -112,10 +113,10 @@ namespace Dev69Restaurant.GUI.About
             // gunaLinkLabel1
             // 
             this.gunaLinkLabel1.AutoSize = true;
-            this.gunaLinkLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLinkLabel1.Location = new System.Drawing.Point(392, 400);
+            this.gunaLinkLabel1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLinkLabel1.Location = new System.Drawing.Point(392, 397);
             this.gunaLinkLabel1.Name = "gunaLinkLabel1";
-            this.gunaLinkLabel1.Size = new System.Drawing.Size(199, 20);
+            this.gunaLinkLabel1.Size = new System.Drawing.Size(228, 23);
             this.gunaLinkLabel1.TabIndex = 3;
             this.gunaLinkLabel1.TabStop = true;
             this.gunaLinkLabel1.Text = "dev69restaurant@gmail.com";
@@ -123,50 +124,50 @@ namespace Dev69Restaurant.GUI.About
             // gunaLabel9
             // 
             this.gunaLabel9.AutoSize = true;
-            this.gunaLabel9.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel9.Location = new System.Drawing.Point(392, 443);
+            this.gunaLabel9.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel9.Location = new System.Drawing.Point(392, 440);
             this.gunaLabel9.Name = "gunaLabel9";
-            this.gunaLabel9.Size = new System.Drawing.Size(28, 20);
+            this.gunaLabel9.Size = new System.Drawing.Size(32, 23);
             this.gunaLabel9.TabIndex = 2;
             this.gunaLabel9.Text = "1.0";
             // 
             // gunaLabel4
             // 
             this.gunaLabel4.AutoSize = true;
-            this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel4.Location = new System.Drawing.Point(392, 337);
             this.gunaLabel4.Name = "gunaLabel4";
-            this.gunaLabel4.Size = new System.Drawing.Size(116, 20);
+            this.gunaLabel4.Size = new System.Drawing.Size(137, 23);
             this.gunaLabel4.TabIndex = 2;
             this.gunaLabel4.Text = "Trần Bình Phong";
             // 
             // gunaLabel3
             // 
             this.gunaLabel3.AutoSize = true;
-            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel3.Location = new System.Drawing.Point(392, 301);
             this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(138, 20);
+            this.gunaLabel3.Size = new System.Drawing.Size(162, 23);
             this.gunaLabel3.TabIndex = 2;
             this.gunaLabel3.Text = "Nguyễn Duy Quang";
             // 
             // gunaLabel6
             // 
             this.gunaLabel6.AutoSize = true;
-            this.gunaLabel6.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel6.Location = new System.Drawing.Point(392, 224);
+            this.gunaLabel6.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel6.Location = new System.Drawing.Point(392, 221);
             this.gunaLabel6.Name = "gunaLabel6";
-            this.gunaLabel6.Size = new System.Drawing.Size(72, 20);
+            this.gunaLabel6.Size = new System.Drawing.Size(81, 23);
             this.gunaLabel6.TabIndex = 2;
             this.gunaLabel6.Text = "IdiotDevs";
             // 
             // gunaLabel2
             // 
             this.gunaLabel2.AutoSize = true;
-            this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel2.Location = new System.Drawing.Point(392, 265);
+            this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel2.Location = new System.Drawing.Point(392, 262);
             this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(83, 20);
+            this.gunaLabel2.Size = new System.Drawing.Size(95, 23);
             this.gunaLabel2.TabIndex = 2;
             this.gunaLabel2.Text = "Tô Văn Bảo";
             // 
@@ -274,6 +275,7 @@ namespace Dev69Restaurant.GUI.About
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AboutForm";
             this.Text = "About";
+            this.Load += new System.EventHandler(this.AboutForm_Load);
             this.pnTop.ResumeLayout(false);
             this.pnTop.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -305,5 +307,6 @@ namespace Dev69Restaurant.GUI.About
         private Guna.UI.WinForms.GunaLabel gunaLabel7;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private Guna.UI.WinForms.GunaDragControl drag;
+        private Guna.UI2.WinForms.Guna2ShadowForm shadowForm;
     }
 }

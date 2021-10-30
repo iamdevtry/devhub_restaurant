@@ -77,5 +77,10 @@ namespace Dev69Restaurant.GUI.InfoUser
                 return 1;
             }
         }
+
+        private void ChangePasswordForm_Load(object sender, EventArgs e)
+        {
+            shadowForm.SetShadowForm(this);
+        }
     }
 }

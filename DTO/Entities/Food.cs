@@ -19,8 +19,6 @@ namespace Dev69Restaurant.DTO.Entities
         [Required]
         public decimal Price { get; set; }
 
-        public decimal PromotionPrice { get; set; }
-
         [Required]
         public int CategoryId { get; set; }
 

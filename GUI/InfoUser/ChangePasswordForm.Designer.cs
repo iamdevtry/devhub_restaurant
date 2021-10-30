@@ -29,6 +29,7 @@ namespace Dev69Restaurant.GUI.InfoUser
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.gunaControlBox2 = new Guna.UI.WinForms.GunaControlBox();
             this.gunaControlBox1 = new Guna.UI.WinForms.GunaControlBox();
@@ -40,6 +41,8 @@ namespace Dev69Restaurant.GUI.InfoUser
             this.txtNewPass = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtOldPass = new Guna.UI2.WinForms.Guna2TextBox();
+            this.shadowForm = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -48,6 +51,7 @@ namespace Dev69Restaurant.GUI.InfoUser
             // 
             this.panel1.Controls.Add(this.gunaControlBox2);
             this.panel1.Controls.Add(this.gunaControlBox1);
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -241,6 +245,16 @@ namespace Dev69Restaurant.GUI.InfoUser
             this.txtOldPass.TabIndex = 10;
             this.txtOldPass.UseSystemPasswordChar = true;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(12, 13);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(114, 23);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Đổi mật khẩu";
+            // 
             // ChangePasswordForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -251,7 +265,9 @@ namespace Dev69Restaurant.GUI.InfoUser
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ChangePasswordForm";
             this.Text = "Đổi mật khẩu";
+            this.Load += new System.EventHandler(this.ChangePasswordForm_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -271,5 +287,7 @@ namespace Dev69Restaurant.GUI.InfoUser
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2TextBox txtOldPass;
         private Guna.UI.WinForms.GunaGradientButton btnUpdatePass;
+        private Guna.UI2.WinForms.Guna2ShadowForm shadowForm;
+        private System.Windows.Forms.Label label4;
     }
 }

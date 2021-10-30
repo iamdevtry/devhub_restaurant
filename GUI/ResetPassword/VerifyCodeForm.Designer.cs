@@ -31,19 +31,20 @@ namespace Dev69Restaurant.GUI.ResetPassword
         {
             this.components = new System.ComponentModel.Container();
             this.pnTop = new System.Windows.Forms.Panel();
-            this.dragForm = new Guna.UI.WinForms.GunaDragControl(this.components);
-            this.gunaControlBox1 = new Guna.UI.WinForms.GunaControlBox();
             this.gunaControlBox2 = new Guna.UI.WinForms.GunaControlBox();
+            this.gunaControlBox1 = new Guna.UI.WinForms.GunaControlBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dragForm = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSendCode = new Guna.UI.WinForms.GunaGradientButton();
             this.btnVerify = new Guna.UI.WinForms.GunaGradientButton();
             this.lblPassword = new System.Windows.Forms.Label();
+            this.lblblllb = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
+            this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtVerifyCode = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnSendCode = new Guna.UI.WinForms.GunaGradientButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblblllb = new System.Windows.Forms.Label();
+            this.shadowForm = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.pnTop.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -58,25 +59,6 @@ namespace Dev69Restaurant.GUI.ResetPassword
             this.pnTop.Name = "pnTop";
             this.pnTop.Size = new System.Drawing.Size(440, 48);
             this.pnTop.TabIndex = 0;
-            // 
-            // dragForm
-            // 
-            this.dragForm.TargetControl = this.pnTop;
-            // 
-            // gunaControlBox1
-            // 
-            this.gunaControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaControlBox1.AnimationHoverSpeed = 0.07F;
-            this.gunaControlBox1.AnimationSpeed = 0.03F;
-            this.gunaControlBox1.IconColor = System.Drawing.Color.Black;
-            this.gunaControlBox1.IconSize = 15F;
-            this.gunaControlBox1.Location = new System.Drawing.Point(383, 12);
-            this.gunaControlBox1.Name = "gunaControlBox1";
-            this.gunaControlBox1.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
-            this.gunaControlBox1.OnHoverIconColor = System.Drawing.Color.White;
-            this.gunaControlBox1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaControlBox1.Size = new System.Drawing.Size(45, 29);
-            this.gunaControlBox1.TabIndex = 0;
             // 
             // gunaControlBox2
             // 
@@ -94,6 +76,35 @@ namespace Dev69Restaurant.GUI.ResetPassword
             this.gunaControlBox2.Size = new System.Drawing.Size(45, 29);
             this.gunaControlBox2.TabIndex = 0;
             // 
+            // gunaControlBox1
+            // 
+            this.gunaControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.gunaControlBox1.AnimationHoverSpeed = 0.07F;
+            this.gunaControlBox1.AnimationSpeed = 0.03F;
+            this.gunaControlBox1.IconColor = System.Drawing.Color.Black;
+            this.gunaControlBox1.IconSize = 15F;
+            this.gunaControlBox1.Location = new System.Drawing.Point(383, 12);
+            this.gunaControlBox1.Name = "gunaControlBox1";
+            this.gunaControlBox1.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
+            this.gunaControlBox1.OnHoverIconColor = System.Drawing.Color.White;
+            this.gunaControlBox1.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaControlBox1.Size = new System.Drawing.Size(45, 29);
+            this.gunaControlBox1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(128, 23);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Xác nhận Email";
+            // 
+            // dragForm
+            // 
+            this.dragForm.TargetControl = this.pnTop;
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.btnSendCode);
@@ -110,10 +121,41 @@ namespace Dev69Restaurant.GUI.ResetPassword
             this.panel1.Size = new System.Drawing.Size(440, 492);
             this.panel1.TabIndex = 1;
             // 
+            // btnSendCode
+            // 
+            this.btnSendCode.AnimationHoverSpeed = 0.07F;
+            this.btnSendCode.AnimationSpeed = 0.03F;
+            this.btnSendCode.BackColor = System.Drawing.Color.Transparent;
+            this.btnSendCode.BaseColor1 = System.Drawing.Color.SlateBlue;
+            this.btnSendCode.BaseColor2 = System.Drawing.Color.Fuchsia;
+            this.btnSendCode.BorderColor = System.Drawing.Color.Black;
+            this.btnSendCode.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSendCode.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnSendCode.FocusedColor = System.Drawing.Color.Empty;
+            this.btnSendCode.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSendCode.ForeColor = System.Drawing.Color.White;
+            this.btnSendCode.Image = null;
+            this.btnSendCode.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnSendCode.Location = new System.Drawing.Point(294, 238);
+            this.btnSendCode.Name = "btnSendCode";
+            this.btnSendCode.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
+            this.btnSendCode.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
+            this.btnSendCode.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnSendCode.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnSendCode.OnHoverImage = null;
+            this.btnSendCode.OnPressedColor = System.Drawing.Color.Black;
+            this.btnSendCode.Radius = 8;
+            this.btnSendCode.Size = new System.Drawing.Size(118, 45);
+            this.btnSendCode.TabIndex = 13;
+            this.btnSendCode.Text = "Gửi mã";
+            this.btnSendCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnSendCode.Click += new System.EventHandler(this.btnSendCode_Click);
+            // 
             // btnVerify
             // 
             this.btnVerify.AnimationHoverSpeed = 0.07F;
             this.btnVerify.AnimationSpeed = 0.03F;
+            this.btnVerify.BackColor = System.Drawing.Color.Transparent;
             this.btnVerify.BaseColor1 = System.Drawing.Color.SlateBlue;
             this.btnVerify.BaseColor2 = System.Drawing.Color.Fuchsia;
             this.btnVerify.BorderColor = System.Drawing.Color.Black;
@@ -132,6 +174,7 @@ namespace Dev69Restaurant.GUI.ResetPassword
             this.btnVerify.OnHoverForeColor = System.Drawing.Color.White;
             this.btnVerify.OnHoverImage = null;
             this.btnVerify.OnPressedColor = System.Drawing.Color.Black;
+            this.btnVerify.Radius = 8;
             this.btnVerify.Size = new System.Drawing.Size(394, 45);
             this.btnVerify.TabIndex = 13;
             this.btnVerify.Text = "Xác nhận";
@@ -148,6 +191,16 @@ namespace Dev69Restaurant.GUI.ResetPassword
             this.lblPassword.TabIndex = 8;
             this.lblPassword.Text = "Mã xác nhận";
             // 
+            // lblblllb
+            // 
+            this.lblblllb.AutoSize = true;
+            this.lblblllb.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblblllb.Location = new System.Drawing.Point(15, 45);
+            this.lblblllb.Name = "lblblllb";
+            this.lblblllb.Size = new System.Drawing.Size(124, 23);
+            this.lblblllb.TabIndex = 9;
+            this.lblblllb.Text = "Tên đăng nhập";
+            // 
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
@@ -157,6 +210,32 @@ namespace Dev69Restaurant.GUI.ResetPassword
             this.lblUsername.Size = new System.Drawing.Size(51, 23);
             this.lblUsername.TabIndex = 9;
             this.lblUsername.Text = "Email";
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.BorderRadius = 8;
+            this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUsername.DefaultText = "";
+            this.txtUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUsername.DisabledState.Parent = this.txtUsername;
+            this.txtUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUsername.FocusedState.Parent = this.txtUsername;
+            this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.ForeColor = System.Drawing.Color.Black;
+            this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUsername.HoverState.Parent = this.txtUsername;
+            this.txtUsername.Location = new System.Drawing.Point(17, 72);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.PasswordChar = '\0';
+            this.txtUsername.PlaceholderText = "Nhập tên đăng nhập";
+            this.txtUsername.SelectedText = "";
+            this.txtUsername.ShadowDecoration.Parent = this.txtUsername;
+            this.txtUsername.Size = new System.Drawing.Size(394, 42);
+            this.txtUsername.TabIndex = 7;
             // 
             // txtVerifyCode
             // 
@@ -211,90 +290,18 @@ namespace Dev69Restaurant.GUI.ResetPassword
             this.txtEmail.Size = new System.Drawing.Size(394, 42);
             this.txtEmail.TabIndex = 7;
             // 
-            // btnSendCode
-            // 
-            this.btnSendCode.AnimationHoverSpeed = 0.07F;
-            this.btnSendCode.AnimationSpeed = 0.03F;
-            this.btnSendCode.BaseColor1 = System.Drawing.Color.SlateBlue;
-            this.btnSendCode.BaseColor2 = System.Drawing.Color.Fuchsia;
-            this.btnSendCode.BorderColor = System.Drawing.Color.Black;
-            this.btnSendCode.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSendCode.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnSendCode.FocusedColor = System.Drawing.Color.Empty;
-            this.btnSendCode.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSendCode.ForeColor = System.Drawing.Color.White;
-            this.btnSendCode.Image = null;
-            this.btnSendCode.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnSendCode.Location = new System.Drawing.Point(294, 254);
-            this.btnSendCode.Name = "btnSendCode";
-            this.btnSendCode.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
-            this.btnSendCode.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
-            this.btnSendCode.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnSendCode.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnSendCode.OnHoverImage = null;
-            this.btnSendCode.OnPressedColor = System.Drawing.Color.Black;
-            this.btnSendCode.Size = new System.Drawing.Size(118, 45);
-            this.btnSendCode.TabIndex = 13;
-            this.btnSendCode.Text = "Gửi mã";
-            this.btnSendCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnSendCode.Click += new System.EventHandler(this.btnSendCode_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 23);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "XÁC NHẬN EMAIL";
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.BorderRadius = 8;
-            this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUsername.DefaultText = "";
-            this.txtUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUsername.DisabledState.Parent = this.txtUsername;
-            this.txtUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsername.FocusedState.Parent = this.txtUsername;
-            this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.ForeColor = System.Drawing.Color.Black;
-            this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsername.HoverState.Parent = this.txtUsername;
-            this.txtUsername.Location = new System.Drawing.Point(17, 72);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.PasswordChar = '\0';
-            this.txtUsername.PlaceholderText = "Nhập tên đăng nhập";
-            this.txtUsername.SelectedText = "";
-            this.txtUsername.ShadowDecoration.Parent = this.txtUsername;
-            this.txtUsername.Size = new System.Drawing.Size(394, 42);
-            this.txtUsername.TabIndex = 7;
-            // 
-            // lblblllb
-            // 
-            this.lblblllb.AutoSize = true;
-            this.lblblllb.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblblllb.Location = new System.Drawing.Point(15, 45);
-            this.lblblllb.Name = "lblblllb";
-            this.lblblllb.Size = new System.Drawing.Size(124, 23);
-            this.lblblllb.TabIndex = 9;
-            this.lblblllb.Text = "Tên đăng nhập";
-            // 
             // VerifyCodeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.ClientSize = new System.Drawing.Size(440, 540);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "VerifyCodeForm";
             this.Text = "Xác nhận Email";
+            this.Load += new System.EventHandler(this.VerifyCodeForm_Load);
             this.pnTop.ResumeLayout(false);
             this.pnTop.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -319,5 +326,6 @@ namespace Dev69Restaurant.GUI.ResetPassword
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
         private System.Windows.Forms.Label lblblllb;
         private Guna.UI2.WinForms.Guna2TextBox txtUsername;
+        private Guna.UI2.WinForms.Guna2ShadowForm shadowForm;
     }
 }

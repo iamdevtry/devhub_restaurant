@@ -40,6 +40,7 @@ namespace Dev69Restaurant.GUI.Checkout
 
         private void CheckoutForm_Load(object sender, EventArgs e)
         {
+            shadowForm.SetShadowForm(this);
             ShowReport(_currentBillId);
             this.rptBillDetail.RefreshReport();
         }

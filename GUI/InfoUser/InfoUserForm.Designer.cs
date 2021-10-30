@@ -41,7 +41,7 @@ namespace Dev69Restaurant.GUI.InfoUser
             this.pnTop = new System.Windows.Forms.Panel();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.gnShadowForm = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
+            this.shadowForm = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.gunaGradient2Panel1 = new Guna.UI.WinForms.GunaGradient2Panel();
             this.btnChangePassword = new Guna.UI.WinForms.GunaLinkLabel();
@@ -492,6 +492,7 @@ namespace Dev69Restaurant.GUI.InfoUser
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "InfoUserForm";
             this.Text = "Thông tin tài khoản";
+            this.Load += new System.EventHandler(this.InfoUserForm_Load);
             this.pnTop.ResumeLayout(false);
             this.gunaGradient2Panel1.ResumeLayout(false);
             this.gunaGradient2Panel1.PerformLayout();
@@ -513,7 +514,7 @@ namespace Dev69Restaurant.GUI.InfoUser
         private System.Windows.Forms.Panel pnTop;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
-        private Guna.UI2.WinForms.Guna2ShadowForm gnShadowForm;
+        private Guna.UI2.WinForms.Guna2ShadowForm shadowForm;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI.WinForms.GunaGradient2Panel gunaGradient2Panel1;
         private System.Windows.Forms.Label lbllbl;

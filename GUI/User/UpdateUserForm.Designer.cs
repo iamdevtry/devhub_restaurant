@@ -51,6 +51,7 @@ namespace Dev69Restaurant.GUI.User
             this.label2 = new System.Windows.Forms.Label();
             this.txtDisplayName = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            this.drag = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.pnTop.SuspendLayout();
             this.gunaGradient2Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -378,6 +379,10 @@ namespace Dev69Restaurant.GUI.User
             this.txtPassword.TabIndex = 6;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
+            // drag
+            // 
+            this.drag.TargetControl = this.pnTop;
+            // 
             // UpdateUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -418,5 +423,6 @@ namespace Dev69Restaurant.GUI.User
         private Guna.UI2.WinForms.Guna2ComboBox cmbRole;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2TextBox txtDisplayName;
+        private Guna.UI.WinForms.GunaDragControl drag;
     }
 }
