@@ -578,6 +578,19 @@
     <Content Include="app.ico" />
     <Content Include="Resources\app.ico" />
     <None Include="Resources\dev69_banner_blackandWhite.jpg" />
+    <Content Include="Resources\combo1.png" />
+    <Content Include="Resources\combo2.png" />
+    <Content Include="Resources\Devcf1.png" />
+    <Content Include="Resources\Devcf2.png" />
+    <Content Include="Resources\Devcf3.png" />
+    <Content Include="Resources\Devcf4.png" />
+    <Content Include="Resources\drink1.png" />
+    <Content Include="Resources\drink2.png" />
+    <Content Include="Resources\drink3.png" />
+    <Content Include="Resources\drink4.png" />
+    <Content Include="Resources\food1.png" />
+    <Content Include="Resources\food2.png" />
+    <Content Include="Resources\food3.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

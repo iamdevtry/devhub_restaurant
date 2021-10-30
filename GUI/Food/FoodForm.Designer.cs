@@ -34,6 +34,7 @@ namespace Dev69Restaurant.GUI.Food
             // 
             // pnFood
             // 
+            this.pnFood.AutoScroll = true;
             this.pnFood.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnFood.Location = new System.Drawing.Point(0, 0);
             this.pnFood.Name = "pnFood";

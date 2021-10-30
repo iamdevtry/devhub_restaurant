@@ -34,7 +34,15 @@ namespace Dev69Restaurant.GUI.ManageDiscount
                     discount.Name = txtName.Text;
                     discount.Code = txtCode.Text;
                     discount.DiscountPercent = decimal.Parse(txtPercent.Text);
-                    discount.ConditionPrice = decimal.Parse(txtConditionPrice.Text);
+                    if (string.IsNullOrEmpty(txtConditionPrice.Text))
+                    {
+                        discount.ConditionPrice = 0;
+                    }
+                    else
+                    {
+                        discount.ConditionPrice = decimal.Parse(txtConditionPrice.Text);
+                    }
+
                     discount.StartDate = dtpStartDate.Value.Date;
                     discount.EndDate = dtpEndDate.Value.Date;
 
@@ -87,6 +95,11 @@ namespace Dev69Restaurant.GUI.ManageDiscount
             else if (string.IsNullOrEmpty(txtCode.Text))
             {
                 MessageBox.Show("Bạn chưa mã CODE khuyến mãi.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return -1;
+            }
+            else if (txtCode.Text.Length>10)
+            {
+                MessageBox.Show("Mã CODE không được quá 10 kí tự.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return -1;
             }
             else if (string.IsNullOrEmpty(txtPercent.Text))
