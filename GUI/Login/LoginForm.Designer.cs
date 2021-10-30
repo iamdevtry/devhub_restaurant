@@ -235,6 +235,7 @@ namespace Dev69Restaurant.GUI.Login
             this.txtPassword.Size = new System.Drawing.Size(302, 42);
             this.txtPassword.TabIndex = 2;
             this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             // 
             // txtUsername
             // 

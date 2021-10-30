@@ -90,15 +90,23 @@ namespace Dev69Restaurant.GUI.ResetPassword
 
         private int ValidateAccount(string username, string email)
         {
-            var user = _userService.CheckExistByUserNameAndEmail(username, email);
-            if(user)
+            if (string.IsNullOrEmpty(txtUsername.Text) && string.IsNullOrEmpty(txtEmail.Text))
             {
                 return -1;
             }
             else
             {
-                return 1;
+                var user = _userService.CheckExistByUserNameAndEmail(username, email);
+                if (user)
+                {
+                    return -1;
+                }
+                else
+                {
+                    return 1;
+                }
             }
+
         }
     }
 }

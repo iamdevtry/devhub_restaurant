@@ -27,6 +27,36 @@ namespace Dev69Restaurant.GUI.Login
             LoadForm();
         }
 
+        #region events
+
+
+        private void lblForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            VerifyCodeForm verifyCodeForm = new VerifyCodeForm();
+            verifyCodeForm.StartPosition = FormStartPosition.CenterScreen;
+            verifyCodeForm.Show();
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            shadowForm.SetShadowForm(this);
+        }
+
+        private void btnHidePassword_Click(object sender, EventArgs e)
+        {
+            ShowPassword();
+        }
+
+        private void btnShowPassword_Click(object sender, EventArgs e)
+        {
+            ShowPassword();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            Login();
+        }
+        #endregion
 
         #region Methods
         private void LoadForm()
@@ -51,47 +81,45 @@ namespace Dev69Restaurant.GUI.Login
             }
         }
 
-        private void btnHidePassword_Click(object sender, EventArgs e)
+        private void Login()
         {
-            ShowPassword();
-        }
-
-        private void btnShowPassword_Click(object sender, EventArgs e)
-        {
-            ShowPassword();
-        }
-
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            string password = Encryptor.MD5Hash(txtPassword.Text);
-            var user = _loginService.Login(txtUsername.Text, password);
-            var userRole = _loginService.GetRoleByUsername(txtUsername.Text);
-
-            if (user != null)
+            if (string.IsNullOrEmpty(txtUsername.Text))
             {
-                HomeForm homeForm = new HomeForm(user,userRole.ShortName);
-                this.Hide();
-                homeForm.ShowDialog();
-                this.Show();
+                MessageBox.Show("Bạn chưa nhập tài khoản.", "Đăng nhập thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if(string.IsNullOrEmpty(txtPassword.Text))
+            {
+                MessageBox.Show("Bạn chưa nhập mật khẩu.", "Đăng nhập thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
             else
             {
-                MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng.", "Đăng nhập thất bại", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                string password = Encryptor.MD5Hash(txtPassword.Text);
+                var user = _loginService.Login(txtUsername.Text, password);
+                var userRole = _loginService.GetRoleByUsername(txtUsername.Text);
+
+                if (user != null)
+                {
+                    HomeForm homeForm = new HomeForm(user, userRole.ShortName);
+                    this.Hide();
+                    homeForm.ShowDialog();
+                    this.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng.", "Đăng nhập thất bại", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                }
             }
+
         }
 
         #endregion
 
-        private void lblForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
         {
-            VerifyCodeForm verifyCodeForm = new VerifyCodeForm();
-            verifyCodeForm.StartPosition = FormStartPosition.CenterScreen;
-            verifyCodeForm.Show();
-        }
-
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
-            shadowForm.SetShadowForm(this);
+            if (e.KeyCode == Keys.Enter)
+                Login();
         }
     }
 }
