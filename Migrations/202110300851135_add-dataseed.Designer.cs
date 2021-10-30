@@ -7,13 +7,13 @@ namespace Dev69Restaurant.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class updatedbv2 : IMigrationMetadata
+    public sealed partial class adddataseed : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(updatedbv2));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(adddataseed));
         
         string IMigrationMetadata.Id
         {
-            get { return "202110260822566_update-db-v2"; }
+            get { return "202110300851135_add-dataseed"; }
         }
         
         string IMigrationMetadata.Source

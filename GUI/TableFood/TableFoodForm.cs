@@ -32,7 +32,7 @@ namespace Dev69Restaurant.GUI.TableFood
             var listTableFoods = _tableService.GetAll();
             foreach(var table in listTableFoods)
             {
-                string status = table.Status ? "Có người" : "Trống";
+                string status = table.Status ? "Trống" : "Có người";
                 UCTableFood ucTableFood = new UCTableFood(table.Id.ToString(), status, table.Name);
                 ucTableFood.Click += UcTableFood_Click;
                 pnTableFood.Controls.Add(ucTableFood);

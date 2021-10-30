@@ -19,7 +19,6 @@ namespace Dev69Restaurant
         public DbSet<Food> Foods { set; get; }
         public DbSet<FoodCategory> FoodCategories { set; get; }
         public DbSet<TableFood> TableFoods { set; get; }
-        public DbSet<VAT> VATs { set; get; }
         public DbSet<User> Users { set; get; }
         public DbSet<Role> Roles { set; get; }
         public DbSet<UserRole> UserRoles { set; get; }

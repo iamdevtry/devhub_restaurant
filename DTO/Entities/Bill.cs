@@ -15,9 +15,6 @@ namespace Dev69Restaurant.DTO.Entities
         [Required]
         public int TableId { get; set; }
 
-        [Required]
-        public int VATId { get; set; }
-
         public string PaymentMethod { get; set; }
 
         [MaxLength(10)]
@@ -28,9 +25,6 @@ namespace Dev69Restaurant.DTO.Entities
 
         [ForeignKey("TableId")]
         public virtual TableFood TableFood { set; get; }
-
-        [ForeignKey("VATId")]
-        public virtual VAT VAT { set; get; }
 
         public virtual IEnumerable<BillDetail> BillDetails { set; get; }
     }

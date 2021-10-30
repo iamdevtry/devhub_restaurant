@@ -43,7 +43,15 @@ namespace Dev69Restaurant.GUI.Food
             foreach (var food in listFoods)
             {
                 UCTableFood ucTableFood = new UCTableFood(food.Id.ToString(), food.Price.ToString(), food.Name);
-                ucTableFood.BackgroundImage = Image.FromFile(food.Image);
+                if(food.Image == null)
+                {
+                    ucTableFood.BackgroundImage = Image.FromFile(BaseIcon.NO_IMAGE);
+                }
+                else
+                {
+                    ucTableFood.BackgroundImage = Image.FromFile(food.Image);
+                }
+
                 ucTableFood.Click += UcTableFood_Click;
 
                 pnFood.Controls.Add(ucTableFood);
@@ -56,7 +64,14 @@ namespace Dev69Restaurant.GUI.Food
             foreach (var food in listFoods)
             {
                 UCTableFood ucTableFood = new UCTableFood(food.Id.ToString(), food.Price.ToString(), food.Name);
-                ucTableFood.BackgroundImage = Image.FromFile(food.Image);
+                if (food.Image == null)
+                {
+                    ucTableFood.BackgroundImage = Image.FromFile(BaseIcon.NO_IMAGE);
+                }
+                else
+                {
+                    ucTableFood.BackgroundImage = Image.FromFile(food.Image);
+                }
                 ucTableFood.Click += UcTableFood_Click;
 
                 pnFood.Controls.Add(ucTableFood);

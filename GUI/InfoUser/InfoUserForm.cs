@@ -151,7 +151,7 @@ namespace Dev69Restaurant.GUI.InfoUser
                 }
                 catch
                 {
-                    picAvatar.Image = null;
+                    picAvatar.Image = Image.FromFile(BaseIcon.NO_IMAGE);
                 }
             }
             txtAddress.Text = us.Address;

@@ -73,6 +73,7 @@ namespace Dev69Restaurant.GUI.Home
         {
             cbCategoryFood.Visible = false;
             lblFoodCategory.Visible = false;
+            HideFormActive();
             ActivateButton(sender, BaseIcon.HOME_ACTIVE);
         }
 
@@ -297,7 +298,6 @@ namespace Dev69Restaurant.GUI.Home
         {
             Bill bill = new Bill();
             bill.TableId = idTable;
-            bill.VATId = 1;
             bill.PaymentMethod = "Tiền mặt";
             bill.CreatedDate = DateTime.Now;
             bill.CreatedBy = _currentUser.Username;

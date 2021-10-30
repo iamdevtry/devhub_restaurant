@@ -7,13 +7,13 @@ namespace Dev69Restaurant.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class updatedatabase_rmPromotionPrice : IMigrationMetadata
+    public sealed partial class InitialDb : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(updatedatabase_rmPromotionPrice));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialDb));
         
         string IMigrationMetadata.Id
         {
-            get { return "202110300243111_update-database_rmPromotionPrice"; }
+            get { return "202110300848218_InitialDb"; }
         }
         
         string IMigrationMetadata.Source

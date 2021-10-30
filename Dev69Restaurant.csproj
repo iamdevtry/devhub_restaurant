@@ -123,7 +123,6 @@
     <Compile Include="DAL\Repositories\TableFoodRepository.cs" />
     <Compile Include="DAL\Repositories\UserRepository.cs" />
     <Compile Include="DAL\Repositories\UserRoleRepository.cs" />
-    <Compile Include="DAL\Repositories\VATRepository.cs" />
     <Compile Include="DAL\Services\BillService.cs" />
     <Compile Include="DAL\Services\DiscountService.cs" />
     <Compile Include="DAL\Services\FoodCategoryService.cs" />
@@ -142,7 +141,6 @@
     <Compile Include="DTO\Entities\TableFood.cs" />
     <Compile Include="DTO\Entities\User.cs" />
     <Compile Include="DTO\Entities\UserRole.cs" />
-    <Compile Include="DTO\Entities\VAT.cs" />
     <Compile Include="DTO\EntityReports\BillDetailRpt.cs" />
     <Compile Include="DTO\EntityReports\CheckoutRpt.cs" />
     <Compile Include="GUI\About\AboutForm.cs">
@@ -298,33 +296,13 @@
     <Compile Include="Infrastructure\Components\UserControls\UCToggleButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Migrations\202109291137127_InitialDB.cs" />
-    <Compile Include="Migrations\202109291137127_InitialDB.designer.cs">
-      <DependentUpon>202109291137127_InitialDB.cs</DependentUpon>
+    <Compile Include="Migrations\202110300848218_InitialDb.cs" />
+    <Compile Include="Migrations\202110300848218_InitialDb.designer.cs">
+      <DependentUpon>202110300848218_InitialDb.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202109291152064_add_seed_data.cs" />
-    <Compile Include="Migrations\202109291152064_add_seed_data.designer.cs">
-      <DependentUpon>202109291152064_add_seed_data.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202110061433493_add-role-of-user.cs" />
-    <Compile Include="Migrations\202110061433493_add-role-of-user.designer.cs">
-      <DependentUpon>202110061433493_add-role-of-user.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202110231520290_add_field_avatar_of_tbUser.cs" />
-    <Compile Include="Migrations\202110231520290_add_field_avatar_of_tbUser.designer.cs">
-      <DependentUpon>202110231520290_add_field_avatar_of_tbUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202110260815432_update-database_remove_area.cs" />
-    <Compile Include="Migrations\202110260815432_update-database_remove_area.designer.cs">
-      <DependentUpon>202110260815432_update-database_remove_area.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202110260822566_update-db-v2.cs" />
-    <Compile Include="Migrations\202110260822566_update-db-v2.designer.cs">
-      <DependentUpon>202110260822566_update-db-v2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202110300243111_update-database_rmPromotionPrice.cs" />
-    <Compile Include="Migrations\202110300243111_update-database_rmPromotionPrice.designer.cs">
-      <DependentUpon>202110300243111_update-database_rmPromotionPrice.cs</DependentUpon>
+    <Compile Include="Migrations\202110300851135_add-dataseed.cs" />
+    <Compile Include="Migrations\202110300851135_add-dataseed.designer.cs">
+      <DependentUpon>202110300851135_add-dataseed.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -419,26 +397,11 @@
     <EmbeddedResource Include="Infrastructure\Reports\rptCheckout.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202109291137127_InitialDB.resx">
-      <DependentUpon>202109291137127_InitialDB.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202110300848218_InitialDb.resx">
+      <DependentUpon>202110300848218_InitialDb.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202109291152064_add_seed_data.resx">
-      <DependentUpon>202109291152064_add_seed_data.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202110061433493_add-role-of-user.resx">
-      <DependentUpon>202110061433493_add-role-of-user.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202110231520290_add_field_avatar_of_tbUser.resx">
-      <DependentUpon>202110231520290_add_field_avatar_of_tbUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202110260815432_update-database_remove_area.resx">
-      <DependentUpon>202110260815432_update-database_remove_area.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202110260822566_update-db-v2.resx">
-      <DependentUpon>202110260822566_update-db-v2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202110300243111_update-database_rmPromotionPrice.resx">
-      <DependentUpon>202110300243111_update-database_rmPromotionPrice.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202110300851135_add-dataseed.resx">
+      <DependentUpon>202110300851135_add-dataseed.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -3,19 +3,10 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialDB : DbMigration
+    public partial class InitialDb : DbMigration
     {
         public override void Up()
         {
-            CreateTable(
-                "dbo.Areas",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(nullable: false, maxLength: 256),
-                    })
-                .PrimaryKey(t => t.Id);
-            
             CreateTable(
                 "dbo.BillDetails",
                 c => new
@@ -37,9 +28,7 @@
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        CustomerCategoryId = c.Int(nullable: false),
                         TableId = c.Int(nullable: false),
-                        VATId = c.Int(nullable: false),
                         PaymentMethod = c.String(),
                         DiscountCode = c.String(maxLength: 10),
                         Discount = c.Decimal(nullable: false, precision: 18, scale: 2),
@@ -51,26 +40,8 @@
                         Status = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.CustomerCategories", t => t.CustomerCategoryId, cascadeDelete: true)
                 .ForeignKey("dbo.TableFoods", t => t.TableId, cascadeDelete: true)
-                .ForeignKey("dbo.VATs", t => t.VATId, cascadeDelete: true)
-                .Index(t => t.CustomerCategoryId)
-                .Index(t => t.TableId)
-                .Index(t => t.VATId);
-            
-            CreateTable(
-                "dbo.CustomerCategories",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(nullable: false, maxLength: 256),
-                        CreatedDate = c.DateTime(),
-                        CreatedBy = c.String(maxLength: 256),
-                        UpdatedDate = c.DateTime(),
-                        UpdatedBy = c.String(maxLength: 256),
-                        Status = c.Boolean(nullable: false),
-                    })
-                .PrimaryKey(t => t.Id);
+                .Index(t => t.TableId);
             
             CreateTable(
                 "dbo.TableFoods",
@@ -78,24 +49,6 @@
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Name = c.String(nullable: false, maxLength: 256),
-                        AreaId = c.Int(nullable: false),
-                        CreatedDate = c.DateTime(),
-                        CreatedBy = c.String(maxLength: 256),
-                        UpdatedDate = c.DateTime(),
-                        UpdatedBy = c.String(maxLength: 256),
-                        Status = c.Boolean(nullable: false),
-                    })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Areas", t => t.AreaId, cascadeDelete: true)
-                .Index(t => t.AreaId);
-            
-            CreateTable(
-                "dbo.VATs",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        TaxPrice = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        TaxPercent = c.Decimal(nullable: false, precision: 18, scale: 2),
                         CreatedDate = c.DateTime(),
                         CreatedBy = c.String(maxLength: 256),
                         UpdatedDate = c.DateTime(),
@@ -111,7 +64,6 @@
                         Id = c.Int(nullable: false, identity: true),
                         Name = c.String(nullable: false, maxLength: 256),
                         Price = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        PromotionPrice = c.Decimal(nullable: false, precision: 18, scale: 2),
                         CategoryId = c.Int(nullable: false),
                         Image = c.String(maxLength: 256),
                         CreatedDate = c.DateTime(),
@@ -140,25 +92,6 @@
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
-                "dbo.Customers",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(nullable: false, maxLength: 256),
-                        Address = c.String(maxLength: 256),
-                        Phone = c.String(maxLength: 20, unicode: false),
-                        CustomerCategoryId = c.Int(nullable: false),
-                        CreatedDate = c.DateTime(),
-                        CreatedBy = c.String(maxLength: 256),
-                        UpdatedDate = c.DateTime(),
-                        UpdatedBy = c.String(maxLength: 256),
-                        Status = c.Boolean(nullable: false),
-                    })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.CustomerCategories", t => t.CustomerCategoryId, cascadeDelete: true)
-                .Index(t => t.CustomerCategoryId);
-            
-            CreateTable(
                 "dbo.Discounts",
                 c => new
                     {
@@ -178,6 +111,30 @@
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
+                "dbo.Roles",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Name = c.String(nullable: false),
+                        ShortName = c.String(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.UserRoles",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Username = c.String(nullable: false, maxLength: 50),
+                        RoleId = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Roles", t => t.RoleId, cascadeDelete: true)
+                .ForeignKey("dbo.Users", t => t.Username, cascadeDelete: true)
+                .Index(t => t.Username)
+                .Index(t => t.RoleId);
+            
+            CreateTable(
                 "dbo.Users",
                 c => new
                     {
@@ -185,6 +142,7 @@
                         Password = c.String(nullable: false, maxLength: 128),
                         DisplayName = c.String(maxLength: 256),
                         FullName = c.String(nullable: false, maxLength: 256),
+                        Avatar = c.String(maxLength: 256),
                         BirthDay = c.DateTime(),
                         Address = c.String(maxLength: 256),
                         Phone = c.String(maxLength: 20, unicode: false),
@@ -197,33 +155,27 @@
         
         public override void Down()
         {
-            DropForeignKey("dbo.Customers", "CustomerCategoryId", "dbo.CustomerCategories");
+            DropForeignKey("dbo.UserRoles", "Username", "dbo.Users");
+            DropForeignKey("dbo.UserRoles", "RoleId", "dbo.Roles");
             DropForeignKey("dbo.BillDetails", "FoodId", "dbo.Foods");
             DropForeignKey("dbo.Foods", "CategoryId", "dbo.FoodCategories");
             DropForeignKey("dbo.BillDetails", "BillId", "dbo.Bills");
-            DropForeignKey("dbo.Bills", "VATId", "dbo.VATs");
             DropForeignKey("dbo.Bills", "TableId", "dbo.TableFoods");
-            DropForeignKey("dbo.TableFoods", "AreaId", "dbo.Areas");
-            DropForeignKey("dbo.Bills", "CustomerCategoryId", "dbo.CustomerCategories");
-            DropIndex("dbo.Customers", new[] { "CustomerCategoryId" });
+            DropIndex("dbo.UserRoles", new[] { "RoleId" });
+            DropIndex("dbo.UserRoles", new[] { "Username" });
             DropIndex("dbo.Foods", new[] { "CategoryId" });
-            DropIndex("dbo.TableFoods", new[] { "AreaId" });
-            DropIndex("dbo.Bills", new[] { "VATId" });
             DropIndex("dbo.Bills", new[] { "TableId" });
-            DropIndex("dbo.Bills", new[] { "CustomerCategoryId" });
             DropIndex("dbo.BillDetails", new[] { "FoodId" });
             DropIndex("dbo.BillDetails", new[] { "BillId" });
             DropTable("dbo.Users");
+            DropTable("dbo.UserRoles");
+            DropTable("dbo.Roles");
             DropTable("dbo.Discounts");
-            DropTable("dbo.Customers");
             DropTable("dbo.FoodCategories");
             DropTable("dbo.Foods");
-            DropTable("dbo.VATs");
             DropTable("dbo.TableFoods");
-            DropTable("dbo.CustomerCategories");
             DropTable("dbo.Bills");
             DropTable("dbo.BillDetails");
-            DropTable("dbo.Areas");
         }
     }
 }
