@@ -41,11 +41,6 @@ namespace Dev69Restaurant.Infrastructure.Components.UserControls
             isCheckedFood();
         }
 
-        private void lblTableName_Click(object sender, EventArgs e)
-        {
-            isCheckedFood();
-        }
-
         public void isCheckedFood()
         {
             if (chbSelectTable.Checked == false)
@@ -64,6 +59,11 @@ namespace Dev69Restaurant.Infrastructure.Components.UserControls
         {
             chbSelectTable.Checked = false;
             pnlineTableFood.Visible = false;
+        }
+
+        private void chbSelectTable_Click(object sender, EventArgs e)
+        {
+            isCheckedFood();
         }
     }
 }

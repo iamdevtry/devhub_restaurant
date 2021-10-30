@@ -161,6 +161,7 @@ namespace Dev69Restaurant.GUI.ResetPassword
             this.txtNewPassword.ShadowDecoration.Parent = this.txtNewPassword;
             this.txtNewPassword.Size = new System.Drawing.Size(394, 42);
             this.txtNewPassword.TabIndex = 7;
+            this.txtNewPassword.UseSystemPasswordChar = true;
             // 
             // pnTop
             // 

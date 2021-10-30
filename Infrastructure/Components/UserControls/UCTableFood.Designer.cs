@@ -86,7 +86,6 @@ namespace Dev69Restaurant.Infrastructure.Components.UserControls
             this.lblTableName.TabIndex = 0;
             this.lblTableName.Text = "Table name";
             this.lblTableName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblTableName.Click += new System.EventHandler(this.lblTableName_Click);
             // 
             // pnlineTableFood
             // 
@@ -115,6 +114,7 @@ namespace Dev69Restaurant.Infrastructure.Components.UserControls
             this.chbSelectTable.Name = "chbSelectTable";
             this.chbSelectTable.Size = new System.Drawing.Size(40, 40);
             this.chbSelectTable.TabIndex = 0;
+            this.chbSelectTable.Click += new System.EventHandler(this.chbSelectTable_Click);
             // 
             // UCTableFood
             // 

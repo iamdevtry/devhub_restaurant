@@ -262,7 +262,6 @@ namespace Dev69Restaurant.GUI.ResetPassword
             this.txtVerifyCode.ShadowDecoration.Parent = this.txtVerifyCode;
             this.txtVerifyCode.Size = new System.Drawing.Size(394, 42);
             this.txtVerifyCode.TabIndex = 6;
-            this.txtVerifyCode.UseSystemPasswordChar = true;
             // 
             // txtEmail
             // 
