@@ -455,7 +455,6 @@
     <None Include="DatabaseDataSet.xss">
       <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
     </None>
-    <None Include="Dev69Restaurant_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Dev69Restaurant.Common.RevenueChart.datasource" />
     <None Include="Properties\DataSources\Dev69Restaurant.DTO.EntityReports.BillDetailReport.datasource" />
