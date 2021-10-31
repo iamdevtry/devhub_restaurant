@@ -80,14 +80,23 @@ namespace Dev69Restaurant.GUI.Revenue
 
         private decimal GetRevenueToday()
         {
-            var bills = _billService.GetBills();
-            var retrievedInvoices = bills.Where(n => n.CreatedDate.Value.Date == DateTime.Now.Date).Select(x => x.CreatedDate.Value.Date);
+            try
+            {
+                var bills = _billService.GetBills();
+                var retrievedInvoices = bills.Where(n => n.CreatedDate.Value.Date == DateTime.Now.Date).Select(x => x.CreatedDate.Value.Date);
 
-            decimal totalPrice = bills
-            .Where(n => retrievedInvoices.Contains(n.CreatedDate.Value.Date))
-            .Sum(n => n.TotalPrice);
+                decimal totalPrice = bills
+                .Where(n => retrievedInvoices.Contains(n.CreatedDate.Value.Date))
+                .Sum(n => n.TotalPrice);
 
-            return totalPrice;
+                return totalPrice;
+            }
+            catch
+            {
+                MessageBox.Show("Chưa có dữ liệu để thống kê!");
+                return 0;
+            }
+
         }
 
         private void GetPopularItem()
