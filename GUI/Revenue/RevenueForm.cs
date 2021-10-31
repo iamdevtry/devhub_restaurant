@@ -34,9 +34,6 @@ namespace Dev69Restaurant.GUI.Revenue
             LoadData();
             ShowChartAWeek();
             BindChartDefault();
-
-            var info = System.Globalization.CultureInfo.GetCultureInfo("vi-VN");
-            lblRevenueToday.Text = String.Format(info, "{0:c}", GetRevenueToday());
             GetPopularItem();
         }
 
@@ -63,6 +60,10 @@ namespace Dev69Restaurant.GUI.Revenue
                 revenueChart.Value = double.Parse(GetTotalPrice(bills, (DateTime)bill) + "");
                 revenueCharts.Add(revenueChart);
             }
+
+
+            var info = System.Globalization.CultureInfo.GetCultureInfo("vi-VN");
+            lblRevenueToday.Text = String.Format(info, "{0:c}", GetRevenueToday(bills));
         }
 
         private decimal GetTotalPrice(List<Bill> bills, DateTime dateTime)
@@ -78,15 +79,14 @@ namespace Dev69Restaurant.GUI.Revenue
         }
 
 
-        private decimal GetRevenueToday()
+        private decimal GetRevenueToday(List<Bill> bills)
         {
             try
             {
-                var bills = _billService.GetBills();
-                var retrievedInvoices = bills.Where(n => n.CreatedDate.Value.Date == DateTime.Now.Date).Select(x => x.CreatedDate.Value.Date);
-
+                DateTime dt = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+                var retrievedInvoices = bills.Where(n => n.CreatedDate.Value.Date == dt).Select(x => x.CreatedDate);
                 decimal totalPrice = bills
-                .Where(n => retrievedInvoices.Contains(n.CreatedDate.Value.Date))
+                .Where(n => retrievedInvoices.Contains(n.CreatedDate))
                 .Sum(n => n.TotalPrice);
 
                 return totalPrice;
