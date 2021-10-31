@@ -8,7 +8,7 @@ namespace Dev69Restaurant
     public class RestaurantDbContext : DbContext
     {
 
-        public RestaurantDbContext() : base("RestaurantDev69")
+        public RestaurantDbContext() : base("Dev69Restaurant.Properties.Settings.DatabaseConnectionString")
         {
             this.Configuration.LazyLoadingEnabled = false;
         }

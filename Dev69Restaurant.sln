@@ -7,10 +7,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dev69Restaurant", "Dev69Res
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		All|Any CPU = All|Any CPU
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF9F7577-E440-473A-8582-830D669C90E7}.All|Any CPU.ActiveCfg = Release|Any CPU
+		{CF9F7577-E440-473A-8582-830D669C90E7}.All|Any CPU.Build.0 = Release|Any CPU
 		{CF9F7577-E440-473A-8582-830D669C90E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CF9F7577-E440-473A-8582-830D669C90E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF9F7577-E440-473A-8582-830D669C90E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
