@@ -158,6 +158,11 @@
     <Compile Include="DAL\Services\LoginService.cs" />
     <Compile Include="DAL\Services\TableService.cs" />
     <Compile Include="DAL\Services\UserService.cs" />
+    <Compile Include="DatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DTO\Abstract\Auditable.cs" />
     <Compile Include="DTO\Abstract\IAuditable.cs" />
     <Compile Include="DTO\Entities\Bill.cs" />
@@ -439,6 +444,17 @@
     <None Include="AppSettings.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="DatabaseDataSet.xsc">
+      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DatabaseDataSet.xss">
+      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Dev69Restaurant.Common.RevenueChart.datasource" />
     <None Include="Properties\DataSources\Dev69Restaurant.DTO.EntityReports.BillDetailReport.datasource" />
@@ -604,6 +620,13 @@
     <None Include="Resources\logo_Hutech.png" />
     <None Include="Resources\logo_Dark_new.png" />
     <Content Include="app.ico" />
+    <Content Include="Database.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Database.mdf</DependentUpon>
+    </Content>
     <Content Include="Resources\app.ico" />
     <None Include="Resources\dev69_banner_blackandWhite.jpg" />
     <Content Include="Resources\combo1.png" />
