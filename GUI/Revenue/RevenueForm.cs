@@ -54,9 +54,7 @@ namespace Dev69Restaurant.GUI.Revenue
             foreach (var bill in dates)
             {
                 RevenueChart revenueChart = new RevenueChart();
-                revenueChart.Date = bill.Day;
-                revenueChart.Month = bill.Month;
-                revenueChart.Year = bill.Year;
+                revenueChart.dateTime = new DateTime(bill.Year, bill.Month, bill.Day);
                 revenueChart.Value = double.Parse(GetTotalPrice(bills, (DateTime)bill) + "");
                 revenueCharts.Add(revenueChart);
             }
@@ -165,15 +163,15 @@ namespace Dev69Restaurant.GUI.Revenue
             chartRevenue.Series.Clear();
             SeriesCollection series = new SeriesCollection();
             var years = (from o in revenueCharts
-                         select new { Year = o.Year }).Distinct();
+                         select new { Year = o.dateTime.Year }).Distinct();
             foreach (var year in years)
             {
                 List<double> values = new List<double>();
                 double value = 0;
                 var data = from o in revenueCharts
-                           where o.Date >= firstDayOfMonth.Date.Day && o.Date <= lastDayOfMonth.Date.Day
-                           orderby o.Date ascending
-                           select new { o.Value, o.Date };
+                           where o.dateTime >= firstDayOfMonth.Date &&  o.dateTime <= lastDayOfMonth.Date
+                           orderby o.dateTime ascending
+                           select new { o.Value, o.dateTime };
                 foreach (var item in data)
                 {
                     value = item.Value;

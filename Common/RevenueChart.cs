@@ -8,9 +8,7 @@ namespace Dev69Restaurant.Common
 {
     public class RevenueChart
     {
-        public int Date { get; set; }
-        public int Year { get; set; }
-        public int Month { get; set; }
+        public DateTime dateTime { get; set; }
         public double Value { get; set; }
     }
 }
