@@ -1,6 +1,6 @@
 # Restaurant
 ## Technologies
-- Windows Form Application .NET Framwork 4.5
+- Windows Form Application .NET Framework 4.5
 - Entity Framework
 - Guna UI Framework
 ## Project structure
