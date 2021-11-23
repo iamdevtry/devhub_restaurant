@@ -23,7 +23,7 @@
 --|Migrations (Contains changes when updating the database)
 --|Resources (Contains the application's resources)
 ```
-## Creat Database
+## Create Database
 -- add connection string in App.config file
 ```
                                         enable-migrations
